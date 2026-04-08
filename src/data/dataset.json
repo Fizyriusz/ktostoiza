@@ -1,0 +1,1080 @@
+{
+  "lastUpdate": "2026-04-08",
+  "nodes": [
+    {
+      "id": "h-beko",
+      "type": "holding",
+      "name": "Beko Europe",
+      "country": "Turcja / USA",
+      "description": "Fuzja europejskich operacji amerykańskiego Whirlpoola oraz tureckiego Arçelik (właściciela Beko).",
+      "seo_slug": "beko-europe"
+    },
+    {
+      "id": "b-beko",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Beko",
+      "origin": "Turcja",
+      "segment": "Budżetowy / Standard",
+      "history": "Główna marka koncernu Arçelik, znana z przystępnych cenowo i innowacyjnych rozwiązań.",
+      "factories_pl": [
+        "Łódź",
+        "Radomsko",
+        "Wrocław"
+      ],
+      "seo_slug": "beko",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-beko",
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-beko"
+      }
+    },
+    {
+      "id": "b-whirlpool",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Whirlpool",
+      "origin": "USA",
+      "segment": "Standard",
+      "history": "Jedna z najpopularniejszych marek w Polsce, obecnie zarządzana w Europie przez Beko.",
+      "factories_pl": [
+        "Łódź",
+        "Radomsko",
+        "Wrocław"
+      ],
+      "seo_slug": "whirlpool",
+      "monetization": {
+        "rtv_euro": "https://www.euro.com.pl/search.bhtml?keyword=whirlpool",
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-whirlpool"
+      }
+    },
+    {
+      "id": "b-indesit",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Indesit",
+      "origin": "Włochy",
+      "segment": "Budżetowy",
+      "history": "Proste i tanie urządzenia, przejęte przez Whirlpool, a obecnie część Beko Europe.",
+      "seo_slug": "indesit",
+      "monetization": {
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-indesit"
+      }
+    },
+    {
+      "id": "b-hotpoint",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Hotpoint-Ariston",
+      "origin": "Włochy / USA",
+      "segment": "Standard",
+      "history": "Marka wygaszana na rzecz Whirlpoola, ale wciąż obecna na rynku.",
+      "seo_slug": "hotpoint-ariston"
+    },
+    {
+      "id": "b-bauknecht",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Bauknecht",
+      "origin": "Niemcy",
+      "segment": "Premium",
+      "history": "Niemiecka marka premium, rzadsza w Polsce, ale technologicznie bardzo zaawansowana.",
+      "seo_slug": "bauknecht"
+    },
+    {
+      "id": "b-grundig",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Grundig",
+      "origin": "Niemcy",
+      "segment": "Standard / Premium",
+      "history": "Dawniej niemiecka legenda RTV, obecnie marka AGD w portfolio Beko.",
+      "seo_slug": "grundig"
+    },
+    {
+      "id": "b-polar",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Polar",
+      "origin": "Polska",
+      "segment": "Budżetowy",
+      "history": "Polska legenda, obecnie głównie lodówki i pralki z logo Whirlpool w niższym budżecie.",
+      "factories_pl": [
+        "Wrocław"
+      ],
+      "seo_slug": "polar"
+    },
+    {
+      "id": "b-ignis",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Ignis",
+      "origin": "Włochy",
+      "segment": "Budżetowy",
+      "history": "Marka regionalna i niszowa, dawniej silna we Włoszech, używana głównie w sieciach meblowych.",
+      "seo_slug": "ignis"
+    },
+    {
+      "id": "b-privileg",
+      "type": "brand",
+      "parentId": "h-beko",
+      "name": "Privileg",
+      "origin": "Niemcy",
+      "segment": "Budżetowy",
+      "history": "Marka dawnego niemieckiego domu wysyłkowego Quelle, obecnie w rękach Beko Europe.",
+      "seo_slug": "privileg"
+    },
+    {
+      "id": "h-bsh",
+      "type": "holding",
+      "name": "BSH Group",
+      "country": "Niemcy",
+      "description": "Największy europejski producent (Bosch und Siemens Hausgeräte), obecnie w 100% należy do Bosch.",
+      "seo_slug": "bsh-group"
+    },
+    {
+      "id": "b-bosch",
+      "type": "brand",
+      "parentId": "h-bsh",
+      "name": "Bosch",
+      "origin": "Niemcy",
+      "segment": "Standard / Premium",
+      "history": "Marka globalna. W Polsce podział na serie 2, 4, 6 i 8 (zmywarki i pralki).",
+      "factories_pl": [
+        "Łódź",
+        "Wrocław",
+        "Rogoźnica"
+      ],
+      "seo_slug": "bosch",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-bosch",
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-bosch"
+      }
+    },
+    {
+      "id": "b-siemens",
+      "type": "brand",
+      "parentId": "h-bsh",
+      "name": "Siemens",
+      "origin": "Niemcy",
+      "segment": "Premium",
+      "history": "Bliźniacza marka Boscha, często o wyższym designie (BSH używa nazwy na licencji).",
+      "factories_pl": [
+        "Łódź",
+        "Wrocław"
+      ],
+      "seo_slug": "siemens",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-siemens"
+      }
+    },
+    {
+      "id": "b-gaggenau",
+      "type": "brand",
+      "parentId": "h-bsh",
+      "name": "Gaggenau",
+      "origin": "Niemcy",
+      "segment": "Luksusowy",
+      "history": "Ultra-luksusowa marka grupy BSH, dedykowana dla najbardziej wymagających.",
+      "seo_slug": "gaggenau"
+    },
+    {
+      "id": "b-neff",
+      "type": "brand",
+      "parentId": "h-bsh",
+      "name": "Neff",
+      "origin": "Niemcy",
+      "segment": "Premium",
+      "history": "Specjalista od piekarników z chowanymi drzwiami (Slide&Hide).",
+      "seo_slug": "neff"
+    },
+    {
+      "id": "h-haier",
+      "type": "holding",
+      "name": "Haier Europe",
+      "country": "Chiny",
+      "description": "Chiński gigant, który przejął jedną z najstarszych grup AGD w Europie (Candy/Hoover).",
+      "seo_slug": "haier-europe"
+    },
+    {
+      "id": "b-haier",
+      "type": "brand",
+      "parentId": "h-haier",
+      "name": "Haier",
+      "origin": "Chiny",
+      "segment": "Premium / Standard",
+      "history": "Dynamicznie rosnący gigant, szczególnie w kategorii innowacyjnych lodówek.",
+      "seo_slug": "haier",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-haier"
+      }
+    },
+    {
+      "id": "b-candy",
+      "type": "brand",
+      "parentId": "h-haier",
+      "name": "Candy",
+      "origin": "Włochy",
+      "segment": "Budżetowy",
+      "history": "Popularna marka znana głównie z pralek slim i taniego sprzętu do zabudowy.",
+      "seo_slug": "candy",
+      "monetization": {
+        "rtv_euro": "https://www.euro.com.pl/search.bhtml?keyword=candy"
+      }
+    },
+    {
+      "id": "b-hoover",
+      "type": "brand",
+      "parentId": "h-haier",
+      "name": "Hoover",
+      "origin": "USA",
+      "segment": "Standard",
+      "history": "Znana głównie z odkurzaczy, ale oferuje też dobre pralki i suszarki.",
+      "seo_slug": "hoover"
+    },
+    {
+      "id": "b-ge",
+      "type": "brand",
+      "parentId": "h-haier",
+      "name": "GE Appliances",
+      "origin": "USA",
+      "segment": "Premium",
+      "history": "Amerykańska legenda, rzadko w Polsce w dużym AGD, ale należy do chińskiej grupy.",
+      "seo_slug": "ge-appliances"
+    },
+    {
+      "id": "h-electrolux",
+      "type": "holding",
+      "name": "Electrolux Group",
+      "country": "Szwecja",
+      "description": "Szwedzki koncern konsolidujący rynek europejski.",
+      "seo_slug": "electrolux-group"
+    },
+    {
+      "id": "b-electrolux",
+      "type": "brand",
+      "parentId": "h-electrolux",
+      "name": "Electrolux",
+      "origin": "Szwecja",
+      "segment": "Standard / Premium",
+      "history": "Lider w kategorii piekarników parowych i odkurzaczy.",
+      "factories_pl": [
+        "Oława",
+        "Świdnica",
+        "Zabrze"
+      ],
+      "seo_slug": "electrolux",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-electrolux"
+      }
+    },
+    {
+      "id": "b-aeg",
+      "type": "brand",
+      "parentId": "h-electrolux",
+      "name": "AEG",
+      "origin": "Niemcy",
+      "segment": "Premium",
+      "history": "Pozycjonowana wyżej niż Electrolux, historycznie niemiecka marka przejęta przez Szwedów.",
+      "seo_slug": "aeg"
+    },
+    {
+      "id": "b-zanussi",
+      "type": "brand",
+      "parentId": "h-electrolux",
+      "name": "Zanussi",
+      "origin": "Włochy",
+      "segment": "Budżetowy",
+      "history": "Marka budżetowa, głównie pralki i lodówki.",
+      "seo_slug": "zanussi"
+    },
+    {
+      "id": "h-hisense",
+      "type": "holding",
+      "name": "Hisense Group",
+      "country": "Chiny",
+      "description": "Chiński koncern, który przejął słoweńskie Gorenje, tworząc silnego gracza w Europie Środkowej.",
+      "seo_slug": "hisense-group"
+    },
+    {
+      "id": "b-hisense",
+      "type": "brand",
+      "parentId": "h-hisense",
+      "name": "Hisense",
+      "origin": "Chiny",
+      "segment": "Standard",
+      "history": "Konkurent Samsunga i LG w segmencie chłodnictwa.",
+      "seo_slug": "hisense",
+      "monetization": {
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-hisense"
+      }
+    },
+    {
+      "id": "b-gorenje",
+      "type": "brand",
+      "parentId": "h-hisense",
+      "name": "Gorenje",
+      "origin": "Słowenia",
+      "segment": "Standard",
+      "history": "Znana z designu (linie Retro, Ora-Ito), obecnie z kapitałem chińskim.",
+      "seo_slug": "gorenje"
+    },
+    {
+      "id": "b-asko",
+      "type": "brand",
+      "parentId": "h-hisense",
+      "name": "Asko",
+      "origin": "Szwecja",
+      "segment": "Premium",
+      "history": "Skandynawska marka premium, niezwykle solidne pralki i zmywarki, bez fartucha w drzwiach.",
+      "seo_slug": "asko"
+    },
+    {
+      "id": "h-amica",
+      "type": "holding",
+      "name": "Amica Group",
+      "country": "Polska",
+      "description": "Polska firma z Wronek, potężny gracz w Europie Wschodniej i Skandynawii.",
+      "seo_slug": "amica-group"
+    },
+    {
+      "id": "b-amica",
+      "type": "brand",
+      "parentId": "h-amica",
+      "name": "Amica",
+      "origin": "Polska",
+      "segment": "Standard",
+      "history": "Największy polski producent (szczególnie piekarniki i kuchnie wolnostojące).",
+      "factories_pl": [
+        "Wronki"
+      ],
+      "seo_slug": "amica",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-amica",
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-amica"
+      }
+    },
+    {
+      "id": "b-hansa",
+      "type": "brand",
+      "parentId": "h-amica",
+      "name": "Hansa",
+      "origin": "Polska",
+      "segment": "Standard",
+      "history": "Marka eksportowa grupy Amica, głównie na rynek Europy Wschodniej.",
+      "seo_slug": "hansa"
+    },
+    {
+      "id": "b-gram",
+      "type": "brand",
+      "parentId": "h-amica",
+      "name": "Gram",
+      "origin": "Dania",
+      "segment": "Standard",
+      "history": "Duńska marka sprzętu chłodniczego i grzewczego przejęta przez grupę Amica.",
+      "seo_slug": "gram"
+    },
+    {
+      "id": "b-cda",
+      "type": "brand",
+      "parentId": "h-amica",
+      "name": "CDA",
+      "origin": "Wielka Brytania",
+      "segment": "Standard",
+      "history": "Brytyjska marka sprzętu do zabudowy, kupiona przez grupę Amica.",
+      "seo_slug": "cda"
+    },
+    {
+      "id": "b-fagor",
+      "type": "brand",
+      "parentId": "h-amica",
+      "name": "Fagor",
+      "origin": "Hiszpania",
+      "segment": "Standard",
+      "history": "Hiszpańska legenda, na którą Amica nabyła licencję po upadku oryginalnego Fagor Electrodomésticos.",
+      "seo_slug": "fagor"
+    },
+    {
+      "id": "h-vestel",
+      "type": "holding",
+      "name": "Vestel",
+      "country": "Turcja",
+      "description": "Cichy gigant. Potężna fabryka OEM/ODM produkująca dla innych.",
+      "seo_slug": "vestel"
+    },
+    {
+      "id": "b-sharp",
+      "type": "brand",
+      "parentId": "h-vestel",
+      "name": "Sharp",
+      "origin": "Japonia / Turcja",
+      "segment": "Standard",
+      "history": "Popularny w kategorii lodówek i zmywarek. Technologia i produkcja tureckiego Vestela na licencji.",
+      "seo_slug": "sharp",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-sharp"
+      }
+    },
+    {
+      "id": "b-toshiba",
+      "type": "brand",
+      "parentId": "h-vestel",
+      "name": "Toshiba",
+      "origin": "Japonia / Chiny / Turcja",
+      "segment": "Standard",
+      "history": "W Polsce obecna głównie w segmencie lodówek wielodrzwiowych (produkowanych m.in. przez Vestel).",
+      "seo_slug": "toshiba"
+    },
+    {
+      "id": "b-finlux",
+      "type": "brand",
+      "parentId": "h-vestel",
+      "name": "Finlux",
+      "origin": "Turcja",
+      "segment": "Budżetowy",
+      "history": "Budżetowa marka telewizorów i AGD bezpośrednio zarządzana przez Vestel.",
+      "seo_slug": "finlux"
+    },
+    {
+      "id": "b-vestfrost",
+      "type": "brand",
+      "parentId": "h-vestel",
+      "name": "Vestfrost",
+      "origin": "Dania",
+      "segment": "Premium / Standard",
+      "history": "Duńska marka przejęta przez koncern Vestel, znana z solidnego chłodnictwa i oczyszczaczy powietrza.",
+      "seo_slug": "vestfrost"
+    },
+    {
+      "id": "h-samsung",
+      "type": "holding",
+      "name": "Samsung Electronics",
+      "country": "Korea Południowa",
+      "description": "Gigant technologiczny z własnymi liniami produkcyjnymi.",
+      "seo_slug": "samsung-group"
+    },
+    {
+      "id": "b-samsung",
+      "type": "brand",
+      "parentId": "h-samsung",
+      "name": "Samsung",
+      "origin": "Korea Południowa",
+      "segment": "Standard / Premium",
+      "history": "Lider sprzedaży lodówek i pralek.",
+      "factories_pl": [
+        "Wronki"
+      ],
+      "seo_slug": "samsung",
+      "monetization": {
+        "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-samsung"
+      }
+    },
+    {
+      "id": "h-lg",
+      "type": "holding",
+      "name": "LG Electronics",
+      "country": "Korea Południowa",
+      "description": "Jeden z liderów innowacji, z własnymi ogromnymi fabrykami.",
+      "seo_slug": "lg-group"
+    },
+    {
+      "id": "b-lg",
+      "type": "brand",
+      "parentId": "h-lg",
+      "name": "LG",
+      "origin": "Korea Południowa",
+      "segment": "Standard / Premium",
+      "history": "Głównie lodówki Side-by-Side i pralki Direct Drive.",
+      "factories_pl": [
+        "Wrocław",
+        "Mława"
+      ],
+      "seo_slug": "lg",
+      "monetization": {
+        "media_expert": "https://www.mediaexpert.pl/agd/brand-lg"
+      }
+    },
+    {
+      "id": "b-miele",
+      "type": "brand",
+      "name": "Miele",
+      "origin": "Niemcy",
+      "segment": "Luksusowy",
+      "history": "Wzorzec trwałości i prestiżu, niezależna firma rodzinna.",
+      "seo_slug": "miele"
+    },
+    {
+      "id": "b-liebherr",
+      "type": "brand",
+      "name": "Liebherr",
+      "origin": "Niemcy / Szwajcaria",
+      "segment": "Luksusowy",
+      "history": "Absolutny lider w technologii chłodniczej, niezależna grupa.",
+      "seo_slug": "liebherr"
+    },
+    {
+      "id": "b-smeg",
+      "type": "brand",
+      "name": "Smeg",
+      "origin": "Włochy",
+      "segment": "Premium",
+      "history": "Włoski design, kultowe lodówki retro, firma rodzinna.",
+      "seo_slug": "smeg"
+    },
+    {
+      "id": "h-pl-ind",
+      "type": "holding",
+      "name": "Polskie Marki Niezależne",
+      "country": "Polska",
+      "description": "Firmy z polskim rodowodem, posiadające własne fabryki lub bazujące na imporcie pod swoim logo.",
+      "seo_slug": "polskie-niezalezne"
+    },
+    {
+      "id": "b-kernau",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Kernau",
+      "origin": "Polska",
+      "segment": "Standard",
+      "history": "Polska marka oferująca pełne spektrum dużego AGD z długą gwarancją.",
+      "seo_slug": "kernau"
+    },
+    {
+      "id": "b-mpm",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "MPM",
+      "origin": "Polska",
+      "segment": "Budżetowy / Standard",
+      "history": "Polska firma rodzinna, szeroka oferta lodówek i pralek w dobrych cenach.",
+      "seo_slug": "mpm"
+    },
+    {
+      "id": "b-solgaz",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Solgaz",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Polski innowator, słynny z płyt gazowych „gaz-pod-szkłem”.",
+      "seo_slug": "solgaz"
+    },
+    {
+      "id": "b-ciarko",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Ciarko Design",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Czołowy polski producent okapów.",
+      "factories_pl": [
+        "Sanok"
+      ],
+      "seo_slug": "ciarko"
+    },
+    {
+      "id": "b-akpo",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Akpo",
+      "origin": "Polska",
+      "segment": "Standard / Budżetowy",
+      "history": "Polska marka specjalizująca się w okapach i płytach grzewczych.",
+      "seo_slug": "akpo"
+    },
+    {
+      "id": "b-globalo",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Globalo",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Polska marka innowacyjnych i cichych okapów kuchennych segmentu wyższego.",
+      "seo_slug": "globalo"
+    },
+    {
+      "id": "b-vdb",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "VDB",
+      "origin": "Polska",
+      "segment": "Standard",
+      "history": "Specjalistyczny producent okapów z własnym wzornictwem.",
+      "seo_slug": "vdb"
+    },
+    {
+      "id": "h-market",
+      "type": "holding",
+      "name": "Marki Marketowe (OEM)",
+      "country": "Globalnie",
+      "description": "Marki należące do sieci handlowych, produkcja zlecana zewnętrznym gigantom.",
+      "seo_slug": "marki-marketowe"
+    },
+    {
+      "id": "b-raven",
+      "type": "brand",
+      "parentId": "h-market",
+      "name": "Raven",
+      "origin": "Polska (Marka własna)",
+      "segment": "Budżetowy",
+      "history": "Marka własna RTV Euro AGD (produkcja m m.in. Amica, Vestel, Midea).",
+      "seo_slug": "raven"
+    },
+    {
+      "id": "b-koenic",
+      "type": "brand",
+      "parentId": "h-market",
+      "name": "Koenic",
+      "origin": "Niemcy (Marka własna)",
+      "segment": "Standard",
+      "history": "Marka własna sprzętu dla sieci Media Markt.",
+      "seo_slug": "koenic"
+    },
+    {
+      "id": "b-ok",
+      "type": "brand",
+      "parentId": "h-market",
+      "name": "OK.",
+      "origin": "Niemcy (Marka własna)",
+      "segment": "Budżetowy",
+      "history": "Najbardziej budżetowa marka własna dostępna w sieci Media Markt.",
+      "seo_slug": "ok"
+    },
+    {
+      "id": "b-bertazzoni",
+      "type": "brand",
+      "name": "Bertazzoni",
+      "origin": "Włochy",
+      "segment": "Luksusowy",
+      "history": "Włoskie luksusowe kuchnie wolnostojące.",
+      "seo_slug": "bertazzoni"
+    },
+    {
+      "id": "b-elica",
+      "type": "brand",
+      "name": "Elica",
+      "origin": "Włochy",
+      "segment": "Premium",
+      "history": "Włoski gigant i specjalista od innowacyjnych okapów kuchennych.",
+      "seo_slug": "elica"
+    },
+    {
+      "id": "b-falmec",
+      "type": "brand",
+      "name": "Falmec",
+      "origin": "Włochy",
+      "segment": "Luksusowy",
+      "history": "Włoski ekspert z zakresu niezwykle cichych okapów (technologia NRS).",
+      "seo_slug": "falmec"
+    },
+    {
+      "id": "b-faber",
+      "type": "brand",
+      "name": "Faber",
+      "origin": "Włochy",
+      "segment": "Premium",
+      "history": "Wynalazca okapu kuchennego, obecnie część grupy Franke.",
+      "seo_slug": "faber"
+    },
+    {
+      "id": "b-hitachi",
+      "type": "brand",
+      "name": "Hitachi",
+      "origin": "Japonia",
+      "segment": "Premium",
+      "history": "Japońskie lodówki klasy premium (często Multidoor), na Europę wspierane kapitałem Arçelik.",
+      "seo_slug": "hitachi"
+    },
+    {
+      "id": "b-teka",
+      "type": "brand",
+      "name": "Teka",
+      "origin": "Hiszpania / Niemcy",
+      "segment": "Premium",
+      "history": "Specjalista od sprzętu do zabudowy i zlewozmywaków.",
+      "seo_slug": "teka"
+    },
+    {
+      "id": "b-lofra",
+      "type": "brand",
+      "name": "Lofra",
+      "origin": "Włochy",
+      "segment": "Luksusowy",
+      "history": "Zaawansowane włoskie kuchnie wolnostojące w stylu profesjonalnym/retro.",
+      "seo_slug": "lofra"
+    },
+    {
+      "id": "b-fulgor",
+      "type": "brand",
+      "name": "Fulgor Milano",
+      "origin": "Włochy",
+      "segment": "Luksusowy",
+      "history": "Ekskluzywny, wbudowany sprzęt kuchenny o bardzo nowoczesnym designie.",
+      "seo_slug": "fulgor"
+    },
+    {
+      "id": "b-ravanson",
+      "type": "brand",
+      "name": "Ravanson",
+      "origin": "Polska",
+      "segment": "Budżetowy",
+      "history": "Polska firma importująca bardzo tanie lodówki, chłodziarki i wentylatory.",
+      "seo_slug": "ravanson"
+    },
+    {
+      "id": "b-concept",
+      "type": "brand",
+      "name": "Concept",
+      "origin": "Czechy",
+      "segment": "Budżetowy / Standard",
+      "history": "Czeska popularna linia małego i dużego AGD (w tym kolorowe lodówki retro).",
+      "seo_slug": "concept"
+    },
+    {
+      "id": "b-philco",
+      "type": "brand",
+      "name": "Philco",
+      "origin": "USA",
+      "segment": "Budżetowy",
+      "history": "Historycznie amerykańska marka, obecnie operująca na licencjach przez dystrybutorów (np. Fast ČR).",
+      "seo_slug": "philco"
+    },
+    {
+      "id": "b-lord",
+      "type": "brand",
+      "name": "Lord",
+      "origin": "Niemcy / Czechy",
+      "segment": "Standard",
+      "history": "Marka stawiająca na prostotę, bardzo długą gwarancję i brak zbędnej elektroniki.",
+      "seo_slug": "lord"
+    },
+    {
+      "id": "b-klarstein",
+      "type": "brand",
+      "name": "Klarstein",
+      "origin": "Niemcy",
+      "segment": "Budżetowy / Standard",
+      "history": "Niemiecka marka D2C słynąca z mocnego, często nietypowego designu (np. winiarki, okapy).",
+      "seo_slug": "klarstein"
+    },
+    {
+      "id": "b-mitsubishi",
+      "type": "brand",
+      "name": "Mitsubishi Electric",
+      "origin": "Japonia",
+      "segment": "Luksusowy",
+      "history": "Luksusowe i niezwykle bezawaryjne lodówki wolnostojące Multidoor.",
+      "seo_slug": "mitsubishi"
+    },
+    {
+      "id": "b-panasonic",
+      "type": "brand",
+      "name": "Panasonic",
+      "origin": "Japonia",
+      "segment": "Premium",
+      "history": "Pomału wycofująca się z Europy japońska marka znana z zaawansowanych pralek i lodówek.",
+      "seo_slug": "panasonic"
+    },
+    {
+      "id": "b-blaupunkt",
+      "type": "brand",
+      "name": "Blaupunkt",
+      "origin": "Niemcy",
+      "segment": "Premium",
+      "history": "Niegdyś car audio, dziś licencjonowany ekskluzywny sprzęt do studiów meblowych.",
+      "seo_slug": "blaupunkt"
+    },
+    {
+      "id": "b-franke",
+      "type": "brand",
+      "name": "Franke",
+      "origin": "Szwajcaria",
+      "segment": "Premium",
+      "history": "Lider rynku zlewozmywaków i baterii, oferuje także pełne linie szwajcarskiego AGD do zabudowy.",
+      "seo_slug": "franke"
+    },
+    {
+      "id": "b-tcl",
+      "type": "brand",
+      "name": "TCL",
+      "origin": "Chiny",
+      "segment": "Budżetowy",
+      "history": "Chiński gigant RTV, silnie wchodzący z agresywną cenowo ofertą pralek i lodówek.",
+      "seo_slug": "tcl"
+    },
+    {
+      "id": "b-chiq",
+      "type": "brand",
+      "name": "CHiQ",
+      "origin": "Chiny",
+      "segment": "Budżetowy",
+      "history": "Należąca do Changhong marka telewizorów oferująca coraz tańsze lodówki bezszronowe.",
+      "seo_slug": "chiq"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-b-whirlpool",
+      "source": "h-beko",
+      "target": "b-whirlpool",
+      "label": "Licencja/Właściciel"
+    },
+    {
+      "id": "e-b-beko",
+      "source": "h-beko",
+      "target": "b-beko",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-b-indesit",
+      "source": "h-beko",
+      "target": "b-indesit",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-b-hotpoint",
+      "source": "h-beko",
+      "target": "b-hotpoint",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-b-bauknecht",
+      "source": "h-beko",
+      "target": "b-bauknecht",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-b-grundig",
+      "source": "h-beko",
+      "target": "b-grundig",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-b-polar",
+      "source": "h-beko",
+      "target": "b-polar",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-b-ignis",
+      "source": "h-beko",
+      "target": "b-ignis",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-b-privileg",
+      "source": "h-beko",
+      "target": "b-privileg",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-bsh-bosch",
+      "source": "h-bsh",
+      "target": "b-bosch",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-bsh-siemens",
+      "source": "h-bsh",
+      "target": "b-siemens",
+      "label": "Licencja/Prawa"
+    },
+    {
+      "id": "e-bsh-gaggenau",
+      "source": "h-bsh",
+      "target": "b-gaggenau",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-bsh-neff",
+      "source": "h-bsh",
+      "target": "b-neff",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-haier-haier",
+      "source": "h-haier",
+      "target": "b-haier",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-haier-candy",
+      "source": "h-haier",
+      "target": "b-candy",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-haier-hoover",
+      "source": "h-haier",
+      "target": "b-hoover",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-haier-ge",
+      "source": "h-haier",
+      "target": "b-ge",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-elx-elx",
+      "source": "h-electrolux",
+      "target": "b-electrolux",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-elx-aeg",
+      "source": "h-electrolux",
+      "target": "b-aeg",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-elx-zanussi",
+      "source": "h-electrolux",
+      "target": "b-zanussi",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-his-his",
+      "source": "h-hisense",
+      "target": "b-hisense",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-his-gor",
+      "source": "h-hisense",
+      "target": "b-gorenje",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-his-asko",
+      "source": "h-hisense",
+      "target": "b-asko",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-ami-ami",
+      "source": "h-amica",
+      "target": "b-amica",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-ami-han",
+      "source": "h-amica",
+      "target": "b-hansa",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-ami-gram",
+      "source": "h-amica",
+      "target": "b-gram",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-ami-cda",
+      "source": "h-amica",
+      "target": "b-cda",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-ami-fagor",
+      "source": "h-amica",
+      "target": "b-fagor",
+      "label": "Licencja"
+    },
+    {
+      "id": "e-ves-sharp",
+      "source": "h-vestel",
+      "target": "b-sharp",
+      "label": "Produkcja / Licencja"
+    },
+    {
+      "id": "e-ves-tos",
+      "source": "h-vestel",
+      "target": "b-toshiba",
+      "label": "Produkcja / Licencja"
+    },
+    {
+      "id": "e-ves-finlux",
+      "source": "h-vestel",
+      "target": "b-finlux",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-ves-vestfrost",
+      "source": "h-vestel",
+      "target": "b-vestfrost",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-sam-sam",
+      "source": "h-samsung",
+      "target": "b-samsung",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-lg-lg",
+      "source": "h-lg",
+      "target": "b-lg",
+      "label": "Marka Główna"
+    },
+    {
+      "id": "e-pl-ker",
+      "source": "h-pl-ind",
+      "target": "b-kernau",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl-mpm",
+      "source": "h-pl-ind",
+      "target": "b-mpm",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl-sol",
+      "source": "h-pl-ind",
+      "target": "b-solgaz",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl-ciarko",
+      "source": "h-pl-ind",
+      "target": "b-ciarko",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl-akpo",
+      "source": "h-pl-ind",
+      "target": "b-akpo",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl-globalo",
+      "source": "h-pl-ind",
+      "target": "b-globalo",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl-vdb",
+      "source": "h-pl-ind",
+      "target": "b-vdb",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-mar-rav",
+      "source": "h-market",
+      "target": "b-raven",
+      "label": "Marka Własna"
+    },
+    {
+      "id": "e-mar-koenic",
+      "source": "h-market",
+      "target": "b-koenic",
+      "label": "Marka Własna"
+    },
+    {
+      "id": "e-mar-ok",
+      "source": "h-market",
+      "target": "b-ok",
+      "label": "Marka Własna"
+    }
+  ]
+}
