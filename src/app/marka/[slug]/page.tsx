@@ -59,6 +59,8 @@ export default async function BrandPage(
     origin?: string;
     history?: string;
     factories_pl?: string[];
+    founded_year?: number;
+    business_structure?: string;
     segment?: string;
   };
 
@@ -85,9 +87,25 @@ export default async function BrandPage(
             className="w-20 h-20 object-contain mx-auto mb-4 rounded-2xl"
           />
           <h1 className="text-4xl font-black text-slate-900 mb-2">{node.name}</h1>
-          <p className="text-slate-500 font-medium">
-            {brandNode.origin} · Segment: {brandNode.segment ?? 'Standard'}
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-slate-500 font-medium">
+              {brandNode.origin} · Segment: {brandNode.segment ?? 'Standard'}
+            </p>
+            {(brandNode.founded_year || brandNode.business_structure) && (
+              <div className="flex flex-wrap justify-center gap-2 mt-1">
+                {brandNode.founded_year && (
+                  <span className="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg text-slate-600 text-xs font-bold">
+                    Założona: {brandNode.founded_year}
+                  </span>
+                )}
+                {brandNode.business_structure && (
+                  <span className="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg text-slate-600 text-xs font-bold">
+                    {brandNode.business_structure}
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Ownership card */}

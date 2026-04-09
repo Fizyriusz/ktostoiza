@@ -122,11 +122,49 @@ export default function DetailsPanel({ node, onClose }: DetailsPanelProps) {
               <div className="flex items-center justify-center gap-2 text-slate-500 text-sm font-medium bg-slate-100 px-3 py-1 rounded-full w-min mx-auto whitespace-nowrap">
                 <span>{flag}</span> {origin}
               </div>
+
+              {node.type === 'brand' && (node.founded_year || node.business_structure) && (
+                <div className="flex flex-wrap justify-center gap-1.5 mt-3">
+                  {node.founded_year && (
+                    <div className="px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-slate-500 text-[11px] font-bold shadow-sm">
+                      Założona: {node.founded_year}
+                    </div>
+                  )}
+                  {node.business_structure && (
+                    <div className="px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-slate-500 text-[11px] font-bold shadow-sm">
+                      {node.business_structure}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
             
             {node.type === 'brand' && node.segment && (
-              <div className="mt-4 px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl text-blue-700 text-sm font-semibold text-center w-full">
+              <div className="mt-5 px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl text-blue-700 text-sm font-semibold text-center w-full">
                 Grupa: {node.segment}
+              </div>
+            )}
+
+            {node.type === 'brand' && node.product_range && (
+              <div className="mt-2 group relative w-full">
+                <div className="cursor-help px-4 py-2 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm font-semibold text-center w-full transition-colors hover:bg-slate-700 shadow-sm">
+                  Zakres: {node.product_range}
+                </div>
+                {node.product_categories && node.product_categories.length > 0 && (
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-[110%] mb-1 w-max max-w-[320px] bg-slate-900 text-white rounded-xl p-3 shadow-xl opacity-0 group-hover:opacity-100 pointer-events-none transition-all z-50 scale-95 group-hover:scale-100 origin-bottom">
+                    <div className="font-bold text-slate-400 mb-1.5 uppercase tracking-widest text-[9px] text-center">
+                      Kategorie produktowe
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-1.5">
+                      {node.product_categories.map(cat => (
+                        <span key={cat} className="bg-slate-800 border border-slate-700 text-[10px] font-medium px-2 py-0.5 rounded-md whitespace-nowrap">
+                          {cat}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-3 h-3 bg-slate-900 rotate-45 border-r border-b border-transparent"></div>
+                  </div>
+                )}
               </div>
             )}
           </div>

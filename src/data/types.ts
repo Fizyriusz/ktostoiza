@@ -19,6 +19,10 @@ export interface BrandNode {
   segment: string;
   history: string;
   factories_pl?: string[];
+  founded_year?: number;
+  business_structure?: string;
+  product_range?: string;
+  product_categories?: string[];
   seo_slug: string;
   monetization?: {
     ceneo?: string;

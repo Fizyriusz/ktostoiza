@@ -18,15 +18,27 @@
       "segment": "Budżetowy / Standard",
       "history": "Główna marka koncernu Arçelik, znana z przystępnych cenowo i innowacyjnych rozwiązań.",
       "factories_pl": [
-        "Łódź",
-        "Radomsko",
-        "Wrocław"
+        "Radomsko (pralki, zmywarki)",
+        "Wrocław (piekarniki)"
       ],
       "seo_slug": "beko",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-beko",
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-beko"
-      }
+      },
+      "founded_year": 1955,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące",
+        "Mikrofalówki"
+      ]
     },
     {
       "id": "b-whirlpool",
@@ -37,15 +49,27 @@
       "segment": "Standard",
       "history": "Jedna z najpopularniejszych marek w Polsce, obecnie zarządzana w Europie przez Beko.",
       "factories_pl": [
-        "Łódź",
-        "Radomsko",
-        "Wrocław"
+        "Radomsko (pralki, zmywarki)",
+        "Wrocław (piekarniki)"
       ],
       "seo_slug": "whirlpool",
       "monetization": {
         "rtv_euro": "https://www.euro.com.pl/search.bhtml?keyword=whirlpool",
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-whirlpool"
-      }
+      },
+      "founded_year": 1911,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Mikrofalówki",
+        "Okapy"
+      ]
     },
     {
       "id": "b-indesit",
@@ -58,7 +82,10 @@
       "seo_slug": "indesit",
       "monetization": {
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-indesit"
-      }
+      },
+      "founded_year": 1953,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-hotpoint",
@@ -68,7 +95,10 @@
       "origin": "Włochy / USA",
       "segment": "Standard",
       "history": "Marka wygaszana na rzecz Whirlpoola, ale wciąż obecna na rynku.",
-      "seo_slug": "hotpoint-ariston"
+      "seo_slug": "hotpoint-ariston",
+      "founded_year": 1911,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-bauknecht",
@@ -78,7 +108,10 @@
       "origin": "Niemcy",
       "segment": "Premium",
       "history": "Niemiecka marka premium, rzadsza w Polsce, ale technologicznie bardzo zaawansowana.",
-      "seo_slug": "bauknecht"
+      "seo_slug": "bauknecht",
+      "founded_year": 1919,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-grundig",
@@ -88,7 +121,10 @@
       "origin": "Niemcy",
       "segment": "Standard / Premium",
       "history": "Dawniej niemiecka legenda RTV, obecnie marka AGD w portfolio Beko.",
-      "seo_slug": "grundig"
+      "seo_slug": "grundig",
+      "founded_year": 1945,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-polar",
@@ -101,7 +137,10 @@
       "factories_pl": [
         "Wrocław"
       ],
-      "seo_slug": "polar"
+      "seo_slug": "polar",
+      "founded_year": 1951,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)"
     },
     {
       "id": "b-ignis",
@@ -111,7 +150,10 @@
       "origin": "Włochy",
       "segment": "Budżetowy",
       "history": "Marka regionalna i niszowa, dawniej silna we Włoszech, używana głównie w sieciach meblowych.",
-      "seo_slug": "ignis"
+      "seo_slug": "ignis",
+      "founded_year": 1943,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Szerokie Portfolio"
     },
     {
       "id": "b-privileg",
@@ -121,7 +163,10 @@
       "origin": "Niemcy",
       "segment": "Budżetowy",
       "history": "Marka dawnego niemieckiego domu wysyłkowego Quelle, obecnie w rękach Beko Europe.",
-      "seo_slug": "privileg"
+      "seo_slug": "privileg",
+      "founded_year": 1964,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "h-bsh",
@@ -140,15 +185,29 @@
       "segment": "Standard / Premium",
       "history": "Marka globalna. W Polsce podział na serie 2, 4, 6 i 8 (zmywarki i pralki).",
       "factories_pl": [
-        "Łódź",
-        "Wrocław",
-        "Rogoźnica"
+        "Łódź (pralki, zmywarki, suszarki)",
+        "Wrocław (lodówki, piekarniki)",
+        "Rogoźnica (małe AGD)"
       ],
       "seo_slug": "bosch",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-bosch",
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-bosch"
-      }
+      },
+      "founded_year": 1886,
+      "business_structure": "Struktura Fundacyjna",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Mikrofalówki",
+        "Ekspresy do kawy"
+      ]
     },
     {
       "id": "b-siemens",
@@ -159,13 +218,16 @@
       "segment": "Premium",
       "history": "Bliźniacza marka Boscha, często o wyższym designie (BSH używa nazwy na licencji).",
       "factories_pl": [
-        "Łódź",
-        "Wrocław"
+        "Łódź (pralki, zmywarki, suszarki)",
+        "Wrocław (lodówki, piekarniki)"
       ],
       "seo_slug": "siemens",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-siemens"
-      }
+      },
+      "founded_year": 1847,
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-gaggenau",
@@ -175,7 +237,10 @@
       "origin": "Niemcy",
       "segment": "Luksusowy",
       "history": "Ultra-luksusowa marka grupy BSH, dedykowana dla najbardziej wymagających.",
-      "seo_slug": "gaggenau"
+      "seo_slug": "gaggenau",
+      "founded_year": 1683,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio (Luksusowe)"
     },
     {
       "id": "b-neff",
@@ -185,7 +250,10 @@
       "origin": "Niemcy",
       "segment": "Premium",
       "history": "Specjalista od piekarników z chowanymi drzwiami (Slide&Hide).",
-      "seo_slug": "neff"
+      "seo_slug": "neff",
+      "founded_year": 1877,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Specjalista: Grzejnictwo (Piekarniki, Płyty)"
     },
     {
       "id": "h-haier",
@@ -206,7 +274,21 @@
       "seo_slug": "haier",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-haier"
-      }
+      },
+      "founded_year": 1984,
+      "factories_pl": [
+        "Brak fabryk w Polsce. Produkcja na Europę odbywa się głównie w Turcji, Rumunii (lodówki) oraz Chinach."
+      ],
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki Multidoor",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Winiarki"
+      ]
     },
     {
       "id": "b-candy",
@@ -219,7 +301,10 @@
       "seo_slug": "candy",
       "monetization": {
         "rtv_euro": "https://www.euro.com.pl/search.bhtml?keyword=candy"
-      }
+      },
+      "founded_year": 1945,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-hoover",
@@ -229,7 +314,10 @@
       "origin": "USA",
       "segment": "Standard",
       "history": "Znana głównie z odkurzaczy, ale oferuje też dobre pralki i suszarki.",
-      "seo_slug": "hoover"
+      "seo_slug": "hoover",
+      "founded_year": 1908,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-ge",
@@ -239,7 +327,10 @@
       "origin": "USA",
       "segment": "Premium",
       "history": "Amerykańska legenda, rzadko w Polsce w dużym AGD, ale należy do chińskiej grupy.",
-      "seo_slug": "ge-appliances"
+      "seo_slug": "ge-appliances",
+      "founded_year": 1892,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "h-electrolux",
@@ -258,14 +349,28 @@
       "segment": "Standard / Premium",
       "history": "Lider w kategorii piekarników parowych i odkurzaczy.",
       "factories_pl": [
-        "Oława",
-        "Świdnica",
-        "Zabrze"
+        "Oława (pralki)",
+        "Świdnica (kuchenki)",
+        "Żarów (zmywarki)",
+        "Siewierz (suszarki)"
       ],
       "seo_slug": "electrolux",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-electrolux"
-      }
+      },
+      "founded_year": 1919,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Mikrofalówki"
+      ]
     },
     {
       "id": "b-aeg",
@@ -275,7 +380,10 @@
       "origin": "Niemcy",
       "segment": "Premium",
       "history": "Pozycjonowana wyżej niż Electrolux, historycznie niemiecka marka przejęta przez Szwedów.",
-      "seo_slug": "aeg"
+      "seo_slug": "aeg",
+      "founded_year": 1883,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-zanussi",
@@ -285,7 +393,10 @@
       "origin": "Włochy",
       "segment": "Budżetowy",
       "history": "Marka budżetowa, głównie pralki i lodówki.",
-      "seo_slug": "zanussi"
+      "seo_slug": "zanussi",
+      "founded_year": 1916,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "h-hisense",
@@ -306,7 +417,21 @@
       "seo_slug": "hisense",
       "monetization": {
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-hisense"
-      }
+      },
+      "founded_year": 1969,
+      "factories_pl": [
+        "Brak fabryk w Polsce. Korzysta z zaplecza Gorenje na Bałkanach oraz własnych fabryk w Chinach."
+      ],
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze"
+      ]
     },
     {
       "id": "b-gorenje",
@@ -316,7 +441,22 @@
       "origin": "Słowenia",
       "segment": "Standard",
       "history": "Znana z designu (linie Retro, Ora-Ito), obecnie z kapitałem chińskim.",
-      "seo_slug": "gorenje"
+      "seo_slug": "gorenje",
+      "founded_year": 1950,
+      "factories_pl": [
+        "Brak fabryk w Polsce. Produkcja skoncentrowana w Słowenii (Velenje) oraz Serbii (Valjevo) pod nadzorem grupy Hisense."
+      ],
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki (Retro)",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące"
+      ]
     },
     {
       "id": "b-asko",
@@ -326,7 +466,10 @@
       "origin": "Szwecja",
       "segment": "Premium",
       "history": "Skandynawska marka premium, niezwykle solidne pralki i zmywarki, bez fartucha w drzwiach.",
-      "seo_slug": "asko"
+      "seo_slug": "asko",
+      "founded_year": 1950,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio (Premium)"
     },
     {
       "id": "h-amica",
@@ -345,13 +488,26 @@
       "segment": "Standard",
       "history": "Największy polski producent (szczególnie piekarniki i kuchnie wolnostojące).",
       "factories_pl": [
-        "Wronki"
+        "Wronki (kuchnie wolnostojące, piekarniki, płyty grzejne). Pozostały asortyment (lodówki, pralki) zlecany partnerom OEM: Midea, Samsung oraz Vestel."
       ],
       "seo_slug": "amica",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-amica",
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-amica"
-      }
+      },
+      "founded_year": 1945,
+      "business_structure": "Spółka Publiczna (GPW)",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące",
+        "Okapy",
+        "Zmywarki",
+        "Lodówki",
+        "Pralki",
+        "Mikrofalówki"
+      ]
     },
     {
       "id": "b-hansa",
@@ -361,7 +517,10 @@
       "origin": "Polska",
       "segment": "Standard",
       "history": "Marka eksportowa grupy Amica, głównie na rynek Europy Wschodniej.",
-      "seo_slug": "hansa"
+      "seo_slug": "hansa",
+      "founded_year": 1999,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-gram",
@@ -371,7 +530,10 @@
       "origin": "Dania",
       "segment": "Standard",
       "history": "Duńska marka sprzętu chłodniczego i grzewczego przejęta przez grupę Amica.",
-      "seo_slug": "gram"
+      "seo_slug": "gram",
+      "founded_year": 1901,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-cda",
@@ -381,7 +543,10 @@
       "origin": "Wielka Brytania",
       "segment": "Standard",
       "history": "Brytyjska marka sprzętu do zabudowy, kupiona przez grupę Amica.",
-      "seo_slug": "cda"
+      "seo_slug": "cda",
+      "founded_year": 1991,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-fagor",
@@ -391,7 +556,10 @@
       "origin": "Hiszpania",
       "segment": "Standard",
       "history": "Hiszpańska legenda, na którą Amica nabyła licencję po upadku oryginalnego Fagor Electrodomésticos.",
-      "seo_slug": "fagor"
+      "seo_slug": "fagor",
+      "founded_year": 1956,
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "h-vestel",
@@ -412,7 +580,13 @@
       "seo_slug": "sharp",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-sharp"
-      }
+      },
+      "founded_year": 1912,
+      "factories_pl": [
+        "Brak własnych fabryk w Polsce w segmencie AGD. Produkcja zlecana na licencji tureckiemu koncernowi Vestel."
+      ],
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-toshiba",
@@ -422,7 +596,10 @@
       "origin": "Japonia / Chiny / Turcja",
       "segment": "Standard",
       "history": "W Polsce obecna głównie w segmencie lodówek wielodrzwiowych (produkowanych m.in. przez Vestel).",
-      "seo_slug": "toshiba"
+      "seo_slug": "toshiba",
+      "founded_year": 1939,
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Szerokie Portfolio (Głównie Chłodnictwo)"
     },
     {
       "id": "b-finlux",
@@ -432,7 +609,10 @@
       "origin": "Turcja",
       "segment": "Budżetowy",
       "history": "Budżetowa marka telewizorów i AGD bezpośrednio zarządzana przez Vestel.",
-      "seo_slug": "finlux"
+      "seo_slug": "finlux",
+      "founded_year": 1927,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Szerokie Portfolio"
     },
     {
       "id": "b-vestfrost",
@@ -442,7 +622,16 @@
       "origin": "Dania",
       "segment": "Premium / Standard",
       "history": "Duńska marka przejęta przez koncern Vestel, znana z solidnego chłodnictwa i oczyszczaczy powietrza.",
-      "seo_slug": "vestfrost"
+      "seo_slug": "vestfrost",
+      "founded_year": 1963,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Specjalista: Chłodnictwo i Winiarki",
+      "product_categories": [
+        "Lodówki",
+        "Winiarki",
+        "Zamrażarki",
+        "Oczyszczacze powietrza"
+      ]
     },
     {
       "id": "h-samsung",
@@ -461,12 +650,25 @@
       "segment": "Standard / Premium",
       "history": "Lider sprzedaży lodówek i pralek.",
       "factories_pl": [
-        "Wronki"
+        "Wronki (lodówki, pralki)"
       ],
       "seo_slug": "samsung",
       "monetization": {
         "ceneo": "https://www.ceneo.pl/Sprzet_AGD;szukaj-samsung"
-      }
+      },
+      "founded_year": 1938,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Mikrofalówki"
+      ]
     },
     {
       "id": "h-lg",
@@ -485,13 +687,16 @@
       "segment": "Standard / Premium",
       "history": "Głównie lodówki Side-by-Side i pralki Direct Drive.",
       "factories_pl": [
-        "Wrocław",
-        "Mława"
+        "Wrocław/Biskupice Podgórne (lodówki, pralki)",
+        "Mława (telewizory)"
       ],
       "seo_slug": "lg",
       "monetization": {
         "media_expert": "https://www.mediaexpert.pl/agd/brand-lg"
-      }
+      },
+      "founded_year": 1958,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-miele",
@@ -500,7 +705,24 @@
       "origin": "Niemcy",
       "segment": "Luksusowy",
       "history": "Wzorzec trwałości i prestiżu, niezależna firma rodzinna.",
-      "seo_slug": "miele"
+      "seo_slug": "miele",
+      "founded_year": 1899,
+      "factories_pl": [
+        "Ksawerów (pralki)"
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Ekspresy do kawy",
+        "Odkurzacze"
+      ]
     },
     {
       "id": "b-liebherr",
@@ -509,7 +731,16 @@
       "origin": "Niemcy / Szwajcaria",
       "segment": "Luksusowy",
       "history": "Absolutny lider w technologii chłodniczej, niezależna grupa.",
-      "seo_slug": "liebherr"
+      "seo_slug": "liebherr",
+      "founded_year": 1949,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Chłodnictwo",
+      "product_categories": [
+        "Lodówki",
+        "Zamrażarki",
+        "Winiarki",
+        "Chłodziarki profesjonalne"
+      ]
     },
     {
       "id": "b-smeg",
@@ -518,7 +749,10 @@
       "origin": "Włochy",
       "segment": "Premium",
       "history": "Włoski design, kultowe lodówki retro, firma rodzinna.",
-      "seo_slug": "smeg"
+      "seo_slug": "smeg",
+      "founded_year": 1948,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Pełne Portfolio (Design)"
     },
     {
       "id": "h-pl-ind",
@@ -536,7 +770,22 @@
       "origin": "Polska",
       "segment": "Standard",
       "history": "Polska marka oferująca pełne spektrum dużego AGD z długą gwarancją.",
-      "seo_slug": "kernau"
+      "seo_slug": "kernau",
+      "founded_year": 2011,
+      "factories_pl": [
+        "Brak własnych fabryk. Model OEM: produkcja zlecana zewnętrznym partnerom w celu optymalizacji kosztów. Główni dostawcy to turecki Vestel (lodówki, pralki) oraz polska Amica (kuchnie)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Pełne Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zlewozmywaki"
+      ]
     },
     {
       "id": "b-mpm",
@@ -546,7 +795,13 @@
       "origin": "Polska",
       "segment": "Budżetowy / Standard",
       "history": "Polska firma rodzinna, szeroka oferta lodówek i pralek w dobrych cenach.",
-      "seo_slug": "mpm"
+      "seo_slug": "mpm",
+      "founded_year": 1989,
+      "factories_pl": [
+        "Brak własnych fabryk w Polsce. Firma zleca produkcję pod własnym logo zakładom w Chinach oraz Turcji, skupiając się na własnym projekcie wizualnym i serwisie."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-solgaz",
@@ -556,7 +811,19 @@
       "origin": "Polska",
       "segment": "Premium",
       "history": "Polski innowator, słynny z płyt gazowych „gaz-pod-szkłem”.",
-      "seo_slug": "solgaz"
+      "seo_slug": "solgaz",
+      "founded_year": 2002,
+      "factories_pl": [
+        "Świdnica (opatentowane płyty gaz-pod-szkłem, płyty indukcyjne)"
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Grzejnictwo i Innowacje",
+      "product_categories": [
+        "Płyty gazowe pod szkłem",
+        "Płyty indukcyjne",
+        "Piekarniki",
+        "Okapy inteligentne"
+      ]
     },
     {
       "id": "b-ciarko",
@@ -567,9 +834,16 @@
       "segment": "Premium",
       "history": "Czołowy polski producent okapów.",
       "factories_pl": [
-        "Sanok"
+        "Sanok (okapy kuchenne)"
       ],
-      "seo_slug": "ciarko"
+      "seo_slug": "ciarko",
+      "founded_year": 1989,
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "product_categories": [
+        "Okapy kuchenne premium",
+        "Systemy wyciągowe"
+      ]
     },
     {
       "id": "b-akpo",
@@ -579,7 +853,17 @@
       "origin": "Polska",
       "segment": "Standard / Budżetowy",
       "history": "Polska marka specjalizująca się w okapach i płytach grzewczych.",
-      "seo_slug": "akpo"
+      "seo_slug": "akpo",
+      "founded_year": 1989,
+      "factories_pl": [
+        "Sońsk (okapy, płyty grzewcze)"
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy i Płyty",
+      "product_categories": [
+        "Okapy kuchenne",
+        "Płyty grzewcze"
+      ]
     },
     {
       "id": "b-globalo",
@@ -589,7 +873,17 @@
       "origin": "Polska",
       "segment": "Premium",
       "history": "Polska marka innowacyjnych i cichych okapów kuchennych segmentu wyższego.",
-      "seo_slug": "globalo"
+      "seo_slug": "globalo",
+      "founded_year": 2001,
+      "factories_pl": [
+        "Rzeszów (okapy kuchenne)"
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "product_categories": [
+        "Okapy kuchenne",
+        "Płyty grzewcze z wyciągiem"
+      ]
     },
     {
       "id": "b-vdb",
@@ -599,7 +893,13 @@
       "origin": "Polska",
       "segment": "Standard",
       "history": "Specjalistyczny producent okapów z własnym wzornictwem.",
-      "seo_slug": "vdb"
+      "seo_slug": "vdb",
+      "founded_year": 2006,
+      "factories_pl": [
+        "Chrzanów (okapy kuchenne)"
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne"
     },
     {
       "id": "h-market",
@@ -617,7 +917,20 @@
       "origin": "Polska (Marka własna)",
       "segment": "Budżetowy",
       "history": "Marka własna RTV Euro AGD (produkcja m m.in. Amica, Vestel, Midea).",
-      "seo_slug": "raven"
+      "seo_slug": "raven",
+      "founded_year": 2014,
+      "factories_pl": [
+        "Brak własnych fabryk. Marka własna RTV Euro AGD. Produkcja zlecana m.in. Amice (kuchenki), Vestelowi (lodówki) oraz producentom chińskim."
+      ],
+      "business_structure": "Marka Własna (RTV Euro AGD)",
+      "product_range": "Szerokie Portfolio",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki",
+        "Małe AGD"
+      ]
     },
     {
       "id": "b-koenic",
@@ -627,7 +940,13 @@
       "origin": "Niemcy (Marka własna)",
       "segment": "Standard",
       "history": "Marka własna sprzętu dla sieci Media Markt.",
-      "seo_slug": "koenic"
+      "seo_slug": "koenic",
+      "founded_year": 2010,
+      "factories_pl": [
+        "Brak własnych fabryk. Marka własna MediaMarkt/Saturn. Produkcja zlecana gigantom takim jak BSH (Niemcy/Polska) oraz Midea (Chiny)."
+      ],
+      "business_structure": "Marka Własna (MediaMarktSaturn)",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-ok",
@@ -637,7 +956,13 @@
       "origin": "Niemcy (Marka własna)",
       "segment": "Budżetowy",
       "history": "Najbardziej budżetowa marka własna dostępna w sieci Media Markt.",
-      "seo_slug": "ok"
+      "seo_slug": "ok",
+      "founded_year": 2010,
+      "factories_pl": [
+        "Brak własnych fabryk. Najtańsza marka własna MediaMarkt. Produkcja zlecana masowym fabrykom w Chinach i Turcji."
+      ],
+      "business_structure": "Marka Własna (MediaMarktSaturn)",
+      "product_range": "Szerokie Portfolio"
     },
     {
       "id": "b-bertazzoni",
@@ -646,7 +971,17 @@
       "origin": "Włochy",
       "segment": "Luksusowy",
       "history": "Włoskie luksusowe kuchnie wolnostojące.",
-      "seo_slug": "bertazzoni"
+      "seo_slug": "bertazzoni",
+      "founded_year": 1882,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Kuchnie Wolnostojące i Grzejnictwo",
+      "product_categories": [
+        "Kuchnie wolnostojące",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Lodówki luksusowe",
+        "Zmywarki"
+      ]
     },
     {
       "id": "b-elica",
@@ -655,7 +990,14 @@
       "origin": "Włochy",
       "segment": "Premium",
       "history": "Włoski gigant i specjalista od innowacyjnych okapów kuchennych.",
-      "seo_slug": "elica"
+      "seo_slug": "elica",
+      "founded_year": 1970,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Specjalista: Okapy i Płyty z Wyciągiem",
+      "product_categories": [
+        "Okapy kuchenne",
+        "Płyty indukcyjne z wyciągiem (NikolaTesla)"
+      ]
     },
     {
       "id": "b-falmec",
@@ -664,7 +1006,14 @@
       "origin": "Włochy",
       "segment": "Luksusowy",
       "history": "Włoski ekspert z zakresu niezwykle cichych okapów (technologia NRS).",
-      "seo_slug": "falmec"
+      "seo_slug": "falmec",
+      "founded_year": 1981,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "product_categories": [
+        "Okapy kuchenne (NRS)",
+        "Systemy oczyszczania powietrza"
+      ]
     },
     {
       "id": "b-faber",
@@ -673,7 +1022,10 @@
       "origin": "Włochy",
       "segment": "Premium",
       "history": "Wynalazca okapu kuchennego, obecnie część grupy Franke.",
-      "seo_slug": "faber"
+      "seo_slug": "faber",
+      "founded_year": 1955,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Specjalista: Okapy Kuchenne"
     },
     {
       "id": "b-hitachi",
@@ -682,7 +1034,13 @@
       "origin": "Japonia",
       "segment": "Premium",
       "history": "Japońskie lodówki klasy premium (często Multidoor), na Europę wspierane kapitałem Arçelik.",
-      "seo_slug": "hitachi"
+      "seo_slug": "hitachi",
+      "founded_year": 1910,
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Specjalista: Chłodnictwo Multidoor",
+      "product_categories": [
+        "Lodówki Multidoor (Premium)"
+      ]
     },
     {
       "id": "b-teka",
@@ -691,7 +1049,18 @@
       "origin": "Hiszpania / Niemcy",
       "segment": "Premium",
       "history": "Specjalista od sprzętu do zabudowy i zlewozmywaków.",
-      "seo_slug": "teka"
+      "seo_slug": "teka",
+      "founded_year": 1924,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Pełne Portfolio (Zabudowa)",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Zmywarki",
+        "Okapy",
+        "Zlewozmywaki",
+        "Baterie kuchenne"
+      ]
     },
     {
       "id": "b-lofra",
@@ -700,7 +1069,10 @@
       "origin": "Włochy",
       "segment": "Luksusowy",
       "history": "Zaawansowane włoskie kuchnie wolnostojące w stylu profesjonalnym/retro.",
-      "seo_slug": "lofra"
+      "seo_slug": "lofra",
+      "founded_year": 1956,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Kuchnie Wolnostojące (Retro)"
     },
     {
       "id": "b-fulgor",
@@ -709,7 +1081,10 @@
       "origin": "Włochy",
       "segment": "Luksusowy",
       "history": "Ekskluzywny, wbudowany sprzęt kuchenny o bardzo nowoczesnym designie.",
-      "seo_slug": "fulgor"
+      "seo_slug": "fulgor",
+      "founded_year": 1949,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Grzejnictwo i Zabudowa Premium"
     },
     {
       "id": "b-ravanson",
@@ -718,7 +1093,13 @@
       "origin": "Polska",
       "segment": "Budżetowy",
       "history": "Polska firma importująca bardzo tanie lodówki, chłodziarki i wentylatory.",
-      "seo_slug": "ravanson"
+      "seo_slug": "ravanson",
+      "founded_year": 2003,
+      "factories_pl": [
+        "Brak własnych fabryk. Model czysto importerski/OEM. Produkcja w Chinach (małe AGD, winiarki) oraz Turcji (kuchnie gazowe)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Szerokie Portfolio (Budżetowe)"
     },
     {
       "id": "b-concept",
@@ -727,7 +1108,13 @@
       "origin": "Czechy",
       "segment": "Budżetowy / Standard",
       "history": "Czeska popularna linia małego i dużego AGD (w tym kolorowe lodówki retro).",
-      "seo_slug": "concept"
+      "seo_slug": "concept",
+      "founded_year": 1991,
+      "factories_pl": [
+        "Brak fabryk w Polsce. Czeska marka korzystająca z produkcji OEM w Chinach i Turcji (szczególnie w zakresie kolorowych lodówek retro)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Szerokie Portfolio"
     },
     {
       "id": "b-philco",
@@ -736,7 +1123,10 @@
       "origin": "USA",
       "segment": "Budżetowy",
       "history": "Historycznie amerykańska marka, obecnie operująca na licencjach przez dystrybutorów (np. Fast ČR).",
-      "seo_slug": "philco"
+      "seo_slug": "philco",
+      "founded_year": 1892,
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-lord",
@@ -745,7 +1135,10 @@
       "origin": "Niemcy / Czechy",
       "segment": "Standard",
       "history": "Marka stawiająca na prostotę, bardzo długą gwarancję i brak zbędnej elektroniki.",
-      "seo_slug": "lord"
+      "seo_slug": "lord",
+      "founded_year": 2015,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Pełne Portfolio"
     },
     {
       "id": "b-klarstein",
@@ -754,7 +1147,10 @@
       "origin": "Niemcy",
       "segment": "Budżetowy / Standard",
       "history": "Niemiecka marka D2C słynąca z mocnego, często nietypowego designu (np. winiarki, okapy).",
-      "seo_slug": "klarstein"
+      "seo_slug": "klarstein",
+      "founded_year": 2008,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Szerokie Portfolio (Design D2C)"
     },
     {
       "id": "b-mitsubishi",
@@ -763,7 +1159,14 @@
       "origin": "Japonia",
       "segment": "Luksusowy",
       "history": "Luksusowe i niezwykle bezawaryjne lodówki wolnostojące Multidoor.",
-      "seo_slug": "mitsubishi"
+      "seo_slug": "mitsubishi",
+      "founded_year": 1921,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Specjalista: Chłodnictwo Premium",
+      "product_categories": [
+        "Lodówki Multidoor",
+        "Systemy klimatyzacji"
+      ]
     },
     {
       "id": "b-panasonic",
@@ -772,7 +1175,10 @@
       "origin": "Japonia",
       "segment": "Premium",
       "history": "Pomału wycofująca się z Europy japońska marka znana z zaawansowanych pralek i lodówek.",
-      "seo_slug": "panasonic"
+      "seo_slug": "panasonic",
+      "founded_year": 1918,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)"
     },
     {
       "id": "b-blaupunkt",
@@ -781,7 +1187,10 @@
       "origin": "Niemcy",
       "segment": "Premium",
       "history": "Niegdyś car audio, dziś licencjonowany ekskluzywny sprzęt do studiów meblowych.",
-      "seo_slug": "blaupunkt"
+      "seo_slug": "blaupunkt",
+      "founded_year": 1924,
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Szerokie Portfolio (Zabudowa)"
     },
     {
       "id": "b-franke",
@@ -790,7 +1199,18 @@
       "origin": "Szwajcaria",
       "segment": "Premium",
       "history": "Lider rynku zlewozmywaków i baterii, oferuje także pełne linie szwajcarskiego AGD do zabudowy.",
-      "seo_slug": "franke"
+      "seo_slug": "franke",
+      "founded_year": 1911,
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Pełne Portfolio (Zabudowa i Zlewozmywaki)",
+      "product_categories": [
+        "Zlewozmywaki",
+        "Baterie kuchenne",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zmywarki"
+      ]
     },
     {
       "id": "b-tcl",
@@ -799,7 +1219,17 @@
       "origin": "Chiny",
       "segment": "Budżetowy",
       "history": "Chiński gigant RTV, silnie wchodzący z agresywną cenowo ofertą pralek i lodówek.",
-      "seo_slug": "tcl"
+      "seo_slug": "tcl",
+      "founded_year": 1981,
+      "factories_pl": [
+        "Brak fabryk dużego AGD w Polsce (posiadają jedynie fabrykę TV w Żyrardowie). Lodówki i pralki importowane z Chin."
+      ],
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)",
+      "product_categories": [
+        "Lodówki",
+        "Pralki"
+      ]
     },
     {
       "id": "b-chiq",
@@ -808,7 +1238,10 @@
       "origin": "Chiny",
       "segment": "Budżetowy",
       "history": "Należąca do Changhong marka telewizorów oferująca coraz tańsze lodówki bezszronowe.",
-      "seo_slug": "chiq"
+      "seo_slug": "chiq",
+      "founded_year": 2014,
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Szerokie Portfolio (Głównie Chłodnictwo)"
     }
   ],
   "edges": [
