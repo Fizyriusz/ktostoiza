@@ -140,7 +140,13 @@
       "seo_slug": "polar",
       "founded_year": 1951,
       "business_structure": "Grupa Kapitałowa",
-      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)"
+      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)",
+      "product_categories": [
+        "Lodówki wolnostojące",
+        "Pralki ładowane od frontu",
+        "Pralki ładowane od góry",
+        "Zamrażarki skrzyniowe"
+      ]
     },
     {
       "id": "b-ignis",
@@ -153,7 +159,13 @@
       "seo_slug": "ignis",
       "founded_year": 1943,
       "business_structure": "Grupa Kapitałowa",
-      "product_range": "Szerokie Portfolio"
+      "product_range": "Szerokie Portfolio",
+      "product_categories": [
+        "Piekarniki do zabudowy",
+        "Płyty grzewcze (głównie gazowe)",
+        "Lodówki",
+        "Zmywarki (podstawowe modele)"
+      ]
     },
     {
       "id": "b-privileg",
@@ -253,7 +265,13 @@
       "seo_slug": "neff",
       "founded_year": 1877,
       "business_structure": "Grupa Kapitałowa",
-      "product_range": "Specjalista: Grzejnictwo (Piekarniki, Płyty)"
+      "product_range": "Specjalista: Grzejnictwo (Piekarniki, Płyty)",
+      "product_categories": [
+        "Piekarniki z drzwiami Slide&Hide",
+        "Płyty indukcyjne z wyciągiem",
+        "Ekspresy do zabudowy",
+        "Szuflady grzewcze"
+      ]
     },
     {
       "id": "h-haier",
@@ -599,7 +617,13 @@
       "seo_slug": "toshiba",
       "founded_year": 1939,
       "business_structure": "Partnerstwo Licencyjne",
-      "product_range": "Szerokie Portfolio (Głównie Chłodnictwo)"
+      "product_range": "Szerokie Portfolio (Głównie Chłodnictwo)",
+      "product_categories": [
+        "Lodówki Multidoor",
+        "Lodówki Side-by-Side",
+        "Mikrofalówki",
+        "Pralki (wybrane modele)"
+      ]
     },
     {
       "id": "b-finlux",
@@ -612,7 +636,13 @@
       "seo_slug": "finlux",
       "founded_year": 1927,
       "business_structure": "Grupa Kapitałowa",
-      "product_range": "Szerokie Portfolio"
+      "product_range": "Szerokie Portfolio",
+      "product_categories": [
+        "Pralki",
+        "Lodówki",
+        "Zmywarki",
+        "Kuchnie wolnostojące"
+      ]
     },
     {
       "id": "b-vestfrost",
@@ -929,7 +959,8 @@
         "Pralki",
         "Zmywarki",
         "Piekarniki",
-        "Małe AGD"
+        "Płyty grzewcze",
+        "Małe AGD (blendery, odkurzacze)"
       ]
     },
     {
@@ -962,7 +993,13 @@
         "Brak własnych fabryk. Najtańsza marka własna MediaMarkt. Produkcja zlecana masowym fabrykom w Chinach i Turcji."
       ],
       "business_structure": "Marka Własna (MediaMarktSaturn)",
-      "product_range": "Szerokie Portfolio"
+      "product_range": "Szerokie Portfolio",
+      "product_categories": [
+        "Lodówki wolnostojące",
+        "Pralki ładowane od frontu",
+        "Zmywarki wolnostojące",
+        "Kuchenki mikrofalowe"
+      ]
     },
     {
       "id": "b-bertazzoni",
@@ -976,11 +1013,11 @@
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Specjalista: Kuchnie Wolnostojące i Grzejnictwo",
       "product_categories": [
-        "Kuchnie wolnostojące",
-        "Piekarniki",
-        "Płyty grzewcze",
-        "Lodówki luksusowe",
-        "Zmywarki"
+        "Profesjonalne kuchnie wolnostojące",
+        "Piekarniki o dużej pojemności",
+        "Płyty grzewcze (mosiężne palniki)",
+        "Luksusowe chłodziarko-zamrażarki",
+        "Zmywarki do zabudowy"
       ]
     },
     {
@@ -1039,7 +1076,9 @@
       "business_structure": "Partnerstwo Licencyjne",
       "product_range": "Specjalista: Chłodnictwo Multidoor",
       "product_categories": [
-        "Lodówki Multidoor (Premium)"
+        "Lodówki Multidoor z drzwiami szklanymi",
+        "Lodówki Side-by-Side",
+        "Lodówki French Door"
       ]
     },
     {
@@ -1072,7 +1111,12 @@
       "seo_slug": "lofra",
       "founded_year": 1956,
       "business_structure": "Przedsiębiorstwo Prywatne",
-      "product_range": "Specjalista: Kuchnie Wolnostojące (Retro)"
+      "product_range": "Specjalista: Kuchnie Wolnostojące (Retro)",
+      "product_categories": [
+        "Kuchnie wolnostojące (styl Retro/Maxi)",
+        "Piekarniki do zabudowy (styl klasyczny)",
+        "Płyty gazowe (mosiądz/żeliwo)"
+      ]
     },
     {
       "id": "b-fulgor",
@@ -1084,7 +1128,13 @@
       "seo_slug": "fulgor",
       "founded_year": 1949,
       "business_structure": "Przedsiębiorstwo Prywatne",
-      "product_range": "Specjalista: Grzejnictwo i Zabudowa Premium"
+      "product_range": "Specjalista: Grzejnictwo i Zabudowa Premium",
+      "product_categories": [
+        "Piekarniki wielofunkcyjne premium",
+        "Płyty indukcyjne z licowaniem",
+        "Grille do zabudowy (Outdoor)",
+        "Chłodnictwo do pełnej zabudowy (kolumnowe)"
+      ]
     },
     {
       "id": "b-ravanson",
@@ -1099,7 +1149,13 @@
         "Brak własnych fabryk. Model czysto importerski/OEM. Produkcja w Chinach (małe AGD, winiarki) oraz Turcji (kuchnie gazowe)."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
-      "product_range": "Szerokie Portfolio (Budżetowe)"
+      "product_range": "Szerokie Portfolio (Budżetowe)",
+      "product_categories": [
+        "Chłodziarki turystyczne",
+        "Lodówki podblatowe",
+        "Kuchnie gazowe nastawne",
+        "Wentylatory i klimatyzatory"
+      ]
     },
     {
       "id": "b-concept",
@@ -1114,7 +1170,14 @@
         "Brak fabryk w Polsce. Czeska marka korzystająca z produkcji OEM w Chinach i Turcji (szczególnie w zakresie kolorowych lodówek retro)."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne",
-      "product_range": "Szerokie Portfolio"
+      "product_range": "Szerokie Portfolio",
+      "product_categories": [
+        "Lodówki Retro",
+        "Piekarniki i płyty do zabudowy",
+        "Zmywarki",
+        "Odkurzacze",
+        "Drobne AGD kuchenne"
+      ]
     },
     {
       "id": "b-philco",
@@ -1150,7 +1213,13 @@
       "seo_slug": "klarstein",
       "founded_year": 2008,
       "business_structure": "Przedsiębiorstwo Prywatne",
-      "product_range": "Szerokie Portfolio (Design D2C)"
+      "product_range": "Szerokie Portfolio (Design D2C)",
+      "product_categories": [
+        "Winiarki (różne pojemności)",
+        "Okapy wyspowe (designerskie)",
+        "Lodówki na napoje",
+        "Małe AGD (roboty planetarne)"
+      ]
     },
     {
       "id": "b-mitsubishi",
@@ -1178,7 +1247,13 @@
       "seo_slug": "panasonic",
       "founded_year": 1918,
       "business_structure": "Spółka Publiczna",
-      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)"
+      "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)",
+      "product_categories": [
+        "Pralki (z systemem AutoCare)",
+        "Lodówki (French Door, Multi-door)",
+        "Wypiekacze do chleba",
+        "Kuchenki mikrofalowe"
+      ]
     },
     {
       "id": "b-blaupunkt",
@@ -1190,7 +1265,13 @@
       "seo_slug": "blaupunkt",
       "founded_year": 1924,
       "business_structure": "Partnerstwo Licencyjne",
-      "product_range": "Szerokie Portfolio (Zabudowa)"
+      "product_range": "Szerokie Portfolio (Zabudowa)",
+      "product_categories": [
+        "Piekarniki do zabudowy",
+        "Płyty indukcyjne",
+        "Okapy kuchenne",
+        "Zmywarki z panelem ukrytym"
+      ]
     },
     {
       "id": "b-franke",
@@ -1227,8 +1308,9 @@
       "business_structure": "Spółka Publiczna",
       "product_range": "Szerokie Portfolio (Chłodnictwo, Pranie)",
       "product_categories": [
-        "Lodówki",
-        "Pralki"
+        "Lodówki French Door i Side-by-Side",
+        "Pralki ładowane od frontu",
+        "Pralko-suszarki"
       ]
     },
     {
@@ -1241,7 +1323,12 @@
       "seo_slug": "chiq",
       "founded_year": 2014,
       "business_structure": "Spółka Publiczna",
-      "product_range": "Szerokie Portfolio (Głównie Chłodnictwo)"
+      "product_range": "Szerokie Portfolio (Głównie Chłodnictwo)",
+      "product_categories": [
+        "Lodówki wolnostojące (No-Frost)",
+        "Lodówki Side-by-Side",
+        "Zamrażarki"
+      ]
     }
   ],
   "edges": [
