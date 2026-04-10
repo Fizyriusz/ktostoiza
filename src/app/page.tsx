@@ -10,6 +10,7 @@ import { FilterType } from '@/contexts/FilterContext';
 import FlowInternals from '@/components/map/FlowInternals';
 import DetailsPanel from '@/components/map/DetailsPanel';
 import { GraphNodeData } from '@/data/types';
+import NetworkLogo from '@/components/ui/NetworkLogo';
 
 const FILTERS: { key: FilterType; label: string }[] = [
   { key: 'all',            label: 'Wszystkie'       },
@@ -44,16 +45,21 @@ export default function Home() {
         <header className="absolute top-0 left-0 right-0 z-30 pointer-events-none flex flex-col items-center pt-4">
           
           {/* Logo + Title (Top Left) */}
-          <div className="absolute top-5 left-6 pointer-events-auto text-left transition-opacity">
-            <h1 className="text-2xl sm:text-3xl font-black tracking-tight leading-none bg-white/70 backdrop-blur-md px-3 py-1.5 -ml-3 rounded-xl inline-block shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0 sm:m-0">
-              <span className="text-blue-600">Kto</span>
-              <span className="text-slate-800">Stoi</span>
-              <span className="text-blue-600">Za</span>
-              <span className="text-slate-400">.pl</span>
-            </h1>
-            <p className="text-slate-400 text-[10px] sm:text-xs font-medium mt-1 uppercase tracking-widest hidden sm:block">
-              Interaktywna Mapa Powiązań AGD
-            </p>
+          <div className="absolute top-5 left-6 pointer-events-auto text-left transition-opacity flex items-center gap-3">
+            <div className="bg-white/70 backdrop-blur-md rounded-xl p-1.5 shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0">
+              <NetworkLogo className="w-9 h-9" />
+            </div>
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-black tracking-tight leading-none bg-white/70 backdrop-blur-md px-3 py-1.5 -ml-3 rounded-xl inline-block shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0 sm:m-0">
+                <span className="text-blue-600">Kto</span>
+                <span className="text-slate-800">Stoi</span>
+                <span className="text-blue-600">Za</span>
+                <span className="text-slate-400">.pl</span>
+              </h1>
+              <p className="text-slate-400 text-[10px] sm:text-xs font-medium mt-1 uppercase tracking-widest hidden sm:block">
+                Interaktywna Mapa Powiązań
+              </p>
+            </div>
           </div>
 
           {/* Center Column: Search Bar then Filters */}
