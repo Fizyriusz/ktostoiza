@@ -1,5 +1,7 @@
 'use client';
 
+import { Suspense } from 'react';
+
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Shield, Globe2, Info } from 'lucide-react';
@@ -21,8 +23,16 @@ const FILTERS: { key: FilterType; label: string }[] = [
 ];
 
 export default function Home() {
+  return (
+    <Suspense fallback={<div className="bg-[#f8fafc] w-full h-screen" />}>
+      <HomeContent />
+    </Suspense>
+  );
+}
+
+function HomeContent() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
-  const [selectedNode, setSelectedNode] = useState<GraphNodeData | null>(null);
+  const [selectedNodes, setSelectedNodes] = useState<GraphNodeData[]>([]);
   const [showIntro, setShowIntro] = useState(false);
 
   useEffect(() => {
@@ -42,29 +52,31 @@ export default function Home() {
       <div className="relative w-full h-screen overflow-hidden flex flex-col bg-[#f8fafc]">
 
         {/* Header - Z-30 provides UI stacking context above the Map */}
-        <header className="absolute top-0 left-0 right-0 z-30 pointer-events-none flex flex-col items-center pt-4">
+        <header className="absolute top-0 left-0 right-0 z-30 pointer-events-none flex flex-col sm:flex-row sm:justify-center items-center pt-2 sm:pt-4 gap-3 sm:gap-0">
           
-          {/* Logo + Title (Top Left) */}
-          <div className="absolute top-5 left-6 pointer-events-auto text-left transition-opacity flex items-center gap-3">
-            <div className="bg-white/70 backdrop-blur-md rounded-xl p-1.5 shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0">
-              <NetworkLogo className="w-9 h-9" />
+          {/* Logo + Title (Top Center on Mobile, Top Left on Desktop) */}
+          <div className="sm:absolute sm:top-5 sm:left-6 pointer-events-auto text-left transition-opacity flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 w-full sm:w-auto px-4 sm:px-0">
+            <div className="bg-white/90 sm:bg-white/70 backdrop-blur-md rounded-xl p-1.5 shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0">
+              <NetworkLogo className="w-8 h-8 sm:w-9 sm:h-9" />
             </div>
             <div>
-              <h1 className="text-2xl sm:text-3xl font-black tracking-tight leading-none bg-white/70 backdrop-blur-md px-3 py-1.5 -ml-3 rounded-xl inline-block shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0 sm:m-0">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight leading-none bg-white/90 sm:bg-white/70 backdrop-blur-md px-3 py-1.5 -ml-2 sm:-ml-3 rounded-xl inline-block shadow-sm sm:shadow-none sm:bg-transparent sm:backdrop-blur-none sm:p-0 sm:m-0">
                 <span className="text-blue-600">Kto</span>
                 <span className="text-slate-800">Stoi</span>
                 <span className="text-blue-600">Za</span>
                 <span className="text-slate-400">.pl</span>
               </h1>
-              <p className="text-slate-400 text-[10px] sm:text-xs font-medium mt-1 uppercase tracking-widest hidden sm:block">
+              <p className="text-slate-400 text-[10px] sm:text-xs font-medium mt-0.5 sm:mt-1 uppercase tracking-widest hidden sm:block">
                 Interaktywna Mapa Powiązań
               </p>
             </div>
           </div>
 
           {/* Center Column: Search Bar then Filters */}
-          <div className="pointer-events-auto w-72 sm:w-80 relative z-50">
-            <FlowInternals onNodeSelect={setSelectedNode} />
+          <div className="pointer-events-auto w-[90%] max-w-[320px] sm:w-80 relative z-50">
+            <FlowInternals 
+              onNodeSelect={(node) => setSelectedNodes([node])} 
+            />
           </div>
 
           <div className="pointer-events-auto flex items-center gap-2 flex-wrap justify-center px-4 max-w-2xl mt-4 relative z-10 transition-all">
@@ -99,10 +111,28 @@ export default function Home() {
 
         {/* Map */}
         <main className="flex-1 w-full h-full z-10 relative">
-          <GraphMap activeFilter={activeFilter} onNodeSelect={setSelectedNode} />
+          <GraphMap 
+            activeFilter={activeFilter} 
+            onNodeSelect={(node, multi) => {
+              setSelectedNodes(prev => {
+                // Toggle if already selected
+                if (prev.some(n => n.id === node.id)) {
+                  return prev.filter(n => n.id !== node.id);
+                }
+                // If multi (shift pressed) and we have < 2, add it
+                if (multi) {
+                  return prev.length < 2 ? [...prev, node] : [prev[0], node];
+                }
+                return [node];
+              });
+            }} 
+          />
         </main>
 
-        <DetailsPanel node={selectedNode} onClose={() => setSelectedNode(null)} />
+        <DetailsPanel nodes={selectedNodes} onClose={(idToClose) => {
+          if (!idToClose) setSelectedNodes([]);
+          else setSelectedNodes(prev => prev.filter(n => n.id !== idToClose));
+        }} />
 
         {/* Intro Modal */}
         <AnimatePresence>

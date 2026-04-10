@@ -1211,7 +1211,8 @@
         "Kuchnie gazowe nastawne",
         "Wentylatory i klimatyzatory"
       ],
-      "acquisition_history": "Niezależna polska firma prywatna."
+      "acquisition_history": "Niezależna polska firma prywatna.",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-concept",

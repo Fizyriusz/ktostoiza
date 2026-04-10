@@ -136,13 +136,17 @@ function generateMapLayout(): { initialNodes: Node[]; initialEdges: Edge[] } {
   const orphans = brands.filter(b => !placedIds.has(b.id));
   const orphanStartY = Math.ceil(holdings.length / maxPerRow) * hSpacingY + 120;
 
+  // Siatka z "szumem" (pływająca konstelacja) i offsetami
   orphans.forEach((brand, index) => {
     const col = index % 6;
     const row = Math.floor(index / 6);
+    // Niedoskonała siatka: dodajemy losowe przesunięcie od -15 do +15
+    const offsetX = (Math.random() - 0.5) * 30;
+    const offsetY = (Math.random() - 0.5) * 30;
     nodes.push({
       id: brand.id,
       type: 'brand',
-      position: { x: col * 220, y: orphanStartY + row * 220 },
+      position: { x: col * 220 + offsetX, y: orphanStartY + row * 220 + offsetY },
       data: { ...brand, accentColor: '#64748b' },
     });
   });
@@ -167,7 +171,7 @@ const LERP = 0.15;
 
 interface GraphMapProps {
   activeFilter?: FilterType;
-  onNodeSelect?: (node: GraphNodeData) => void;
+  onNodeSelect?: (node: GraphNodeData, multi: boolean) => void;
 }
 
 export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMapProps) {
@@ -183,8 +187,8 @@ export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMa
     [setEdges],
   );
 
-  const handleNodeClick = useCallback((_: React.MouseEvent, node: Node) => {
-    onNodeSelect?.(node.data as unknown as GraphNodeData);
+  const handleNodeClick = useCallback((e: React.MouseEvent, node: Node) => {
+    onNodeSelect?.(node.data as unknown as GraphNodeData, e.shiftKey);
   }, [onNodeSelect]);
 
   // ── DragStart ────────────────────────────────────────────────────────────
@@ -256,6 +260,38 @@ export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMa
 
     draggedHoldingId.current = null;
     childOffsetsRef.current = new Map();
+  }, [setNodes]);
+
+  // Rysowanie pływającej konstelacji (Orphans LERP)
+  React.useEffect(() => {
+    let animationFrameId: number;
+    let time = 0;
+
+    const animateOrphans = () => {
+      time += 0.015;
+      setNodes(current => {
+        let changed = false;
+        const next = current.map(n => {
+          // Aplikujemy pływający efekt tylko do marek niezrzeszonych
+          if (n.type === 'brand' && !('parentId' in n.data && n.data.parentId)) {
+            changed = true;
+            return {
+              ...n,
+              position: {
+                x: n.position.x + Math.sin(time + parseInt(n.id.replace(/\D/g, '') || '0', 10)) * 0.1,
+                y: n.position.y + Math.cos(time + parseInt(n.id.replace(/\D/g, '') || '0', 10)) * 0.1,
+              }
+            };
+          }
+          return n;
+        });
+        return changed ? next : current;
+      });
+      animationFrameId = requestAnimationFrame(animateOrphans);
+    };
+
+    animationFrameId = requestAnimationFrame(animateOrphans);
+    return () => cancelAnimationFrame(animationFrameId);
   }, [setNodes]);
 
   return (

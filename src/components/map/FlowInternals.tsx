@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useReactFlow } from '@xyflow/react';
+import { useSearchParams } from 'next/navigation';
 import { Search, X } from 'lucide-react';
 import dataset from '@/data/dataset.json';
 
@@ -27,10 +28,23 @@ interface FlowInternalsProps {
 
 export default function FlowInternals({ onNodeSelect }: FlowInternalsProps) {
   const { fitView } = useReactFlow();
+  const searchParams = useSearchParams();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    // Deep linking initial check
+    const brandSlug = searchParams.get('brand');
+    if (brandSlug) {
+      const match = dataset.nodes.find(n => n.seo_slug === brandSlug || n.name.toLowerCase() === brandSlug.toLowerCase());
+      if (match) {
+        fitView({ nodes: [{ id: match.id }], duration: 1500, padding: 1.8 });
+        onNodeSelect(match as any);
+      }
+    }
+  }, [searchParams, fitView, onNodeSelect]);
 
   useEffect(() => {
     if (query.trim().length < 1) {
