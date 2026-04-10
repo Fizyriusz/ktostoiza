@@ -5,25 +5,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Factory, Globe2, BookOpen, Link2, Info, ShoppingCart } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
 
-function getFlagEmoji(countryStr: string) {
-  if (!countryStr) return '🌍';
+function getCountryCode(countryStr: string) {
+  if (!countryStr) return 'un';
   const c = countryStr.toLowerCase();
-  if (c.includes('polska')) return '🇵🇱';
-  if (c.includes('niemcy')) return '🇩🇪';
-  if (c.includes('szwecja')) return '🇸🇪';
-  if (c.includes('włochy')) return '🇮🇹';
-  if (c.includes('turcja')) return '🇹🇷';
-  if (c.includes('usa')) return '🇺🇸';
-  if (c.includes('japonia')) return '🇯🇵';
-  if (c.includes('chiny')) return '🇨🇳';
-  if (c.includes('korea')) return '🇰🇷';
-  if (c.includes('słowenia')) return '🇸🇮';
-  if (c.includes('dania')) return '🇩🇰';
-  if (c.includes('hiszpania')) return '🇪🇸';
-  if (c.includes('uk') || c.includes('anglia')) return '🇬🇧';
-  if (c.includes('szwajcaria')) return '🇨🇭';
-  if (c.includes('globalnie') || c.includes('różne')) return '🌍';
-  return '🌍';
+  if (c.includes('polska') || c.includes('marka własna')) return 'pl';
+  if (c.includes('niemcy')) return 'de';
+  if (c.includes('szwecja')) return 'se';
+  if (c.includes('włochy')) return 'it';
+  if (c.includes('turcja')) return 'tr';
+  if (c.includes('usa')) return 'us';
+  if (c.includes('japonia')) return 'jp';
+  if (c.includes('chiny')) return 'cn';
+  if (c.includes('korea')) return 'kr';
+  if (c.includes('słowenia')) return 'si';
+  if (c.includes('dania')) return 'dk';
+  if (c.includes('hiszpania')) return 'es';
+  if (c.includes('uk') || c.includes('anglia') || c.includes('wielka')) return 'gb';
+  if (c.includes('szwajcaria')) return 'ch';
+  if (c.includes('czechy')) return 'cz';
+  if (c.includes('globalnie') || c.includes('różne')) return 'un';
+  return 'un';
+}
+
+function getFlagUrl(countryStr: string) {
+  const code = getCountryCode(countryStr);
+  return code === 'un' 
+    ? 'https://upload.wikimedia.org/wikipedia/commons/e/ef/International_Flag_of_Planet_Earth.svg' 
+    : `https://flagcdn.com/w20/${code}.png`;
 }
 
 function getBrandDomain(brandName: string) {
@@ -55,7 +63,7 @@ export default function DetailsPanel({ node, onClose }: DetailsPanelProps) {
   if (!node) return null;
 
   const origin = node.type === 'holding' ? node.country : node.origin;
-  const flag = getFlagEmoji(origin);
+  const flagUrl = getFlagUrl(origin);
   const brandLogo = node.type === 'brand' ? `https://logo.clearbit.com/${getBrandDomain(node.name)}` : null;
 
   return (
@@ -120,7 +128,9 @@ export default function DetailsPanel({ node, onClose }: DetailsPanelProps) {
                 {node.name}
               </h2>
               <div className="flex items-center justify-center gap-2 text-slate-500 text-sm font-medium bg-slate-100 px-3 py-1 rounded-full w-min mx-auto whitespace-nowrap">
-                <span>{flag}</span> {origin}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={flagUrl} alt={origin} className="w-5 h-3.5 object-cover rounded-[2px]" /> 
+                {origin}
               </div>
 
               {node.type === 'brand' && (node.founded_year || node.business_structure) && (
@@ -180,6 +190,14 @@ export default function DetailsPanel({ node, onClose }: DetailsPanelProps) {
               <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
                 {node.type === 'holding' ? node.description : node.history}
               </p>
+              {node.type === 'brand' && node.acquisition_history && (
+                <div className="mt-4 pt-4 border-t border-slate-100">
+                  <h5 className="text-[10px] font-black uppercase text-slate-400 mb-1.5 tracking-wider">Historia przejęć</h5>
+                  <p className="text-slate-500 text-xs font-semibold leading-relaxed">
+                    {node.acquisition_history}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Factories */}

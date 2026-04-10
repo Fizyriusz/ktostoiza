@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { Shield } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Shield, Globe2, Info } from 'lucide-react';
 import { ReactFlowProvider } from '@xyflow/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import GraphMap from '@/components/map/GraphMap';
 import { FilterType } from '@/contexts/FilterContext';
 import FlowInternals from '@/components/map/FlowInternals';
@@ -21,6 +22,19 @@ const FILTERS: { key: FilterType; label: string }[] = [
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
   const [selectedNode, setSelectedNode] = useState<GraphNodeData | null>(null);
+  const [showIntro, setShowIntro] = useState(false);
+
+  useEffect(() => {
+    const hasSeen = localStorage.getItem('ktostoiza_intro_seen');
+    if (!hasSeen) {
+      setShowIntro(true);
+    }
+  }, []);
+
+  const closeIntro = () => {
+    localStorage.setItem('ktostoiza_intro_seen', 'true');
+    setShowIntro(false);
+  };
 
   return (
     <ReactFlowProvider>
@@ -83,6 +97,73 @@ export default function Home() {
         </main>
 
         <DetailsPanel node={selectedNode} onClose={() => setSelectedNode(null)} />
+
+        {/* Intro Modal */}
+        <AnimatePresence>
+          {showIntro && (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm pointer-events-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                className="w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col"
+              >
+                <div className="bg-blue-600 px-6 py-8 text-center relative overflow-hidden">
+                  <div className="absolute -top-4 -right-4 p-4 opacity-10">
+                    <Globe2 className="w-32 h-32 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-black text-white tracking-tight relative z-10 mb-2">
+                    Witaj na KtoStoiZa.pl!
+                  </h2>
+                  <p className="text-blue-100 font-medium text-sm relative z-10">
+                    Odkryj prawdziwe powiązania w świecie AGD
+                  </p>
+                </div>
+                
+                <div className="p-6 space-y-6 text-slate-600 text-[13px] font-medium bg-white">
+                  <div className="flex gap-4">
+                    <div className="w-10 h-10 shrink-0 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shadow-sm">
+                        <Info className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800 mb-1 text-sm">O co tu chodzi?</h4>
+                      <p>Sprawdź struktury. Przeciągaj główny koncern myszką na mapie, aby zobaczyć wszystkie podlegające mu marki.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="w-10 h-10 shrink-0 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shadow-sm">
+                        <Globe2 className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800 mb-1 text-sm">Kraj pochodzenia vs Produkcja</h4>
+                      <p>Flagi widoczne na mapie określają <b>kolebkę</b> (państwo, z którego pochodzi projekt) oraz reprezentują historyczne <b>korzenie</b> marki. Czerwone znaczniki 📍 w opisie określają natomiast miasto z jej fabryką.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="w-10 h-10 shrink-0 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center shadow-sm">
+                        <Shield className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800 mb-1 text-sm">Przejęcia i Produkcja</h4>
+                      <p>Kliknij w dowolną markę, aby rozwinąć panel informacyjny tłumaczący jakie kategorie produktów dany producent oferuje i do kogo należy.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 pt-5 bg-slate-50 border-t border-slate-100 flex justify-end">
+                  <button
+                    onClick={closeIntro}
+                    className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-md hover:shadow-lg active:scale-95"
+                  >
+                    Gotowe, pokaż mapę!
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
 
         {/* Footer */}
         <footer className="absolute bottom-3 right-6 z-20 pointer-events-none">

@@ -21,6 +21,7 @@ export interface BrandNode {
   factories_pl?: string[];
   founded_year?: number;
   business_structure?: string;
+  acquisition_history?: string;
   product_range?: string;
   product_categories?: string[];
   seo_slug: string;

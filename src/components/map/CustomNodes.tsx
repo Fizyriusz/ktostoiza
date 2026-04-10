@@ -4,26 +4,33 @@ import React, { useState } from 'react';
 import { Handle, Position, NodeProps } from '@xyflow/react';
 import { useFilter, nodeMatchesFilter } from '@/contexts/FilterContext';
 
-function getFlagEmoji(countryStr: string) {
-  if (!countryStr) return '🌍';
+function getCountryCode(countryStr: string) {
+  if (!countryStr) return 'un';
   const c = countryStr.toLowerCase();
-  if (c.includes('polska') || c.includes('marka własna')) return '🇵🇱';
-  if (c.includes('niemcy')) return '🇩🇪';
-  if (c.includes('szwecja')) return '🇸🇪';
-  if (c.includes('włochy')) return '🇮🇹';
-  if (c.includes('turcja')) return '🇹🇷';
-  if (c.includes('usa')) return '🇺🇸';
-  if (c.includes('japonia')) return '🇯🇵';
-  if (c.includes('chiny')) return '🇨🇳';
-  if (c.includes('korea')) return '🇰🇷';
-  if (c.includes('słowenia')) return '🇸🇮';
-  if (c.includes('dania')) return '🇩🇰';
-  if (c.includes('hiszpania')) return '🇪🇸';
-  if (c.includes('uk') || c.includes('anglia') || c.includes('wielka')) return '🇬🇧';
-  if (c.includes('szwajcaria')) return '🇨🇭';
-  if (c.includes('czechy')) return '🇨🇿';
-  if (c.includes('globalnie') || c.includes('różne')) return '🌍';
-  return '🌍';
+  if (c.includes('polska') || c.includes('marka własna')) return 'pl';
+  if (c.includes('niemcy')) return 'de';
+  if (c.includes('szwecja')) return 'se';
+  if (c.includes('włochy')) return 'it';
+  if (c.includes('turcja')) return 'tr';
+  if (c.includes('usa')) return 'us';
+  if (c.includes('japonia')) return 'jp';
+  if (c.includes('chiny')) return 'cn';
+  if (c.includes('korea')) return 'kr';
+  if (c.includes('słowenia')) return 'si';
+  if (c.includes('dania')) return 'dk';
+  if (c.includes('hiszpania')) return 'es';
+  if (c.includes('uk') || c.includes('anglia') || c.includes('wielka')) return 'gb';
+  if (c.includes('szwajcaria')) return 'ch';
+  if (c.includes('czechy')) return 'cz';
+  if (c.includes('globalnie') || c.includes('różne')) return 'un';
+  return 'un';
+}
+
+function getFlagUrl(countryStr: string) {
+  const code = getCountryCode(countryStr);
+  return code === 'un' 
+    ? 'https://upload.wikimedia.org/wikipedia/commons/e/ef/International_Flag_of_Planet_Earth.svg' 
+    : `https://flagcdn.com/w20/${code}.png`;
 }
 
 function getHoldingAccent(name: string): string {
@@ -115,7 +122,7 @@ export const HoldingNode = ({ data }: NodeProps) => {
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter);
   const origin = data.country as string;
   const name = data.name as string;
-  const flag = getFlagEmoji(origin);
+  const flagUrl = getFlagUrl(origin);
   const accent = getHoldingAccent(name);
 
   return (
@@ -131,7 +138,10 @@ export const HoldingNode = ({ data }: NodeProps) => {
     >
       <InvisibleHandle type="target" position={Position.Top} />
 
-      <span className="text-4xl leading-none mb-3">{flag}</span>
+      <div className="mb-3 w-8 h-8 rounded-full overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center bg-slate-50">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={flagUrl} alt={origin} className="w-full h-full object-cover" />
+      </div>
       <h3 className="text-slate-800 font-black text-xl tracking-tight leading-tight">{name}</h3>
       <p className="text-slate-400 text-[11px] font-medium mt-1.5 tracking-wide">{origin}</p>
 
@@ -152,7 +162,7 @@ export const BrandNode = ({ data }: NodeProps) => {
   const domain = getBrandDomain(brandName);
   const logoUrl = `https://logo.clearbit.com/${domain}`;
   const initial = brandName.charAt(0).toUpperCase();
-  const flag = getFlagEmoji(origin);
+  const flagUrl = getFlagUrl(origin);
 
   const fallbackGrad = accentToGradient(accentColor);
   const fallbackText = accentToTextColor(accentColor);
@@ -195,8 +205,10 @@ export const BrandNode = ({ data }: NodeProps) => {
       {/* Label always visible */}
       <div className="mt-2.5 text-center max-w-[110px]">
         <span className="text-[12px] font-bold text-slate-700 leading-tight block">{brandName}</span>
-        <span className="text-[10px] text-slate-400 font-medium leading-tight flex items-center justify-center gap-1 mt-0.5">
-          {flag} {origin}
+        <span className="text-[10px] text-slate-400 font-medium leading-tight flex items-center justify-center gap-1.5 mt-1">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={flagUrl} alt={origin} className="w-4 h-3 object-cover rounded-[2px]" /> 
+          {origin}
         </span>
       </div>
     </div>
