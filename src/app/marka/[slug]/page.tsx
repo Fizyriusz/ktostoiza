@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import dataset from '@/data/dataset.json';
 import { HomeContent } from '@/app/page';
 
@@ -91,7 +92,9 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HomeContent />
+      <Suspense fallback={<div className="bg-[#f8fafc] w-full h-screen" />}>
+        <HomeContent />
+      </Suspense>
     </>
   );
 }
