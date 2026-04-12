@@ -62,6 +62,11 @@ function buildBrandAccentMap(): Map<string, string> {
     'h-samsung':    '#1d4ed8',
     'h-lg':         '#dc2626',
     'h-pl-ind':     '#b91c1c',
+    'h-it-ind':     '#059669',
+    'h-de-ind':     '#ca8a04',
+    'h-jp-ind':     '#be123c',
+    'h-cn-ind':     '#ea580c',
+    'h-other-ind':  '#475569',
     'h-market':     '#64748b',
   };
   const map = new Map<string, string>();
@@ -272,18 +277,20 @@ export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMa
       setNodes(current => {
         let changed = false;
         const next = current.map(n => {
-          // Aplikujemy pływający efekt tylko do marek niezrzeszonych
-          if (n.type === 'brand' && !('parentId' in n.data && n.data.parentId)) {
-            changed = true;
-            return {
-              ...n,
-              position: {
-                x: n.position.x + Math.sin(time + parseInt(n.id.replace(/\D/g, '') || '0', 10)) * 0.1,
-                y: n.position.y + Math.cos(time + parseInt(n.id.replace(/\D/g, '') || '0', 10)) * 0.1,
-              }
-            };
-          }
-          return n;
+          // Aplikujemy pływający efekt do każdego node'a
+          if (n.id === draggedHoldingId.current) return n;
+
+          changed = true;
+          let hash = 0;
+          for (let i = 0; i < n.id.length; i++) hash += n.id.charCodeAt(i);
+
+          return {
+            ...n,
+            position: {
+              x: n.position.x + Math.sin(time + hash) * 0.08,
+              y: n.position.y + Math.cos(time + hash) * 0.08,
+            }
+          };
         });
         return changed ? next : current;
       });

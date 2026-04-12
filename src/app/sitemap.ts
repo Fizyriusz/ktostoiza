@@ -4,9 +4,9 @@ import dataset from '@/data/dataset.json';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ktostoiza.pl';
 
-  // Dynamiczne podstrony z ?brand= dla każdej marki z datasetu
+  // Dynamiczne podstrony /marka/[slug] dla każdej marki z datasetu
   const brandUrls = dataset.nodes.map((node) => ({
-    url: `${baseUrl}?brand=${node.seo_slug}`,
+    url: `${baseUrl}/marka/${node.seo_slug}`,
     lastModified: new Date(dataset.lastUpdate || new Date()),
     changeFrequency: 'weekly' as const,
     // Koncerny są odrobinę ważniejsze dla SEO głównego struktury

@@ -13,6 +13,7 @@ import FlowInternals from '@/components/map/FlowInternals';
 import DetailsPanel from '@/components/map/DetailsPanel';
 import { GraphNodeData } from '@/data/types';
 import NetworkLogo from '@/components/ui/NetworkLogo';
+import StatsDashboard from '@/components/ui/StatsDashboard';
 
 const FILTERS: { key: FilterType; label: string }[] = [
   { key: 'all',            label: 'Wszystkie'       },
@@ -30,7 +31,7 @@ export default function Home() {
   );
 }
 
-function HomeContent() {
+export function HomeContent() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
   const [selectedNodes, setSelectedNodes] = useState<GraphNodeData[]>([]);
   const [showIntro, setShowIntro] = useState(false);
@@ -98,7 +99,7 @@ function HomeContent() {
           </div>
 
           {/* Corner link */}
-          <div className="absolute top-5 right-6 pointer-events-auto">
+          <div className="absolute top-5 right-6 pointer-events-auto hidden sm:block">
             <Link
               href="/polityka-prywatnosci"
               className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
@@ -111,6 +112,10 @@ function HomeContent() {
 
         {/* Map */}
         <main className="flex-1 w-full h-full z-10 relative">
+          <StatsDashboard 
+            activeFilter={activeFilter} 
+            onFilterChange={setActiveFilter} 
+          />
           <GraphMap 
             activeFilter={activeFilter} 
             onNodeSelect={(node, multi) => {
@@ -202,8 +207,17 @@ function HomeContent() {
         </AnimatePresence>
 
         {/* Footer */}
-        <footer className="absolute bottom-3 right-6 z-20 pointer-events-none">
-          <p className="text-[10px] text-slate-400 font-medium">
+        <footer className="absolute bottom-3 right-5 sm:right-6 z-20 pointer-events-none flex flex-col sm:flex-row items-end sm:items-center gap-1.5 sm:gap-4">
+          <div className="pointer-events-auto sm:hidden">
+            <Link
+              href="/polityka-prywatnosci"
+              className="flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
+            >
+              <Shield className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              Polityka Prywatności
+            </Link>
+          </div>
+          <p className="text-[10px] text-slate-400 font-medium text-right">
             Aktualizacja: 2026-04-08
           </p>
         </footer>

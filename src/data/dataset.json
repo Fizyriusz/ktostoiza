@@ -787,7 +787,8 @@
         "Ekspresy do kawy",
         "Odkurzacze"
       ],
-      "acquisition_history": "Niezależna. Firma rodzinna od 1899 roku."
+      "acquisition_history": "Niezależna. Firma rodzinna od 1899 roku.",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-liebherr",
@@ -806,7 +807,8 @@
         "Winiarki",
         "Chłodziarki profesjonalne"
       ],
-      "acquisition_history": "Niezależna. Firma rodzinna od 1949 roku."
+      "acquisition_history": "Niezależna. Firma rodzinna od 1949 roku.",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-smeg",
@@ -819,7 +821,8 @@
       "founded_year": 1948,
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Pełne Portfolio (Design)",
-      "acquisition_history": "Niezależna. Firma rodzinna od 1948 roku."
+      "acquisition_history": "Niezależna. Firma rodzinna od 1948 roku.",
+      "parentId": "h-it-ind"
     },
     {
       "id": "h-pl-ind",
@@ -976,6 +979,46 @@
       "acquisition_history": "Niezależna polska specjalistyczna marka."
     },
     {
+      "id": "h-it-ind",
+      "type": "holding",
+      "name": "Włoskie Marki Niezależne",
+      "country": "Włochy",
+      "description": "Firmy z włoskim rodowodem, posiadające własne fabryki lub bazujące na imporcie.",
+      "seo_slug": "wloskie-niezalezne"
+    },
+    {
+      "id": "h-de-ind",
+      "type": "holding",
+      "name": "Niemieckie Marki Niezależne",
+      "country": "Niemcy",
+      "description": "Niemieckie, austriackie oraz szwajcarskie marki niezależne.",
+      "seo_slug": "niemieckie-niezalezne"
+    },
+    {
+      "id": "h-jp-ind",
+      "type": "holding",
+      "name": "Japońskie Marki Niezależne",
+      "country": "Japonia",
+      "description": "Rozwiązania i technologie z Japonii.",
+      "seo_slug": "japonskie-niezalezne"
+    },
+    {
+      "id": "h-cn-ind",
+      "type": "holding",
+      "name": "Chińskie Marki Niezależne",
+      "country": "Chiny",
+      "description": "Rosnący w siłę niezależni producenci z Chin.",
+      "seo_slug": "chinskie-niezalezne"
+    },
+    {
+      "id": "h-other-ind",
+      "type": "holding",
+      "name": "Pozostałe Marki Niezależne",
+      "country": "Różne",
+      "description": "Marki niezależne z innych krajów Europy i Świata.",
+      "seo_slug": "pozostale-niezalezne"
+    },
+    {
       "id": "h-market",
       "type": "holding",
       "name": "Marki Marketowe (OEM)",
@@ -1066,7 +1109,8 @@
         "Luksusowe chłodziarko-zamrażarki",
         "Zmywarki do zabudowy"
       ],
-      "acquisition_history": "Niezależna firma rodzinna od 1882 roku."
+      "acquisition_history": "Niezależna firma rodzinna od 1882 roku.",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-elica",
@@ -1083,7 +1127,8 @@
         "Okapy kuchenne",
         "Płyty indukcyjne z wyciągiem (NikolaTesla)"
       ],
-      "acquisition_history": "Niezależna spółka publiczna (Borsa Italiana)."
+      "acquisition_history": "Niezależna spółka publiczna (Borsa Italiana).",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-falmec",
@@ -1100,7 +1145,8 @@
         "Okapy kuchenne (NRS)",
         "Systemy oczyszczania powietrza"
       ],
-      "acquisition_history": "Niezależna firma rodzinna od 1981 roku."
+      "acquisition_history": "Niezależna firma rodzinna od 1981 roku.",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-faber",
@@ -1113,7 +1159,8 @@
       "founded_year": 1955,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Specjalista: Okapy Kuchenne",
-      "acquisition_history": "Przejęta przez Franke Group w 2005 roku."
+      "acquisition_history": "Przejęta przez Franke Group w 2005 roku.",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-hitachi",
@@ -1131,7 +1178,8 @@
         "Lodówki Side-by-Side",
         "Lodówki French Door"
       ],
-      "acquisition_history": "Joint venture pomiędzy Hitachi Global Life Solutions a Arçelik (2021)."
+      "acquisition_history": "Joint venture pomiędzy Hitachi Global Life Solutions a Arçelik (2021).",
+      "parentId": "h-jp-ind"
     },
     {
       "id": "b-teka",
@@ -1152,7 +1200,8 @@
         "Zlewozmywaki",
         "Baterie kuchenne"
       ],
-      "acquisition_history": "Niezależna niemiecko-szwajcarska grupa."
+      "acquisition_history": "Niezależna niemiecko-szwajcarska grupa.",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-lofra",
@@ -1170,7 +1219,8 @@
         "Piekarniki do zabudowy (styl klasyczny)",
         "Płyty gazowe (mosiądz/żeliwo)"
       ],
-      "acquisition_history": "Przejęta przez bliskowschodnią grupę kapitałową w 2010 roku."
+      "acquisition_history": "Przejęta przez bliskowschodnią grupę kapitałową w 2010 roku.",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-fulgor",
@@ -1189,7 +1239,8 @@
         "Grille do zabudowy (Outdoor)",
         "Chłodnictwo do pełnej zabudowy (kolumnowe)"
       ],
-      "acquisition_history": "Przejęta przez Meneghetti S.p.A. w 2009 roku."
+      "acquisition_history": "Przejęta przez Meneghetti S.p.A. w 2009 roku.",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-ravanson",
@@ -1235,7 +1286,8 @@
         "Odkurzacze",
         "Drobne AGD kuchenne"
       ],
-      "acquisition_history": "Niezależna czeska firma prywatna."
+      "acquisition_history": "Niezależna czeska firma prywatna.",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-philco",
@@ -1248,7 +1300,8 @@
       "founded_year": 1892,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Licencja na markę w Europie Środkowo-Wschodniej przejęta przez Fast ČR w 2011 roku."
+      "acquisition_history": "Licencja na markę w Europie Środkowo-Wschodniej przejęta przez Fast ČR w 2011 roku.",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-lord",
@@ -1261,7 +1314,8 @@
       "founded_year": 2015,
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Niezależna firma założona przez byłych menedżerów Bosch/Siemens."
+      "acquisition_history": "Niezależna firma założona przez byłych menedżerów Bosch/Siemens.",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-klarstein",
@@ -1280,7 +1334,8 @@
         "Lodówki na napoje",
         "Małe AGD (roboty planetarne)"
       ],
-      "acquisition_history": "Marka należąca do Berlin Brands Group (model D2C)."
+      "acquisition_history": "Marka należąca do Berlin Brands Group (model D2C).",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-mitsubishi",
@@ -1297,7 +1352,8 @@
         "Lodówki Multidoor",
         "Systemy klimatyzacji"
       ],
-      "acquisition_history": "Niezależna globalna grupa technologiczna."
+      "acquisition_history": "Niezależna globalna grupa technologiczna.",
+      "parentId": "h-jp-ind"
     },
     {
       "id": "b-panasonic",
@@ -1316,7 +1372,8 @@
         "Wypiekacze do chleba",
         "Kuchenki mikrofalowe"
       ],
-      "acquisition_history": "Niezależna globalna grupa technologiczna."
+      "acquisition_history": "Niezależna globalna grupa technologiczna.",
+      "parentId": "h-jp-ind"
     },
     {
       "id": "b-blaupunkt",
@@ -1335,7 +1392,8 @@
         "Okapy kuchenne",
         "Zmywarki z panelem ukrytym"
       ],
-      "acquisition_history": "Model licencjonowania marki zarządzany przez GIP Development SARL."
+      "acquisition_history": "Model licencjonowania marki zarządzany przez GIP Development SARL.",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-franke",
@@ -1356,7 +1414,8 @@
         "Okapy",
         "Zmywarki"
       ],
-      "acquisition_history": "Niezależny holding rodzinny Artemis."
+      "acquisition_history": "Niezależny holding rodzinny Artemis.",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-tcl",
@@ -1377,7 +1436,8 @@
         "Pralki ładowane od frontu",
         "Pralko-suszarki"
       ],
-      "acquisition_history": "Niezależna globalna grupa technologiczna."
+      "acquisition_history": "Niezależna globalna grupa technologiczna.",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-chiq",
@@ -1395,7 +1455,8 @@
         "Lodówki Side-by-Side",
         "Zamrażarki"
       ],
-      "acquisition_history": "Marka należąca do grupy Changhong."
+      "acquisition_history": "Marka należąca do grupy Changhong.",
+      "parentId": "h-cn-ind"
     }
   ],
   "edges": [
@@ -1662,6 +1723,138 @@
       "source": "h-market",
       "target": "b-ok",
       "label": "Marka Własna"
+    },
+    {
+      "id": "e-de--miele",
+      "source": "h-de-ind",
+      "target": "b-miele",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-de--liebherr",
+      "source": "h-de-ind",
+      "target": "b-liebherr",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--smeg",
+      "source": "h-it-ind",
+      "target": "b-smeg",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--bertazzoni",
+      "source": "h-it-ind",
+      "target": "b-bertazzoni",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--elica",
+      "source": "h-it-ind",
+      "target": "b-elica",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--falmec",
+      "source": "h-it-ind",
+      "target": "b-falmec",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--faber",
+      "source": "h-it-ind",
+      "target": "b-faber",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-jp--hitachi",
+      "source": "h-jp-ind",
+      "target": "b-hitachi",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-oth-teka",
+      "source": "h-other-ind",
+      "target": "b-teka",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--lofra",
+      "source": "h-it-ind",
+      "target": "b-lofra",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-it--fulgor",
+      "source": "h-it-ind",
+      "target": "b-fulgor",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-pl--ravanson",
+      "source": "h-pl-ind",
+      "target": "b-ravanson",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-oth-concept",
+      "source": "h-other-ind",
+      "target": "b-concept",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-oth-philco",
+      "source": "h-other-ind",
+      "target": "b-philco",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-de--lord",
+      "source": "h-de-ind",
+      "target": "b-lord",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-de--klarstein",
+      "source": "h-de-ind",
+      "target": "b-klarstein",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-jp--mitsubishi",
+      "source": "h-jp-ind",
+      "target": "b-mitsubishi",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-jp--panasonic",
+      "source": "h-jp-ind",
+      "target": "b-panasonic",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-de--blaupunkt",
+      "source": "h-de-ind",
+      "target": "b-blaupunkt",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-de--franke",
+      "source": "h-de-ind",
+      "target": "b-franke",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-cn--tcl",
+      "source": "h-cn-ind",
+      "target": "b-tcl",
+      "label": "Niezależna"
+    },
+    {
+      "id": "e-cn--chiq",
+      "source": "h-cn-ind",
+      "target": "b-chiq",
+      "label": "Niezależna"
     }
   ]
 }
