@@ -4,11 +4,11 @@ import { Suspense } from 'react';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Shield, Globe2, Info } from 'lucide-react';
+import { Shield, Globe2, Info, HelpCircle } from 'lucide-react';
 import { ReactFlowProvider } from '@xyflow/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GraphMap from '@/components/map/GraphMap';
-import { FilterType } from '@/contexts/FilterContext';
+import { FilterType, ViewMode, FilterContext } from '@/contexts/FilterContext';
 import FlowInternals from '@/components/map/FlowInternals';
 import DetailsPanel from '@/components/map/DetailsPanel';
 import { GraphNodeData } from '@/data/types';
@@ -33,7 +33,9 @@ export default function Home() {
 
 export function HomeContent() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
+  const [viewMode, setViewMode] = useState<ViewMode>('classic');
   const [selectedNodes, setSelectedNodes] = useState<GraphNodeData[]>([]);
+  const [compareQueue, setCompareQueue] = useState<GraphNodeData | null>(null);
   const [showIntro, setShowIntro] = useState(false);
 
   useEffect(() => {
@@ -49,8 +51,9 @@ export function HomeContent() {
   };
 
   return (
-    <ReactFlowProvider>
-      <div className="relative w-full h-screen overflow-hidden flex flex-col bg-[#f8fafc]">
+    <FilterContext.Provider value={{ activeFilter, viewMode }}>
+      <ReactFlowProvider>
+        <div className="relative w-full h-screen overflow-hidden flex flex-col bg-[#f8fafc]">
 
         {/* Header - Z-30 provides UI stacking context above the Map */}
         <header className="absolute top-0 left-0 right-0 z-30 pointer-events-none flex flex-col sm:flex-row sm:justify-center items-center pt-2 sm:pt-4 gap-3 sm:gap-0">
@@ -96,10 +99,32 @@ export function HomeContent() {
                 {f.label}
               </button>
             ))}
+
+            <div className="flex bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-slate-300 shadow-sm ml-2">
+              <button
+                onClick={() => setViewMode('classic')}
+                className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'classic' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
+              >
+                Punkty
+              </button>
+              <button
+                onClick={() => setViewMode('logocards')}
+                className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'logocards' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
+              >
+                Karty
+              </button>
+            </div>
           </div>
 
           {/* Corner link */}
-          <div className="absolute top-5 right-6 pointer-events-auto hidden sm:block">
+          <div className="absolute top-5 right-6 pointer-events-auto hidden sm:flex items-center gap-4">
+            <button
+              onClick={() => setShowIntro(true)}
+              className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
+            >
+              <HelpCircle className="w-4 h-4" />
+              Jak to działa?
+            </button>
             <Link
               href="/polityka-prywatnosci"
               className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
@@ -120,11 +145,18 @@ export function HomeContent() {
             activeFilter={activeFilter} 
             onNodeSelect={(node, multi) => {
               setSelectedNodes(prev => {
-                // Toggle if already selected
+                if (compareQueue) {
+                  if (compareQueue.id === node.id) {
+                    setCompareQueue(null);
+                    return [node];
+                  }
+                  setCompareQueue(null);
+                  return [compareQueue, node];
+                }
+
                 if (prev.some(n => n.id === node.id)) {
                   return prev.filter(n => n.id !== node.id);
                 }
-                // If multi (shift pressed) and we have < 2, add it
                 if (multi) {
                   return prev.length < 2 ? [...prev, node] : [prev[0], node];
                 }
@@ -133,11 +165,39 @@ export function HomeContent() {
             }} 
           />
         </main>
+        
+        <AnimatePresence>
+          {compareQueue && (
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -100, opacity: 0 }}
+              className="absolute top-6 left-1/2 -translate-x-1/2 z-[100] pointer-events-auto flex items-center gap-4 bg-slate-900 border border-slate-700 text-white rounded-full px-5 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
+            >
+              <span className="text-sm font-semibold tracking-wide">
+                Wybierz drugą markę by porównać z <b className="text-blue-400">{compareQueue.name}</b>...
+              </span>
+              <button 
+                onClick={() => setCompareQueue(null)}
+                className="text-[10px] uppercase font-bold tracking-widest text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-full transition-all"
+              >
+                Anuluj
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-        <DetailsPanel nodes={selectedNodes} onClose={(idToClose) => {
-          if (!idToClose) setSelectedNodes([]);
-          else setSelectedNodes(prev => prev.filter(n => n.id !== idToClose));
-        }} />
+        <DetailsPanel 
+          nodes={selectedNodes} 
+          onClose={(idToClose) => {
+            if (!idToClose) setSelectedNodes([]);
+            else setSelectedNodes(prev => prev.filter(n => n.id !== idToClose));
+          }}
+          onRequestCompare={(node) => {
+            setCompareQueue(node);
+            setSelectedNodes([]);
+          }}
+        />
 
         {/* Intro Modal */}
         <AnimatePresence>
@@ -187,8 +247,8 @@ export function HomeContent() {
                         <Shield className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800 mb-1 text-sm">Przejęcia i Produkcja</h4>
-                      <p>Kliknij w dowolną markę, aby rozwinąć panel informacyjny tłumaczący jakie kategorie produktów dany producent oferuje i do kogo należy.</p>
+                      <h4 className="font-bold text-slate-800 mb-1 text-sm">Przejęcia i Porównania</h4>
+                      <p>Kliknij w dowolną markę, aby rozwinąć panel informacyjny tłumaczący do kogo należy. <b>Wskazówka:</b> Na komputerze przytrzymaj <kbd className="px-1.5 py-0.5 bg-slate-100 border border-slate-200 rounded-md text-[10px] font-mono text-slate-600">Shift</kbd> by zaznaczyć dwie marki i porównać je do siebie łeb w łeb.</p>
                     </div>
                   </div>
                 </div>
@@ -208,7 +268,14 @@ export function HomeContent() {
 
         {/* Footer */}
         <footer className="absolute bottom-3 right-5 sm:right-6 z-20 pointer-events-none flex flex-col sm:flex-row items-end sm:items-center gap-1.5 sm:gap-4">
-          <div className="pointer-events-auto sm:hidden">
+          <div className="pointer-events-auto sm:hidden flex items-center gap-4">
+            <button
+              onClick={() => setShowIntro(true)}
+              className="flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
+            >
+              <HelpCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              Jak to działa?
+            </button>
             <Link
               href="/polityka-prywatnosci"
               className="flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
@@ -223,5 +290,6 @@ export function HomeContent() {
         </footer>
       </div>
     </ReactFlowProvider>
+    </FilterContext.Provider>
   );
 }

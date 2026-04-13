@@ -4,11 +4,14 @@ import { createContext, useContext } from 'react';
 
 export type FilterType = 'all' | 'polski-kapital' | 'produkcja-pl' | 'premium' | 'budzetowe';
 
+export type ViewMode = 'classic' | 'logocards';
+
 interface FilterContextValue {
   activeFilter: FilterType;
+  viewMode: ViewMode;
 }
 
-export const FilterContext = createContext<FilterContextValue>({ activeFilter: 'all' });
+export const FilterContext = createContext<FilterContextValue>({ activeFilter: 'all', viewMode: 'classic' });
 export const useFilter = () => useContext(FilterContext);
 
 // ─── Filter matching logic ───────────────────────────────────────────────────

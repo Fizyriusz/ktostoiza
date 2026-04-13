@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08",
+  "lastUpdate": "2026-04-13T00:14:55.179Z",
   "nodes": [
     {
       "id": "h-beko",
@@ -7,7 +7,8 @@
       "name": "Beko Europe",
       "country": "Turcja / USA",
       "description": "Fuzja europejskich operacji amerykańskiego Whirlpoola oraz tureckiego Arçelik (właściciela Beko).",
-      "seo_slug": "beko-europe"
+      "seo_slug": "beko-europe",
+      "localLogo": "/brandsicons/beko.svg"
     },
     {
       "id": "b-beko",
@@ -39,7 +40,8 @@
         "Kuchnie wolnostojące",
         "Mikrofalówki"
       ],
-      "acquisition_history": "Założona przez Arçelik w 1955 roku. Część Beko Europe od 2024 roku."
+      "acquisition_history": "Założona przez Arçelik w 1955 roku. Część Beko Europe od 2024 roku.",
+      "localLogo": "/brandsicons/beko.svg"
     },
     {
       "id": "b-whirlpool",
@@ -71,7 +73,8 @@
         "Mikrofalówki",
         "Okapy"
       ],
-      "acquisition_history": "Działalność w regionie EMEA połączona z Beko Europe w 2024 roku."
+      "acquisition_history": "Działalność w regionie EMEA połączona z Beko Europe w 2024 roku.",
+      "localLogo": "/brandsicons/whirlpool.svg"
     },
     {
       "id": "b-indesit",
@@ -88,7 +91,17 @@
       "founded_year": 1953,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Whirlpool w 2014 roku, przeniesiona do Beko Europe w 2024 roku."
+      "acquisition_history": "Przejęta przez Whirlpool w 2014 roku, przeniesiona do Beko Europe w 2024 roku.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące"
+      ],
+      "localLogo": "/brandsicons/indesit.svg"
     },
     {
       "id": "b-hotpoint",
@@ -102,7 +115,17 @@
       "founded_year": 1911,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Hotpoint przejęty przez Indesit (2001), następnie Whirlpool (2014), a obecnie Beko Europe (2024)."
+      "acquisition_history": "Hotpoint przejęty przez Indesit (2001), następnie Whirlpool (2014), a obecnie Beko Europe (2024).",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące"
+      ],
+      "localLogo": "/brandsicons/hotpoint.svg"
     },
     {
       "id": "b-bauknecht",
@@ -116,7 +139,17 @@
       "founded_year": 1919,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Philips (1982), następnie Whirlpool (1989), a obecnie Beko Europe (2024)."
+      "acquisition_history": "Przejęta przez Philips (1982), następnie Whirlpool (1989), a obecnie Beko Europe (2024).",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Ekspresy do zabudowy"
+      ],
+      "localLogo": "/brandsicons/bauknecht.svg"
     },
     {
       "id": "b-grundig",
@@ -130,7 +163,17 @@
       "founded_year": 1945,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Arçelik (Beko) między 2004 a 2007 rokiem."
+      "acquisition_history": "Przejęta przez Arçelik (Beko) między 2004 a 2007 rokiem.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy"
+      ],
+      "localLogo": "/brandsicons/grundig.svg"
     },
     {
       "id": "b-polar",
@@ -173,7 +216,8 @@
         "Lodówki",
         "Zmywarki (podstawowe modele)"
       ],
-      "acquisition_history": "Długoletnia część portfolio Whirlpool, obecnie Beko Europe."
+      "acquisition_history": "Długoletnia część portfolio Whirlpool, obecnie Beko Europe.",
+      "localLogo": "/brandsicons/ignis.png"
     },
     {
       "id": "b-privileg",
@@ -187,7 +231,15 @@
       "founded_year": 1964,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Whirlpool w 2011 roku, obecnie Beko Europe."
+      "acquisition_history": "Przejęta przez Whirlpool w 2011 roku, obecnie Beko Europe.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze"
+      ],
+      "localLogo": "/brandsicons/privileg.svg"
     },
     {
       "id": "h-bsh",
@@ -229,7 +281,8 @@
         "Mikrofalówki",
         "Ekspresy do kawy"
       ],
-      "acquisition_history": "Niezależna. Utworzyła spółkę joint venture BSH w 1967 roku, stała się stuprocentowym właścicielem w 2015 roku."
+      "acquisition_history": "Niezależna. Utworzyła spółkę joint venture BSH w 1967 roku, stała się stuprocentowym właścicielem w 2015 roku.",
+      "localLogo": "/brandsicons/bosch.svg"
     },
     {
       "id": "b-siemens",
@@ -250,7 +303,19 @@
       "founded_year": 1847,
       "business_structure": "Partnerstwo Licencyjne",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Pełne prawa do sprzętu AGD przejęte przez firmę Bosch od Siemens AG w 2015 roku."
+      "acquisition_history": "Pełne prawa do sprzętu AGD przejęte przez firmę Bosch od Siemens AG w 2015 roku.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Ekspresy do kawy",
+        "Szuflady grzewcze"
+      ],
+      "localLogo": "/brandsicons/siemens.svg"
     },
     {
       "id": "b-gaggenau",
@@ -264,7 +329,17 @@
       "founded_year": 1683,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio (Luksusowe)",
-      "acquisition_history": "Przejęta przez BSH (Bosch/Siemens) w 1995 roku."
+      "acquisition_history": "Przejęta przez BSH (Bosch/Siemens) w 1995 roku.",
+      "product_categories": [
+        "Piekarniki profesjonalne",
+        "Płyty grzewcze",
+        "Okapy",
+        "Chłodnictwo kolumnowe",
+        "Winiarki",
+        "Zmywarki luksusowe",
+        "Ekspresy do zabudowy"
+      ],
+      "localLogo": "/brandsicons/gaggenau.svg"
     },
     {
       "id": "b-neff",
@@ -284,7 +359,8 @@
         "Ekspresy do zabudowy",
         "Szuflady grzewcze"
       ],
-      "acquisition_history": "Przejęta przez BSH (Bosch/Siemens) w 1982 roku."
+      "acquisition_history": "Przejęta przez BSH (Bosch/Siemens) w 1982 roku.",
+      "localLogo": "/brandsicons/neff.svg"
     },
     {
       "id": "h-haier",
@@ -292,7 +368,8 @@
       "name": "Haier Europe",
       "country": "Chiny",
       "description": "Chiński gigant, który przejął jedną z najstarszych grup AGD w Europie (Candy/Hoover).",
-      "seo_slug": "haier-europe"
+      "seo_slug": "haier-europe",
+      "localLogo": "/brandsicons/haier.svg"
     },
     {
       "id": "b-haier",
@@ -320,7 +397,8 @@
         "Piekarniki",
         "Winiarki"
       ],
-      "acquisition_history": "Niezależna grupa globalna. Przejęła GE Appliances (2016) oraz Candy/Hoover (2018)."
+      "acquisition_history": "Niezależna grupa globalna. Przejęła GE Appliances (2016) oraz Candy/Hoover (2018).",
+      "localLogo": "/brandsicons/haier.svg"
     },
     {
       "id": "b-candy",
@@ -337,7 +415,16 @@
       "founded_year": 1945,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Haier Group w 2018 roku."
+      "acquisition_history": "Przejęta przez Haier Group w 2018 roku.",
+      "product_categories": [
+        "Pralki Slim",
+        "Pralko-suszarki",
+        "Lodówki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze"
+      ],
+      "localLogo": "/brandsicons/candy.svg"
     },
     {
       "id": "b-hoover",
@@ -351,7 +438,14 @@
       "founded_year": 1908,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Europejski oddział przejęty przez Candy (1995), a następnie Haier (2018)."
+      "acquisition_history": "Europejski oddział przejęty przez Candy (1995), a następnie Haier (2018).",
+      "product_categories": [
+        "Pralki",
+        "Suszarki",
+        "Lodówki",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/hoover.svg"
     },
     {
       "id": "b-ge",
@@ -365,7 +459,15 @@
       "founded_year": 1892,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Haier Group od General Electric w 2016 roku."
+      "acquisition_history": "Przejęta przez Haier Group od General Electric w 2016 roku.",
+      "product_categories": [
+        "Lodówki American Style",
+        "Pralki",
+        "Suszarki",
+        "Piekarniki",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/geappliances.svg"
     },
     {
       "id": "h-electrolux",
@@ -373,7 +475,8 @@
       "name": "Electrolux Group",
       "country": "Szwecja",
       "description": "Szwedzki koncern konsolidujący rynek europejski.",
-      "seo_slug": "electrolux-group"
+      "seo_slug": "electrolux-group",
+      "localLogo": "/brandsicons/electrolux.svg"
     },
     {
       "id": "b-electrolux",
@@ -406,7 +509,8 @@
         "Okapy",
         "Mikrofalówki"
       ],
-      "acquisition_history": "Globalna grupa. Przejęła markę Zanussi (1984) i AEG (1994)."
+      "acquisition_history": "Globalna grupa. Przejęła markę Zanussi (1984) i AEG (1994).",
+      "localLogo": "/brandsicons/electrolux.svg"
     },
     {
       "id": "b-aeg",
@@ -420,7 +524,17 @@
       "founded_year": 1883,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Dział AGD przejęty przez Electrolux w 1994 roku."
+      "acquisition_history": "Dział AGD przejęty przez Electrolux w 1994 roku.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki parowe",
+        "Płyty grzewcze",
+        "Okapy"
+      ],
+      "localLogo": "/brandsicons/aeg.svg"
     },
     {
       "id": "b-zanussi",
@@ -434,7 +548,16 @@
       "founded_year": 1916,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Electrolux w 1984 roku."
+      "acquisition_history": "Przejęta przez Electrolux w 1984 roku.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące"
+      ],
+      "localLogo": "/brandsicons/zanussi.svg"
     },
     {
       "id": "h-hisense",
@@ -442,7 +565,8 @@
       "name": "Hisense Group",
       "country": "Chiny",
       "description": "Chiński koncern, który przejął słoweńskie Gorenje, tworząc silnego gracza w Europie Środkowej.",
-      "seo_slug": "hisense-group"
+      "seo_slug": "hisense-group",
+      "localLogo": "/brandsicons/hisense.svg"
     },
     {
       "id": "b-hisense",
@@ -470,7 +594,8 @@
         "Piekarniki",
         "Płyty grzewcze"
       ],
-      "acquisition_history": "Globalna grupa. Przejęła Gorenje i Asko w 2018 roku."
+      "acquisition_history": "Globalna grupa. Przejęła Gorenje i Asko w 2018 roku.",
+      "localLogo": "/brandsicons/hisense.svg"
     },
     {
       "id": "b-gorenje",
@@ -496,7 +621,8 @@
         "Płyty grzewcze",
         "Kuchnie wolnostojące"
       ],
-      "acquisition_history": "Przejęta przez Hisense Group w 2018 roku."
+      "acquisition_history": "Przejęta przez Hisense Group w 2018 roku.",
+      "localLogo": "/brandsicons/gorenje.svg"
     },
     {
       "id": "b-asko",
@@ -510,7 +636,16 @@
       "founded_year": 1950,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio (Premium)",
-      "acquisition_history": "Przejęta przez Gorenje (2010), a następnie Hisense Group (2018)."
+      "acquisition_history": "Przejęta przez Gorenje (2010), a następnie Hisense Group (2018).",
+      "product_categories": [
+        "Pralki (Pro Wash)",
+        "Suszarki",
+        "Zmywarki",
+        "Lodówki",
+        "Piekarniki parowe",
+        "Winiarki"
+      ],
+      "localLogo": "/brandsicons/asko.svg"
     },
     {
       "id": "h-amica",
@@ -518,7 +653,8 @@
       "name": "Amica Group",
       "country": "Polska",
       "description": "Polska firma z Wronek, potężny gracz w Europie Wschodniej i Skandynawii.",
-      "seo_slug": "amica-group"
+      "seo_slug": "amica-group",
+      "localLogo": "/brandsicons/amica.svg"
     },
     {
       "id": "b-amica",
@@ -549,7 +685,8 @@
         "Pralki",
         "Mikrofalówki"
       ],
-      "acquisition_history": "Niezależna (GPW). Przejęła Gram (2001), CDA (2015) oraz licencję na markę Fagor (2019)."
+      "acquisition_history": "Niezależna (GPW). Przejęła Gram (2001), CDA (2015) oraz licencję na markę Fagor (2019).",
+      "localLogo": "/brandsicons/amica.svg"
     },
     {
       "id": "b-hansa",
@@ -563,7 +700,16 @@
       "founded_year": 1999,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Marka stworzona przez Amikę na rynki wschodnioeuropejskie (1999)."
+      "acquisition_history": "Marka stworzona przez Amikę na rynki wschodnioeuropejskie (1999).",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Kuchnie wolnostojące",
+        "Okapy",
+        "Lodówki",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/hansa.png"
     },
     {
       "id": "b-gram",
@@ -577,7 +723,15 @@
       "founded_year": 1901,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Amica Group w 2001 roku."
+      "acquisition_history": "Przejęta przez Amica Group w 2001 roku.",
+      "product_categories": [
+        "Lodówki",
+        "Zamrażarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/gram.webp"
     },
     {
       "id": "b-cda",
@@ -591,7 +745,16 @@
       "founded_year": 1991,
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Przejęta przez Amica Group w 2015 roku."
+      "acquisition_history": "Przejęta przez Amica Group w 2015 roku.",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Winiarki",
+        "Zlewozmywaki",
+        "Lodówki do zabudowy"
+      ],
+      "localLogo": "/brandsicons/cda.png"
     },
     {
       "id": "b-fagor",
@@ -605,7 +768,15 @@
       "founded_year": 1956,
       "business_structure": "Partnerstwo Licencyjne",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Licencja na markę pozyskana przez firmę Amica na 30 lat w 2019 roku."
+      "acquisition_history": "Licencja na markę pozyskana przez firmę Amica na 30 lat w 2019 roku.",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zmywarki",
+        "Lodówki"
+      ],
+      "localLogo": "/brandsicons/fagor.svg"
     },
     {
       "id": "h-vestel",
@@ -633,7 +804,15 @@
       ],
       "business_structure": "Partnerstwo Licencyjne",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Europejska licencja na markę przejęta przez Vestel w 2014 roku."
+      "acquisition_history": "Europejska licencja na markę przejęta przez Vestel w 2014 roku.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Kuchenki mikrofalowe",
+        "Piekarniki"
+      ],
+      "localLogo": "/brandsicons/sharp.svg"
     },
     {
       "id": "b-toshiba",
@@ -653,7 +832,8 @@
         "Mikrofalówki",
         "Pralki (wybrane modele)"
       ],
-      "acquisition_history": "Dział AGD przejęty przez Midea Group w 2016 roku."
+      "acquisition_history": "Dział AGD przejęty przez Midea Group w 2016 roku.",
+      "localLogo": "/brandsicons/toshiba.svg"
     },
     {
       "id": "b-finlux",
@@ -673,7 +853,8 @@
         "Zmywarki",
         "Kuchnie wolnostojące"
       ],
-      "acquisition_history": "Przejęta przez Vestel Group w 2006 roku."
+      "acquisition_history": "Przejęta przez Vestel Group w 2006 roku.",
+      "localLogo": "/brandsicons/finlux.webp"
     },
     {
       "id": "b-vestfrost",
@@ -693,7 +874,8 @@
         "Zamrażarki",
         "Oczyszczacze powietrza"
       ],
-      "acquisition_history": "Przejęta przez Vestel Group w 2008 roku."
+      "acquisition_history": "Przejęta przez Vestel Group w 2008 roku.",
+      "localLogo": "/brandsicons/vestfrost.png"
     },
     {
       "id": "h-samsung",
@@ -701,7 +883,8 @@
       "name": "Samsung Electronics",
       "country": "Korea Południowa",
       "description": "Gigant technologiczny z własnymi liniami produkcyjnymi.",
-      "seo_slug": "samsung-group"
+      "seo_slug": "samsung-group",
+      "localLogo": "/brandsicons/samsung.svg"
     },
     {
       "id": "b-samsung",
@@ -731,7 +914,8 @@
         "Okapy",
         "Mikrofalówki"
       ],
-      "acquisition_history": "Niezależna globalna grupa technologiczna."
+      "acquisition_history": "Niezależna globalna grupa technologiczna.",
+      "localLogo": "/brandsicons/samsung.svg"
     },
     {
       "id": "h-lg",
@@ -739,7 +923,16 @@
       "name": "LG Electronics",
       "country": "Korea Południowa",
       "description": "Jeden z liderów innowacji, z własnymi ogromnymi fabrykami.",
-      "seo_slug": "lg-group"
+      "seo_slug": "lg-group",
+      "product_categories": [
+        "Lodówki Side-by-Side",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Okapy"
+      ],
+      "localLogo": "/brandsicons/lg.svg"
     },
     {
       "id": "b-lg",
@@ -760,7 +953,8 @@
       "founded_year": 1958,
       "business_structure": "Spółka Publiczna",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Niezależna globalna grupa technologiczna."
+      "acquisition_history": "Niezależna globalna grupa technologiczna.",
+      "localLogo": "/brandsicons/fulgormilano.jpg"
     },
     {
       "id": "b-miele",
@@ -788,7 +982,8 @@
         "Odkurzacze"
       ],
       "acquisition_history": "Niezależna. Firma rodzinna od 1899 roku.",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "localLogo": "/brandsicons/miele.svg"
     },
     {
       "id": "b-liebherr",
@@ -808,7 +1003,8 @@
         "Chłodziarki profesjonalne"
       ],
       "acquisition_history": "Niezależna. Firma rodzinna od 1949 roku.",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "localLogo": "/brandsicons/liebherr.svg"
     },
     {
       "id": "b-smeg",
@@ -822,7 +1018,16 @@
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Pełne Portfolio (Design)",
       "acquisition_history": "Niezależna. Firma rodzinna od 1948 roku.",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "product_categories": [
+        "Lodówki Retro (FAB)",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zmywarki",
+        "Ekspresy do kawy"
+      ],
+      "localLogo": "/brandsicons/smeg.svg"
     },
     {
       "id": "h-pl-ind",
@@ -856,7 +1061,8 @@
         "Okapy",
         "Zlewozmywaki"
       ],
-      "acquisition_history": "Niezależna polska marka należąca do GT Group."
+      "acquisition_history": "Niezależna polska marka należąca do GT Group.",
+      "localLogo": "/brandsicons/kernau.png"
     },
     {
       "id": "b-mpm",
@@ -873,7 +1079,16 @@
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Niezależna polska firma rodzinna."
+      "acquisition_history": "Niezależna polska firma rodzinna.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Kuchnie wolnostojące",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/mpm.jpg"
     },
     {
       "id": "b-solgaz",
@@ -896,7 +1111,8 @@
         "Piekarniki",
         "Okapy inteligentne"
       ],
-      "acquisition_history": "Niezależna polska firma technologiczna."
+      "acquisition_history": "Niezależna polska firma technologiczna.",
+      "localLogo": "/brandsicons/lg.svg"
     },
     {
       "id": "b-ciarko",
@@ -917,7 +1133,8 @@
         "Okapy kuchenne premium",
         "Systemy wyciągowe"
       ],
-      "acquisition_history": "Niezależny polski producent."
+      "acquisition_history": "Niezależny polski producent.",
+      "localLogo": "/brandsicons/ciarkodesign.svg"
     },
     {
       "id": "b-akpo",
@@ -938,7 +1155,8 @@
         "Okapy kuchenne",
         "Płyty grzewcze"
       ],
-      "acquisition_history": "Niezależny polski producent."
+      "acquisition_history": "Niezależny polski producent.",
+      "localLogo": "/brandsicons/akpo.svg"
     },
     {
       "id": "b-globalo",
@@ -959,7 +1177,8 @@
         "Okapy kuchenne",
         "Płyty grzewcze z wyciągiem"
       ],
-      "acquisition_history": "Niezależna polska specjalistyczna marka."
+      "acquisition_history": "Niezależna polska specjalistyczna marka.",
+      "localLogo": "/brandsicons/globalo.svg"
     },
     {
       "id": "b-vdb",
@@ -976,7 +1195,12 @@
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
       "product_range": "Specjalista: Okapy Kuchenne",
-      "acquisition_history": "Niezależna polska specjalistyczna marka."
+      "acquisition_history": "Niezależna polska specjalistyczna marka.",
+      "product_categories": [
+        "Okapy kuchenne",
+        "Płyty indukcyjne"
+      ],
+      "localLogo": "/brandsicons/vdb.jpg"
     },
     {
       "id": "h-it-ind",
@@ -1049,7 +1273,8 @@
         "Płyty grzewcze",
         "Małe AGD (blendery, odkurzacze)"
       ],
-      "acquisition_history": "Marka własna stworzona przez RTV Euro AGD (2014)."
+      "acquisition_history": "Marka własna stworzona przez RTV Euro AGD (2014).",
+      "localLogo": "/brandsicons/raven.png"
     },
     {
       "id": "b-koenic",
@@ -1066,7 +1291,16 @@
       ],
       "business_structure": "Marka Własna (MediaMarktSaturn)",
       "product_range": "Pełne Portfolio",
-      "acquisition_history": "Marka własna stworzona przez MediaMarktSaturn (2010)."
+      "acquisition_history": "Marka własna stworzona przez MediaMarktSaturn (2010).",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze"
+      ],
+      "localLogo": "/brandsicons/koenic.png"
     },
     {
       "id": "b-ok",
@@ -1089,7 +1323,8 @@
         "Zmywarki wolnostojące",
         "Kuchenki mikrofalowe"
       ],
-      "acquisition_history": "Marka własna stworzona przez MediaMarktSaturn (2010)."
+      "acquisition_history": "Marka własna stworzona przez MediaMarktSaturn (2010).",
+      "localLogo": "/brandsicons/ok..png"
     },
     {
       "id": "b-bertazzoni",
@@ -1110,7 +1345,8 @@
         "Zmywarki do zabudowy"
       ],
       "acquisition_history": "Niezależna firma rodzinna od 1882 roku.",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "localLogo": "/brandsicons/bertazzoni.png"
     },
     {
       "id": "b-elica",
@@ -1128,7 +1364,8 @@
         "Płyty indukcyjne z wyciągiem (NikolaTesla)"
       ],
       "acquisition_history": "Niezależna spółka publiczna (Borsa Italiana).",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "localLogo": "/brandsicons/elica.svg"
     },
     {
       "id": "b-falmec",
@@ -1146,7 +1383,8 @@
         "Systemy oczyszczania powietrza"
       ],
       "acquisition_history": "Niezależna firma rodzinna od 1981 roku.",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "localLogo": "/brandsicons/falmec.jpg"
     },
     {
       "id": "b-faber",
@@ -1160,7 +1398,12 @@
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Specjalista: Okapy Kuchenne",
       "acquisition_history": "Przejęta przez Franke Group w 2005 roku.",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "product_categories": [
+        "Okapy kuchenne",
+        "Płyty indukcyjne zintegrowane z wyciągiem"
+      ],
+      "localLogo": "/brandsicons/faber.svg"
     },
     {
       "id": "b-hitachi",
@@ -1179,7 +1422,8 @@
         "Lodówki French Door"
       ],
       "acquisition_history": "Joint venture pomiędzy Hitachi Global Life Solutions a Arçelik (2021).",
-      "parentId": "h-jp-ind"
+      "parentId": "h-jp-ind",
+      "localLogo": "/brandsicons/hitachi.svg"
     },
     {
       "id": "b-teka",
@@ -1201,7 +1445,8 @@
         "Baterie kuchenne"
       ],
       "acquisition_history": "Niezależna niemiecko-szwajcarska grupa.",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "localLogo": "/brandsicons/teka.png"
     },
     {
       "id": "b-lofra",
@@ -1220,7 +1465,8 @@
         "Płyty gazowe (mosiądz/żeliwo)"
       ],
       "acquisition_history": "Przejęta przez bliskowschodnią grupę kapitałową w 2010 roku.",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "localLogo": "/brandsicons/lofra.png"
     },
     {
       "id": "b-fulgor",
@@ -1240,7 +1486,8 @@
         "Chłodnictwo do pełnej zabudowy (kolumnowe)"
       ],
       "acquisition_history": "Przejęta przez Meneghetti S.p.A. w 2009 roku.",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "localLogo": "/brandsicons/fulgormilano.jpg"
     },
     {
       "id": "b-ravanson",
@@ -1263,7 +1510,8 @@
         "Wentylatory i klimatyzatory"
       ],
       "acquisition_history": "Niezależna polska firma prywatna.",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "localLogo": "/brandsicons/ravanson.png"
     },
     {
       "id": "b-concept",
@@ -1287,7 +1535,8 @@
         "Drobne AGD kuchenne"
       ],
       "acquisition_history": "Niezależna czeska firma prywatna.",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "localLogo": "/brandsicons/concept.png"
     },
     {
       "id": "b-philco",
@@ -1301,7 +1550,15 @@
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio",
       "acquisition_history": "Licencja na markę w Europie Środkowo-Wschodniej przejęta przez Fast ČR w 2011 roku.",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze"
+      ],
+      "localLogo": "/brandsicons/philco.svg"
     },
     {
       "id": "b-lord",
@@ -1315,7 +1572,15 @@
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Pełne Portfolio",
       "acquisition_history": "Niezależna firma założona przez byłych menedżerów Bosch/Siemens.",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Suszarki",
+        "Zmywarki",
+        "Piekarniki"
+      ],
+      "localLogo": "/brandsicons/lord.png"
     },
     {
       "id": "b-klarstein",
@@ -1335,7 +1600,8 @@
         "Małe AGD (roboty planetarne)"
       ],
       "acquisition_history": "Marka należąca do Berlin Brands Group (model D2C).",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "localLogo": "/brandsicons/klarstein.webp"
     },
     {
       "id": "b-mitsubishi",
@@ -1353,7 +1619,8 @@
         "Systemy klimatyzacji"
       ],
       "acquisition_history": "Niezależna globalna grupa technologiczna.",
-      "parentId": "h-jp-ind"
+      "parentId": "h-jp-ind",
+      "localLogo": "/brandsicons/mitsubishi.svg"
     },
     {
       "id": "b-panasonic",
@@ -1373,7 +1640,8 @@
         "Kuchenki mikrofalowe"
       ],
       "acquisition_history": "Niezależna globalna grupa technologiczna.",
-      "parentId": "h-jp-ind"
+      "parentId": "h-jp-ind",
+      "localLogo": "/brandsicons/panasonic.svg"
     },
     {
       "id": "b-blaupunkt",
@@ -1393,7 +1661,8 @@
         "Zmywarki z panelem ukrytym"
       ],
       "acquisition_history": "Model licencjonowania marki zarządzany przez GIP Development SARL.",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "localLogo": "/brandsicons/blaupunkt.svg"
     },
     {
       "id": "b-franke",
@@ -1415,7 +1684,8 @@
         "Zmywarki"
       ],
       "acquisition_history": "Niezależny holding rodzinny Artemis.",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "localLogo": "/brandsicons/franke.svg"
     },
     {
       "id": "b-tcl",
@@ -1437,7 +1707,8 @@
         "Pralko-suszarki"
       ],
       "acquisition_history": "Niezależna globalna grupa technologiczna.",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "localLogo": "/brandsicons/tcl.svg"
     },
     {
       "id": "b-chiq",
@@ -1456,7 +1727,8 @@
         "Zamrażarki"
       ],
       "acquisition_history": "Marka należąca do grupy Changhong.",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "localLogo": "/brandsicons/chiq.svg"
     }
   ],
   "edges": [

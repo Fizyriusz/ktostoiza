@@ -55,9 +55,10 @@ function getBrandDomain(brandName: string) {
 interface DetailsPanelProps {
   nodes: GraphNodeData[];
   onClose: (id?: string) => void;
+  onRequestCompare?: (node: GraphNodeData) => void;
 }
 
-function SingleNodeDetails({ node, onClose, isSideBySide }: { node: GraphNodeData, onClose: () => void, isSideBySide: boolean }) {
+function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: GraphNodeData, onClose: () => void, onCompare?: () => void, isSideBySide: boolean }) {
   const [imgError, setImgError] = useState(false);
   const origin = node.type === 'holding' ? node.country : node.origin;
   const flagUrl = getFlagUrl(origin);
@@ -126,6 +127,16 @@ function SingleNodeDetails({ node, onClose, isSideBySide }: { node: GraphNodeDat
           </div>
         )}
 
+        {!isSideBySide && onCompare && (
+          <button 
+            onClick={onCompare} 
+            className="mt-3 px-4 py-2 pb-[10px] bg-slate-900 border border-slate-700 rounded-xl text-white text-sm font-semibold w-full transition-colors hover:bg-slate-800 shadow-sm flex items-center justify-center gap-2 group relative overflow-hidden"
+          >
+            <span className="relative z-10">Zestaw z inną marką</span>
+            <span className="relative z-10 ml-1 text-[9px] bg-slate-700/80 text-white px-1.5 py-0.5 rounded opacity-90 group-hover:bg-slate-600 transition-colors uppercase tracking-widest font-black">VS</span>
+          </button>
+        )}
+
         {node.type === 'brand' && node.product_range && (
           <div className={`mt-2 group relative w-full ${isSideBySide ? 'hover:z-50' : ''}`}>
             <div className="cursor-help px-4 py-2 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm font-semibold text-center w-full transition-colors hover:bg-slate-700 shadow-sm">
@@ -168,17 +179,23 @@ function SingleNodeDetails({ node, onClose, isSideBySide }: { node: GraphNodeDat
           )}
         </div>
 
-        {node.type === 'brand' && node.factories_pl && node.factories_pl.length > 0 && (
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+        {node.type === 'brand' && (
+          <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
             <h4 className="flex items-center gap-2 text-xs font-black text-slate-800 uppercase tracking-widest mb-3 border-b border-slate-100 pb-2">
               <Factory className="w-4 h-4 text-emerald-500" /> Produkcja w Polsce
             </h4>
             <div className="flex flex-wrap gap-2">
-              {node.factories_pl.map(city => (
-                <span key={city} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-bold shadow-sm">
-                  📍 {city}
-                </span>
-              ))}
+              {(!node.factories_pl || node.factories_pl.length === 0) ? (
+                <span className="text-slate-500 text-sm font-semibold">Brak fabryk na terenie Polski.</span>
+              ) : (node.factories_pl.length === 1 && node.factories_pl[0].includes('Brak')) ? (
+                <span className="text-slate-500 text-sm font-semibold">{node.factories_pl[0]}</span>
+              ) : (
+                node.factories_pl.map(city => (
+                  <span key={city} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-bold shadow-sm">
+                    📍 {city}
+                  </span>
+                ))
+              )}
             </div>
           </div>
         )}
@@ -232,7 +249,7 @@ function SingleNodeDetails({ node, onClose, isSideBySide }: { node: GraphNodeDat
   );
 }
 
-export default function DetailsPanel({ nodes, onClose }: DetailsPanelProps) {
+export default function DetailsPanel({ nodes, onClose, onRequestCompare }: DetailsPanelProps) {
   if (!nodes || nodes.length === 0) return null;
 
   const isMulti = nodes.length > 1;
@@ -258,7 +275,12 @@ export default function DetailsPanel({ nodes, onClose }: DetailsPanelProps) {
         <div className={`flex flex-col sm:flex-row w-full h-full overflow-y-auto sm:overflow-hidden rounded-t-3xl sm:rounded-3xl shadow-2xl divide-y sm:divide-y-0 sm:divide-x divide-slate-200 border border-slate-200 ${isMulti ? 'bg-slate-100' : 'bg-white'}`}>
           {nodes.map(node => (
             <div key={node.id} className="flex-1 sm:overflow-y-auto min-w-[300px]">
-              <SingleNodeDetails node={node} onClose={() => onClose(node.id)} isSideBySide={isMulti} />
+              <SingleNodeDetails 
+                node={node} 
+                onClose={() => onClose(node.id)} 
+                isSideBySide={isMulti} 
+                onCompare={onRequestCompare ? () => onRequestCompare(node) : undefined}
+              />
             </div>
           ))}
         </div>

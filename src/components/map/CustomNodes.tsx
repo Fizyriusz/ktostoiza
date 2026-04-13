@@ -118,7 +118,7 @@ const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; positi
 // ─── Holding Node ───────────────────────────────────────────────────────────
 
 export const HoldingNode = ({ data }: NodeProps) => {
-  const { activeFilter } = useFilter();
+  const { activeFilter, viewMode } = useFilter();
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter);
   const origin = data.country as string;
   const name = data.name as string;
@@ -138,11 +138,18 @@ export const HoldingNode = ({ data }: NodeProps) => {
     >
       <InvisibleHandle type="target" position={Position.Top} />
 
-      <div className="mb-3 w-8 h-8 rounded-full overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center bg-slate-50">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={flagUrl} alt={origin} className="w-full h-full object-cover" />
-      </div>
-      <h3 className="text-slate-800 font-black text-xl tracking-tight leading-tight">{name}</h3>
+      {viewMode === 'logocards' && data.localLogo ? (
+        <div className="w-full h-12 mb-3 flex items-center justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={data.localLogo as string} alt={name} className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all opacity-90 hover:opacity-100" />
+        </div>
+      ) : (
+        <div className="mb-3 w-8 h-8 rounded-full overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center bg-slate-50 mx-auto">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={flagUrl} alt={origin} className="w-full h-full object-cover" />
+        </div>
+      )}
+      <h3 className={`text-slate-800 font-black tracking-tight leading-tight ${viewMode === 'logocards' && data.localLogo ? 'text-xs hidden' : 'text-xl'}`}>{name}</h3>
       <p className="text-slate-400 text-[11px] font-medium mt-1.5 tracking-wide">{origin}</p>
 
       <InvisibleHandle type="source" position={Position.Bottom} />
@@ -154,7 +161,7 @@ export const HoldingNode = ({ data }: NodeProps) => {
 
 export const BrandNode = ({ data }: NodeProps) => {
   const [imgError, setImgError] = useState(false);
-  const { activeFilter } = useFilter();
+  const { activeFilter, viewMode } = useFilter();
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter);
   const brandName = data.name as string;
   const origin = data.origin as string;
@@ -177,40 +184,71 @@ export const BrandNode = ({ data }: NodeProps) => {
       }}
     >
 
-      {/* Circle */}
-      <div
-        className={`w-[82px] h-[82px] rounded-full flex items-center justify-center overflow-hidden ring-1 ring-slate-200/60 bg-white
-          ${imgError ? `bg-gradient-to-br ${fallbackGrad}` : ''}`}
-        style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.09), 0 1px 4px rgba(0,0,0,0.06)' }}
-      >
-        <InvisibleHandle type="target" position={Position.Top} />
+      {viewMode === 'logocards' ? (
+        <>
+          <div
+            className={`w-[130px] h-[64px] rounded-2xl flex items-center justify-center overflow-hidden bg-white shadow-sm ring-1 ring-slate-200/60 p-3 group-hover:ring-2 group-hover:shadow-md transition-all`}
+            style={{ borderColor: accentColor }}
+          >
+            <InvisibleHandle type="target" position={Position.Top} />
+            
+            {data.localLogo ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={data.localLogo as string}
+                alt={`Logo ${brandName}`}
+                className={`max-w-full max-h-full object-contain transition-all duration-300 ${matches ? 'grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100' : 'grayscale opacity-20'}`}
+              />
+            ) : (
+              <span className={`text-[12px] text-center font-black select-none ${fallbackText} leading-tight`}>
+                {brandName}
+              </span>
+            )}
 
-        {!imgError ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={logoUrl}
-            alt={`Logo ${brandName}`}
-            className="w-12 h-12 object-contain"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <span className={`text-[28px] font-black select-none ${fallbackText}`}>
-            {initial}
-          </span>
-        )}
+            <InvisibleHandle type="source" position={Position.Bottom} />
+          </div>
+          <div className="mt-2 text-center opacity-0 group-hover:opacity-100 transition-opacity absolute top-full pointer-events-none">
+            <span className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 bg-white/90 px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">{origin}</span>
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Circle */}
+          <div
+            className={`w-[82px] h-[82px] rounded-full flex items-center justify-center overflow-hidden ring-1 ring-slate-200/60 bg-white
+              ${imgError ? `bg-gradient-to-br ${fallbackGrad}` : ''}`}
+            style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.09), 0 1px 4px rgba(0,0,0,0.06)' }}
+          >
+            <InvisibleHandle type="target" position={Position.Top} />
 
-        <InvisibleHandle type="source" position={Position.Bottom} />
-      </div>
+            {!imgError ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={logoUrl}
+                alt={`Logo ${brandName}`}
+                className="w-12 h-12 object-contain"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <span className={`text-[28px] font-black select-none ${fallbackText}`}>
+                {initial}
+              </span>
+            )}
 
-      {/* Label always visible */}
-      <div className="mt-2.5 text-center max-w-[110px]">
-        <span className="text-[12px] font-bold text-slate-700 leading-tight block">{brandName}</span>
-        <span className="text-[10px] text-slate-400 font-medium leading-tight flex items-center justify-center gap-1.5 mt-1">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={flagUrl} alt={origin} className="w-4 h-3 object-cover rounded-[2px]" /> 
-          {origin}
-        </span>
-      </div>
+            <InvisibleHandle type="source" position={Position.Bottom} />
+          </div>
+
+          {/* Label always visible */}
+          <div className="mt-2.5 text-center max-w-[110px]">
+            <span className="text-[12px] font-bold text-slate-700 leading-tight block">{brandName}</span>
+            <span className="text-[10px] text-slate-400 font-medium leading-tight flex items-center justify-center gap-1.5 mt-1">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={flagUrl} alt={origin} className="w-4 h-3 object-cover rounded-[2px]" /> 
+              {origin}
+            </span>
+          </div>
+        </>
+      )}
     </div>
   );
 };

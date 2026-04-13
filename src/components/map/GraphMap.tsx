@@ -302,7 +302,6 @@ export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMa
   }, [setNodes]);
 
   return (
-    <FilterContext.Provider value={{ activeFilter }}>
       <div className="w-full h-full min-h-[90vh] relative bg-transparent">
         <ReactFlow
           nodes={nodes}
@@ -330,6 +329,5 @@ export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMa
           />
         </ReactFlow>
       </div>
-    </FilterContext.Provider>
   );
 }

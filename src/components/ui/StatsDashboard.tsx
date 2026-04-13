@@ -13,14 +13,14 @@ export default function StatsDashboard({ activeFilter, onFilterChange }: StatsDa
     let brandsCount = 0;
     let holdingsCount = 0;
     let factoriesCount = 0;
-    const countryCounts: Record<string, number> = {};
+    let polishBrandsCount = 0;
 
     dataset.nodes.forEach(node => {
       if (node.type === 'brand') {
         brandsCount++;
         const origin = (node as any).origin;
-        if (origin) {
-          countryCounts[origin] = (countryCounts[origin] || 0) + 1;
+        if (origin && origin.includes('Polska')) {
+          polishBrandsCount++;
         }
         const factories = (node as any).factories_pl as string[];
         if (factories && Array.isArray(factories)) {
@@ -32,20 +32,11 @@ export default function StatsDashboard({ activeFilter, onFilterChange }: StatsDa
       }
     });
 
-    let topCountry = '';
-    let max = 0;
-    Object.entries(countryCounts).forEach(([country, count]) => {
-      if (count > max) {
-        max = count;
-        topCountry = country;
-      }
-    });
-
     return {
       brandsCount,
       holdingsCount,
       factoriesCount,
-      topCountry
+      polishBrandsCount
     };
   }, []);
 
@@ -97,21 +88,19 @@ export default function StatsDashboard({ activeFilter, onFilterChange }: StatsDa
          </div>
       </button>
 
-      {/* Kapitał -> polski-kapital (zakładając że top to Polska) */}
+      {/* Polskie Marki -> polski-kapital */}
       <button 
-        onClick={() => {
-            if (stats.topCountry.includes('Polska')) onFilterChange('polski-kapital');
-        }}
-        className={`flex items-center gap-3 p-2 rounded-xl transition-all text-left ${activeFilter === 'polski-kapital' ? 'bg-white shadow-sm ring-1 ring-slate-200' : 'hover:bg-white/60'} ${!stats.topCountry.includes('Polska') ? 'cursor-default' : 'cursor-pointer'}`}
+        onClick={() => onFilterChange('polski-kapital')}
+        className={`flex items-center gap-3 p-2 rounded-xl transition-all text-left group ${activeFilter === 'polski-kapital' ? 'bg-white shadow-sm ring-1 ring-slate-200' : 'hover:bg-white/60'} cursor-pointer`}
       >
          <div className="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 shadow-sm border border-rose-100/50">
            <Globe2 className="w-4 h-4" />
          </div>
          <div>
-           <p className="text-[15px] font-black text-slate-800 leading-none block max-w-[90px] truncate" title={stats.topCountry}>
-             {stats.topCountry}
+           <p className="text-xl font-black text-slate-800 leading-none">
+             {stats.polishBrandsCount}
            </p>
-           <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide mt-1.5">Główny Kapitał</p>
+           <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide mt-1.5">Polskie Marki</p>
          </div>
       </button>
 
