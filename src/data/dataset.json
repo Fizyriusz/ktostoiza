@@ -1729,6 +1729,682 @@
       "acquisition_history": "Marka należąca do grupy Changhong.",
       "parentId": "h-cn-ind",
       "localLogo": "/brandsicons/chiq.svg"
+    },
+    {
+      "id": "h-midea",
+      "type": "holding",
+      "name": "Midea Group",
+      "country": "Chiny",
+      "description": "Jeden z największych na świecie producentów AGD i dostawców OEM (często produkuje sprzęt dla innych europejskich marek).",
+      "seo_slug": "midea-group"
+    },
+    {
+      "id": "h-cevital",
+      "type": "holding",
+      "name": "Cevital Group",
+      "country": "Algieria",
+      "description": "Ogromny algierski konglomerat, który uratował przed upadkiem i przejął zasłużone francuskie marki AGD.",
+      "seo_slug": "cevital-group"
+    },
+    {
+      "id": "h-hptronic",
+      "type": "holding",
+      "name": "HP Tronic",
+      "country": "Czechy",
+      "description": "Czeska grupa kapitałowa i dystrybucyjna, właściciel lokalnych marek oraz dysponent ważnych licencji (np. Hyundai).",
+      "seo_slug": "hp-tronic"
+    },
+    {
+      "id": "h-xiaomi",
+      "type": "holding",
+      "name": "Xiaomi Corporation",
+      "country": "Chiny",
+      "description": "Gigant technologiczny rozbudowujący swój ekosystem smart home o duże urządzenia AGD.",
+      "seo_slug": "xiaomi-corp"
+    },
+    {
+      "id": "h-si-ind",
+      "type": "holding",
+      "name": "Słoweńskie Marki Niezależne",
+      "country": "Słowenia",
+      "description": "Niezależne firmy ze Słowenii operujące poza strukturami grupy Hisense/Gorenje.",
+      "seo_slug": "slowenskie-niezalezne"
+    },
+    {
+      "id": "b-midea",
+      "type": "brand",
+      "parentId": "h-midea",
+      "name": "Midea",
+      "origin": "Chiny",
+      "segment": "Standard",
+      "history": "Jeden z największych producentów AGD na świecie, z potężnym zapleczem produkcyjnym dla marek własnych i obcych.",
+      "seo_slug": "midea",
+      "founded_year": 1968,
+      "factories_pl": [
+        "Brak własnych fabryk w Polsce. Ogromna produkcja zlokalizowana w Azji (model OEM/ODM)."
+      ],
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Pełne Portfolio",
+      "acquisition_history": "Niezależny gigant. W 2016 roku Midea przejęła dział AGD japońskiej Toshiby.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Klimatyzatory"
+      ],
+      "localLogo": "/brandsicons/midea.jpg"
+    },
+    {
+      "id": "b-berg",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Berg",
+      "origin": "Polska (Dystrybucja)",
+      "segment": "Standard",
+      "history": "Polska marka dystrybutorska, często oferowana jako wyposażenie w lokalnych studiach mebli kuchennych.",
+      "seo_slug": "berg",
+      "founded_year": 2010,
+      "factories_pl": [
+        "Brak własnej produkcji. Zlecanie produkcji w fabrykach w Europie Wschodniej oraz Azji."
+      ],
+      "business_structure": "Marka Dystrybutorska (PL)",
+      "product_range": "Szerokie Portfolio (Zabudowa)",
+      "acquisition_history": "Marka operowana przez polską grupę dystrybucyjną (m.in. Galicja Galdon).",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zmywarki do zabudowy",
+        "Lodówki do zabudowy"
+      ],
+      "localLogo": "/brandsicons/berg.jpg"
+    },
+    {
+      "id": "b-smith-brown",
+      "type": "brand",
+      "parentId": "h-market",
+      "name": "Smith & Brown",
+      "origin": "Polska (Marka własna)",
+      "segment": "Ekonomiczny",
+      "history": "Marka własna sieci handlowej Media Expert, oferująca podstawowe AGD w przystępnych cenach.",
+      "seo_slug": "smith-brown",
+      "founded_year": 2020,
+      "factories_pl": [
+        "Brak produkcji. Sprzęt tworzony na zlecenie przez dostawców OEM w Azji i Turcji."
+      ],
+      "business_structure": "Marka Własna (Media Expert)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Stworzona i zarządzana w 100% przez firmę TERG S.A.",
+      "product_categories": [
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Okapy",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/smith-brown.jpg"
+    },
+    {
+      "id": "b-lin",
+      "type": "brand",
+      "parentId": "h-market",
+      "name": "Lin",
+      "origin": "Polska (Marka własna)",
+      "segment": "Ekonomiczny",
+      "history": "Budżetowa marka własna Media Expert, rywalizująca w najniższych przedziałach cenowych.",
+      "seo_slug": "lin",
+      "founded_year": 2018,
+      "factories_pl": [
+        "Brak produkcji. Import bezpośredni (OEM) z azjatyckich fabryk."
+      ],
+      "business_structure": "Marka Własna (Media Expert)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Zarządzana przez TERG S.A. jako uzupełnienie półki budżetowej.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Kuchnie wolnostojące",
+        "Zamrażarki"
+      ],
+      "localLogo": "/brandsicons/lin.jpg"
+    },
+    {
+      "id": "b-dreame",
+      "type": "brand",
+      "parentId": "h-xiaomi",
+      "name": "Dreame",
+      "origin": "Chiny",
+      "segment": "Premium",
+      "history": "Innowator technologiczny z ekosystemu Xiaomi, który po sukcesie odkurzaczy rozszerza ofertę o twarde AGD.",
+      "seo_slug": "dreame",
+      "founded_year": 2015,
+      "factories_pl": [
+        "Brak fabryk w Europie. Produkcja skupiona w nowoczesnych chińskich zakładach zautomatyzowanych."
+      ],
+      "business_structure": "Grupa Kapitałowa (Xiaomi Ecosystem)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Prywatna firma silnie związana kapitałowo i technologicznie z korporacją Xiaomi.",
+      "product_categories": [
+        "Lodówki Smart",
+        "Pralki",
+        "Suszarki bębnowe"
+      ],
+      "localLogo": "/brandsicons/dreame.jpg"
+    },
+    {
+      "id": "b-electro-line",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Electro-line",
+      "origin": "Polska",
+      "segment": "Ekonomiczny",
+      "history": "Polska marka dystrybucyjna celująca w najniższe ceny i najprostsze rozwiązania konstrukcyjne.",
+      "seo_slug": "electro-line",
+      "founded_year": 1998,
+      "factories_pl": [
+        "Brak. Działalność importerska z rynków azjatyckich."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Niezależny polski importer sprzętu RTV i AGD.",
+      "product_categories": [
+        "Lodówki podblatowe",
+        "Pralki wirnikowe",
+        "Kuchnie wolnostojące"
+      ],
+      "localLogo": "/brandsicons/electro-line.jpg"
+    },
+    {
+      "id": "b-samcook",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Sam Cook",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Prestiżowa linia sprzętu kuchennego wykreowana przez znaną na polskim rynku firmę MPM.",
+      "seo_slug": "sam-cook",
+      "founded_year": 2016,
+      "factories_pl": [
+        "Brak dedykowanej fabryki dla dużego AGD tej marki w PL. Zlecanie u certyfikowanych podwykonawców."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (Grupa MPM)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Wewnętrzna marka premium powołana do życia przez rodzime MPM.",
+      "product_categories": [
+        "Płyty indukcyjne",
+        "Piekarniki",
+        "Okapy designerskie",
+        "Ekspresy do kawy"
+      ],
+      "localLogo": "/brandsicons/sam-cook.jpg"
+    },
+    {
+      "id": "b-goddess",
+      "type": "brand",
+      "parentId": "h-hptronic",
+      "name": "Goddess",
+      "origin": "Czechy",
+      "segment": "Ekonomiczny",
+      "history": "Czeska marka budżetowa, wypełniająca lukę w najtańszym przedziale rynkowym u naszych sąsiadów i w PL.",
+      "seo_slug": "goddess",
+      "founded_year": 2008,
+      "factories_pl": [
+        "Brak produkcji europejskiej. Czysty model dystrybucyjny OEM."
+      ],
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Marka wchodząca w skład czeskiego dystrybutora HP Tronic.",
+      "product_categories": [
+        "Lodówki wolnostojące",
+        "Zamrażarki skrzyniowe",
+        "Zmywarki",
+        "Pralki"
+      ],
+      "localLogo": "/brandsicons/goddess.jpg"
+    },
+    {
+      "id": "b-eta",
+      "type": "brand",
+      "parentId": "h-hptronic",
+      "name": "Eta",
+      "origin": "Czechy",
+      "segment": "Standard",
+      "history": "Czeska legenda sprzętu AGD, która pod skrzydłami grupy dystrybucyjnej utrzymała silną pozycję w regionie.",
+      "seo_slug": "eta",
+      "founded_year": 1943,
+      "factories_pl": [
+        "Brak fabryk w Polsce. Produkcja zlecana na zewnątrz, zarządzana centralnie w Czechach."
+      ],
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Tradycyjna czeska marka wykupiona w 2011 roku przez grupę HP Tronic.",
+      "product_categories": [
+        "Lodówki",
+        "Pralki",
+        "Zmywarki",
+        "Piekarniki"
+      ],
+      "localLogo": "/brandsicons/eta.jpg"
+    },
+    {
+      "id": "b-manta",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Manta",
+      "origin": "Polska",
+      "segment": "Ekonomiczny",
+      "history": "Polska firma kojarzona głównie z budżetowym RTV, która okazjonalnie importuje również urządzenia chłodnicze.",
+      "seo_slug": "manta",
+      "founded_year": 1998,
+      "factories_pl": [
+        "Brak zaplecza produkcyjnego AGD w Polsce. Import OEM/ODM."
+      ],
+      "business_structure": "Spółka Publiczna (PL)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Niezależna polska firma z sektora elektroniki użytkowej.",
+      "product_categories": [
+        "Lodówki wolnostojące",
+        "Chłodziarki barowe",
+        "Zamrażarki"
+      ],
+      "localLogo": "/brandsicons/manta.jpg"
+    },
+    {
+      "id": "b-optimum",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Optimum",
+      "origin": "Polska",
+      "segment": "Ekonomiczny",
+      "history": "Polska firma z wieloletnim stażem, specjalizująca się w tanich rozwiązaniach AGD dla domu.",
+      "seo_slug": "optimum",
+      "founded_year": 1995,
+      "factories_pl": [
+        "Brak własnych linii montażowych. Produkcja outsourcowana."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Własność polskiej spółki Arconet, niezależna od gigantów.",
+      "product_categories": [
+        "Lodówki podblatowe",
+        "Kuchenki mikrofalowe",
+        "Mini piekarniki"
+      ],
+      "localLogo": "/brandsicons/optimum.jpg"
+    },
+    {
+      "id": "b-xiaomi",
+      "type": "brand",
+      "parentId": "h-xiaomi",
+      "name": "Xiaomi",
+      "origin": "Chiny",
+      "segment": "Standard",
+      "history": "Mocne wejście technologicznego giganta w strefę nowoczesnego, inteligentnego sprzętu domowego.",
+      "seo_slug": "xiaomi",
+      "founded_year": 2010,
+      "factories_pl": [
+        "Brak fabryk AGD w Polsce."
+      ],
+      "business_structure": "Spółka Publiczna",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Niezależna chińska korporacja IT stale powiększająca portfolio AGD.",
+      "product_categories": [
+        "Lodówki Smart",
+        "Pralki z WiFi",
+        "Zmywarki zintegrowane z ekosystemem"
+      ],
+      "localLogo": "/brandsicons/xiaomi.jpg"
+    },
+    {
+      "id": "b-hyundai",
+      "type": "brand",
+      "parentId": "h-hptronic",
+      "name": "Hyundai",
+      "origin": "Korea Południowa / Czechy",
+      "segment": "Ekonomiczny",
+      "history": "Globalna marka używana na licencji przez dystrybutorów do sprzedaży niedrogiego AGD w Europie Środkowej.",
+      "seo_slug": "hyundai-agd",
+      "founded_year": 1947,
+      "factories_pl": [
+        "Brak."
+      ],
+      "business_structure": "Partnerstwo Licencyjne",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Prawa do dystrybucji na wybranych rynkach posiada czeska grupa HP Tronic.",
+      "product_categories": [
+        "Lodówki",
+        "Winiarki domowe",
+        "Zamrażarki"
+      ],
+      "localLogo": "/brandsicons/hyundai.jpg"
+    },
+    {
+      "id": "b-dynaxo",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Dynaxo",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Polska firma inżynieryjna, pionier i twórca opatentowanej technologii „gaz ukryty pod szkłem” (DynaCook).",
+      "seo_slug": "dynaxo",
+      "founded_year": 2006,
+      "factories_pl": [
+        "Własny zaawansowany zakład produkcyjno-badawczy w Popowie (koło Wronek)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Grzejnictwo",
+      "acquisition_history": "Niezależna polska firma rodzinna, stawiająca na własne patenty.",
+      "product_categories": [
+        "Płyty ceramiczne gazowe",
+        "Płyty podszklane"
+      ],
+      "localLogo": "/brandsicons/dynaxo.jpg"
+    },
+    {
+      "id": "b-gasmaster",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Gasmaster",
+      "origin": "Polska",
+      "segment": "Ekonomiczny",
+      "history": "Polski importer budżetowych i bezawaryjnych rozwiązań gazowych dla najprostszych instalacji.",
+      "seo_slug": "gasmaster",
+      "founded_year": 1999,
+      "factories_pl": [
+        "Brak własnej produkcji. Zlecenia w montowniach zagranicznych."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Grzejnictwo",
+      "acquisition_history": "Niezależna firma importersko-dystrybucyjna.",
+      "product_categories": [
+        "Kuchnie gazowe",
+        "Płyty gazowe do zabudowy",
+        "Kuchenki nastawne"
+      ],
+      "localLogo": "/brandsicons/gasmaster.jpg"
+    },
+    {
+      "id": "b-iseasy",
+      "type": "brand",
+      "parentId": "h-cn-ind",
+      "name": "Iseasy",
+      "origin": "Chiny",
+      "segment": "Ekonomiczny",
+      "history": "Chińska marka operująca wyłącznie na e-commerce (D2C), celująca w skrajnie niskie ceny płyt do zabudowy.",
+      "seo_slug": "iseasy",
+      "founded_year": 2018,
+      "factories_pl": [
+        "Brak."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (CN)",
+      "product_range": "Specjalista: Grzejnictwo i Wentylacja",
+      "acquisition_history": "Niezależny dystrybutor operujący głównie za pośrednictwem Allegro i Amazona.",
+      "product_categories": [
+        "Płyty indukcyjne",
+        "Płyty ceramiczne",
+        "Okapy budżetowe"
+      ],
+      "localLogo": "/brandsicons/iseasy.jpg"
+    },
+    {
+      "id": "b-xberg",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Xberg",
+      "origin": "Polska",
+      "segment": "Ekonomiczny",
+      "history": "Budżetowa marka często spotykana na portalach aukcyjnych, sygnowana przez polskiego dystrybutora.",
+      "seo_slug": "xberg",
+      "founded_year": 2015,
+      "factories_pl": [
+        "Brak produkcji. Typowy import pod marką (private label)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Szerokie Portfolio",
+      "acquisition_history": "Marka dystrybucyjna powiązana z handlem internetowym (m.in. sprzęt Berg AGD).",
+      "product_categories": [
+        "Płyty indukcyjne",
+        "Piekarniki",
+        "Kuchenki mikrofalowe"
+      ],
+      "localLogo": "/brandsicons/xberg.jpg"
+    },
+    {
+      "id": "b-brandt",
+      "type": "brand",
+      "parentId": "h-cevital",
+      "name": "Brandt",
+      "origin": "Francja",
+      "segment": "Standard / Premium",
+      "history": "Francuska legenda, najbardziej rozpoznawalna dzięki bezawaryjnym pralkom ładowanym od góry.",
+      "seo_slug": "brandt",
+      "founded_year": 1924,
+      "factories_pl": [
+        "Brak. Fabryki ulokowane głównie we Francji i Algierii."
+      ],
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio",
+      "acquisition_history": "Uratowana z problemów finansowych poprzez przejęcie przez algierski Cevital Group w 2014 roku.",
+      "product_categories": [
+        "Pralki Top-load",
+        "Piekarniki",
+        "Płyty grzewcze",
+        "Lodówki",
+        "Zmywarki"
+      ],
+      "localLogo": "/brandsicons/brandt.jpg"
+    },
+    {
+      "id": "b-kluge",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Kluge",
+      "origin": "Polska / Czechy",
+      "segment": "Standard",
+      "history": "Silnie rozwijająca się marka dystrybutorska oferująca solidne i racjonalne cenowo AGD do pełnej zabudowy.",
+      "seo_slug": "kluge",
+      "founded_year": 2016,
+      "factories_pl": [
+        "Brak własnej fabryki. Produkty zlecane do zaufanych fabryk OEM (często tureckich)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Pełne Portfolio",
+      "acquisition_history": "Marka niezależna, zarządzana przez polską spółkę dystrybucyjną Rankor.",
+      "product_categories": [
+        "Zmywarki",
+        "Piekarniki",
+        "Płyty indukcyjne",
+        "Lodówki do zabudowy",
+        "Kuchenki mikrofalowe"
+      ],
+      "localLogo": "/brandsicons/kluge.jpg"
+    },
+    {
+      "id": "b-lanilia",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Lanilia",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Marka reprezentująca segment premium w produkcji designerskich i bardzo cichych okapów kuchennych.",
+      "seo_slug": "lanilia",
+      "founded_year": 2018,
+      "factories_pl": [
+        "Produkcja i montaż odbywa się na terenie Polski."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "acquisition_history": "Niezależny polski projekt premium.",
+      "product_categories": [
+        "Okapy podszafkowe",
+        "Okapy przyścienne",
+        "Okapy designerskie"
+      ],
+      "localLogo": "/brandsicons/lanilia.jpg"
+    },
+    {
+      "id": "b-dedietrich",
+      "type": "brand",
+      "parentId": "h-cevital",
+      "name": "De Dietrich",
+      "origin": "Francja",
+      "segment": "Luksusowy",
+      "history": "Jedna z najstarszych marek przemysłowych świata, obecnie absolutny lider luksusowego designu we francuskich kuchniach.",
+      "seo_slug": "de-dietrich",
+      "founded_year": 1684,
+      "factories_pl": [
+        "Brak produkcji w PL."
+      ],
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Pełne Portfolio (Luksusowe)",
+      "acquisition_history": "W 2014 roku marka wraz z całą grupą Brandt została kupiona przez Cevital Group.",
+      "product_categories": [
+        "Piekarniki luksusowe",
+        "Płyty indukcyjne",
+        "Okapy zintegrowane",
+        "Zmywarki do zabudowy",
+        "Ekspresy do zabudowy"
+      ],
+      "localLogo": "/brandsicons/de-dietrich.jpg"
+    },
+    {
+      "id": "b-maan",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Maan",
+      "origin": "Polska",
+      "segment": "Standard / Premium",
+      "history": "Jeden z liderów i najstarszych polskich producentów wyspecjalizowanych w wyciągach kuchennych.",
+      "seo_slug": "maan",
+      "founded_year": 1991,
+      "factories_pl": [
+        "Własna, nowoczesna fabryka produkcyjna w Pruszkowie."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "acquisition_history": "Niezależna polska firma o tradycjach rodzinnych.",
+      "product_categories": [
+        "Okapy kominowe",
+        "Okapy teleskopowe",
+        "Okapy wyspowe"
+      ],
+      "localLogo": "/brandsicons/maan.jpg"
+    },
+    {
+      "id": "b-seenergy",
+      "type": "brand",
+      "parentId": "h-it-ind",
+      "name": "SeeNERGY",
+      "origin": "Włochy",
+      "segment": "Premium",
+      "history": "Włoski design połączony z technicznym naciskiem na układy zasysania i najwyższą wydajność wyciągów.",
+      "seo_slug": "seenergy",
+      "founded_year": 2005,
+      "factories_pl": [
+        "Brak fabryk w Polsce, ale marka ma silne przedstawicielstwo i oficjalny oddział w Warszawie."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Okapy i Płyty",
+      "acquisition_history": "Niezależna marka premium operująca silnie na styku kapitału włoskiego i polskiej dystrybucji.",
+      "product_categories": [
+        "Płyty indukcyjne zintegrowane",
+        "Okapy sufitowe",
+        "Okapy wyspowe"
+      ],
+      "localLogo": "/brandsicons/seenergy.jpg"
+    },
+    {
+      "id": "b-alveus",
+      "type": "brand",
+      "parentId": "h-si-ind",
+      "name": "Alveus",
+      "origin": "Słowenia",
+      "segment": "Standard / Premium",
+      "history": "Wiodący producent w Europie z zakresu armatury i strefy mokrej, oferujący także dedykowane płyty grzewcze.",
+      "seo_slug": "alveus",
+      "founded_year": 1954,
+      "factories_pl": [
+        "Brak."
+      ],
+      "business_structure": "Grupa Kapitałowa",
+      "product_range": "Specjalista: Strefa Zmywania",
+      "acquisition_history": "Kluczowa marka wchodząca w skład słoweńskiej Kovinoplastika Lož Group.",
+      "product_categories": [
+        "Zlewozmywaki",
+        "Baterie kuchenne",
+        "Płyty grzewcze szklane"
+      ],
+      "localLogo": "/brandsicons/alveus.jpg"
+    },
+    {
+      "id": "b-afrelli",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Afrelli",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Polska odpowiedź na włoski design okapów, skupiona na pięknych bryłach i wykończeniu ze szkła hartowanego.",
+      "seo_slug": "afrelli",
+      "founded_year": 2015,
+      "factories_pl": [
+        "Część procesu produkcyjnego i montaż zlokalizowane na terytorium RP."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "acquisition_history": "Rozwijająca się, całkowicie niezależna polska marka.",
+      "product_categories": [
+        "Okapy przyścienne",
+        "Okapy tubowe",
+        "Oświetlenie nad wyspy"
+      ],
+      "localLogo": "/brandsicons/afrelli.jpg"
+    },
+    {
+      "id": "b-toflesz",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Toflesz",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Doświadczony rodzimy producent ceniący się doskonałą jakością silników wentylacyjnych i solidnym wykończeniem.",
+      "seo_slug": "toflesz",
+      "founded_year": 2000,
+      "factories_pl": [
+        "Kompleks produkcyjny okapów zlokalizowany w okolicach Krakowa."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "acquisition_history": "Polska firma z rzemieślniczymi korzeniami z Małopolski.",
+      "product_categories": [
+        "Okapy rustykalne",
+        "Okapy tubowe",
+        "Okapy sufitowe"
+      ],
+      "localLogo": "/brandsicons/toflesz.jpg"
+    },
+    {
+      "id": "b-nortberg",
+      "type": "brand",
+      "parentId": "h-pl-ind",
+      "name": "Nortberg",
+      "origin": "Polska",
+      "segment": "Premium",
+      "history": "Innowacyjny polski gracz stawiający na bardzo ciche systemy z turbinami instalowanymi np. na poddaszu.",
+      "seo_slug": "nortberg",
+      "founded_year": 2012,
+      "factories_pl": [
+        "Procesy produkcyjne odbywają się w Polsce (m.in. w Radomiu)."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne (PL)",
+      "product_range": "Specjalista: Okapy Kuchenne",
+      "acquisition_history": "Prężnie i niezależnie działająca polska firma produkcyjna.",
+      "product_categories": [
+        "Okapy z zewnętrzną turbiną",
+        "Okapy ceramiczne",
+        "Okapy wyspowe"
+      ],
+      "localLogo": "/brandsicons/nortberg.jpg"
     }
   ],
   "edges": [
@@ -2127,6 +2803,168 @@
       "source": "h-cn-ind",
       "target": "b-chiq",
       "label": "Niezależna"
+    },
+    {
+      "id": "e-h-midea-b-midea",
+      "source": "h-midea",
+      "target": "b-midea",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-berg",
+      "source": "h-pl-ind",
+      "target": "b-berg",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-market-b-smith-brown",
+      "source": "h-market",
+      "target": "b-smith-brown",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-market-b-lin",
+      "source": "h-market",
+      "target": "b-lin",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-xiaomi-b-dreame",
+      "source": "h-xiaomi",
+      "target": "b-dreame",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-electro-line",
+      "source": "h-pl-ind",
+      "target": "b-electro-line",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-samcook",
+      "source": "h-pl-ind",
+      "target": "b-samcook",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-hptronic-b-goddess",
+      "source": "h-hptronic",
+      "target": "b-goddess",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-hptronic-b-eta",
+      "source": "h-hptronic",
+      "target": "b-eta",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-manta",
+      "source": "h-pl-ind",
+      "target": "b-manta",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-optimum",
+      "source": "h-pl-ind",
+      "target": "b-optimum",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-xiaomi-b-xiaomi",
+      "source": "h-xiaomi",
+      "target": "b-xiaomi",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-hptronic-b-hyundai",
+      "source": "h-hptronic",
+      "target": "b-hyundai",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-dynaxo",
+      "source": "h-pl-ind",
+      "target": "b-dynaxo",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-gasmaster",
+      "source": "h-pl-ind",
+      "target": "b-gasmaster",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-cn-ind-b-iseasy",
+      "source": "h-cn-ind",
+      "target": "b-iseasy",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-xberg",
+      "source": "h-pl-ind",
+      "target": "b-xberg",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-cevital-b-brandt",
+      "source": "h-cevital",
+      "target": "b-brandt",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-kluge",
+      "source": "h-pl-ind",
+      "target": "b-kluge",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-lanilia",
+      "source": "h-pl-ind",
+      "target": "b-lanilia",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-cevital-b-dedietrich",
+      "source": "h-cevital",
+      "target": "b-dedietrich",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-maan",
+      "source": "h-pl-ind",
+      "target": "b-maan",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-it-ind-b-seenergy",
+      "source": "h-it-ind",
+      "target": "b-seenergy",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-si-ind-b-alveus",
+      "source": "h-si-ind",
+      "target": "b-alveus",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-afrelli",
+      "source": "h-pl-ind",
+      "target": "b-afrelli",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-toflesz",
+      "source": "h-pl-ind",
+      "target": "b-toflesz",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-pl-ind-b-nortberg",
+      "source": "h-pl-ind",
+      "target": "b-nortberg",
+      "label": "Marka"
     }
   ]
 }
