@@ -489,7 +489,7 @@
       "name": "Electrolux",
       "origin": "Szwecja",
       "segment": "Standard / Premium",
-      "history": "Lider w kategorii piekarników parowych i odkurzaczy.",
+      "history": "Lider w piekarnikach parowych oraz jeden z głównych dostawców AGD dla sieci IKEA (wraz z Whirlpoolem). Spora część lodówek pochodzi od Vestela.",
       "factories_pl": [
         "Oława (pralki)",
         "Świdnica (kuchenki)",
@@ -508,13 +508,13 @@
         "Pralki",
         "Suszarki",
         "Zmywarki",
-        "Piekarniki",
-        "Płyty grzewcze",
-        "Okapy",
-        "Mikrofalówki"
+        "Piekarniki"
       ],
       "acquisition_history": "Globalna grupa. Przejęła markę Zanussi (1984) i AEG (1994).",
-      "localLogo": "/brandsicons/electrolux.svg"
+      "localLogo": "/brandsicons/electrolux.svg",
+      "producedBy": [
+        "h-vestel"
+      ]
     },
     {
       "id": "b-aeg",
@@ -675,9 +675,9 @@
       "name": "Amica",
       "origin": "Polska",
       "segment": "Standard",
-      "history": "Największy polski producent (szczególnie piekarniki i kuchnie wolnostojące).",
+      "history": "Największy polski producent. Własna produkcja to głównie piekarniki i płyty, reszta sprzętu (chłodnictwo) pochodzi m.in. od Vestela i Midei.",
       "factories_pl": [
-        "Wronki (kuchnie wolnostojące, piekarniki, płyty grzejne). Pozostały asortyment (lodówki, pralki) zlecany partnerom OEM: Midea, Samsung oraz Vestel."
+        "Wronki (kuchnie wolnostojące, piekarniki, płyty grzejne)"
       ],
       "seo_slug": "amica",
       "monetization": {
@@ -691,16 +691,14 @@
         "Piekarniki",
         "Płyty grzewcze",
         "Kuchnie wolnostojące",
-        "Okapy",
         "Zmywarki",
         "Lodówki",
-        "Pralki",
-        "Mikrofalówki"
+        "Pralki"
       ],
-      "acquisition_history": "Niezależna (GPW). Przejęła Gram (2001), CDA (2015) oraz licencję na markę Fagor (2019).",
+      "acquisition_history": "Niezależna (GPW). W portfolio posiada: Gram, CDA, Fagor, Hansa oraz francuską markę Sideme.",
       "localLogo": "/brandsicons/amica.svg",
       "producedBy": [
-        "h-amica",
+        "m-amica-factory",
         "m-midea",
         "h-vestel"
       ]
@@ -838,11 +836,11 @@
     {
       "id": "b-toshiba",
       "type": "brand",
-      "parentId": "h-vestel",
+      "parentId": "h-midea",
       "name": "Toshiba",
       "origin": "Japonia / Chiny / Turcja",
       "segment": "Standard",
-      "history": "W Polsce obecna głównie w segmencie lodówek wielodrzwiowych (produkowanych m.in. przez Vestel).",
+      "history": "Japońska ikona. Od 2016 roku marka AGD Toshiba (w skrócie: Toshiba Home Appliances) jest własnością chińskiego Midea Group. W Europie urządzenia pod marką Toshiba są wytwarzane przez tureckiego Vestela, który pełni rolę kontraktowego partnera dystrybucyjno-produkcyjnego.",
       "seo_slug": "toshiba",
       "founded_year": 1939,
       "business_structure": "Partnerstwo Licencyjne",
@@ -853,10 +851,9 @@
         "Mikrofalówki",
         "Pralki (wybrane modele)"
       ],
-      "acquisition_history": "Dział AGD przejęty przez Midea Group w 2016 roku.",
+      "acquisition_history": "Toshiba Home Appliances przejęta przez Midea Group w 2016 roku. Dystrybucja i produkcja na rynek europejski realizowana przez Vestel od 2017 roku.",
       "localLogo": "/brandsicons/toshiba.svg",
       "producedBy": [
-        "m-midea",
         "h-vestel"
       ]
     },
@@ -990,7 +987,7 @@
       "name": "Miele",
       "origin": "Niemcy",
       "segment": "Luksusowy",
-      "history": "Wzorzec trwałości i prestiżu, niezależna firma rodzinna.",
+      "history": "Wzorzec trwałości. Większość urządzeń produkują sami, z wyjątkiem chłodnictwa, które dostarcza BSH oraz Liebherr.",
       "seo_slug": "miele",
       "founded_year": 1899,
       "factories_pl": [
@@ -1004,14 +1001,14 @@
         "Suszarki",
         "Zmywarki",
         "Piekarniki",
-        "Płyty grzewcze",
-        "Okapy",
-        "Ekspresy do kawy",
-        "Odkurzacze"
+        "Płyty grzewcze"
       ],
       "acquisition_history": "Niezależna. Firma rodzinna od 1899 roku.",
       "parentId": "h-de-ind",
-      "localLogo": "/brandsicons/miele.svg"
+      "localLogo": "/brandsicons/miele.svg",
+      "producedBy": [
+        "m-bsh-factory"
+      ]
     },
     {
       "id": "b-liebherr",
@@ -1446,19 +1443,19 @@
       "id": "b-hitachi",
       "type": "brand",
       "name": "Hitachi",
-      "origin": "Japonia",
+      "origin": "Japonia / Tajlandia",
       "segment": "Premium",
-      "history": "Japońskie lodówki klasy premium (często Multidoor), na Europę wspierane kapitałem Arçelik.",
+      "history": "Japońskie lodówki klasy premium. Sprzęt produkowany wyłącznie w Japonii i Tajlandii (brak produkcji w Chinach). Fabryka w Tajlandii operuje jako joint-venture między Hitachi a tureckim Arçelik (Beko).",
       "seo_slug": "hitachi",
       "founded_year": 1910,
-      "business_structure": "Partnerstwo Licencyjne",
+      "business_structure": "Partnerstwo Licencyjne (Joint Venture)",
       "product_range": "Specjalista: Chłodnictwo Multidoor",
       "product_categories": [
-        "Lodówki Multidoor z drzwiami szklanymi",
+        "Lodówki Multidoor",
         "Lodówki Side-by-Side",
         "Lodówki French Door"
       ],
-      "acquisition_history": "Joint venture pomiędzy Hitachi Global Life Solutions a Arçelik (2021).",
+      "acquisition_history": "Fabryka w Tajlandii operuje jako spółka joint-venture pomiędzy Hitachi a tureckim Arçelik (Beko).",
       "parentId": "h-jp-ind",
       "localLogo": "/brandsicons/hitachi.svg"
     },
@@ -1466,24 +1463,29 @@
       "id": "b-teka",
       "type": "brand",
       "name": "Teka",
-      "origin": "Hiszpania / Niemcy",
+      "origin": "Niemcy / Hiszpania",
       "segment": "Premium",
-      "history": "Specjalista od sprzętu do zabudowy i zlewozmywaków.",
+      "history": "Specjalista od sprzętu do zabudowy o niemieckich korzeniach, obecnie w rękach chińskich.",
       "seo_slug": "teka",
       "founded_year": 1924,
-      "business_structure": "Przedsiębiorstwo Prywatne",
+      "business_structure": "Grupa Kapitałowa",
       "product_range": "Pełne Portfolio (Zabudowa)",
       "product_categories": [
         "Piekarniki",
         "Płyty grzewcze",
         "Zmywarki",
         "Okapy",
-        "Zlewozmywaki",
-        "Baterie kuchenne"
+        "Zlewozmywaki"
       ],
-      "acquisition_history": "Niezależna niemiecko-szwajcarska grupa.",
-      "parentId": "h-other-ind",
-      "localLogo": "/brandsicons/teka.png"
+      "acquisition_history": "Przejęta pod koniec 2024/2025 roku (wraz z marką Kuppersbusch) przez chiński gigant Midea Group.",
+      "parentId": "h-midea",
+      "localLogo": "/brandsicons/teka.png",
+      "producedBy": [
+        "m-midea",
+        "m-vestel",
+        "m-bsh-factory",
+        "h-beko"
+      ]
     },
     {
       "id": "b-lofra",
@@ -1556,7 +1558,7 @@
       "name": "Concept",
       "origin": "Czechy",
       "segment": "Budżetowy / Standard",
-      "history": "Czeska popularna linia małego i dużego AGD (w tym kolorowe lodówki retro).",
+      "history": "Czeska popularna linia małego i dużego AGD. Sporą część asortymentu dostarcza im polska Amica.",
       "seo_slug": "concept",
       "founded_year": 1991,
       "factories_pl": [
@@ -1567,13 +1569,14 @@
       "product_categories": [
         "Lodówki Retro",
         "Piekarniki i płyty do zabudowy",
-        "Zmywarki",
-        "Odkurzacze",
-        "Drobne AGD kuchenne"
+        "Zmywarki"
       ],
       "acquisition_history": "Niezależna czeska firma prywatna.",
       "parentId": "h-other-ind",
-      "localLogo": "/brandsicons/concept.png"
+      "localLogo": "/brandsicons/concept.png",
+      "producedBy": [
+        "m-amica-factory"
+      ]
     },
     {
       "id": "b-philco",
@@ -1581,7 +1584,7 @@
       "name": "Philco",
       "origin": "USA",
       "segment": "Budżetowy",
-      "history": "Historycznie amerykańska marka, obecnie operująca na licencjach przez dystrybutorów (np. Fast ČR).",
+      "history": "Historycznie amerykańska marka, obecnie w Polsce oferuje sprzęt z fabryk chińskiego Hisense oraz tureckiego Vestela.",
       "seo_slug": "philco",
       "founded_year": 1892,
       "business_structure": "Grupa Kapitałowa",
@@ -1592,10 +1595,13 @@
         "Lodówki",
         "Pralki",
         "Zmywarki",
-        "Piekarniki",
-        "Płyty grzewcze"
+        "Piekarniki"
       ],
-      "localLogo": "/brandsicons/philco.svg"
+      "localLogo": "/brandsicons/philco.svg",
+      "producedBy": [
+        "h-hisense",
+        "h-vestel"
+      ]
     },
     {
       "id": "b-lord",
@@ -1707,22 +1713,24 @@
       "name": "Franke",
       "origin": "Szwajcaria",
       "segment": "Premium",
-      "history": "Lider rynku zlewozmywaków i baterii, oferuje także pełne linie szwajcarskiego AGD do zabudowy.",
+      "history": "Lider rynku zlewozmywaków. W kategorii dużego AGD bazuje silnie na platformach Whirlpoola oraz rozwiązaniach od włoskiego OEM Meneghetti.",
       "seo_slug": "franke",
       "founded_year": 1911,
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Pełne Portfolio (Zabudowa i Zlewozmywaki)",
       "product_categories": [
         "Zlewozmywaki",
-        "Baterie kuchenne",
         "Piekarniki",
         "Płyty grzewcze",
         "Okapy",
         "Zmywarki"
       ],
-      "acquisition_history": "Niezależny holding rodzinny Artemis.",
-      "parentId": "h-de-ind",
-      "localLogo": "/brandsicons/franke.svg"
+      "acquisition_history": "Niezależny holding rodzinny Artemis. Właściciel marki okapów Faber.",
+      "parentId": "h-other-ind",
+      "localLogo": "/brandsicons/franke.svg",
+      "producedBy": [
+        "h-beko"
+      ]
     },
     {
       "id": "b-tcl",
@@ -1772,8 +1780,9 @@
       "type": "holding",
       "name": "Midea Group",
       "country": "Chiny",
-      "description": "Jeden z największych na świecie producentów AGD i dostawców OEM (często produkuje sprzęt dla innych europejskich marek).",
-      "seo_slug": "midea-group"
+      "description": "Jeden z największych na świecie producentów AGD i dostawców OEM. Właściciel marek Toshiba (AGD), Teka i Kuppersbusch. Operator fabryki OEM m-midea.",
+      "seo_slug": "midea-group",
+      "isOEM": true
     },
     {
       "id": "h-cevital",
@@ -2450,6 +2459,44 @@
       "country": "Chiny",
       "description": "Globalny lider produkcji kontraktowej chłodnictwa i mikrofali.",
       "seo_slug": "midea-oem"
+    },
+    {
+      "id": "m-bsh-factory",
+      "type": "manufacturer",
+      "name": "BSH Factory (OEM)",
+      "country": "Niemcy / Europa",
+      "description": "Zakłady produkcyjne BSH Group świadczące usługi kontraktowe dla partnerów zewnętrznych (m.in. Miele), głównie w obszarze chłodnictwa.",
+      "seo_slug": "bsh-factory-oem"
+    },
+    {
+      "id": "b-gotze-jensen",
+      "type": "brand",
+      "parentId": "h-market",
+      "name": "Götze & Jensen",
+      "origin": "Polska (Marka własna)",
+      "segment": "Ekonomiczny",
+      "history": "Marka własna sieci handlowej Media Expert. Oprócz drobnego AGD oferuje podstawowe urządzenia z kategorii dużego sprzętu.",
+      "seo_slug": "gotze-jensen",
+      "founded_year": 2016,
+      "factories_pl": [
+        "Brak produkcji. Typowy import OEM z fabryk azjatyckich i tureckich."
+      ],
+      "business_structure": "Marka Własna (Media Expert)",
+      "product_range": "Szerokie Portfolio (Uzupełniające)",
+      "product_categories": [
+        "Mini lodówki",
+        "Okapy",
+        "Nastawne płyty indukcyjne"
+      ],
+      "acquisition_history": "Stworzona i zarządzana przez firmę TERG S.A."
+    },
+    {
+      "id": "m-amica-factory",
+      "type": "manufacturer",
+      "name": "Fabryka Amica (Wronki)",
+      "country": "Polska",
+      "description": "Specjalistyczny zakład produkcyjny Amica Group we Wronkach. Produkuje kuchnie wolnostojące, piekarniki i płyty grzejne dla Amiki i partnerów (m.in. Concept).",
+      "seo_slug": "amica-factory-wronki"
     }
   ],
   "edges": [
