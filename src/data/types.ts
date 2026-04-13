@@ -1,4 +1,4 @@
-export type NodeType = 'holding' | 'brand';
+export type NodeType = 'holding' | 'brand' | 'manufacturer';
 
 export interface HoldingNode {
   id: string;
@@ -8,6 +8,16 @@ export interface HoldingNode {
   description: string;
   tags?: string[];
   seo_slug: string;
+  isOEM?: boolean;
+}
+
+export interface ManufacturerNode {
+  id: string;
+  type: 'manufacturer';
+  name: string;
+  country: string;
+  description: string;
+  seo_slug?: string;
 }
 
 export interface BrandNode {
@@ -30,9 +40,10 @@ export interface BrandNode {
     media_expert?: string;
     rtv_euro?: string;
   };
+  producedBy?: string[];
 }
 
-export type GraphNodeData = HoldingNode | BrandNode;
+export type GraphNodeData = HoldingNode | BrandNode | ManufacturerNode;
 
 export interface EdgeData {
   id: string;

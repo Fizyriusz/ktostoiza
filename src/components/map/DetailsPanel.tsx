@@ -58,9 +58,11 @@ interface DetailsPanelProps {
   onRequestCompare?: (node: GraphNodeData) => void;
 }
 
+import dataset from '@/data/dataset.json';
+
 function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: GraphNodeData, onClose: () => void, onCompare?: () => void, isSideBySide: boolean }) {
   const [imgError, setImgError] = useState(false);
-  const origin = node.type === 'holding' ? node.country : node.origin;
+  const origin = (node.type === 'holding' || node.type === 'manufacturer') ? node.country : node.origin;
   const flagUrl = getFlagUrl(origin);
   const brandLogo = node.type === 'brand' ? `https://logo.clearbit.com/${getBrandDomain(node.name)}` : null;
 
@@ -68,10 +70,17 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
     <div className="flex flex-col h-full bg-white relative">
       {/* Top Bar with Close Button */}
       <div className="sticky top-0 bg-white/80 backdrop-blur-md px-6 py-4 border-b border-slate-100 flex justify-between items-center z-10">
-        <div className="flex gap-2">
-          {node.type === 'holding' ? (
+        <div className="flex flex-wrap gap-2">
+          {node.type === 'holding' && (
             <span className="bg-slate-800 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md">Koncern</span>
-          ) : (
+          )}
+          {node.type === 'holding' && 'isOEM' in node && node.isOEM && (
+            <span className="bg-fuchsia-900 text-fuchsia-100 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md flex items-center gap-1.5"><Factory className="w-3 h-3 text-fuchsia-300" /> OEM</span>
+          )}
+          {node.type === 'manufacturer' && (
+            <span className="bg-slate-900 text-slate-300 border border-slate-700 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md flex items-center gap-1.5"><Factory className="w-3 h-3" /> Fabryka (OEM)</span>
+          )}
+          {node.type === 'brand' && (
             <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md">Marka</span>
           )}
         </div>
@@ -167,7 +176,7 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
             <BookOpen className="w-4 h-4 text-blue-500" /> Historia i profil
           </h4>
           <p className="text-slate-600 text-[14px] leading-relaxed font-medium">
-            {node.type === 'holding' ? node.description : node.history}
+            {node.type === 'holding' || node.type === 'manufacturer' ? node.description : node.history}
           </p>
           {node.type === 'brand' && node.acquisition_history && (
             <div className="mt-4 pt-4 border-t border-slate-100">
@@ -206,8 +215,30 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
               <Link2 className="w-4 h-4 text-purple-500" /> Przynależność
             </h4>
             <p className="text-slate-500 font-medium text-sm">
-              Marka: <span className="font-bold text-slate-900 bg-slate-100 px-2 py-1 rounded inline-block ml-1">{node.parentId.replace('h-', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+              Marka podlegająca oficjalnie pod: <span className="font-bold text-slate-900 bg-slate-100 px-2 py-1 rounded inline-block ml-1">{node.parentId.replace('h-', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
             </p>
+          </div>
+        )}
+
+        {node.type === 'brand' && node.producedBy && node.producedBy.length > 0 && (
+          <div className="bg-fuchsia-50/50 p-5 rounded-2xl shadow-sm border border-fuchsia-100">
+            <h4 className="flex items-center gap-2 text-xs font-black text-fuchsia-800 uppercase tracking-widest mb-3 border-b border-fuchsia-100 pb-2">
+              <Factory className="w-4 h-4 text-fuchsia-500" /> Realna Produkcja (OEM)
+            </h4>
+            <p className="text-fuchsia-900/80 font-medium text-sm leading-relaxed">
+              Ten model/marka korzysta z zaplecza technologicznego fabryk zewnętrznych:
+            </p>
+            <div className="flex flex-col gap-1.5 mt-3">
+              {node.producedBy.map(producerId => {
+                const producerInfo = dataset.nodes.find(n => n.id === producerId);
+                return (
+                  <div key={producerId} className="bg-white border border-fuchsia-200 text-fuchsia-900 px-3 py-2 rounded-lg font-bold text-sm shadow-sm flex justify-between items-center">
+                    <span>{producerInfo ? producerInfo.name : producerId}</span>
+                    <span className="text-[9px] uppercase tracking-widest text-fuchsia-500">{(producerInfo && 'country' in producerInfo) ? producerInfo.country : 'Zakład'}</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

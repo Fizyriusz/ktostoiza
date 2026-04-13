@@ -9,14 +9,24 @@ export type ViewMode = 'classic' | 'logocards';
 interface FilterContextValue {
   activeFilter: FilterType;
   viewMode: ViewMode;
+  focusedOEMNodeId?: string | null;
 }
 
-export const FilterContext = createContext<FilterContextValue>({ activeFilter: 'all', viewMode: 'classic' });
+export const FilterContext = createContext<FilterContextValue>({ activeFilter: 'all', viewMode: 'classic', focusedOEMNodeId: null });
 export const useFilter = () => useContext(FilterContext);
 
 // ─── Filter matching logic ───────────────────────────────────────────────────
 
-export function nodeMatchesFilter(data: Record<string, unknown>, filter: FilterType): boolean {
+export function nodeMatchesFilter(data: Record<string, unknown>, filter: FilterType, focusedOEMNodeId?: string | null): boolean {
+  if (focusedOEMNodeId) {
+    if (data.id === focusedOEMNodeId) return true;
+    if (data.type === 'brand') {
+      const producedBy = data.producedBy as string[] | undefined;
+      if (producedBy && producedBy.includes(focusedOEMNodeId)) return true;
+    }
+    return false;
+  }
+
   if (filter === 'all') return true;
 
   const type = data.type as string;

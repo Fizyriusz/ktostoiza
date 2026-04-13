@@ -8,7 +8,8 @@
       "country": "Turcja / USA",
       "description": "Fuzja europejskich operacji amerykańskiego Whirlpoola oraz tureckiego Arçelik (właściciela Beko).",
       "seo_slug": "beko-europe",
-      "localLogo": "/brandsicons/beko.svg"
+      "localLogo": "/brandsicons/beko.svg",
+      "isOEM": true
     },
     {
       "id": "b-beko",
@@ -196,7 +197,10 @@
         "Pralki ładowane od góry",
         "Zamrażarki skrzyniowe"
       ],
-      "acquisition_history": "Przejęta przez Whirlpool w 2002 roku, przeniesiona do Beko Europe w 2024 roku."
+      "acquisition_history": "Przejęta przez Whirlpool w 2002 roku, przeniesiona do Beko Europe w 2024 roku.",
+      "producedBy": [
+        "h-beko"
+      ]
     },
     {
       "id": "b-ignis",
@@ -566,7 +570,8 @@
       "country": "Chiny",
       "description": "Chiński koncern, który przejął słoweńskie Gorenje, tworząc silnego gracza w Europie Środkowej.",
       "seo_slug": "hisense-group",
-      "localLogo": "/brandsicons/hisense.svg"
+      "localLogo": "/brandsicons/hisense.svg",
+      "isOEM": true
     },
     {
       "id": "b-hisense",
@@ -622,7 +627,10 @@
         "Kuchnie wolnostojące"
       ],
       "acquisition_history": "Przejęta przez Hisense Group w 2018 roku.",
-      "localLogo": "/brandsicons/gorenje.svg"
+      "localLogo": "/brandsicons/gorenje.svg",
+      "producedBy": [
+        "h-hisense"
+      ]
     },
     {
       "id": "b-asko",
@@ -645,7 +653,10 @@
         "Piekarniki parowe",
         "Winiarki"
       ],
-      "localLogo": "/brandsicons/asko.svg"
+      "localLogo": "/brandsicons/asko.svg",
+      "producedBy": [
+        "h-hisense"
+      ]
     },
     {
       "id": "h-amica",
@@ -654,7 +665,8 @@
       "country": "Polska",
       "description": "Polska firma z Wronek, potężny gracz w Europie Wschodniej i Skandynawii.",
       "seo_slug": "amica-group",
-      "localLogo": "/brandsicons/amica.svg"
+      "localLogo": "/brandsicons/amica.svg",
+      "isOEM": true
     },
     {
       "id": "b-amica",
@@ -686,7 +698,12 @@
         "Mikrofalówki"
       ],
       "acquisition_history": "Niezależna (GPW). Przejęła Gram (2001), CDA (2015) oraz licencję na markę Fagor (2019).",
-      "localLogo": "/brandsicons/amica.svg"
+      "localLogo": "/brandsicons/amica.svg",
+      "producedBy": [
+        "h-amica",
+        "m-midea",
+        "h-vestel"
+      ]
     },
     {
       "id": "b-hansa",
@@ -784,7 +801,8 @@
       "name": "Vestel",
       "country": "Turcja",
       "description": "Cichy gigant. Potężna fabryka OEM/ODM produkująca dla innych.",
-      "seo_slug": "vestel"
+      "seo_slug": "vestel",
+      "isOEM": true
     },
     {
       "id": "b-sharp",
@@ -812,7 +830,10 @@
         "Kuchenki mikrofalowe",
         "Piekarniki"
       ],
-      "localLogo": "/brandsicons/sharp.svg"
+      "localLogo": "/brandsicons/sharp.svg",
+      "producedBy": [
+        "h-vestel"
+      ]
     },
     {
       "id": "b-toshiba",
@@ -833,7 +854,11 @@
         "Pralki (wybrane modele)"
       ],
       "acquisition_history": "Dział AGD przejęty przez Midea Group w 2016 roku.",
-      "localLogo": "/brandsicons/toshiba.svg"
+      "localLogo": "/brandsicons/toshiba.svg",
+      "producedBy": [
+        "m-midea",
+        "h-vestel"
+      ]
     },
     {
       "id": "b-finlux",
@@ -854,7 +879,10 @@
         "Kuchnie wolnostojące"
       ],
       "acquisition_history": "Przejęta przez Vestel Group w 2006 roku.",
-      "localLogo": "/brandsicons/finlux.webp"
+      "localLogo": "/brandsicons/finlux.webp",
+      "producedBy": [
+        "h-vestel"
+      ]
     },
     {
       "id": "b-vestfrost",
@@ -1062,7 +1090,11 @@
         "Zlewozmywaki"
       ],
       "acquisition_history": "Niezależna polska marka należąca do GT Group.",
-      "localLogo": "/brandsicons/kernau.png"
+      "localLogo": "/brandsicons/kernau.png",
+      "producedBy": [
+        "h-vestel",
+        "h-amica"
+      ]
     },
     {
       "id": "b-mpm",
@@ -1274,7 +1306,12 @@
         "Małe AGD (blendery, odkurzacze)"
       ],
       "acquisition_history": "Marka własna stworzona przez RTV Euro AGD (2014).",
-      "localLogo": "/brandsicons/raven.png"
+      "localLogo": "/brandsicons/raven.png",
+      "producedBy": [
+        "h-vestel",
+        "h-amica",
+        "m-midea"
+      ]
     },
     {
       "id": "b-koenic",
@@ -2405,6 +2442,14 @@
         "Okapy wyspowe"
       ],
       "localLogo": "/brandsicons/nortberg.jpg"
+    },
+    {
+      "id": "m-midea",
+      "type": "manufacturer",
+      "name": "Midea OEM",
+      "country": "Chiny",
+      "description": "Globalny lider produkcji kontraktowej chłodnictwa i mikrofali.",
+      "seo_slug": "midea-oem"
     }
   ],
   "edges": [

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Handle, Position, NodeProps } from '@xyflow/react';
+import { Factory } from 'lucide-react';
 import { useFilter, nodeMatchesFilter } from '@/contexts/FilterContext';
 
 function getCountryCode(countryStr: string) {
@@ -118,8 +119,8 @@ const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; positi
 // ─── Holding Node ───────────────────────────────────────────────────────────
 
 export const HoldingNode = ({ data }: NodeProps) => {
-  const { activeFilter, viewMode } = useFilter();
-  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter);
+  const { activeFilter, viewMode, focusedOEMNodeId } = useFilter();
+  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
   const origin = data.country as string;
   const name = data.name as string;
   const flagUrl = getFlagUrl(origin);
@@ -161,8 +162,8 @@ export const HoldingNode = ({ data }: NodeProps) => {
 
 export const BrandNode = ({ data }: NodeProps) => {
   const [imgError, setImgError] = useState(false);
-  const { activeFilter, viewMode } = useFilter();
-  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter);
+  const { activeFilter, viewMode, focusedOEMNodeId } = useFilter();
+  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
   const brandName = data.name as string;
   const origin = data.origin as string;
   const accentColor = (data.accentColor as string) || '#64748b';
@@ -249,6 +250,43 @@ export const BrandNode = ({ data }: NodeProps) => {
           </div>
         </>
       )}
+    </div>
+  );
+};
+
+// ─── Manufacturer Node (OEM) ────────────────────────────────────────────────
+export const ManufacturerNode = ({ data }: NodeProps) => {
+  const { activeFilter, focusedOEMNodeId } = useFilter();
+  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
+  const name = data.name as string;
+  const origin = data.country as string;
+  const flagUrl = getFlagUrl(origin);
+
+  return (
+    <div
+      className="bg-slate-900 rounded-lg px-6 py-4 min-w-[190px] flex flex-col justify-center items-center text-center cursor-grab active:cursor-grabbing relative"
+      style={{
+        border: `2px solid #334155`,
+        boxShadow: `0 8px 32px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.05)`,
+        opacity: matches ? 1 : 0.1,
+        filter: matches ? 'none' : 'grayscale(100%)',
+        transition: 'opacity 0.35s ease, filter 0.35s ease',
+      }}
+    >
+      <InvisibleHandle type="target" position={Position.Left} />
+      <InvisibleHandle type="target" position={Position.Right} />
+      <InvisibleHandle type="target" position={Position.Top} />
+      <InvisibleHandle type="source" position={Position.Bottom} />
+
+      <div className="mb-2 w-8 h-8 rounded bg-slate-800 border border-slate-700 shadow-inner flex items-center justify-center mx-auto text-slate-400">
+        <Factory className="w-4 h-4" />
+      </div>
+      <h3 className="text-white font-black tracking-tight leading-tight text-base mb-1">{name}</h3>
+      
+      <div className="flex items-center justify-center gap-1.5 mt-1.5">
+        <img src={flagUrl} alt={origin} className="w-3.5 h-2.5 object-cover rounded-sm opacity-80" /> 
+        <p className="text-slate-400 text-[9px] font-bold uppercase tracking-widest leading-none">{origin}</p>
+      </div>
     </div>
   );
 };

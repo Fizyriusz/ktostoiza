@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useCallback, useState, useRef } from 'react';
+import React, { useMemo, useCallback, useState, useRef, useEffect } from 'react';
 import {
   ReactFlow,
   MiniMap,
@@ -17,7 +17,7 @@ import {
 import '@xyflow/react/dist/style.css';
 
 import dataset from '@/data/dataset.json';
-import { HoldingNode, BrandNode } from './CustomNodes';
+import { HoldingNode, BrandNode, ManufacturerNode } from './CustomNodes';
 import CustomEdge from './CustomEdge';
 import { GraphNodeData } from '@/data/types';
 import { FilterContext, FilterType } from '@/contexts/FilterContext';
@@ -25,6 +25,7 @@ import { FilterContext, FilterType } from '@/contexts/FilterContext';
 const nodeTypes = {
   holding: HoldingNode,
   brand: BrandNode,
+  manufacturer: ManufacturerNode,
 };
 
 const edgeTypes = {
@@ -83,7 +84,7 @@ const brandAccentMap = buildBrandAccentMap();
 
 // ─── Layout ─────────────────────────────────────────────────────────────────
 
-function generateMapLayout(): { initialNodes: Node[]; initialEdges: Edge[] } {
+function generateMapLayout(showOEM: boolean): { initialNodes: Node[]; initialEdges: Edge[] } {
   const nodes: Node[] = [];
   const edges: Edge[] = [];
 
@@ -156,6 +157,24 @@ function generateMapLayout(): { initialNodes: Node[]; initialEdges: Edge[] } {
     });
   });
 
+  // Węzły Producentów (Manufacturers)
+  const manufacturers = dataset.nodes.filter(n => n.type === 'manufacturer');
+  const mY = -400; // Położenie nad holdingami
+  
+  if (showOEM) {
+    manufacturers.forEach((m, index) => {
+      const col = index % maxPerRow;
+      nodes.push({
+        id: m.id,
+        type: 'manufacturer',
+        position: { x: (col + 0.5) * hSpacingX, y: mY },
+        data: { ...m },
+        zIndex: 15,
+      });
+    });
+  }
+
+  // Edges generacja
   dataset.edges.forEach(edge => {
     edges.push({
       id: edge.id,
@@ -165,6 +184,25 @@ function generateMapLayout(): { initialNodes: Node[]; initialEdges: Edge[] } {
       type: 'custom',
     });
   });
+
+  // Generowanie dynamicznych krawędzi produkcyjnych w locie
+  if (showOEM) {
+    brands.forEach(b => {
+      if ('producedBy' in b && b.producedBy && b.producedBy.length > 0) {
+        b.producedBy.forEach(producerId => {
+          edges.push({
+            id: `p-${producerId}-${b.id}`,
+            source: producerId,
+            target: b.id,
+            label: 'Zakład Produkcyjny',
+            type: 'custom',
+            animated: true,
+            style: { stroke: '#d946ef', strokeWidth: 2, strokeDasharray: '5 5' },
+          });
+        });
+      }
+    });
+  }
 
   return { initialNodes: nodes, initialEdges: edges };
 }
@@ -176,11 +214,12 @@ const LERP = 0.15;
 
 interface GraphMapProps {
   activeFilter?: FilterType;
+  showOEM?: boolean;
   onNodeSelect?: (node: GraphNodeData, multi: boolean) => void;
 }
 
-export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMapProps) {
-  const { initialNodes, initialEdges } = useMemo(() => generateMapLayout(), []);
+export default function GraphMap({ activeFilter = 'all', showOEM = false, onNodeSelect }: GraphMapProps) {
+  const { initialNodes, initialEdges } = useMemo(() => generateMapLayout(showOEM), [showOEM]);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
@@ -191,6 +230,13 @@ export default function GraphMap({ activeFilter = 'all', onNodeSelect }: GraphMa
     (params: Edge | Connection) => setEdges(eds => addEdge({ ...params, type: 'custom' }, eds)),
     [setEdges],
   );
+
+  // Update layout when OEM toggle changes
+  useEffect(() => {
+    const { initialNodes, initialEdges } = generateMapLayout(showOEM);
+    setNodes(initialNodes);
+    setEdges(initialEdges);
+  }, [showOEM, setNodes, setEdges]);
 
   const handleNodeClick = useCallback((e: React.MouseEvent, node: Node) => {
     onNodeSelect?.(node.data as unknown as GraphNodeData, e.shiftKey);

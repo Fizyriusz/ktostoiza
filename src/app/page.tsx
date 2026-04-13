@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Shield, Globe2, Info, HelpCircle } from 'lucide-react';
+import { Shield, Globe2, Info, HelpCircle, Factory } from 'lucide-react';
 import { ReactFlowProvider } from '@xyflow/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GraphMap from '@/components/map/GraphMap';
@@ -33,10 +33,21 @@ export default function Home() {
 
 export function HomeContent() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
+  const [showOEM, setShowOEM] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('classic');
   const [selectedNodes, setSelectedNodes] = useState<GraphNodeData[]>([]);
   const [compareQueue, setCompareQueue] = useState<GraphNodeData | null>(null);
   const [showIntro, setShowIntro] = useState(false);
+
+  let focusedOEMNodeId: string | null = null;
+  if (selectedNodes.length === 1) {
+    const n = selectedNodes[0];
+    if (n.type === 'manufacturer') {
+      focusedOEMNodeId = n.id;
+    } else if (n.type === 'holding' && showOEM && 'isOEM' in n && n.isOEM) {
+      focusedOEMNodeId = n.id;
+    }
+  }
 
   useEffect(() => {
     const hasSeen = localStorage.getItem('ktostoiza_intro_seen');
@@ -51,7 +62,7 @@ export function HomeContent() {
   };
 
   return (
-    <FilterContext.Provider value={{ activeFilter, viewMode }}>
+    <FilterContext.Provider value={{ activeFilter, viewMode, focusedOEMNodeId }}>
       <ReactFlowProvider>
         <div className="relative w-full h-screen overflow-hidden flex flex-col bg-[#f8fafc]">
 
@@ -99,6 +110,20 @@ export function HomeContent() {
                 {f.label}
               </button>
             ))}
+
+            <button
+              onClick={() => setShowOEM(!showOEM)}
+              className={`
+                px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5
+                ${showOEM
+                  ? 'border-2 border-fuchsia-600 bg-fuchsia-600 text-white shadow-md'
+                  : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-fuchsia-500 hover:bg-white shadow-sm'
+                }
+              `}
+            >
+              <Factory className="w-3 h-3" />
+              OEM
+            </button>
 
             <div className="flex bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-slate-300 shadow-sm ml-2">
               <button
