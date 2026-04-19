@@ -13,6 +13,7 @@ import {
   Edge,
   Node,
   BackgroundVariant,
+  useReactFlow,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -222,6 +223,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, onNode
   const { initialNodes, initialEdges } = useMemo(() => generateMapLayout(showOEM), [showOEM]);
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const { fitView } = useReactFlow();
 
   const childOffsetsRef = useRef<Map<string, { dx: number; dy: number }>>(new Map());
   const draggedHoldingId = useRef<string | null>(null);
@@ -236,7 +238,11 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, onNode
     const { initialNodes, initialEdges } = generateMapLayout(showOEM);
     setNodes(initialNodes);
     setEdges(initialEdges);
-  }, [showOEM, setNodes, setEdges]);
+    
+    setTimeout(() => {
+      fitView({ duration: 800, padding: 0.1 });
+    }, 50);
+  }, [showOEM, setNodes, setEdges, fitView]);
 
   const handleNodeClick = useCallback((e: React.MouseEvent, node: Node) => {
     onNodeSelect?.(node.data as unknown as GraphNodeData, e.shiftKey);

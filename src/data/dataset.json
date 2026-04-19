@@ -979,7 +979,7 @@
       "business_structure": "Spółka Publiczna",
       "product_range": "Pełne Portfolio",
       "acquisition_history": "Niezależna globalna grupa technologiczna.",
-      "localLogo": "/brandsicons/fulgormilano.jpg"
+      "localLogo": "/brandsicons/lg.svg"
     },
     {
       "id": "b-miele",
@@ -1096,7 +1096,7 @@
     {
       "id": "b-mpm",
       "type": "brand",
-      "parentId": "h-pl-ind",
+      "parentId": "h-mpm",
       "name": "MPM",
       "origin": "Polska",
       "segment": "Budżetowy / Standard",
@@ -1141,7 +1141,7 @@
         "Okapy inteligentne"
       ],
       "acquisition_history": "Niezależna polska firma technologiczna.",
-      "localLogo": "/brandsicons/lg.svg"
+      "localLogo": "/brandsicons/solgaz.png"
     },
     {
       "id": "b-ciarko",
@@ -1870,19 +1870,19 @@
     {
       "id": "b-smith-brown",
       "type": "brand",
-      "parentId": "h-market",
+      "parentId": "h-pl-ind",
       "name": "Smith & Brown",
-      "origin": "Polska (Marka własna)",
+      "origin": "Polska",
       "segment": "Ekonomiczny",
-      "history": "Marka własna sieci handlowej Media Expert, oferująca podstawowe AGD w przystępnych cenach.",
+      "history": "Niezależna marka oferująca podstawowe AGD w przystępnych cenach.",
       "seo_slug": "smith-brown",
       "founded_year": 2020,
       "factories_pl": [
         "Brak produkcji. Sprzęt tworzony na zlecenie przez dostawców OEM w Azji i Turcji."
       ],
-      "business_structure": "Marka Własna (Media Expert)",
+      "business_structure": "Niezależna Marka",
       "product_range": "Szerokie Portfolio",
-      "acquisition_history": "Stworzona i zarządzana w 100% przez firmę TERG S.A.",
+      "acquisition_history": "Niezależna polska marka.",
       "product_categories": [
         "Piekarniki",
         "Płyty grzewcze",
@@ -1894,19 +1894,19 @@
     {
       "id": "b-lin",
       "type": "brand",
-      "parentId": "h-market",
+      "parentId": "h-pl-ind",
       "name": "Lin",
-      "origin": "Polska (Marka własna)",
+      "origin": "Polska",
       "segment": "Ekonomiczny",
-      "history": "Budżetowa marka własna Media Expert, rywalizująca w najniższych przedziałach cenowych.",
+      "history": "Budżetowa marka niezależna, rywalizująca w najniższych przedziałach cenowych.",
       "seo_slug": "lin",
       "founded_year": 2018,
       "factories_pl": [
         "Brak produkcji. Import bezpośredni (OEM) z azjatyckich fabryk."
       ],
-      "business_structure": "Marka Własna (Media Expert)",
+      "business_structure": "Niezależna Marka",
       "product_range": "Szerokie Portfolio",
-      "acquisition_history": "Zarządzana przez TERG S.A. jako uzupełnienie półki budżetowej.",
+      "acquisition_history": "Niezależna polska marka w segmencie budżetowym.",
       "product_categories": [
         "Lodówki",
         "Pralki",
@@ -1964,7 +1964,7 @@
     {
       "id": "b-samcook",
       "type": "brand",
-      "parentId": "h-pl-ind",
+      "parentId": "h-mpm",
       "name": "Sam Cook",
       "origin": "Polska",
       "segment": "Premium",
@@ -2497,6 +2497,37 @@
       "country": "Polska",
       "description": "Specjalistyczny zakład produkcyjny Amica Group we Wronkach. Produkuje kuchnie wolnostojące, piekarniki i płyty grzejne dla Amiki i partnerów (m.in. Concept).",
       "seo_slug": "amica-factory-wronki"
+    },
+    {
+      "id": "h-mpm",
+      "type": "holding",
+      "name": "Grupa MPM",
+      "country": "Polska",
+      "description": "Polska firma z wieloletnią tradycją, właściciel marek MPM i Sam Cook.",
+      "seo_slug": "grupa-mpm"
+    },
+    {
+      "id": "b-bora",
+      "type": "brand",
+      "parentId": "h-de-ind",
+      "name": "BORA",
+      "origin": "Niemcy / Austria",
+      "segment": "Luksusowy",
+      "history": "Pionier i rynkowy lider innowacyjnych płyt indukcyjnych ze zintegrowanym wyciągiem (downdraft). Ostatnio rozszerza portfolio o zaawansowane piekarniki (X BO).",
+      "seo_slug": "bora",
+      "founded_year": 2007,
+      "factories_pl": [
+        "Brak produkcji w PL. Sprzęt produkowany w Niemczech i Austrii."
+      ],
+      "business_structure": "Przedsiębiorstwo Prywatne",
+      "product_range": "Specjalista: Płyty z wyciągiem",
+      "product_categories": [
+        "Płyty indukcyjne zintegrowane z wyciągiem",
+        "Piekarniki parowe (X BO)",
+        "Szuflady grzewcze"
+      ],
+      "acquisition_history": "Całkowicie niezależna, innowacyjna firma założona przez Williego Bruckbauera.",
+      "localLogo": "/brandsicons/bora.svg"
     }
   ],
   "edges": [
@@ -2711,10 +2742,10 @@
       "label": "Niezależna"
     },
     {
-      "id": "e-pl-mpm",
-      "source": "h-pl-ind",
+      "id": "e-h-mpm-b-mpm",
+      "source": "h-mpm",
       "target": "b-mpm",
-      "label": "Niezależna"
+      "label": "Marka"
     },
     {
       "id": "e-pl-sol",
@@ -2909,14 +2940,14 @@
       "label": "Marka"
     },
     {
-      "id": "e-h-market-b-smith-brown",
-      "source": "h-market",
+      "id": "e-h-pl-ind-b-smith-brown",
+      "source": "h-pl-ind",
       "target": "b-smith-brown",
       "label": "Marka"
     },
     {
-      "id": "e-h-market-b-lin",
-      "source": "h-market",
+      "id": "e-h-pl-ind-b-lin",
+      "source": "h-pl-ind",
       "target": "b-lin",
       "label": "Marka"
     },
@@ -2924,7 +2955,7 @@
       "id": "e-h-xiaomi-b-dreame",
       "source": "h-xiaomi",
       "target": "b-dreame",
-      "label": "Marka"
+      "label": "Ekosystem"
     },
     {
       "id": "e-h-pl-ind-b-electro-line",
@@ -2933,8 +2964,8 @@
       "label": "Marka"
     },
     {
-      "id": "e-h-pl-ind-b-samcook",
-      "source": "h-pl-ind",
+      "id": "e-h-mpm-b-samcook",
+      "source": "h-mpm",
       "target": "b-samcook",
       "label": "Marka"
     },
@@ -3057,6 +3088,18 @@
       "source": "h-pl-ind",
       "target": "b-nortberg",
       "label": "Marka"
+    },
+    {
+      "id": "e-h-market-b-gotze-jensen",
+      "source": "h-market",
+      "target": "b-gotze-jensen",
+      "label": "Marka"
+    },
+    {
+      "id": "e-h-de-ind-b-bora",
+      "source": "h-de-ind",
+      "target": "b-bora",
+      "label": "Niezależna"
     }
   ]
 }
