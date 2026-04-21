@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Handle, Position, NodeProps } from '@xyflow/react';
+import { Handle, Position, NodeProps, useViewport } from '@xyflow/react';
 import { Factory } from 'lucide-react';
 import { useFilter, nodeMatchesFilter } from '@/contexts/FilterContext';
+import { motion } from 'framer-motion';
 
 function getCountryCode(countryStr: string) {
   if (!countryStr) return 'un';
@@ -70,21 +71,19 @@ function getBrandDomain(brandName: string) {
   return domainMap[name] || `${name}.com`;
 }
 
-// Accent color → light gradient background for brand fallback
 function accentToGradient(accent: string): string {
-  // Map accent hex to a very light version for the gradient background
   const lightMap: Record<string, string> = {
-    '#0d9488': 'from-teal-50 to-teal-100',       // beko
-    '#3b82f6': 'from-blue-50 to-blue-100',         // bsh
-    '#ef4444': 'from-red-50 to-red-100',            // haier
-    '#6366f1': 'from-indigo-50 to-indigo-100',      // electrolux
-    '#22c55e': 'from-green-50 to-green-100',        // hisense
-    '#16a34a': 'from-emerald-50 to-emerald-100',    // amica
-    '#f59e0b': 'from-amber-50 to-amber-100',        // vestel
-    '#1d4ed8': 'from-blue-50 to-blue-100',          // samsung
-    '#dc2626': 'from-red-50 to-red-100',            // lg
-    '#b91c1c': 'from-rose-50 to-rose-100',          // pl-ind
-    '#64748b': 'from-slate-50 to-slate-100',        // market/fallback
+    '#0d9488': 'from-teal-50 to-teal-100',
+    '#3b82f6': 'from-blue-50 to-blue-100',
+    '#ef4444': 'from-red-50 to-red-100',
+    '#6366f1': 'from-indigo-50 to-indigo-100',
+    '#22c55e': 'from-green-50 to-green-100',
+    '#16a34a': 'from-emerald-50 to-emerald-100',
+    '#f59e0b': 'from-amber-50 to-amber-100',
+    '#1d4ed8': 'from-blue-50 to-blue-100',
+    '#dc2626': 'from-red-50 to-red-100',
+    '#b91c1c': 'from-rose-50 to-rose-100',
+    '#64748b': 'from-slate-50 to-slate-100',
   };
   return lightMap[accent] ?? 'from-slate-50 to-slate-100';
 }
@@ -106,7 +105,6 @@ function accentToTextColor(accent: string): string {
   return textMap[accent] ?? 'text-slate-500';
 }
 
-// Invisible handle placed at the center of the node
 const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; position: Position }) => (
   <Handle
     type={type}
@@ -125,16 +123,21 @@ export const HoldingNode = ({ data }: NodeProps) => {
   const name = data.name as string;
   const flagUrl = getFlagUrl(origin);
   const accent = getHoldingAccent(name);
+  
+  const isExpanded = data.isExpanded as boolean;
+  const anyExpanded = data.anyExpanded as boolean;
+
+  // Unexpanded holdings fade when something else is in focus
+  const effectiveOpacity = matches ? (anyExpanded && !isExpanded ? 0.25 : 1) : 0.05;
 
   return (
     <div
-      className="bg-white rounded-[2rem] px-8 py-6 min-w-[200px] flex flex-col justify-center items-center text-center cursor-grab active:cursor-grabbing relative"
+      className={`bg-white rounded-[2rem] px-8 py-6 min-w-[200px] flex flex-col justify-center items-center text-center cursor-pointer active:cursor-grabbing relative transition-all duration-500 ${isExpanded ? 'scale-110 shadow-2xl z-50' : 'scale-100'}`}
       style={{
         border: `3px solid ${accent}`,
-        boxShadow: `0 8px 32px ${accent}1a, 0 2px 8px rgba(0,0,0,0.07)`,
-        opacity: matches ? 1 : 0.1,
+        boxShadow: isExpanded ? `0 12px 40px ${accent}2a, 0 4px 12px rgba(0,0,0,0.1)` : `0 8px 32px ${accent}1a, 0 2px 8px rgba(0,0,0,0.07)`,
+        opacity: effectiveOpacity,
         filter: matches ? 'none' : 'grayscale(100%)',
-        transition: 'opacity 0.35s ease, filter 0.35s ease',
       }}
     >
       <InvisibleHandle type="target" position={Position.Top} />
@@ -153,6 +156,8 @@ export const HoldingNode = ({ data }: NodeProps) => {
       <h3 className={`text-slate-800 font-black tracking-tight leading-tight ${viewMode === 'logocards' && data.localLogo ? 'text-xs hidden' : 'text-xl'}`}>{name}</h3>
       <p className="text-slate-400 text-[11px] font-medium mt-1.5 tracking-wide">{origin}</p>
 
+      {/* Wyświetlanie "kliknij aby zwinąć" lub strzałek można dodać tu opcjonalnie */}
+      
       <InvisibleHandle type="source" position={Position.Bottom} />
     </div>
   );
@@ -163,6 +168,8 @@ export const HoldingNode = ({ data }: NodeProps) => {
 export const BrandNode = ({ data }: NodeProps) => {
   const [imgError, setImgError] = useState(false);
   const { activeFilter, viewMode, focusedOEMNodeId } = useFilter();
+  const { zoom } = useViewport(); // Adaptive sizing
+
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
   const brandName = data.name as string;
   const origin = data.origin as string;
@@ -175,16 +182,19 @@ export const BrandNode = ({ data }: NodeProps) => {
   const fallbackGrad = accentToGradient(accentColor);
   const fallbackText = accentToTextColor(accentColor);
 
+  // Hidden text on zoom out
+  const showText = zoom > 0.45;
+
   return (
-    <div
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: matches ? 1 : 0.1 }}
+      transition={{ type: 'spring', stiffness: 200, damping: 20 }}
       className="flex flex-col items-center justify-center relative z-10 group cursor-grab active:cursor-grabbing"
       style={{
-        opacity: matches ? 1 : 0.1,
         filter: matches ? 'none' : 'grayscale(100%)',
-        transition: 'opacity 0.35s ease, filter 0.35s ease',
       }}
     >
-
       {viewMode === 'logocards' ? (
         <>
           <div
@@ -208,8 +218,8 @@ export const BrandNode = ({ data }: NodeProps) => {
 
             <InvisibleHandle type="source" position={Position.Bottom} />
           </div>
-          <div className="mt-2 text-center opacity-0 group-hover:opacity-100 transition-opacity absolute top-full pointer-events-none">
-            <span className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 bg-white/90 px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">{origin}</span>
+          <div className={`mt-2 text-center transition-opacity duration-300 pointer-events-none ${showText ? 'opacity-100' : 'opacity-0'}`}>
+            <span className="text-[9px] uppercase tracking-[0.2em] font-black text-slate-500 bg-white/90 px-2.5 py-1 rounded-lg border border-slate-100/50">{origin}</span>
           </div>
         </>
       ) : (
@@ -239,8 +249,8 @@ export const BrandNode = ({ data }: NodeProps) => {
             <InvisibleHandle type="source" position={Position.Bottom} />
           </div>
 
-          {/* Label always visible */}
-          <div className="mt-2.5 text-center max-w-[110px]">
+          {/* Label visible only on proper zoom level */}
+          <div className={`mt-2.5 text-center max-w-[110px] transition-opacity duration-300 ${showText ? 'opacity-100' : 'opacity-0'}`}>
             <span className="text-[12px] font-bold text-slate-700 leading-tight block">{brandName}</span>
             <span className="text-[10px] text-slate-400 font-medium leading-tight flex items-center justify-center gap-1.5 mt-1">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -250,7 +260,7 @@ export const BrandNode = ({ data }: NodeProps) => {
           </div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -264,10 +274,10 @@ export const ManufacturerNode = ({ data }: NodeProps) => {
 
   return (
     <div
-      className="bg-slate-900 rounded-lg px-6 py-4 min-w-[190px] flex flex-col justify-center items-center text-center cursor-grab active:cursor-grabbing relative"
+      className="bg-slate-900 rounded-lg px-8 py-6 min-w-[220px] flex flex-col justify-center items-center text-center cursor-grab active:cursor-grabbing relative"
       style={{
-        border: `2px solid #334155`,
-        boxShadow: `0 8px 32px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.05)`,
+        border: `3px solid #475569`,
+        boxShadow: `0 12px 40px rgba(0,0,0,0.35), inset 0 2px 0 rgba(255,255,255,0.05)`,
         opacity: matches ? 1 : 0.1,
         filter: matches ? 'none' : 'grayscale(100%)',
         transition: 'opacity 0.35s ease, filter 0.35s ease',
@@ -278,14 +288,15 @@ export const ManufacturerNode = ({ data }: NodeProps) => {
       <InvisibleHandle type="target" position={Position.Top} />
       <InvisibleHandle type="source" position={Position.Bottom} />
 
-      <div className="mb-2 w-8 h-8 rounded bg-slate-800 border border-slate-700 shadow-inner flex items-center justify-center mx-auto text-slate-400">
-        <Factory className="w-4 h-4" />
+      <div className="mb-3 w-10 h-10 rounded-md bg-slate-800 border border-slate-700 shadow-inner flex items-center justify-center mx-auto text-fuchsia-400">
+        <Factory className="w-5 h-5" />
       </div>
-      <h3 className="text-white font-black tracking-tight leading-tight text-base mb-1">{name}</h3>
+      <h3 className="text-white font-black tracking-tight leading-tight text-xl mb-1">{name}</h3>
       
-      <div className="flex items-center justify-center gap-1.5 mt-1.5">
-        <img src={flagUrl} alt={origin} className="w-3.5 h-2.5 object-cover rounded-sm opacity-80" /> 
-        <p className="text-slate-400 text-[9px] font-bold uppercase tracking-widest leading-none">{origin}</p>
+      <div className="flex items-center justify-center gap-2 mt-2">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={flagUrl} alt={origin} className="w-4 h-3 object-cover rounded-[2px] opacity-80" /> 
+        <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-none">{origin}</p>
       </div>
     </div>
   );

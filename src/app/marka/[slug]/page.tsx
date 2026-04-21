@@ -4,7 +4,9 @@ import dataset from '@/data/dataset.json';
 import { HomeContent } from '@/app/page';
 
 export function generateStaticParams() {
-  return dataset.nodes.map(node => ({ slug: node.seo_slug }));
+  return dataset.nodes
+    .filter((node: any) => node.seo_slug && typeof node.seo_slug === 'string')
+    .map(node => ({ slug: node.seo_slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

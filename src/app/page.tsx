@@ -168,6 +168,8 @@ export function HomeContent() {
           />
           <GraphMap 
             activeFilter={activeFilter} 
+            showOEM={showOEM}
+            selectedNodes={selectedNodes}
             onNodeSelect={(node, multi) => {
               setSelectedNodes(prev => {
                 if (compareQueue) {

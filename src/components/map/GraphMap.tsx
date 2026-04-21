@@ -83,275 +83,293 @@ function buildBrandAccentMap(): Map<string, string> {
 const childMap = buildChildMap();
 const brandAccentMap = buildBrandAccentMap();
 
-// ─── Layout ─────────────────────────────────────────────────────────────────
-
-function generateMapLayout(showOEM: boolean): { initialNodes: Node[]; initialEdges: Edge[] } {
-  const nodes: Node[] = [];
-  const edges: Edge[] = [];
-
-  const holdings = dataset.nodes.filter(n => n.type === 'holding');
-  const brands = dataset.nodes.filter(n => n.type === 'brand');
-
-  const maxPerRow = 3;
-  const hSpacingX = 1000;
-  const hSpacingY = 900;
-
-  holdings.forEach((holding, index) => {
-    const col = index % maxPerRow;
-    const row = Math.floor(index / maxPerRow);
-    const hX = col * hSpacingX;
-    const hY = row * hSpacingY;
-
-    nodes.push({
-      id: holding.id,
-      type: 'holding',
-      position: { x: hX, y: hY },
-      data: { ...holding },
-      zIndex: 10,
-    });
-
-    const childIds = childMap.get(holding.id) || [];
-    const holdingBrands = brands.filter(b => childIds.includes(b.id));
-    const uniqueBrands = Array.from(new Set(holdingBrands.map(b => b.id))).map(
-      id => holdingBrands.find(b => b.id === id),
-    );
-
-    const radius = 330;
-    uniqueBrands.forEach((brand, bIndex) => {
-      if (!brand) return;
-      const angle = (bIndex / uniqueBrands.length) * 2 * Math.PI - Math.PI / 2;
-      const bX = hX + radius * Math.cos(angle);
-      const bY = hY + radius * Math.sin(angle);
-
-      if (!nodes.find(n => n.id === brand.id)) {
-        nodes.push({
-          id: brand.id,
-          type: 'brand',
-          position: { x: bX, y: bY },
-          data: {
-            ...brand,
-            accentColor: brandAccentMap.get(brand.id) ?? '#64748b',
-          },
-          zIndex: 5,
-        });
-      }
-    });
-  });
-
-  // Orphans
-  const placedIds = new Set(nodes.map(n => n.id));
-  const orphans = brands.filter(b => !placedIds.has(b.id));
-  const orphanStartY = Math.ceil(holdings.length / maxPerRow) * hSpacingY + 120;
-
-  // Siatka z "szumem" (pływająca konstelacja) i offsetami
-  orphans.forEach((brand, index) => {
-    const col = index % 6;
-    const row = Math.floor(index / 6);
-    // Niedoskonała siatka: dodajemy losowe przesunięcie od -15 do +15
-    const offsetX = (Math.random() - 0.5) * 30;
-    const offsetY = (Math.random() - 0.5) * 30;
-    nodes.push({
-      id: brand.id,
-      type: 'brand',
-      position: { x: col * 220 + offsetX, y: orphanStartY + row * 220 + offsetY },
-      data: { ...brand, accentColor: '#64748b' },
-    });
-  });
-
-  // Węzły Producentów (Manufacturers)
-  const manufacturers = dataset.nodes.filter(n => n.type === 'manufacturer');
-  const mY = -400; // Położenie nad holdingami
-  
-  if (showOEM) {
-    manufacturers.forEach((m, index) => {
-      const col = index % maxPerRow;
-      nodes.push({
-        id: m.id,
-        type: 'manufacturer',
-        position: { x: (col + 0.5) * hSpacingX, y: mY },
-        data: { ...m },
-        zIndex: 15,
-      });
-    });
-  }
-
-  // Edges generacja
-  dataset.edges.forEach(edge => {
-    edges.push({
-      id: edge.id,
-      source: edge.source,
-      target: edge.target,
-      label: edge.label,
-      type: 'custom',
-    });
-  });
-
-  // Generowanie dynamicznych krawędzi produkcyjnych w locie
-  if (showOEM) {
-    brands.forEach(b => {
-      if ('producedBy' in b && b.producedBy && b.producedBy.length > 0) {
-        b.producedBy.forEach(producerId => {
-          edges.push({
-            id: `p-${producerId}-${b.id}`,
-            source: producerId,
-            target: b.id,
-            label: 'Zakład Produkcyjny',
-            type: 'custom',
-            animated: true,
-            style: { stroke: '#d946ef', strokeWidth: 2, strokeDasharray: '5 5' },
-          });
-        });
-      }
-    });
-  }
-
-  return { initialNodes: nodes, initialEdges: edges };
-}
-
-// ─── LERP constant ──────────────────────────────────────────────────────────
-const LERP = 0.15;
-
 // ─── Component ──────────────────────────────────────────────────────────────
 
 interface GraphMapProps {
   activeFilter?: FilterType;
   showOEM?: boolean;
+  selectedNodes?: GraphNodeData[];
   onNodeSelect?: (node: GraphNodeData, multi: boolean) => void;
 }
 
-export default function GraphMap({ activeFilter = 'all', showOEM = false, onNodeSelect }: GraphMapProps) {
-  const { initialNodes, initialEdges } = useMemo(() => generateMapLayout(showOEM), [showOEM]);
+export default function GraphMap({ activeFilter = 'all', showOEM = false, selectedNodes = [], onNodeSelect }: GraphMapProps) {
+  const { fitView } = useReactFlow();
+  
+  const [expandedHoldings, setExpandedHoldings] = useState<Set<string>>(new Set());
+
+  // Listen to external selection (like searches) to expand the relevant holding
+  useEffect(() => {
+    if (selectedNodes && selectedNodes.length > 0) {
+      const target = selectedNodes[selectedNodes.length - 1]; // most recent
+      // Auto-expand its parent if it's a brand
+      if (target.type === 'brand' && 'parentId' in target && target.parentId) {
+        setExpandedHoldings(prev => {
+          if (prev.has(target.parentId as string)) return prev;
+          const next = new Set(prev);
+          next.add(target.parentId as string);
+          return next;
+        });
+      } else if (target.type === 'holding') {
+        setExpandedHoldings(prev => {
+          if (prev.has(target.id)) return prev;
+          const next = new Set(prev);
+          next.add(target.id);
+          return next;
+        });
+      }
+    }
+  }, [selectedNodes]);
+
+  // Layout generation depends on expandedHoldings and showOEM
+  const { initialNodes, initialEdges } = useMemo(() => {
+    const nodes: Node[] = [];
+    const edges: Edge[] = [];
+
+    const holdings = dataset.nodes.filter(n => n.type === 'holding');
+    const brands = dataset.nodes.filter(n => n.type === 'brand');
+
+    if (!showOEM) {
+      const maxPerRow = 3;
+      const hSpacingX = 1200;
+      const hSpacingY = 1200;
+
+      holdings.forEach((holding, index) => {
+        const col = index % maxPerRow;
+        const row = Math.floor(index / maxPerRow);
+        const hX = col * hSpacingX;
+        const hY = row * hSpacingY;
+
+        const isExpanded = expandedHoldings.has(holding.id);
+        
+        nodes.push({
+          id: holding.id,
+          type: 'holding',
+          position: { x: hX, y: hY },
+          data: { 
+            ...holding, 
+            isExpanded,
+            anyExpanded: expandedHoldings.size > 0 
+          },
+          zIndex: 10,
+        });
+
+        if (isExpanded) {
+          const childIds = childMap.get(holding.id) || [];
+          const holdingBrands = brands.filter(b => childIds.includes(b.id));
+
+          if (holdingBrands.length > 10) {
+            // GRID layout for large groups
+            const columns = 5;
+            const cellW = 160;
+            const cellH = 160;
+            const totalW = (Math.min(holdingBrands.length, columns) - 1) * cellW;
+            const startX = hX - totalW / 2;
+            const startY = hY + 180;
+
+            holdingBrands.forEach((brand, bIndex) => {
+              const bCol = bIndex % columns;
+              const bRow = Math.floor(bIndex / columns);
+              const bX = startX + bCol * cellW;
+              const bY = startY + bRow * cellH;
+
+              nodes.push({
+                id: brand.id,
+                type: 'brand',
+                position: { x: bX, y: bY },
+                data: {
+                  ...brand,
+                  accentColor: brandAccentMap.get(brand.id) ?? '#64748b',
+                  isGrid: true, // No edges to group container
+                },
+                zIndex: 5,
+              });
+            });
+          } else {
+            // RADIAL layout
+            const radius = 330;
+            holdingBrands.forEach((brand, bIndex) => {
+              const angle = (bIndex / holdingBrands.length) * 2 * Math.PI - Math.PI / 2;
+              const bX = hX + radius * Math.cos(angle);
+              const bY = hY + radius * Math.sin(angle);
+
+              nodes.push({
+                id: brand.id,
+                type: 'brand',
+                position: { x: bX, y: bY },
+                data: {
+                  ...brand,
+                  accentColor: brandAccentMap.get(brand.id) ?? '#64748b',
+                  isGrid: false,
+                },
+                zIndex: 5,
+              });
+               
+              edges.push({
+                id: `e-${holding.id}-${brand.id}`,
+                source: holding.id,
+                target: brand.id,
+                label: '',
+                type: 'custom',
+              });
+            });
+          }
+        }
+      });
+      
+    } else {
+      // OEM MODE
+      const manufacturers = dataset.nodes.filter(n => n.type === 'manufacturer');
+      const mMaxPerRow = 3;
+      const mSpacingX = 1400;
+      const mSpacingY = 1400;
+      
+      const manufacturerChildren = new Map<string, typeof brands>();
+      manufacturers.forEach(m => manufacturerChildren.set(m.id, []));
+      
+      brands.forEach(b => {
+        if ('producedBy' in b && Array.isArray(b.producedBy) && b.producedBy.length > 0) {
+          b.producedBy.forEach(producerId => {
+            if (manufacturerChildren.has(producerId)) {
+              manufacturerChildren.get(producerId)?.push(b);
+            }
+          });
+        }
+      });
+
+      manufacturers.forEach((m, index) => {
+        const col = index % mMaxPerRow;
+        const row = Math.floor(index / mMaxPerRow);
+        const mX = col * mSpacingX;
+        const mY = row * mSpacingY;
+        
+        nodes.push({
+          id: m.id,
+          type: 'manufacturer',
+          position: { x: mX, y: mY },
+          data: { ...m },
+          zIndex: 15,
+        });
+
+        const kids = manufacturerChildren.get(m.id) || [];
+        const radius = Math.min(600, 300 + kids.length * 20); // adaptive radius
+        
+        kids.forEach((brand, bIndex) => {
+          const angle = (bIndex / kids.length) * 2 * Math.PI;
+          
+          const uniqueBrandId = `oem-${m.id}-${brand.id}`;
+
+          // initial position before JS lerp takes over
+          const bX = mX + radius * Math.cos(angle);
+          const bY = mY + radius * Math.sin(angle);
+
+          nodes.push({
+            id: uniqueBrandId, 
+            type: 'brand',
+            position: { x: bX, y: bY },
+            data: {
+               ...brand,
+               accentColor: '#d946ef',
+               isOEMMode: true
+            },
+            zIndex: 10,
+          });
+
+          edges.push({
+            id: `e-${m.id}-${uniqueBrandId}`,
+            source: m.id,
+            target: uniqueBrandId,
+            label: 'Zakład',
+            type: 'custom',
+            animated: true,
+            style: { stroke: '#d946ef', strokeWidth: 2, strokeDasharray: '5 5' },
+          });
+        });
+      });
+    }
+
+    return { initialNodes: nodes, initialEdges: edges };
+  }, [showOEM, expandedHoldings]);
+
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const { fitView } = useReactFlow();
 
-  const childOffsetsRef = useRef<Map<string, { dx: number; dy: number }>>(new Map());
-  const draggedHoldingId = useRef<string | null>(null);
+  // Layout updates
+  useEffect(() => {
+    setNodes(initialNodes);
+    setEdges(initialEdges);
+  }, [initialNodes, initialEdges, setNodes, setEdges]);
+  
+  // Center on map change initially or when OEM toggled
+  useEffect(() => {
+    setTimeout(() => {
+      fitView({ duration: 800, padding: 0.1 });
+    }, 50);
+  }, [showOEM, fitView]);
 
   const onConnect = useCallback(
     (params: Edge | Connection) => setEdges(eds => addEdge({ ...params, type: 'custom' }, eds)),
     [setEdges],
   );
 
-  // Update layout when OEM toggle changes
-  useEffect(() => {
-    const { initialNodes, initialEdges } = generateMapLayout(showOEM);
-    setNodes(initialNodes);
-    setEdges(initialEdges);
-    
-    setTimeout(() => {
-      fitView({ duration: 800, padding: 0.1 });
-    }, 50);
-  }, [showOEM, setNodes, setEdges, fitView]);
-
   const handleNodeClick = useCallback((e: React.MouseEvent, node: Node) => {
-    onNodeSelect?.(node.data as unknown as GraphNodeData, e.shiftKey);
-  }, [onNodeSelect]);
-
-  // ── DragStart ────────────────────────────────────────────────────────────
-  const handleNodeDragStart = useCallback((_e: React.MouseEvent, node: Node) => {
-    if (node.type !== 'holding') return;
-    draggedHoldingId.current = node.id;
-
-    const childIds = childMap.get(node.id) || [];
-    const offsets = new Map<string, { dx: number; dy: number }>();
-
-    setNodes(current => {
-      const hPos = current.find(n => n.id === node.id)?.position;
-      if (!hPos) return current;
-      childIds.forEach(cid => {
-        const child = current.find(n => n.id === cid);
-        if (child) {
-          offsets.set(cid, { dx: child.position.x - hPos.x, dy: child.position.y - hPos.y });
-        }
+    if (!showOEM && node.type === 'holding') {
+      setExpandedHoldings(prev => {
+        const next = new Set(prev);
+        if (next.has(node.id)) next.delete(node.id);
+        else next.add(node.id);
+        return next;
       });
-      childOffsetsRef.current = offsets;
-      return current;
-    });
-  }, [setNodes]);
+    }
+    
+    // We send back the actual ID without the "oem-" prefix if it has it
+    let realData = node.data;
+    if (node.id.startsWith('oem-')) {
+      const realId = node.id.split('-').slice(2).join('-');
+      const found = dataset.nodes.find(n => n.id === realId);
+      if (found) realData = found as any;
+    }
+    
+    onNodeSelect?.(realData as unknown as GraphNodeData, e.shiftKey);
+  }, [onNodeSelect, showOEM]);
 
-  // ── Drag: LERP brands each mousemove ─────────────────────────────────────
-  const handleNodeDrag = useCallback((_e: React.MouseEvent, node: Node) => {
-    if (node.type !== 'holding' || !draggedHoldingId.current) return;
-
-    const offsets = childOffsetsRef.current;
-    if (offsets.size === 0) return;
-
-    const hx = node.position.x;
-    const hy = node.position.y;
-
-    setNodes(current =>
-      current.map(n => {
-        const offset = offsets.get(n.id);
-        if (!offset) return n;
-
-        const targetX = hx + offset.dx;
-        const targetY = hy + offset.dy;
-
-        return {
-          ...n,
-          position: {
-            x: n.position.x + (targetX - n.position.x) * LERP,
-            y: n.position.y + (targetY - n.position.y) * LERP,
-          },
-        };
-      }),
-    );
-  }, [setNodes]);
-
-  // ── DragStop: snap to exact position ─────────────────────────────────────
-  const handleNodeDragStop = useCallback((_e: React.MouseEvent, node: Node) => {
-    if (node.type !== 'holding') { draggedHoldingId.current = null; return; }
-
-    const offsets = childOffsetsRef.current;
-    const hx = node.position.x;
-    const hy = node.position.y;
-
-    setNodes(current =>
-      current.map(n => {
-        const offset = offsets.get(n.id);
-        if (!offset) return n;
-        return { ...n, position: { x: hx + offset.dx, y: hy + offset.dy } };
-      }),
-    );
-
-    draggedHoldingId.current = null;
-    childOffsetsRef.current = new Map();
-  }, [setNodes]);
-
-  // Rysowanie pływającej konstelacji (Orphans LERP)
-  React.useEffect(() => {
+  // Orbit / Floating physics for OEM Mode
+  useEffect(() => {
     let animationFrameId: number;
     let time = 0;
 
-    const animateOrphans = () => {
+    const animateOEMOrphans = () => {
       time += 0.015;
       setNodes(current => {
         let changed = false;
         const next = current.map(n => {
-          // Aplikujemy pływający efekt do każdego node'a
-          if (n.id === draggedHoldingId.current) return n;
+          if (n.type === 'brand' && n.data?.isOEMMode) {
+            changed = true;
+            let hash = 0;
+            for (let i = 0; i < n.id.length; i++) hash += n.id.charCodeAt(i);
 
-          changed = true;
-          let hash = 0;
-          for (let i = 0; i < n.id.length; i++) hash += n.id.charCodeAt(i);
-
-          return {
-            ...n,
-            position: {
-              x: n.position.x + Math.sin(time + hash) * 0.08,
-              y: n.position.y + Math.cos(time + hash) * 0.08,
-            }
-          };
+            // subtle circular orbit/floating
+            return {
+              ...n,
+              position: {
+                x: n.position.x + Math.sin(time + hash) * 0.2,
+                y: n.position.y + Math.cos(time + hash) * 0.2,
+              }
+            };
+          }
+          return n;
         });
         return changed ? next : current;
       });
-      animationFrameId = requestAnimationFrame(animateOrphans);
+      animationFrameId = requestAnimationFrame(animateOEMOrphans);
     };
 
-    animationFrameId = requestAnimationFrame(animateOrphans);
+    if (showOEM) {
+      animationFrameId = requestAnimationFrame(animateOEMOrphans);
+    }
     return () => cancelAnimationFrame(animationFrameId);
-  }, [setNodes]);
+  }, [setNodes, showOEM]);
+
+  // Clean-up drag handlers for holding since they don't apply anymore with expand/collapse grid mode (we don't drag standard nodes around manually now, but we can keep standard ReactFlow dragging active for holdings without sweeping children to avoid glitchy transitions).
 
   return (
       <div className="w-full h-full min-h-[90vh] relative bg-transparent">
@@ -362,9 +380,6 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, onNode
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           onNodeClick={handleNodeClick}
-          onNodeDragStart={handleNodeDragStart}
-          onNodeDrag={handleNodeDrag}
-          onNodeDragStop={handleNodeDragStop}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           fitView
