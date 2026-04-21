@@ -165,6 +165,7 @@ export function HomeContent() {
           <StatsDashboard 
             activeFilter={activeFilter} 
             onFilterChange={setActiveFilter} 
+            onQuickJump={(node) => setSelectedNodes([node])}
           />
           <GraphMap 
             activeFilter={activeFilter} 

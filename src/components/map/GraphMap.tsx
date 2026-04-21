@@ -94,10 +94,12 @@ interface GraphMapProps {
 
 export default function GraphMap({ activeFilter = 'all', showOEM = false, selectedNodes = [], onNodeSelect }: GraphMapProps) {
   const { fitView } = useReactFlow();
+  const childOffsetsRef = useRef<Map<string, { dx: number; dy: number }>>(new Map());
+  const draggedHoldingId = useRef<string | null>(null);
   
   const [expandedHoldings, setExpandedHoldings] = useState<Set<string>>(new Set());
 
-  // Listen to external selection (like searches) to expand the relevant holding
+  // Listen to external selection (like searches and Quick Jump) to expand and zoom
   useEffect(() => {
     if (selectedNodes && selectedNodes.length > 0) {
       const target = selectedNodes[selectedNodes.length - 1]; // most recent
@@ -109,6 +111,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           next.add(target.parentId as string);
           return next;
         });
+        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 1.5 }), 100);
       } else if (target.type === 'holding') {
         setExpandedHoldings(prev => {
           if (prev.has(target.id)) return prev;
@@ -116,9 +119,10 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           next.add(target.id);
           return next;
         });
+        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 1 }), 100);
       }
     }
-  }, [selectedNodes]);
+  }, [selectedNodes, fitView]);
 
   // Layout generation depends on expandedHoldings and showOEM
   const { initialNodes, initialEdges } = useMemo(() => {
@@ -129,15 +133,48 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
     const brands = dataset.nodes.filter(n => n.type === 'brand');
 
     if (!showOEM) {
-      const maxPerRow = 3;
-      const hSpacingX = 1200;
-      const hSpacingY = 1200;
+      // GALACTIC LAYOUT sorted by child count
+      const holdingChildCount = new Map<string, number>();
+      holdings.forEach(h => {
+        const childIds = childMap.get(h.id) || [];
+        holdingChildCount.set(h.id, childIds.length);
+      });
 
-      holdings.forEach((holding, index) => {
-        const col = index % maxPerRow;
-        const row = Math.floor(index / maxPerRow);
-        const hX = col * hSpacingX;
-        const hY = row * hSpacingY;
+      const sortedHoldings = [...holdings].sort((a, b) => {
+        return (holdingChildCount.get(b.id) || 0) - (holdingChildCount.get(a.id) || 0);
+      });
+
+      const isAnyExpanded = expandedHoldings.size > 0;
+      // "The Pusher": if expanded, we dramatically increase spacing
+      const pusherMultiplier = isAnyExpanded ? 1.6 : 1.0;
+
+      let currentOrbit = 0;
+      let capacityInOrbit = 1;
+      let placedInOrbit = 0;
+
+      sortedHoldings.forEach((holding, index) => {
+        if (placedInOrbit >= capacityInOrbit) {
+          currentOrbit++;
+          capacityInOrbit = currentOrbit === 0 ? 1 : currentOrbit * 6; // 1, 6, 12, 18
+          placedInOrbit = 0;
+        }
+
+        let hX = 0;
+        let hY = 0;
+
+        if (currentOrbit === 0) {
+          hX = 0;
+          hY = 0;
+        } else {
+          const baseRadius = currentOrbit * 1200 * pusherMultiplier;
+          // Offset angle to avoid straight lines over the center
+          const angleOffset = currentOrbit % 2 === 0 ? Math.PI / capacityInOrbit : 0;
+          const angle = (placedInOrbit / capacityInOrbit) * 2 * Math.PI + angleOffset;
+          hX = Math.cos(angle) * baseRadius;
+          hY = Math.sin(angle) * baseRadius;
+        }
+
+        placedInOrbit++;
 
         const isExpanded = expandedHoldings.has(holding.id);
         
@@ -148,7 +185,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           data: { 
             ...holding, 
             isExpanded,
-            anyExpanded: expandedHoldings.size > 0 
+            anyExpanded: isAnyExpanded 
           },
           zIndex: 10,
         });
@@ -158,19 +195,23 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           const holdingBrands = brands.filter(b => childIds.includes(b.id));
 
           if (holdingBrands.length > 10) {
-            // GRID layout for large groups
+            // COMPACT GRID layout for large groups
             const columns = 5;
-            const cellW = 160;
-            const cellH = 160;
-            const totalW = (Math.min(holdingBrands.length, columns) - 1) * cellW;
+            const cellW = 110;
+            const cellH = 110;
+            const gap = 15;
+            const stepW = cellW + gap;
+            const stepH = cellH + gap;
+            
+            const totalW = (Math.min(holdingBrands.length, columns) - 1) * stepW;
             const startX = hX - totalW / 2;
-            const startY = hY + 180;
+            const startY = hY + 160;
 
             holdingBrands.forEach((brand, bIndex) => {
               const bCol = bIndex % columns;
               const bRow = Math.floor(bIndex / columns);
-              const bX = startX + bCol * cellW;
-              const bY = startY + bRow * cellH;
+              const bX = startX + bCol * stepW;
+              const bY = startY + bRow * stepH;
 
               nodes.push({
                 id: brand.id,
@@ -204,11 +245,12 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
                 zIndex: 5,
               });
                
+              const storedEdge = dataset.edges.find(e => e.source === holding.id && e.target === brand.id);
               edges.push({
                 id: `e-${holding.id}-${brand.id}`,
                 source: holding.id,
                 target: brand.id,
-                label: '',
+                label: storedEdge?.label || '',
                 type: 'custom',
               });
             });
@@ -251,14 +293,14 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         });
 
         const kids = manufacturerChildren.get(m.id) || [];
-        const radius = Math.min(600, 300 + kids.length * 20); // adaptive radius
+        const radius = Math.min(600, 300 + kids.length * 20); 
         
         kids.forEach((brand, bIndex) => {
           const angle = (bIndex / kids.length) * 2 * Math.PI;
           
           const uniqueBrandId = `oem-${m.id}-${brand.id}`;
 
-          // initial position before JS lerp takes over
+          // initial position
           const bX = mX + radius * Math.cos(angle);
           const bY = mY + radius * Math.sin(angle);
 
@@ -332,17 +374,94 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
     onNodeSelect?.(realData as unknown as GraphNodeData, e.shiftKey);
   }, [onNodeSelect, showOEM]);
 
-  // Orbit / Floating physics for OEM Mode
+  // ── DragStart ────────────────────────────────────────────────────────────
+  const handleNodeDragStart = useCallback((_e: React.MouseEvent, node: Node) => {
+    if (node.type !== 'holding') return;
+    draggedHoldingId.current = node.id;
+
+    const childIds = childMap.get(node.id) || [];
+    const offsets = new Map<string, { dx: number; dy: number }>();
+
+    setNodes(current => {
+      const hPos = current.find(n => n.id === node.id)?.position;
+      if (!hPos) return current;
+      childIds.forEach(cid => {
+        const child = current.find(n => n.id === cid);
+        if (child) {
+          offsets.set(cid, { dx: child.position.x - hPos.x, dy: child.position.y - hPos.y });
+        }
+      });
+      childOffsetsRef.current = offsets;
+      return current;
+    });
+  }, [setNodes]);
+
+  // ── Drag: LERP brands each mousemove ─────────────────────────────────────
+  const handleNodeDrag = useCallback((_e: React.MouseEvent, node: Node) => {
+    if (node.type !== 'holding' || !draggedHoldingId.current) return;
+
+    const offsets = childOffsetsRef.current;
+    if (offsets.size === 0) return;
+
+    const hx = node.position.x;
+    const hy = node.position.y;
+    const LERP = 0.15;
+
+    setNodes(current =>
+      current.map(n => {
+        const offset = offsets.get(n.id);
+        if (!offset) return n;
+
+        const targetX = hx + offset.dx;
+        const targetY = hy + offset.dy;
+
+        // Apply smooth following
+        return {
+          ...n,
+          position: {
+            x: n.position.x + (targetX - n.position.x) * LERP,
+            y: n.position.y + (targetY - n.position.y) * LERP,
+          },
+        };
+      })
+    );
+  }, [setNodes]);
+
+  // ── DragStop: snap to exact position ─────────────────────────────────────
+  const handleNodeDragStop = useCallback((_e: React.MouseEvent, node: Node) => {
+    if (node.type !== 'holding') { draggedHoldingId.current = null; return; }
+
+    const offsets = childOffsetsRef.current;
+    const hx = node.position.x;
+    const hy = node.position.y;
+
+    setNodes(current =>
+      current.map(n => {
+        const offset = offsets.get(n.id);
+        if (!offset) return n;
+        return { ...n, position: { x: hx + offset.dx, y: hy + offset.dy } };
+      }),
+    );
+
+    draggedHoldingId.current = null;
+    childOffsetsRef.current = new Map();
+  }, [setNodes]);
+
+  // Orbit / Floating physics for ALL Brands
   useEffect(() => {
     let animationFrameId: number;
     let time = 0;
 
-    const animateOEMOrphans = () => {
+    const animatePhysics = () => {
       time += 0.015;
       setNodes(current => {
         let changed = false;
         const next = current.map(n => {
-          if (n.type === 'brand' && n.data?.isOEMMode) {
+          if (n.id === draggedHoldingId.current) return n;
+          const isHoldingDragged = childOffsetsRef.current.has(n.id); 
+          if (isHoldingDragged) return n;
+
+          if (n.type === 'brand') {
             changed = true;
             let hash = 0;
             for (let i = 0; i < n.id.length; i++) hash += n.id.charCodeAt(i);
@@ -351,8 +470,8 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
             return {
               ...n,
               position: {
-                x: n.position.x + Math.sin(time + hash) * 0.2,
-                y: n.position.y + Math.cos(time + hash) * 0.2,
+                x: n.position.x + Math.sin(time + hash) * 0.15,
+                y: n.position.y + Math.cos(time + hash) * 0.15,
               }
             };
           }
@@ -360,16 +479,13 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         });
         return changed ? next : current;
       });
-      animationFrameId = requestAnimationFrame(animateOEMOrphans);
+      animationFrameId = requestAnimationFrame(animatePhysics);
     };
 
-    if (showOEM) {
-      animationFrameId = requestAnimationFrame(animateOEMOrphans);
-    }
+    animationFrameId = requestAnimationFrame(animatePhysics);
+    
     return () => cancelAnimationFrame(animationFrameId);
-  }, [setNodes, showOEM]);
-
-  // Clean-up drag handlers for holding since they don't apply anymore with expand/collapse grid mode (we don't drag standard nodes around manually now, but we can keep standard ReactFlow dragging active for holdings without sweeping children to avoid glitchy transitions).
+  }, [setNodes]);
 
   return (
       <div className="w-full h-full min-h-[90vh] relative bg-transparent">
@@ -380,6 +496,9 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           onNodeClick={handleNodeClick}
+          onNodeDragStart={handleNodeDragStart}
+          onNodeDrag={handleNodeDrag}
+          onNodeDragStop={handleNodeDragStop}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           fitView
