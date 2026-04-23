@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { FilterType } from '@/contexts/FilterContext';
 import dataset from '@/data/dataset.json';
-import { Briefcase, Building2, Factory, Globe2, Link as LinkIcon } from 'lucide-react';
+import { Briefcase, Building2, Factory, Globe2, Link as LinkIcon, Menu, X } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
 
 interface StatsDashboardProps {
@@ -58,9 +58,20 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
     };
   }, []);
 
+  const [isOpenMobile, setIsOpenMobile] = useState(false);
+
   return (
-    <div className="absolute left-6 top-32 z-40 hidden xl:flex flex-col gap-4 pointer-events-auto w-64">
-      {/* Statystyki Bazy */}
+    <>
+      {/* Mobile Toggle */}
+      <button 
+        onClick={() => setIsOpenMobile(!isOpenMobile)}
+        className="xl:hidden absolute left-4 top-24 z-50 p-2.5 bg-white/90 backdrop-blur-md rounded-xl border border-slate-200 shadow-sm text-slate-600 pointer-events-auto hover:bg-white transition-all"
+      >
+        {isOpenMobile ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+      </button>
+
+      <div className={`absolute left-4 top-36 xl:left-6 xl:top-32 z-40 flex flex-col gap-4 pointer-events-auto w-56 xl:w-64 transition-all duration-300 ${isOpenMobile ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none xl:opacity-100 xl:translate-y-0 xl:pointer-events-auto'}`}>
+        {/* Statystyki Bazy */}
       <div className="flex flex-col gap-2 bg-white/70 backdrop-blur-md rounded-2xl p-4 border border-white shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
         <h3 className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 ml-1">
           Statystyki Bazy
@@ -141,6 +152,7 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
           </button>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   );
 }

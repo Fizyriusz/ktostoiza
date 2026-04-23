@@ -357,7 +357,10 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
     if (!showOEM && node.type === 'holding') {
       setExpandedHoldings(prev => {
         const next = new Set(prev);
-        if (next.has(node.id)) next.delete(node.id);
+        if (next.has(node.id)) {
+          next.delete(node.id);
+          setTimeout(() => fitView({ duration: 800, padding: 0.2 }), 50);
+        }
         else next.add(node.id);
         return next;
       });
@@ -502,17 +505,12 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           fitView
+          minZoom={0.05}
+          maxZoom={2.5}
           className="border-none"
         >
           <Background variant={BackgroundVariant.Dots} gap={32} size={1} color="#e2e8f0" />
           <Controls className="bg-white border-slate-200 shadow-sm" />
-          <MiniMap
-            zoomable
-            pannable
-            nodeColor={n => (n.type === 'holding' ? '#3b82f6' : '#e2e8f0')}
-            className="bg-white border-slate-200 shadow-sm rounded-xl overflow-hidden"
-            maskColor="rgba(248, 250, 252, 0.7)"
-          />
         </ReactFlow>
       </div>
   );
