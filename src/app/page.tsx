@@ -14,6 +14,9 @@ import DetailsPanel from '@/components/map/DetailsPanel';
 import { GraphNodeData } from '@/data/types';
 import NetworkLogo from '@/components/ui/NetworkLogo';
 import StatsDashboard from '@/components/ui/StatsDashboard';
+import PolandMap from '@/components/ui/PolandMap';
+import { MapPin } from 'lucide-react';
+import dataset from '@/data/dataset.json';
 
 const FILTERS: { key: FilterType; label: string }[] = [
   { key: 'all',            label: 'Wszystkie'       },
@@ -38,6 +41,8 @@ export function HomeContent() {
   const [selectedNodes, setSelectedNodes] = useState<GraphNodeData[]>([]);
   const [compareQueue, setCompareQueue] = useState<GraphNodeData | null>(null);
   const [showIntro, setShowIntro] = useState(false);
+  const [isTourActive, setIsTourActive] = useState(false);
+  const [showPolandMap, setShowPolandMap] = useState(false);
 
   let focusedOEMNodeId: string | null = null;
   if (selectedNodes.length === 1) {
@@ -55,6 +60,29 @@ export function HomeContent() {
       setShowIntro(true);
     }
   }, []);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isTourActive) {
+      const holdingChildrenCount = new Map<string, number>();
+      dataset.nodes.forEach(node => {
+        if (node.type === 'brand' && 'parentId' in node && node.parentId) {
+          holdingChildrenCount.set(node.parentId, (holdingChildrenCount.get(node.parentId) || 0) + 1);
+        }
+      });
+      const holdings = dataset.nodes.filter(n => n.type === 'holding');
+      const sortedHoldings = holdings.sort((a, b) => (holdingChildrenCount.get(b.id) || 0) - (holdingChildrenCount.get(a.id) || 0));
+      
+      let index = 0;
+      setSelectedNodes([sortedHoldings[index] as any]);
+
+      interval = setInterval(() => {
+        index = (index + 1) % sortedHoldings.length;
+        setSelectedNodes([sortedHoldings[index] as any]);
+      }, 5000);
+    }
+    return () => clearInterval(interval);
+  }, [isTourActive]);
 
   const closeIntro = () => {
     localStorage.setItem('ktostoiza_intro_seen', 'true');
@@ -125,6 +153,14 @@ export function HomeContent() {
               OEM
             </button>
 
+            <button
+              onClick={() => setShowPolandMap(true)}
+              className="px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-blue-500 hover:bg-white shadow-sm"
+            >
+              <MapPin className="w-3 h-3 text-red-500" />
+              Fabryki PL
+            </button>
+
             <div className="flex bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-slate-300 shadow-sm ml-2">
               <button
                 onClick={() => setViewMode('classic')}
@@ -166,6 +202,8 @@ export function HomeContent() {
             activeFilter={activeFilter} 
             onFilterChange={setActiveFilter} 
             onQuickJump={(node) => setSelectedNodes([node])}
+            onTourToggle={() => setIsTourActive(!isTourActive)}
+            isTourActive={isTourActive}
           />
           <GraphMap 
             activeFilter={activeFilter} 
@@ -226,6 +264,8 @@ export function HomeContent() {
             setSelectedNodes([]);
           }}
         />
+
+        <PolandMap isOpen={showPolandMap} onClose={() => setShowPolandMap(false)} />
 
         {/* Intro Modal */}
         <AnimatePresence>

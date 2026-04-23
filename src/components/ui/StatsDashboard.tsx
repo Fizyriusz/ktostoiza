@@ -1,16 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import { FilterType } from '@/contexts/FilterContext';
 import dataset from '@/data/dataset.json';
-import { Briefcase, Building2, Factory, Globe2, Link as LinkIcon, Menu, X } from 'lucide-react';
+import { Briefcase, Building2, Factory, Globe2, Link as LinkIcon, Menu, X, Plane, Lightbulb } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
 
 interface StatsDashboardProps {
   activeFilter: FilterType;
   onFilterChange: (filter: FilterType) => void;
   onQuickJump?: (node: GraphNodeData) => void;
+  onTourToggle?: () => void;
+  isTourActive?: boolean;
 }
 
-export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJump }: StatsDashboardProps) {
+export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJump, onTourToggle, isTourActive }: StatsDashboardProps) {
   const { stats, topHoldings } = useMemo(() => {
     let brandsCount = 0;
     let holdingsCount = 0;
@@ -56,6 +58,13 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
       },
       topHoldings: sortedHoldings.slice(0, 6)
     };
+  }, []);
+
+  const randomTrivia = useMemo(() => {
+    const brandsWithHistory = dataset.nodes.filter(n => n.type === 'brand' && (n as any).history);
+    if (brandsWithHistory.length === 0) return null;
+    const randomBrand = brandsWithHistory[Math.floor(Math.random() * brandsWithHistory.length)] as any;
+    return { name: randomBrand.name, text: randomBrand.history };
   }, []);
 
   const [isOpenMobile, setIsOpenMobile] = useState(false);
@@ -132,11 +141,23 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
         </button>
       </div>
 
-      {/* Szybki Skok */}
+      {/* Szybki Skok & Tournee */}
       <div className="flex flex-col gap-1.5 bg-white/70 backdrop-blur-md rounded-2xl p-4 border border-white shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
         <h3 className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 ml-1 flex items-center gap-1.5">
           <LinkIcon className="w-3 h-3" /> Szybki Skok
         </h3>
+        <p className="text-[9px] text-slate-400 font-medium mb-1 ml-1 leading-tight">
+          Posortowane od największej ilości marek
+        </p>
+
+        <button
+          onClick={onTourToggle}
+          className={`flex items-center justify-center gap-2 w-full p-2.5 mb-2 rounded-xl transition-all font-bold text-xs border ${isTourActive ? 'bg-fuchsia-600 text-white border-fuchsia-600 shadow-md animate-pulse' : 'bg-white text-fuchsia-600 border-fuchsia-200 hover:bg-fuchsia-50'}`}
+        >
+          <Plane className="w-4 h-4" />
+          {isTourActive ? 'Zatrzymaj Tournée' : 'Rozpocznij Tournée'}
+        </button>
+
         {topHoldings.map(holding => (
           <button
             key={holding.id}
@@ -152,6 +173,18 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
           </button>
         ))}
       </div>
+
+      {/* Ciekawostka */}
+      {randomTrivia && (
+        <div className="flex flex-col gap-2 bg-gradient-to-br from-blue-50 to-indigo-50/50 backdrop-blur-md rounded-2xl p-4 border border-blue-100/50 shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
+           <h3 className="text-[10px] font-black tracking-widest text-blue-500 uppercase flex items-center gap-1.5 mb-1">
+             <Lightbulb className="w-3 h-3" /> Ciekawostka
+           </h3>
+           <p className="text-[11px] text-slate-600 font-medium leading-relaxed">
+             <strong className="text-slate-800">{randomTrivia.name}</strong>: {randomTrivia.text}
+           </p>
+        </div>
+      )}
       </div>
     </>
   );

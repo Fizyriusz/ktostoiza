@@ -93,7 +93,8 @@ interface GraphMapProps {
 }
 
 export default function GraphMap({ activeFilter = 'all', showOEM = false, selectedNodes = [], onNodeSelect }: GraphMapProps) {
-  const { fitView } = useReactFlow();
+  const { fitView, getViewport, setViewport } = useReactFlow();
+  const savedViewportRef = useRef<any>(null);
   const childOffsetsRef = useRef<Map<string, { dx: number; dy: number }>>(new Map());
   const draggedHoldingId = useRef<string | null>(null);
   
@@ -108,18 +109,20 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         setExpandedHoldings(prev => {
           if (prev.has(target.parentId as string)) return prev;
           const next = new Set(prev);
+          savedViewportRef.current = getViewport();
           next.add(target.parentId as string);
           return next;
         });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 1.5 }), 100);
+        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.2 }), 100);
       } else if (target.type === 'holding') {
         setExpandedHoldings(prev => {
           if (prev.has(target.id)) return prev;
           const next = new Set(prev);
+          savedViewportRef.current = getViewport();
           next.add(target.id);
           return next;
         });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 1 }), 100);
+        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.2 }), 100);
       }
     }
   }, [selectedNodes, fitView]);
@@ -359,9 +362,16 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         const next = new Set(prev);
         if (next.has(node.id)) {
           next.delete(node.id);
-          setTimeout(() => fitView({ duration: 800, padding: 0.2 }), 50);
+          if (savedViewportRef.current) {
+            setTimeout(() => setViewport(savedViewportRef.current, { duration: 800 }), 50);
+          } else {
+            setTimeout(() => fitView({ duration: 800, padding: 0.2 }), 50);
+          }
         }
-        else next.add(node.id);
+        else {
+          savedViewportRef.current = getViewport();
+          next.add(node.id);
+        }
         return next;
       });
     }
