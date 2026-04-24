@@ -118,6 +118,7 @@ const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; positi
 
 export const HoldingNode = ({ data }: NodeProps) => {
   const { activeFilter, viewMode, focusedOEMNodeId } = useFilter();
+  const { zoom } = useViewport();
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
   const origin = data.country as string;
   const name = data.name as string;
@@ -129,11 +130,17 @@ export const HoldingNode = ({ data }: NodeProps) => {
 
   // Unexpanded holdings fade when something else is in focus
   const effectiveOpacity = matches ? (anyExpanded && !isExpanded ? 0.25 : 1) : 0.05;
+  
+  // Semantic zoom enhancement: keep it large and readable
+  const scaleAdjustment = zoom < 0.45 ? (0.45 / zoom) : 1;
+  const targetScale = isExpanded ? 1.1 : 1;
+  const finalScale = targetScale * scaleAdjustment;
 
   return (
     <div
-      className={`bg-white rounded-[2rem] px-8 py-6 min-w-[200px] flex flex-col justify-center items-center text-center cursor-pointer active:cursor-grabbing relative transition-all duration-500 ${isExpanded ? 'scale-110 shadow-2xl z-50' : 'scale-100'}`}
+      className={`bg-white rounded-[2rem] px-8 py-6 min-w-[200px] flex flex-col justify-center items-center text-center cursor-pointer active:cursor-grabbing relative transition-all duration-500 ${isExpanded ? 'shadow-2xl z-50' : ''}`}
       style={{
+        transform: `scale(${finalScale})`,
         border: `3px solid ${accent}`,
         boxShadow: isExpanded ? `0 12px 40px ${accent}2a, 0 4px 12px rgba(0,0,0,0.1)` : `0 8px 32px ${accent}1a, 0 2px 8px rgba(0,0,0,0.07)`,
         opacity: effectiveOpacity,

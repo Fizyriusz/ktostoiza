@@ -9,15 +9,15 @@ interface PolandMapProps {
 }
 
 const CITY_COORDS = [
-  { name: 'Wrocław', x: '33%', y: '66%' },
-  { name: 'Łódź', x: '55%', y: '52%' },
+  { name: 'Wrocław', x: '28%', y: '70%' },
+  { name: 'Łódź', x: '52%', y: '55%' },
   { name: 'Radomsko', x: '55%', y: '63%' },
-  { name: 'Wronki', x: '30%', y: '40%' },
+  { name: 'Wronki', x: '35%', y: '38%' },
   { name: 'Pruszków', x: '62%', y: '46%' },
   { name: 'Warszawa', x: '65%', y: '45%' },
-  { name: 'Świdnica', x: '29%', y: '69%' },
-  { name: 'Żarów', x: '31%', y: '67%' },
-  { name: 'Popowo', x: '28%', y: '38%' },
+  { name: 'Świdnica', x: '26%', y: '72%' },
+  { name: 'Żarów', x: '28%', y: '70%' },
+  { name: 'Popowo', x: '33%', y: '36%' },
   { name: 'Siewierz', x: '55%', y: '75%' },
   { name: 'Sanok', x: '80%', y: '85%' },
   { name: 'Sońsk', x: '63%', y: '35%' },
@@ -106,7 +106,9 @@ export default function PolandMap({ isOpen, onClose }: PolandMapProps) {
                       style={{ left: city.x, top: city.y, transform: 'translate(-50%, -50%)' }}
                     >
                       {/* Pulsing dot background */}
-                      <div className="absolute inset-0 bg-blue-500 rounded-full opacity-40 animate-ping" style={{ transform: 'scale(2)' }} />
+                      {(isSelected || !selectedCity) && (
+                        <div className={`absolute inset-0 rounded-full opacity-40 animate-ping ${isSelected ? 'bg-fuchsia-500' : 'bg-blue-500'}`} style={{ transform: 'scale(2.5)' }} />
+                      )}
                       
                       <button 
                         onClick={() => setSelectedCity(city.name)}
@@ -128,17 +130,34 @@ export default function PolandMap({ isOpen, onClose }: PolandMapProps) {
             {/* Kolumna Info */}
             <div className="w-full md:w-80 lg:w-96 bg-white overflow-y-auto relative p-6">
               {!selectedCity ? (
-                <div className="h-full flex flex-col items-center justify-center text-center text-slate-400 p-6">
-                  <MapPin className="w-12 h-12 mb-4 opacity-20" />
-                  <h3 className="text-lg font-bold text-slate-700 mb-2">Wybierz miasto</h3>
-                  <p className="text-sm">Kliknij pulsujący punkt na mapie, aby zobaczyć jakie zakłady produkcyjne się tam znajdują.</p>
+                <div className="h-full flex flex-col p-2">
+                  <div className="flex flex-col items-center justify-center text-center text-slate-400 mb-8 mt-4">
+                    <MapPin className="w-12 h-12 mb-4 opacity-20" />
+                    <h3 className="text-lg font-bold text-slate-700 mb-2">Wybierz miasto</h3>
+                    <p className="text-sm">Kliknij punkt na mapie lub z listy poniżej, aby sprawdzić fabryki.</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {CITY_COORDS.filter(city => (cityData.get(city.name)?.length || 0) > 0).map(city => (
+                      <button 
+                        key={city.name}
+                        onClick={() => setSelectedCity(city.name)}
+                        className="px-3 py-2 bg-slate-50 border border-slate-100 rounded-lg text-sm font-bold text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors text-left flex items-center gap-2"
+                      >
+                        <MapPin className="w-3 h-3 shrink-0" />
+                        <span className="truncate">{city.name}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 <div className="animate-in fade-in slide-in-from-right-4 duration-300">
-                  <h2 className="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3 border-b pb-4">
+                  <h2 className="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3 border-b pb-4 mt-2">
                     <MapPin className="w-6 h-6 text-fuchsia-600" />
                     {selectedCity}
                   </h2>
+                  <button onClick={() => setSelectedCity(null)} className="absolute top-6 right-6 text-xs font-bold text-slate-400 hover:text-slate-600 uppercase tracking-widest flex items-center gap-1">
+                    Wróć <X className="w-3 h-3" />
+                  </button>
                   
                   <div className="flex flex-col gap-4">
                     {cityData.get(selectedCity)?.map((item, idx) => (

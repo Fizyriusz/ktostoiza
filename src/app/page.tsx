@@ -185,6 +185,16 @@ export function HomeContent() {
 
           {/* Corner link */}
           <div className="absolute top-5 right-6 pointer-events-auto hidden sm:flex items-center gap-4">
+            <Link
+              href="/news"
+              className="group flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-slate-900 to-slate-800 border border-slate-700 rounded-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+            >
+              <div className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
+              </div>
+              <span className="text-[11px] font-black uppercase tracking-widest text-white">Content Hub</span>
+            </Link>
             <button
               onClick={() => setShowIntro(true)}
               className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-blue-600 transition-colors"
