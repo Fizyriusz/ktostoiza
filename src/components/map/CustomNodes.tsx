@@ -178,6 +178,7 @@ export const BrandNode = ({ data }: NodeProps) => {
   const logoUrl = `https://logo.clearbit.com/${domain}`;
   const initial = brandName.charAt(0).toUpperCase();
   const flagUrl = getFlagUrl(origin);
+  const hasRecentNews = data.hasRecentNews as boolean;
 
   const fallbackGrad = accentToGradient(accentColor);
   const fallbackText = accentToTextColor(accentColor);
@@ -198,9 +199,14 @@ export const BrandNode = ({ data }: NodeProps) => {
       {viewMode === 'logocards' ? (
         <>
           <div
-            className={`w-[130px] h-[64px] rounded-2xl flex items-center justify-center overflow-hidden bg-white shadow-sm ring-1 ring-slate-200/60 p-3 group-hover:ring-2 group-hover:shadow-md transition-all`}
+            className={`w-[130px] h-[64px] rounded-2xl flex items-center justify-center overflow-hidden bg-white shadow-sm ring-1 ring-slate-200/60 p-3 group-hover:ring-2 group-hover:shadow-md transition-all relative`}
             style={{ borderColor: accentColor }}
           >
+            {hasRecentNews && (
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full z-50 shadow-sm">
+                <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
+              </div>
+            )}
             <InvisibleHandle type="target" position={Position.Top} />
             
             {data.localLogo ? (
@@ -226,10 +232,15 @@ export const BrandNode = ({ data }: NodeProps) => {
         <>
           {/* Circle */}
           <div
-            className={`w-[82px] h-[82px] rounded-full flex items-center justify-center overflow-hidden ring-1 ring-slate-200/60 bg-white
+            className={`w-[82px] h-[82px] rounded-full flex items-center justify-center overflow-hidden ring-1 ring-slate-200/60 bg-white relative
               ${imgError ? `bg-gradient-to-br ${fallbackGrad}` : ''}`}
             style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.09), 0 1px 4px rgba(0,0,0,0.06)' }}
           >
+            {hasRecentNews && (
+              <div className="absolute top-1 right-2 w-3 h-3 bg-red-500 rounded-full z-50 shadow-sm">
+                <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
+              </div>
+            )}
             <InvisibleHandle type="target" position={Position.Top} />
 
             {!imgError ? (

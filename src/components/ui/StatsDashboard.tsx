@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { FilterType } from '@/contexts/FilterContext';
 import dataset from '@/data/dataset.json';
-import { Briefcase, Building2, Factory, Globe2, Link as LinkIcon, Menu, X, Plane, Lightbulb } from 'lucide-react';
+import { Briefcase, Building2, Factory, Globe2, Link as LinkIcon, Menu, X, Plane, Lightbulb, Newspaper, BellRing } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
 
 interface StatsDashboardProps {
@@ -68,6 +68,14 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
   }, []);
 
   const [isOpenMobile, setIsOpenMobile] = useState(false);
+  const [recentNews, setRecentNews] = useState<any[]>([]);
+
+  React.useEffect(() => {
+    fetch('/api/news')
+      .then(res => res.json())
+      .then(data => setRecentNews(data))
+      .catch(err => console.error(err));
+  }, []);
 
   return (
     <>
@@ -79,7 +87,7 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
         {isOpenMobile ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
-      <div className={`absolute left-4 top-36 xl:left-6 xl:top-32 z-40 flex flex-col gap-4 pointer-events-auto w-56 xl:w-64 transition-all duration-300 ${isOpenMobile ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none xl:opacity-100 xl:translate-y-0 xl:pointer-events-auto'}`}>
+      <div className={`absolute left-4 top-36 xl:left-6 xl:top-32 z-40 flex flex-col gap-4 pointer-events-auto w-56 xl:w-64 transition-all duration-300 max-h-[calc(100vh-140px)] overflow-y-auto pb-4 pr-2 ${isOpenMobile ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none xl:opacity-100 xl:translate-y-0 xl:pointer-events-auto'}`} style={{ scrollbarWidth: 'thin' }}>
         {/* Statystyki Bazy */}
       <div className="flex flex-col gap-2 bg-white/70 backdrop-blur-md rounded-2xl p-4 border border-white shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
         <h3 className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 ml-1">
@@ -185,6 +193,31 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
            </p>
         </div>
       )}
+
+      {/* News Ticker */}
+      {recentNews.length > 0 && (
+        <div className="flex flex-col gap-2 bg-white/70 backdrop-blur-md rounded-2xl p-4 border border-rose-100/50 shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
+           <h3 className="text-[10px] font-black tracking-widest text-rose-500 uppercase flex items-center gap-1.5 mb-1">
+             <Newspaper className="w-3 h-3" /> Newsroom
+           </h3>
+           <div className="flex flex-col gap-2.5">
+             {recentNews.map(news => (
+               <a key={news.slug} href={`/news`} className="group flex flex-col gap-0.5">
+                 <span className="text-[9px] font-bold text-slate-400">{news.date}</span>
+                 <p className="text-[11px] font-semibold text-slate-700 leading-tight group-hover:text-rose-600 transition-colors line-clamp-2">
+                   {news.title}
+                 </p>
+               </a>
+             ))}
+           </div>
+        </div>
+      )}
+
+      {/* Newsletter */}
+      <button className="flex items-center justify-center gap-2 w-full p-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white transition-all font-bold text-xs shadow-lg shadow-slate-800/20 mt-2">
+        <BellRing className="w-4 h-4 text-rose-400" />
+        Zapisz się na Alerty
+      </button>
       </div>
     </>
   );

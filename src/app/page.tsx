@@ -122,58 +122,64 @@ export function HomeContent() {
             />
           </div>
 
-          <div className="pointer-events-auto flex items-center gap-2 flex-wrap justify-center px-4 max-w-2xl mt-4 relative z-10 transition-all">
-            {FILTERS.map(f => (
+          <div className="pointer-events-auto flex flex-col items-center gap-3 px-4 max-w-2xl mt-4 relative z-10 transition-all">
+            {/* Standard Filters */}
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              {FILTERS.map(f => (
+                <button
+                  key={f.key}
+                  onClick={() => setActiveFilter(f.key)}
+                  className={`
+                    px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all
+                    ${activeFilter === f.key
+                      ? 'border-2 border-slate-800 bg-slate-800 text-white shadow-md'
+                      : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-slate-500 hover:bg-white shadow-sm'
+                    }
+                  `}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Special Views & Actions */}
+            <div className="flex items-center justify-center gap-3 flex-wrap border-t border-slate-200/50 pt-3 w-full">
               <button
-                key={f.key}
-                onClick={() => setActiveFilter(f.key)}
+                onClick={() => setShowOEM(!showOEM)}
                 className={`
-                  px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all
-                  ${activeFilter === f.key
-                    ? 'border-2 border-slate-800 bg-slate-800 text-white shadow-md'
-                    : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-slate-500 hover:bg-white shadow-sm'
+                  px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5
+                  ${showOEM
+                    ? 'border-2 border-fuchsia-600 bg-fuchsia-600 text-white shadow-md'
+                    : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-fuchsia-500 hover:bg-white shadow-sm'
                   }
                 `}
               >
-                {f.label}
+                <Factory className="w-3 h-3" />
+                Tryb OEM
               </button>
-            ))}
 
-            <button
-              onClick={() => setShowOEM(!showOEM)}
-              className={`
-                px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5
-                ${showOEM
-                  ? 'border-2 border-fuchsia-600 bg-fuchsia-600 text-white shadow-md'
-                  : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-fuchsia-500 hover:bg-white shadow-sm'
-                }
-              `}
-            >
-              <Factory className="w-3 h-3" />
-              OEM
-            </button>
-
-            <button
-              onClick={() => setShowPolandMap(true)}
-              className="px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-blue-500 hover:bg-white shadow-sm"
-            >
-              <MapPin className="w-3 h-3 text-red-500" />
-              Fabryki PL
-            </button>
-
-            <div className="flex bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-slate-300 shadow-sm ml-2">
               <button
-                onClick={() => setViewMode('classic')}
-                className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'classic' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
+                onClick={() => setShowPolandMap(true)}
+                className="px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-red-500 hover:bg-white shadow-sm group"
               >
-                Punkty
+                <MapPin className="w-3 h-3 text-slate-400 group-hover:text-red-500 transition-colors" />
+                Fabryki PL
               </button>
-              <button
-                onClick={() => setViewMode('logocards')}
-                className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'logocards' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
-              >
-                Karty
-              </button>
+
+              <div className="flex bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-slate-300 shadow-sm ml-2">
+                <button
+                  onClick={() => setViewMode('classic')}
+                  className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'classic' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
+                >
+                  Węzły
+                </button>
+                <button
+                  onClick={() => setViewMode('logocards')}
+                  className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'logocards' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
+                >
+                  Karty Logotypów
+                </button>
+              </div>
             </div>
           </div>
 

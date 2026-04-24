@@ -86,11 +86,12 @@ export default function PolandMap({ isOpen, onClose }: PolandMapProps) {
                 backgroundSize: '24px 24px'
               }} />
               
-              <div className="relative w-full max-w-lg aspect-[1/1.1] rounded-3xl bg-white shadow-xl border border-slate-100 overflow-hidden">
+              <div className="relative w-full max-w-lg aspect-[1/1] rounded-3xl bg-white shadow-xl border border-slate-100 overflow-hidden flex items-center justify-center">
                 {/* Abstraction of Poland - Background shape */}
-                <svg className="absolute inset-0 w-full h-full opacity-5 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                   <polygon points="30,5 60,5 95,30 90,70 70,95 20,90 5,60 10,20" fill="#3b82f6" />
-                </svg>
+                <div 
+                  className="absolute inset-0 w-full h-full opacity-90 pointer-events-none bg-no-repeat bg-center bg-contain p-4"
+                  style={{ backgroundImage: "url('/polska.png')" }}
+                />
                 
                 {CITY_COORDS.map(city => {
                   const brandsCount = cityData.get(city.name)?.length || 0;

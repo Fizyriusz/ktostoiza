@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Factory, Globe2, BookOpen, Link2, Info, ShoppingCart } from 'lucide-react';
+import { X, ExternalLink, Factory, Globe2, BookOpen, Link2, Info, ShoppingCart, Newspaper } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
 
 function getCountryCode(countryStr: string) {
@@ -62,6 +62,14 @@ import dataset from '@/data/dataset.json';
 
 function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: GraphNodeData, onClose: () => void, onCompare?: () => void, isSideBySide: boolean }) {
   const [imgError, setImgError] = useState(false);
+  const [content, setContent] = React.useState<{ news: any[], blogs: any[] }>({ news: [], blogs: [] });
+
+  React.useEffect(() => {
+    fetch(`/api/content?brandId=${node.id}`)
+      .then(res => res.json())
+      .then(data => setContent(data))
+      .catch(console.error);
+  }, [node.id]);
   const origin = (node.type === 'holding' || node.type === 'manufacturer') ? node.country : node.origin;
   const flagUrl = getFlagUrl(origin);
   const brandLogo = node.type === 'brand' ? `https://logo.clearbit.com/${getBrandDomain(node.name)}` : null;
@@ -238,6 +246,37 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
                   </div>
                 );
               })}
+            </div>
+          </div>
+        )}
+
+      {content.blogs.length > 0 && (
+          <div className="bg-blue-50/50 p-5 rounded-2xl shadow-sm border border-blue-100">
+            <h4 className="flex items-center gap-2 text-xs font-black text-blue-800 uppercase tracking-widest mb-3 border-b border-blue-100 pb-2">
+              <BookOpen className="w-4 h-4 text-blue-500" /> Więcej na naszym Blogu
+            </h4>
+            <div className="flex flex-col gap-2">
+              {content.blogs.map(blog => (
+                <a key={blog.slug} href={`/blog/${blog.slug}`} className="text-sm font-bold text-blue-600 hover:text-blue-500 transition-colors">
+                  {blog.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {content.news.length > 0 && (
+          <div className="bg-rose-50/50 p-5 rounded-2xl shadow-sm border border-rose-100">
+            <h4 className="flex items-center gap-2 text-xs font-black text-rose-800 uppercase tracking-widest mb-3 border-b border-rose-100 pb-2">
+              <Newspaper className="w-4 h-4 text-rose-500" /> Ostatnie Wydarzenia
+            </h4>
+            <div className="flex flex-col gap-3">
+              {content.news.map(n => (
+                <a key={n.slug} href="/news" className="group text-sm font-bold text-rose-600 hover:text-rose-500 transition-colors leading-tight">
+                  <span className="text-[10px] text-rose-400 block mb-0.5">{n.date}</span>
+                  {n.title}
+                </a>
+              ))}
             </div>
           </div>
         )}

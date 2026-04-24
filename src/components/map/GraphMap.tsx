@@ -99,6 +99,14 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
   const draggedHoldingId = useRef<string | null>(null);
   
   const [expandedHoldings, setExpandedHoldings] = useState<Set<string>>(new Set());
+  const [recentNews, setRecentNews] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('/api/news')
+      .then(res => res.json())
+      .then(data => setRecentNews(data))
+      .catch(console.error);
+  }, []);
 
   // Listen to external selection (like searches and Quick Jump) to expand and zoom
   useEffect(() => {
@@ -113,7 +121,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           next.add(target.parentId as string);
           return next;
         });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.2 }), 100);
+        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.8 }), 100);
       } else if (target.type === 'holding') {
         setExpandedHoldings(prev => {
           if (prev.has(target.id)) return prev;
@@ -122,7 +130,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           next.add(target.id);
           return next;
         });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.2 }), 100);
+        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.8 }), 100);
       }
     }
   }, [selectedNodes, fitView]);
@@ -224,6 +232,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
                   ...brand,
                   accentColor: brandAccentMap.get(brand.id) ?? '#64748b',
                   isGrid: true, // No edges to group container
+                  hasRecentNews: recentNews.some(news => news.relatedBrands?.includes(brand.id)),
                 },
                 zIndex: 5,
               });
@@ -244,6 +253,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
                   ...brand,
                   accentColor: brandAccentMap.get(brand.id) ?? '#64748b',
                   isGrid: false,
+                  hasRecentNews: recentNews.some(news => news.relatedBrands?.includes(brand.id)),
                 },
                 zIndex: 5,
               });
@@ -365,7 +375,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           if (savedViewportRef.current) {
             setTimeout(() => setViewport(savedViewportRef.current, { duration: 800 }), 50);
           } else {
-            setTimeout(() => fitView({ duration: 800, padding: 0.2 }), 50);
+            setTimeout(() => fitView({ duration: 800, padding: 0.8 }), 50);
           }
         }
         else {
