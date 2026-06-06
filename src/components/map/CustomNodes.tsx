@@ -284,7 +284,7 @@ export const BrandNode = ({ data }: NodeProps) => {
 
 // ─── Manufacturer Node (OEM) ────────────────────────────────────────────────
 export const ManufacturerNode = ({ data }: NodeProps) => {
-  const { activeFilter, focusedOEMNodeId } = useFilter();
+  const { activeFilter, focusedOEMNodeId, showUnavailableInPL } = useFilter();
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId, showUnavailableInPL);
   const name = data.name as string;
   const origin = data.country as string;
