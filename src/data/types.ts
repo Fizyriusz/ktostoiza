@@ -41,6 +41,8 @@ export interface BrandNode {
     rtv_euro?: string;
   };
   producedBy?: string[];
+  availableInPL?: boolean;
+  scope?: 'global' | 'regional';
 }
 
 export type GraphNodeData = HoldingNode | BrandNode | ManufacturerNode;

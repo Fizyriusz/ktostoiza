@@ -97,6 +97,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
   const savedViewportRef = useRef<any>(null);
   const childOffsetsRef = useRef<Map<string, { dx: number; dy: number }>>(new Map());
   const draggedHoldingId = useRef<string | null>(null);
+  const manualPositionsRef = useRef<Map<string, { x: number; y: number }>>(new Map());
   
   const [expandedHoldings, setExpandedHoldings] = useState<Set<string>>(new Set());
   const [recentNews, setRecentNews] = useState<any[]>([]);
@@ -172,8 +173,12 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
 
         let hX = 0;
         let hY = 0;
+        const manualPos = manualPositionsRef.current.get(holding.id);
 
-        if (currentOrbit === 0) {
+        if (manualPos) {
+          hX = manualPos.x;
+          hY = manualPos.y;
+        } else if (currentOrbit === 0) {
           hX = 0;
           hY = 0;
         } else {
@@ -452,6 +457,8 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
 
   // ── DragStop: snap to exact position ─────────────────────────────────────
   const handleNodeDragStop = useCallback((_e: React.MouseEvent, node: Node) => {
+    manualPositionsRef.current.set(node.id, { x: node.position.x, y: node.position.y });
+    
     if (node.type !== 'holding') { draggedHoldingId.current = null; return; }
 
     const offsets = childOffsetsRef.current;
@@ -462,7 +469,9 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       current.map(n => {
         const offset = offsets.get(n.id);
         if (!offset) return n;
-        return { ...n, position: { x: hx + offset.dx, y: hy + offset.dy } };
+        const newPos = { x: hx + offset.dx, y: hy + offset.dy };
+        manualPositionsRef.current.set(n.id, newPos);
+        return { ...n, position: newPos };
       }),
     );
 
@@ -525,8 +534,8 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           fitView
-          minZoom={0.05}
-          maxZoom={2.5}
+          minZoom={0.2}
+          maxZoom={5.0}
           className="border-none"
         >
           <Background variant={BackgroundVariant.Dots} gap={32} size={1} color="#e2e8f0" />

@@ -12,6 +12,7 @@ interface SearchResult {
   type: string;
   origin?: string;
   country?: string;
+  product_categories?: string[];
 }
 
 const allSearchable: SearchResult[] = dataset.nodes.map(n => ({
@@ -20,6 +21,7 @@ const allSearchable: SearchResult[] = dataset.nodes.map(n => ({
   type: n.type,
   origin: 'origin' in n ? (n.origin as string) : undefined,
   country: 'country' in n ? (n.country as string) : undefined,
+  product_categories: 'product_categories' in n ? (n.product_categories as string[]) : undefined,
 }));
 
 interface FlowInternalsProps {
@@ -54,7 +56,20 @@ export default function FlowInternals({ onNodeSelect }: FlowInternalsProps) {
       return;
     }
     const q = query.toLowerCase();
-    const filtered = allSearchable.filter(n => n.name.toLowerCase().includes(q)).slice(0, 8);
+    
+    // First, exact name matches or name includes
+    const nameMatches = allSearchable.filter(n => n.name.toLowerCase().includes(q));
+    
+    // Then, product category matches (for brands)
+    const categoryMatches = allSearchable.filter(n => {
+      if (n.type !== 'brand' || !n.product_categories) return false;
+      return n.product_categories.some(c => c.toLowerCase().includes(q)) && !nameMatches.some(nm => nm.id === n.id);
+    });
+
+    // Sort category matches by the number of product categories ascending (specialization first)
+    categoryMatches.sort((a, b) => (a.product_categories?.length || 0) - (b.product_categories?.length || 0));
+
+    const filtered = [...nameMatches, ...categoryMatches].slice(0, 8);
     setResults(filtered);
     setOpen(filtered.length > 0);
   }, [query]);

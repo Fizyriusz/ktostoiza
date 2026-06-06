@@ -117,9 +117,9 @@ const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; positi
 // ─── Holding Node ───────────────────────────────────────────────────────────
 
 export const HoldingNode = ({ data }: NodeProps) => {
-  const { activeFilter, viewMode, focusedOEMNodeId } = useFilter();
+  const { activeFilter, viewMode, focusedOEMNodeId, showUnavailableInPL } = useFilter();
   const { zoom } = useViewport();
-  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
+  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId, showUnavailableInPL);
   const origin = data.country as string;
   const name = data.name as string;
   const flagUrl = getFlagUrl(origin);
@@ -174,10 +174,10 @@ export const HoldingNode = ({ data }: NodeProps) => {
 
 export const BrandNode = ({ data }: NodeProps) => {
   const [imgError, setImgError] = useState(false);
-  const { activeFilter, viewMode, focusedOEMNodeId } = useFilter();
+  const { activeFilter, viewMode, focusedOEMNodeId, showUnavailableInPL } = useFilter();
   const { zoom } = useViewport(); // Adaptive sizing
 
-  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
+  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId, showUnavailableInPL);
   const brandName = data.name as string;
   const origin = data.origin as string;
   const accentColor = (data.accentColor as string) || '#64748b';
@@ -285,7 +285,7 @@ export const BrandNode = ({ data }: NodeProps) => {
 // ─── Manufacturer Node (OEM) ────────────────────────────────────────────────
 export const ManufacturerNode = ({ data }: NodeProps) => {
   const { activeFilter, focusedOEMNodeId } = useFilter();
-  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId);
+  const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId, showUnavailableInPL);
   const name = data.name as string;
   const origin = data.country as string;
   const flagUrl = getFlagUrl(origin);

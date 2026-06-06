@@ -24,6 +24,9 @@ const FILTERS: { key: FilterType; label: string }[] = [
   { key: 'produkcja-pl',   label: 'Produkcja w PL'  },
   { key: 'premium',        label: 'Segment Premium'  },
   { key: 'budzetowe',      label: 'Segment Budżetowy'},
+  { key: 'globalne',       label: 'Marki Globalne'  },
+  { key: 'regionalne',     label: 'Marki Regionalne' },
+  { key: 'polskie-globalne', label: 'Polskie Globalne' }
 ];
 
 export default function Home() {
@@ -43,6 +46,7 @@ export function HomeContent() {
   const [showIntro, setShowIntro] = useState(false);
   const [isTourActive, setIsTourActive] = useState(false);
   const [showPolandMap, setShowPolandMap] = useState(false);
+  const [showUnavailableInPL, setShowUnavailableInPL] = useState(false);
 
   let focusedOEMNodeId: string | null = null;
   if (selectedNodes.length === 1) {
@@ -90,7 +94,7 @@ export function HomeContent() {
   };
 
   return (
-    <FilterContext.Provider value={{ activeFilter, viewMode, focusedOEMNodeId }}>
+    <FilterContext.Provider value={{ activeFilter, viewMode, focusedOEMNodeId, showUnavailableInPL }}>
       <ReactFlowProvider>
         <div className="relative w-full h-screen overflow-hidden flex flex-col bg-[#f8fafc]">
 
@@ -166,20 +170,13 @@ export function HomeContent() {
                 Fabryki PL
               </button>
 
-              <div className="flex bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-slate-300 shadow-sm ml-2">
-                <button
-                  onClick={() => setViewMode('classic')}
-                  className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'classic' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
-                >
-                  Węzły
-                </button>
-                <button
-                  onClick={() => setViewMode('logocards')}
-                  className={`px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all ${viewMode === 'logocards' ? 'bg-slate-800 text-white' : 'text-slate-500 hover:bg-slate-100'}`}
-                >
-                  Karty Logotypów
-                </button>
-              </div>
+              <button
+                onClick={() => setShowUnavailableInPL(!showUnavailableInPL)}
+                className={`px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ml-2 border ${showUnavailableInPL ? 'border-red-500 bg-red-50 text-red-600' : 'border-slate-300 bg-white/80 text-slate-600 hover:border-red-400'}`}
+                title="Pokaż marki niedostępne w Polsce"
+              >
+                {showUnavailableInPL ? 'Ukryj niedostępne' : 'Pokaż niedostępne w PL'}
+              </button>
             </div>
           </div>
 
