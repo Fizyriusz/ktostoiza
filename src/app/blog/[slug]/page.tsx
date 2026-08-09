@@ -5,7 +5,6 @@ import { getPostBySlug, getBlogPosts } from '@/lib/markdown';
 import ReactMarkdown from 'react-markdown';
 import { ChevronLeft, Calendar } from 'lucide-react';
 import NetworkLogo from '@/components/ui/NetworkLogo';
-import Head from 'next/head';
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -14,8 +13,12 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug('src/data/blog', params.slug);
+// W Next 16 `params` jest Promise'em. Odczyt .slug wprost dawał undefined,
+// więc getPostBySlug nic nie znajdował i każdy artykuł kończył się notFound() —
+// strona wpisu renderowała się jako pusta.
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug('src/data/blog', slug);
   if (!post) {
     return { title: 'Nie znaleziono artykułu | KtoStoiZa' };
   }
@@ -25,8 +28,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug('src/data/blog', params.slug);
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug('src/data/blog', slug);
 
   if (!post) {
     notFound();

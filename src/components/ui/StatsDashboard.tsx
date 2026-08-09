@@ -87,7 +87,11 @@ export default function StatsDashboard({ activeFilter, onFilterChange, onQuickJu
         {isOpenMobile ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
-      <div className={`absolute left-4 top-36 xl:left-6 xl:top-32 z-40 flex flex-col gap-4 pointer-events-auto w-56 xl:w-64 transition-all duration-300 max-h-[calc(100vh-140px)] overflow-y-auto pb-4 pr-2 ${isOpenMobile ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none xl:opacity-100 xl:translate-y-0 xl:pointer-events-auto'}`} style={{ scrollbarWidth: 'thin' }}>
+      {/* Zamiast max-h liczonego z 100vh (które na mobilce obejmuje pasek
+          przeglądarki, przez co dół panelu był nieosiągalny) panel jest
+          rozpięty między top a bottom — wysokość zawsze równa się temu, co
+          faktycznie widać. top-44 na mobilce omija przycisk "Filtry". */}
+      <div className={`absolute left-4 top-44 bottom-4 xl:left-6 xl:top-32 z-40 flex flex-col gap-4 pointer-events-auto w-56 xl:w-64 transition-all duration-300 overflow-y-auto pb-4 pr-2 ${isOpenMobile ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none xl:opacity-100 xl:translate-y-0 xl:pointer-events-auto'}`} style={{ scrollbarWidth: 'thin' }}>
         {/* Statystyki Bazy */}
       <div className="flex flex-col gap-2 bg-white/70 backdrop-blur-md rounded-2xl p-4 border border-white shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
         <h3 className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-1 ml-1">
