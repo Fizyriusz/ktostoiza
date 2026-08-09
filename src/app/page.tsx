@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Shield, Globe2, Info, HelpCircle, Factory } from 'lucide-react';
+import { Shield, Globe2, Info, HelpCircle, SlidersHorizontal, X } from 'lucide-react';
 import { ReactFlowProvider } from '@xyflow/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GraphMap from '@/components/map/GraphMap';
@@ -15,19 +15,8 @@ import { GraphNodeData } from '@/data/types';
 import NetworkLogo from '@/components/ui/NetworkLogo';
 import StatsDashboard from '@/components/ui/StatsDashboard';
 import PolandMap from '@/components/ui/PolandMap';
-import { MapPin } from 'lucide-react';
+import FilterControls, { FILTERS } from '@/components/ui/FilterControls';
 import dataset from '@/data/dataset.json';
-
-const FILTERS: { key: FilterType; label: string }[] = [
-  { key: 'all',            label: 'Wszystkie'       },
-  { key: 'polski-kapital', label: 'Polski Kapitał'  },
-  { key: 'produkcja-pl',   label: 'Produkcja w PL'  },
-  { key: 'premium',        label: 'Segment Premium'  },
-  { key: 'budzetowe',      label: 'Segment Budżetowy'},
-  { key: 'globalne',       label: 'Marki Globalne'  },
-  { key: 'regionalne',     label: 'Marki Regionalne' },
-  { key: 'polskie-globalne', label: 'Polskie Globalne' }
-];
 
 export default function Home() {
   return (
@@ -47,6 +36,15 @@ export function HomeContent() {
   const [isTourActive, setIsTourActive] = useState(false);
   const [showPolandMap, setShowPolandMap] = useState(false);
   const [showUnavailableInPL, setShowUnavailableInPL] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
+
+  // Mobilny przycisk musi pokazywać stan bez otwierania arkusza.
+  const activeFiltersCount =
+    (activeFilter !== 'all' ? 1 : 0) + (showOEM ? 1 : 0) + (showUnavailableInPL ? 1 : 0);
+  const activeFilterLabel =
+    activeFilter === 'all'
+      ? 'Filtry'
+      : FILTERS.find(f => f.key === activeFilter)?.label ?? 'Filtry';
 
   let focusedOEMNodeId: string | null = null;
   if (selectedNodes.length === 1) {
@@ -129,58 +127,39 @@ export function HomeContent() {
             />
           </div>
 
-          <div className="pointer-events-auto flex flex-col items-center gap-3 px-4 max-w-2xl mt-4 relative z-10 transition-all">
-            {/* Standard Filters */}
-            <div className="flex items-center justify-center gap-2 flex-wrap">
-              {FILTERS.map(f => (
-                <button
-                  key={f.key}
-                  onClick={() => setActiveFilter(f.key)}
-                  className={`
-                    px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all
-                    ${activeFilter === f.key
-                      ? 'border-2 border-slate-800 bg-slate-800 text-white shadow-md'
-                      : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-slate-500 hover:bg-white shadow-sm'
-                    }
-                  `}
-                >
-                  {f.label}
-                </button>
-              ))}
-            </div>
+          {/* Desktop: filtry rozłożone w nagłówku. Na mobilce ta sama siatka
+              zawijała się w siedem rzędów i zasłaniała pół mapy — tam siedzi
+              teraz pod przyciskiem poniżej. */}
+          <div className="hidden sm:flex pointer-events-auto flex-col items-center gap-3 px-4 max-w-2xl mt-4 relative z-10 transition-all">
+            <FilterControls
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+              showOEM={showOEM}
+              onToggleOEM={() => setShowOEM(!showOEM)}
+              onOpenPolandMap={() => setShowPolandMap(true)}
+              showUnavailableInPL={showUnavailableInPL}
+              onToggleUnavailable={() => setShowUnavailableInPL(!showUnavailableInPL)}
+            />
+          </div>
 
-            {/* Special Views & Actions */}
-            <div className="flex items-center justify-center gap-3 flex-wrap border-t border-slate-200/50 pt-3 w-full">
-              <button
-                onClick={() => setShowOEM(!showOEM)}
-                className={`
-                  px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5
-                  ${showOEM
-                    ? 'border-2 border-fuchsia-600 bg-fuchsia-600 text-white shadow-md'
-                    : 'border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-fuchsia-500 hover:bg-white shadow-sm'
-                  }
-                `}
-              >
-                <Factory className="w-3 h-3" />
-                Tryb OEM
-              </button>
-
-              <button
-                onClick={() => setShowPolandMap(true)}
-                className="px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-600 hover:border-red-500 hover:bg-white shadow-sm group"
-              >
-                <MapPin className="w-3 h-3 text-slate-400 group-hover:text-red-500 transition-colors" />
-                Fabryki PL
-              </button>
-
-              <button
-                onClick={() => setShowUnavailableInPL(!showUnavailableInPL)}
-                className={`px-4 py-1.5 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ml-2 border ${showUnavailableInPL ? 'border-red-500 bg-red-50 text-red-600' : 'border-slate-300 bg-white/80 text-slate-600 hover:border-red-400'}`}
-                title="Pokaż marki niedostępne w Polsce"
-              >
-                {showUnavailableInPL ? 'Ukryj niedostępne' : 'Pokaż niedostępne w PL'}
-              </button>
-            </div>
+          {/* Mobile: jeden przycisk otwierający arkusz z filtrami */}
+          <div className="sm:hidden pointer-events-auto mt-2 px-4 w-full flex justify-center">
+            <button
+              onClick={() => setShowFilters(true)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-md transition-all border ${
+                activeFiltersCount > 0
+                  ? 'bg-slate-800 border-slate-800 text-white'
+                  : 'bg-white/90 border-slate-300 text-slate-600'
+              }`}
+            >
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              {activeFilterLabel}
+              {activeFiltersCount > 0 && (
+                <span className="ml-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-white text-slate-800 text-[10px] font-black flex items-center justify-center">
+                  {activeFiltersCount}
+                </span>
+              )}
+            </button>
           </div>
 
           {/* Corner link */}
@@ -213,7 +192,10 @@ export function HomeContent() {
         </header>
 
         {/* Map */}
-        <main className="flex-1 w-full h-full z-10 relative">
+        {/* Bez własnego z-index: `relative z-10` tworzyło kontekst nakładania,
+            w którym panel statystyk (z-40) nie mógł przebić nagłówka (z-30) —
+            filtry rysowały się na sidebarze. */}
+        <main className="flex-1 w-full h-full relative">
           <StatsDashboard 
             activeFilter={activeFilter} 
             onFilterChange={setActiveFilter} 
@@ -282,6 +264,73 @@ export function HomeContent() {
         />
 
         <PolandMap isOpen={showPolandMap} onClose={() => setShowPolandMap(false)} />
+
+        {/* Arkusz z filtrami — tylko mobilka. Kontener jest motion.div, bo
+            animację wyjścia dostaje wyłącznie bezpośrednie dziecko
+            AnimatePresence — inaczej arkusz znikałby skokowo. */}
+        <AnimatePresence>
+          {showFilters && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="sm:hidden fixed inset-0 z-[110] flex items-end pointer-events-auto"
+            >
+              <div
+                className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"
+                onClick={() => setShowFilters(false)}
+              />
+              <motion.div
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ type: 'spring', damping: 30, stiffness: 260 }}
+                className="relative w-full bg-white rounded-t-3xl shadow-2xl max-h-[75svh] flex flex-col"
+              >
+                <div className="flex items-center justify-between px-5 pt-5 pb-3 shrink-0">
+                  <h2 className="text-sm font-black uppercase tracking-widest text-slate-800">
+                    Filtry
+                  </h2>
+                  <div className="flex items-center gap-2">
+                    {activeFiltersCount > 0 && (
+                      <button
+                        onClick={() => {
+                          setActiveFilter('all');
+                          setShowOEM(false);
+                          setShowUnavailableInPL(false);
+                        }}
+                        className="text-[11px] font-bold uppercase tracking-wider text-slate-400 hover:text-slate-700 transition-colors"
+                      >
+                        Wyczyść
+                      </button>
+                    )}
+                    <button
+                      onClick={() => setShowFilters(false)}
+                      className="p-2 -mr-2 bg-slate-50 rounded-full hover:bg-slate-200 transition-colors text-slate-500"
+                      aria-label="Zamknij filtry"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="px-5 pb-8 overflow-y-auto">
+                  <FilterControls
+                    layout="sheet"
+                    activeFilter={activeFilter}
+                    onFilterChange={setActiveFilter}
+                    showOEM={showOEM}
+                    onToggleOEM={() => setShowOEM(!showOEM)}
+                    onOpenPolandMap={() => setShowPolandMap(true)}
+                    showUnavailableInPL={showUnavailableInPL}
+                    onToggleUnavailable={() => setShowUnavailableInPL(!showUnavailableInPL)}
+                    onPicked={() => setShowFilters(false)}
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Intro Modal */}
         <AnimatePresence>
