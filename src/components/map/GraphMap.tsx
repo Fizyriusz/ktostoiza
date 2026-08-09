@@ -536,8 +536,10 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
     return () => cancelAnimationFrame(animationFrameId);
   }, [setNodes]);
 
+  // Kontener miał min-h-[90vh], co rozpychało go ponad wysokość rodzica —
+  // na mobilce wypychało stopkę i przyciski poza ekran. Rodzic ma już h-full.
   return (
-      <div className="w-full h-full min-h-[90vh] relative bg-transparent">
+      <div className="w-full h-full relative bg-transparent">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -551,7 +553,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           fitView
-          minZoom={0.1}
+          minZoom={0.04}
           maxZoom={5.0}
           className="border-none"
         >

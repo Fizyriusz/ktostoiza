@@ -112,7 +112,10 @@ export const HoldingNode = ({ data }: NodeProps) => {
   const effectiveOpacity = matches ? (anyExpanded && !isExpanded ? 0.25 : 1) : 0.05;
   
   // Semantic zoom enhancement: keep it large and readable
-  const scaleAdjustment = zoom < 0.45 ? (0.45 / zoom) : 1;
+  // Bez górnego limitu karta rosła tym bardziej, im dalej odjechał widok
+  // (przy zoomie 0.05 aż 9x), więc oddalanie kończyło się kupą nachodzących
+  // na siebie kafli zamiast podglądu całości.
+  const scaleAdjustment = Math.min(zoom < 0.45 ? 0.45 / zoom : 1, 2);
   const targetScale = isExpanded ? 1.1 : 1;
   const finalScale = targetScale * scaleAdjustment;
 

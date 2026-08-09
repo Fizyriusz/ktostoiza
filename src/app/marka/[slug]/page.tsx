@@ -89,7 +89,7 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={<div className="bg-[#f8fafc] w-full h-screen" />}>
+      <Suspense fallback={<div className="bg-[#f8fafc] w-full h-[100svh]" />}>
         <HomeContent />
       </Suspense>
 
@@ -97,9 +97,10 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
           nieosiągalna scrollem — stąd zakotwiczony skrót. */}
       <a
         href="#o-marce"
-        className="fixed bottom-4 left-4 z-[130] flex items-center gap-2 px-4 py-2.5 bg-slate-900/90 backdrop-blur-md text-white rounded-full text-xs font-bold shadow-lg hover:bg-slate-800 transition-colors"
+        className="fixed bottom-14 left-3 sm:bottom-4 sm:left-4 z-[130] flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 bg-slate-900/90 backdrop-blur-md text-white rounded-full text-xs font-bold shadow-lg hover:bg-slate-800 transition-colors"
       >
-        Szczegóły: {node.name}
+        <span className="sm:hidden">Szczegóły</span>
+        <span className="hidden sm:inline">Szczegóły: {node.name}</span>
         <span aria-hidden="true">↓</span>
       </a>
 

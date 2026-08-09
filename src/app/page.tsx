@@ -31,7 +31,7 @@ const FILTERS: { key: FilterType; label: string }[] = [
 
 export default function Home() {
   return (
-    <Suspense fallback={<div className="bg-[#f8fafc] w-full h-screen" />}>
+    <Suspense fallback={<div className="bg-[#f8fafc] w-full h-[100svh]" />}>
       <HomeContent />
     </Suspense>
   );
@@ -96,7 +96,10 @@ export function HomeContent() {
   return (
     <FilterContext.Provider value={{ activeFilter, viewMode, focusedOEMNodeId, showUnavailableInPL }}>
       <ReactFlowProvider>
-        <div className="relative w-full h-screen overflow-hidden flex flex-col bg-[#f8fafc]">
+        {/* 100svh, nie 100vh — na mobilce vh liczy się razem z paskiem adresu,
+            więc dolny pasek UI lądował pod chrome przeglądarki i trzeba było
+            wymuszać pełny ekran gestem, żeby go zobaczyć. */}
+        <div className="relative w-full h-[100svh] overflow-hidden flex flex-col bg-[#f8fafc]">
 
         {/* Header - Z-30 provides UI stacking context above the Map */}
         <header className="absolute top-0 left-0 right-0 z-30 pointer-events-none flex flex-col sm:flex-row sm:justify-center items-center pt-2 sm:pt-4 gap-3 sm:gap-0">
