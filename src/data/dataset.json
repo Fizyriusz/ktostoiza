@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-09T07:14:04.504Z",
+  "lastUpdate": "2026-08-09T07:38:23.460Z",
   "nodes": [
     {
       "id": "h-beko",
@@ -2778,7 +2778,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-bsh"
+      "parentId": "h-bsh",
+      "seo_slug": "balay"
     },
     {
       "id": "b-bomann",
@@ -2805,7 +2806,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "bomann"
     },
     {
       "id": "b-cata",
@@ -2832,7 +2834,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "cata"
     },
     {
       "id": "b-de-noble-foster",
@@ -2859,7 +2862,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-gb-ind"
+      "parentId": "h-gb-ind",
+      "seo_slug": "de-noble-foster"
     },
     {
       "id": "b-freggia",
@@ -2886,7 +2890,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "freggia"
     },
     {
       "id": "b-ikea",
@@ -2914,7 +2919,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "ikea"
     },
     {
       "id": "b-kaiser",
@@ -2941,7 +2947,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "kaiser"
     },
     {
       "id": "b-kuppersbusch",
@@ -2968,7 +2975,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "kuppersbusch"
     },
     {
       "id": "b-malatec",
@@ -2995,7 +3003,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "malatec"
     },
     {
       "id": "b-nodor",
@@ -3021,7 +3030,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "nodor"
     },
     {
       "id": "b-pyramis",
@@ -3048,7 +3058,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "pyramis"
     },
     {
       "id": "b-thetford",
@@ -3074,7 +3085,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "thetford"
     },
     {
       "id": "b-vivax",
@@ -3101,7 +3113,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "vivax"
     },
     {
       "id": "b-dometic",
@@ -3128,7 +3141,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "dometic"
     },
     {
       "id": "b-kitchenaid",
@@ -3156,7 +3170,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-beko"
+      "parentId": "h-beko",
+      "seo_slug": "kitchenaid"
     },
     {
       "id": "b-mora",
@@ -3183,7 +3198,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-hisense"
+      "parentId": "h-hisense",
+      "seo_slug": "mora"
     },
     {
       "id": "b-winia",
@@ -3210,7 +3226,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "winia"
     },
     {
       "id": "b-avintage",
@@ -3235,7 +3252,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "avintage"
     },
     {
       "id": "b-caso",
@@ -3262,7 +3280,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "caso"
     },
     {
       "id": "b-cavin",
@@ -3287,7 +3306,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "cavin"
     },
     {
       "id": "b-climadiff",
@@ -3312,7 +3332,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "climadiff"
     },
     {
       "id": "b-dunavox",
@@ -3338,7 +3359,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "dunavox"
     },
     {
       "id": "b-la-sommeliere",
@@ -3364,7 +3386,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "la-sommeliere"
     },
     {
       "id": "b-le-cellier",
@@ -3389,7 +3412,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "le-cellier"
     },
     {
       "id": "b-bright",
@@ -3414,7 +3438,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-gb-ind"
+      "parentId": "h-gb-ind",
+      "seo_slug": "bright"
     },
     {
       "id": "b-clatronic",
@@ -3441,7 +3466,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "clatronic"
     },
     {
       "id": "b-continental-edison",
@@ -3468,7 +3494,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "continental-edison"
     },
     {
       "id": "b-hanseatic",
@@ -3495,7 +3522,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "hanseatic"
     },
     {
       "id": "b-orbegozo",
@@ -3522,7 +3550,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "orbegozo"
     },
     {
       "id": "b-silva-homeline",
@@ -3548,7 +3577,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "silva-homeline"
     },
     {
       "id": "b-airforce",
@@ -3573,7 +3603,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "airforce"
     },
     {
       "id": "b-berdsen",
@@ -3599,7 +3630,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "berdsen"
     },
     {
       "id": "b-best",
@@ -3624,7 +3656,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "best"
     },
     {
       "id": "b-cecotec",
@@ -3651,7 +3684,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "cecotec"
     },
     {
       "id": "b-ciarra",
@@ -3676,7 +3710,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "ciarra"
     },
     {
       "id": "b-comfee",
@@ -3703,7 +3738,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-midea"
+      "parentId": "h-midea",
+      "seo_slug": "comfee"
     },
     {
       "id": "b-falcon",
@@ -3729,7 +3765,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-gb-ind"
+      "parentId": "h-gb-ind",
+      "seo_slug": "falcon"
     },
     {
       "id": "b-focus",
@@ -3755,7 +3792,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "focus"
     },
     {
       "id": "b-goodhome",
@@ -3782,7 +3820,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "goodhome"
     },
     {
       "id": "b-guzzanti",
@@ -3809,7 +3848,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "guzzanti"
     },
     {
       "id": "b-hendi",
@@ -3835,7 +3875,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "hendi"
     },
     {
       "id": "b-kuchinox",
@@ -3861,7 +3902,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "kuchinox"
     },
     {
       "id": "b-mepamsa",
@@ -3886,7 +3928,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "mepamsa"
     },
     {
       "id": "b-novy",
@@ -3912,7 +3955,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "novy"
     },
     {
       "id": "b-pkm",
@@ -3939,7 +3983,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "pkm"
     },
     {
       "id": "b-respekta",
@@ -3965,7 +4010,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "respekta"
     },
     {
       "id": "b-turboair",
@@ -3989,7 +4035,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "turboair"
     },
     {
       "id": "b-vidaxl",
@@ -4015,7 +4062,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "vidaxl"
     },
     {
       "id": "b-amzchef",
@@ -4041,7 +4089,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "amzchef"
     },
     {
       "id": "b-ardo",
@@ -4067,7 +4116,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "ardo"
     },
     {
       "id": "b-arebos",
@@ -4093,7 +4143,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "arebos"
     },
     {
       "id": "b-cooke-lewis",
@@ -4119,7 +4170,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "cooke-lewis"
     },
     {
       "id": "b-daewoo",
@@ -4146,7 +4198,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "daewoo"
     },
     {
       "id": "b-lacor",
@@ -4172,7 +4225,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "lacor"
     },
     {
       "id": "b-oceanic",
@@ -4199,7 +4253,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "oceanic"
     },
     {
       "id": "b-schild",
@@ -4225,7 +4280,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "schild"
     },
     {
       "id": "b-silvercrest",
@@ -4251,7 +4307,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "silvercrest"
     },
     {
       "id": "b-simfer",
@@ -4278,7 +4335,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-other-ind"
+      "parentId": "h-other-ind",
+      "seo_slug": "simfer"
     },
     {
       "id": "b-taurus",
@@ -4304,7 +4362,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "taurus"
     },
     {
       "id": "b-vevor",
@@ -4330,7 +4389,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "vevor"
     },
     {
       "id": "b-vitrokitchen",
@@ -4356,7 +4416,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "vitrokitchen"
     },
     {
       "id": "b-arset",
@@ -4380,7 +4441,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "arset"
     },
     {
       "id": "b-cata-can-roca",
@@ -4406,7 +4468,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-es-ind"
+      "parentId": "h-es-ind",
+      "seo_slug": "cata-can-roca"
     },
     {
       "id": "b-covercook",
@@ -4432,7 +4495,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "covercook"
     },
     {
       "id": "b-fenu",
@@ -4457,7 +4521,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "fenu"
     },
     {
       "id": "b-galvamet",
@@ -4483,7 +4548,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "galvamet"
     },
     {
       "id": "b-heinrichs",
@@ -4509,7 +4575,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-de-ind"
+      "parentId": "h-de-ind",
+      "seo_slug": "heinrichs"
     },
     {
       "id": "b-hobsir",
@@ -4534,7 +4601,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "hobsir"
     },
     {
       "id": "b-iceberg",
@@ -4560,7 +4628,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "iceberg"
     },
     {
       "id": "b-kage",
@@ -4585,7 +4654,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "kage"
     },
     {
       "id": "b-livoo",
@@ -4611,7 +4681,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-fr-ind"
+      "parentId": "h-fr-ind",
+      "seo_slug": "livoo"
     },
     {
       "id": "b-melchioni",
@@ -4637,7 +4708,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "melchioni"
     },
     {
       "id": "b-neto",
@@ -4662,7 +4734,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "neto"
     },
     {
       "id": "b-novoterm",
@@ -4688,7 +4761,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "novoterm"
     },
     {
       "id": "b-obi",
@@ -4714,7 +4788,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-market"
+      "parentId": "h-market",
+      "seo_slug": "obi"
     },
     {
       "id": "b-smartcook",
@@ -4740,7 +4815,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "smartcook"
     },
     {
       "id": "b-stella",
@@ -4765,7 +4841,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-pl-ind"
+      "parentId": "h-pl-ind",
+      "seo_slug": "stella"
     },
     {
       "id": "b-tognana",
@@ -4791,7 +4868,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-it-ind"
+      "parentId": "h-it-ind",
+      "seo_slug": "tognana"
     },
     {
       "id": "b-vovv",
@@ -4816,7 +4894,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "vovv"
     },
     {
       "id": "b-topstrong",
@@ -4842,7 +4921,8 @@
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
-      "parentId": "h-cn-ind"
+      "parentId": "h-cn-ind",
+      "seo_slug": "topstrong"
     },
     {
       "id": "m-bora-holding",
