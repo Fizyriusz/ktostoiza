@@ -42,6 +42,11 @@ dataset.nodes.forEach(node => {
   );
 });
 
+// Wynik dla koncernu/fabryki zależy wyłącznie od datasetu, filtra i przełącznika
+// dostępności — a funkcja leci przy każdym renderze każdego węzła, więc skanowanie
+// dzieci liczymy raz.
+const aggregateCache = new Map<string, boolean>();
+
 function brandMatchesFilter(data: Row, filter: FilterType, showUnavailableInPL: boolean): boolean {
   const origin = ((data.origin as string) || '').toLowerCase();
   const segment = ((data.segment as string) || '').toLowerCase();
@@ -90,15 +95,19 @@ export function nodeMatchesFilter(data: Record<string, unknown>, filter: FilterT
   // filtra nie robiła absolutnie nic. Teraz węzeł nadrzędny dziedziczy
   // trafienie po tym, co pod nim wisi.
   const id = data.id as string;
-  const country = ((data.country as string) || '').toLowerCase();
-  const matchesOwnAttributes = filter === 'polski-kapital' && country.includes('polska');
-  if (matchesOwnAttributes) return true;
+  const cacheKey = `${id}|${filter}|${showUnavailableInPL}`;
+  const cached = aggregateCache.get(cacheKey);
+  if (cached !== undefined) return cached;
 
+  const country = ((data.country as string) || '').toLowerCase();
   const owned = brandsByParent.get(id) ?? [];
   const produced = brandsByProducer.get(id) ?? [];
 
-  return (
+  const result =
+    (filter === 'polski-kapital' && country.includes('polska')) ||
     owned.some(b => brandMatchesFilter(b, filter, showUnavailableInPL)) ||
-    produced.some(b => brandMatchesFilter(b, filter, showUnavailableInPL))
-  );
+    produced.some(b => brandMatchesFilter(b, filter, showUnavailableInPL));
+
+  aggregateCache.set(cacheKey, result);
+  return result;
 }

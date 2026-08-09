@@ -157,8 +157,12 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       });
 
       const isAnyExpanded = expandedHoldings.size > 0;
-      // "The Pusher": if expanded, we dramatically increase spacing
-      const pusherMultiplier = isAnyExpanded ? 1.6 : 1.0;
+      // "The Pusher": rozwinięty koncern potrzebuje miejsca na swoje marki,
+      // ale gdy wszystko jest zwinięte, orbity były rozdmuchane do rozmiarów
+      // z najgorszego przypadku — mapa zajmowała 7800 px zamiast ~4000, więc
+      // na telefonie trzeba było odjechać tak daleko, że kafle stawały się
+      // nieczytelnymi kropkami.
+      const pusherMultiplier = isAnyExpanded ? 2.2 : 1.0;
 
       let currentOrbit = 0;
       let capacityInOrbit = 1;
@@ -182,7 +186,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           hX = 0;
           hY = 0;
         } else {
-          const baseRadius = currentOrbit * 1200 * pusherMultiplier;
+          const baseRadius = currentOrbit * 560 * pusherMultiplier;
           // Offset angle to avoid straight lines over the center
           const angleOffset = currentOrbit % 2 === 0 ? Math.PI / capacityInOrbit : 0;
           const angle = (placedInOrbit / capacityInOrbit) * 2 * Math.PI + angleOffset;
@@ -297,23 +301,69 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         }
       });
 
-      // Najpierw najwięksi producenci, żeby siatka czytała się od góry-lewej.
+      // Najwięksi producenci najpierw — trafiają do środka.
       const sortedProducers = [...producers].sort(
         (a, b) => (manufacturerChildren.get(b.id)?.length || 0) - (manufacturerChildren.get(a.id)?.length || 0)
       );
 
-      // Siatka mniej więcej kwadratowa — przy ~60 klastrach 3 kolumny dawały
-      // pas długi na dziesiątki tysięcy pikseli.
-      const mMaxPerRow = Math.max(3, Math.ceil(Math.sqrt(sortedProducers.length)));
-      const mSpacingX = 1100;
-      const mSpacingY = 1100;
+      // 300 + marki*20 dawało 320 px promienia nawet dla jednej marki, a takich
+      // klastrów jest 42 z 61 — stąd morze pustki. Skalujemy od realnej liczby
+      // dzieci; przy 9 markach obwód i tak daje ~300 px na markę.
+      const clusterRadius = (id: string) =>
+        Math.min(560, 150 + (manufacturerChildren.get(id)?.length || 0) * 32);
 
-      sortedProducers.forEach((m, index) => {
-        const col = index % mMaxPerRow;
-        const row = Math.floor(index / mMaxPerRow);
-        const mX = col * mSpacingX;
-        const mY = row * mSpacingY;
-        
+      /** Średnica klastra wraz z szerokością samego kafla marki. */
+      const clusterSpan = (id: string) => clusterRadius(id) * 2 + 120;
+
+      // Sztywna siatka rezerwowała każdemu producentowi tyle samo miejsca,
+      // a 42 z 61 klastrów ma tylko jedną markę — z czego robił się rzadki
+      // kwadrat złożony głównie z pustki. Orbity pakują to ciaśniej i są
+      // spójne z układem mapy głównej.
+      const orbits: (typeof sortedProducers)[] = [];
+      for (let i = 0, level = 0; i < sortedProducers.length; level++) {
+        const capacity = level === 0 ? 1 : level * 6;
+        orbits.push(sortedProducers.slice(i, i + capacity));
+        i += capacity;
+      }
+
+      // Promień każdej orbity musi pomieścić obwodowo swoje klastry i nie
+      // wejść w poprzedni pierścień.
+      let prevRadius = 0;
+      let prevSpan = 0;
+      const orbitRadii = orbits.map((members, level) => {
+        const maxSpan = Math.max(...members.map(m => clusterSpan(m.id)));
+        if (level === 0) {
+          prevSpan = maxSpan;
+          return 0;
+        }
+        const byCircumference = (members.length * maxSpan * 1.1) / (2 * Math.PI);
+        // Pierścienie są przesunięte o pół kroku, więc sąsiedzi z kolejnej
+        // orbity zazębiają się kątowo — pełna suma promieni jest tu zbyt
+        // ostrożna i rozdmuchiwała układ.
+        const byPreviousRing = prevRadius + Math.max(maxSpan, prevSpan) * 0.82;
+        const radius = Math.max(byCircumference, byPreviousRing);
+        prevRadius = radius;
+        prevSpan = maxSpan;
+        return radius;
+      });
+
+      const placed = orbits.flatMap((members, level) =>
+        members.map((m, slot) => {
+          const radius = orbitRadii[level];
+          // Co drugi pierścień obrócony o pół kroku, żeby klastry nie
+          // układały się w promieniste korytarze.
+          const offset = level % 2 === 0 ? Math.PI / Math.max(members.length, 1) : 0;
+          const angle = (slot / Math.max(members.length, 1)) * 2 * Math.PI + offset;
+          return {
+            producer: m,
+            x: level === 0 ? 0 : Math.cos(angle) * radius,
+            y: level === 0 ? 0 : Math.sin(angle) * radius,
+          };
+        })
+      );
+
+      placed.forEach(({ producer: m, x: mX, y: mY }) => {
+
         nodes.push({
           id: m.id,
           type: 'manufacturer',
@@ -323,8 +373,8 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         });
 
         const kids = manufacturerChildren.get(m.id) || [];
-        const radius = Math.min(600, 300 + kids.length * 20); 
-        
+        const radius = clusterRadius(m.id);
+
         kids.forEach((brand, bIndex) => {
           const angle = (bIndex / kids.length) * 2 * Math.PI;
           
@@ -496,45 +546,11 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
     childOffsetsRef.current = new Map();
   }, [setNodes]);
 
-  // Orbit / Floating physics for ALL Brands
-  useEffect(() => {
-    let animationFrameId: number;
-    let time = 0;
-
-    const animatePhysics = () => {
-      time += 0.015;
-      setNodes(current => {
-        let changed = false;
-        const next = current.map(n => {
-          if (n.id === draggedHoldingId.current) return n;
-          const isHoldingDragged = childOffsetsRef.current.has(n.id); 
-          if (isHoldingDragged) return n;
-
-          if (n.type === 'brand') {
-            changed = true;
-            let hash = 0;
-            for (let i = 0; i < n.id.length; i++) hash += n.id.charCodeAt(i);
-
-            // subtle circular orbit/floating
-            return {
-              ...n,
-              position: {
-                x: n.position.x + Math.sin(time + hash) * 0.15,
-                y: n.position.y + Math.cos(time + hash) * 0.15,
-              }
-            };
-          }
-          return n;
-        });
-        return changed ? next : current;
-      });
-      animationFrameId = requestAnimationFrame(animatePhysics);
-    };
-
-    animationFrameId = requestAnimationFrame(animatePhysics);
-    
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [setNodes]);
+  // Unoszenie się marek robi teraz CSS (klasa .node-float w globals.css).
+  // Wcześniej stała pętla requestAnimationFrame wołała setNodes 60 razy na
+  // sekundę, budując nową tablicę wszystkich węzłów w każdej klatce — przy 200
+  // węzłach to 12 000 obiektów i 12 000 rekoncyliacji Reacta na sekundę,
+  // niezależnie od tego, czy ktokolwiek dotykał mapy.
 
   // Kontener miał min-h-[90vh], co rozpychało go ponad wysokość rodzica —
   // na mobilce wypychało stopkę i przyciski poza ekran. Rodzic ma już h-full.

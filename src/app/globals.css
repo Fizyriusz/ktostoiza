@@ -23,5 +23,37 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* layout.tsx ładuje Geist, ale twarde Arial tutaj je nadpisywało — fonty
+     były pobierane i nigdy nieużywane. */
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Unoszenie się marek na mapie. Wcześniej robiła to pętla requestAnimationFrame
+   wywołująca setNodes 60 razy na sekundę nad wszystkimi węzłami; ten sam efekt
+   liczy teraz GPU, bez udziału Reacta. Każdy węzeł dostaje ujemne opóźnienie
+   wyliczone z id, żeby nie unosiły się zgodnie. */
+@keyframes node-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(4px, -6px, 0);
+  }
+  50% {
+    transform: translate3d(-4px, 3px, 0);
+  }
+  75% {
+    transform: translate3d(5px, 4px, 0);
+  }
+}
+
+.node-float {
+  animation: node-float 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node-float {
+    animation: none;
+  }
 }

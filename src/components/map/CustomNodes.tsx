@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Handle, Position, NodeProps, useViewport } from '@xyflow/react';
+import { Handle, Position, NodeProps, useStore } from '@xyflow/react';
 import { Factory } from 'lucide-react';
 import { useFilter, nodeMatchesFilter } from '@/contexts/FilterContext';
 import { motion } from 'framer-motion';
@@ -85,6 +85,25 @@ function accentToTextColor(accent: string): string {
   return textMap[accent] ?? 'text-slate-500';
 }
 
+// useViewport() zwraca zoom jako liczbę zmiennoprzecinkową, więc każdy węzeł
+// przerysowywał się przy każdej klatce panowania. Węzły potrzebują z tego tylko
+// progu albo zaokrąglonej skali, więc subskrybujemy wprost te wartości —
+// re-render dzieje się dopiero gdy faktycznie się zmienią.
+const selectLabelsVisible = (s: { transform: [number, number, number] }) => s.transform[2] > 0.45;
+
+const selectHoldingScale = (s: { transform: [number, number, number] }) => {
+  const zoom = s.transform[2];
+  const raw = zoom < 0.45 ? 0.45 / zoom : 1;
+  return Math.round(Math.min(raw, 2) * 10) / 10;
+};
+
+/** Ujemne opóźnienie animacji wyliczone z id — rozjeżdża fazy unoszenia. */
+function floatDelay(id: string) {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) % 9000;
+  return `-${hash}ms`;
+}
+
 const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; position: Position }) => (
   <Handle
     type={type}
@@ -98,7 +117,7 @@ const InvisibleHandle = ({ type, position }: { type: 'source' | 'target'; positi
 
 export const HoldingNode = ({ data }: NodeProps) => {
   const { activeFilter, viewMode, focusedOEMNodeId, showUnavailableInPL } = useFilter();
-  const { zoom } = useViewport();
+  const scaleAdjustment = useStore(selectHoldingScale);
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId, showUnavailableInPL);
   const origin = data.country as string;
   const name = data.name as string;
@@ -112,10 +131,6 @@ export const HoldingNode = ({ data }: NodeProps) => {
   const effectiveOpacity = matches ? (anyExpanded && !isExpanded ? 0.25 : 1) : 0.05;
   
   // Semantic zoom enhancement: keep it large and readable
-  // Bez górnego limitu karta rosła tym bardziej, im dalej odjechał widok
-  // (przy zoomie 0.05 aż 9x), więc oddalanie kończyło się kupą nachodzących
-  // na siebie kafli zamiast podglądu całości.
-  const scaleAdjustment = Math.min(zoom < 0.45 ? 0.45 / zoom : 1, 2);
   const targetScale = isExpanded ? 1.1 : 1;
   const finalScale = targetScale * scaleAdjustment;
 
@@ -158,7 +173,7 @@ export const HoldingNode = ({ data }: NodeProps) => {
 export const BrandNode = ({ data }: NodeProps) => {
   const [imgError, setImgError] = useState(false);
   const { activeFilter, viewMode, focusedOEMNodeId, showUnavailableInPL } = useFilter();
-  const { zoom } = useViewport(); // Adaptive sizing
+  const showText = useStore(selectLabelsVisible);
 
   const matches = nodeMatchesFilter(data as Record<string, unknown>, activeFilter, focusedOEMNodeId, showUnavailableInPL);
   const brandName = data.name as string;
@@ -174,18 +189,21 @@ export const BrandNode = ({ data }: NodeProps) => {
   const fallbackGrad = accentToGradient(accentColor);
   const fallbackText = accentToTextColor(accentColor);
 
-  // Hidden text on zoom out
-  const showText = zoom > 0.45;
-
   return (
     <motion.div
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: matches ? 1 : 0.1 }}
       transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-      className="flex flex-col items-center justify-center relative z-10 group cursor-grab active:cursor-grabbing"
+      className="relative z-10 group cursor-grab active:cursor-grabbing"
       style={{
         filter: matches ? 'none' : 'grayscale(100%)',
       }}
+    >
+    {/* Osobny wrapper, bo transform na motion.div należy do sprężyny skali —
+        animacja unoszenia musi mieć własną warstwę. */}
+    <div
+      className="node-float flex flex-col items-center justify-center"
+      style={{ animationDelay: floatDelay(data.id as string) }}
     >
       {viewMode === 'logocards' ? (
         <>
@@ -262,6 +280,7 @@ export const BrandNode = ({ data }: NodeProps) => {
           </div>
         </>
       )}
+    </div>
     </motion.div>
   );
 };
