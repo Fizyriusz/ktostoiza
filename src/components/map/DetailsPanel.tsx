@@ -34,24 +34,6 @@ function getFlagUrl(countryStr: string) {
     : `https://flagcdn.com/w20/${code}.png`;
 }
 
-function getBrandDomain(brandName: string) {
-  let name = brandName.split('/')[0].trim().toLowerCase().replace(/\s+/g, '');
-  name = name.replace(/[^a-z0-9]/g, '');
-  if (name === 'bosch') return 'bosch-home.com';
-  if (name === 'siemens') return 'siemens-home.bsh-group.com';
-  if (name === 'candy') return 'candy-home.com';
-  if (name === 'amica') return 'amica.pl';
-  if (name === 'samsung') return 'samsung.com';
-  if (name === 'lg') return 'lg.com';
-  if (name === 'miele') return 'miele.com';
-  if (name === 'electrolux') return 'electrolux.com';
-  if (name === 'whirlpool') return 'whirlpool.com';
-  if (name === 'beko') return 'beko.com';
-  if (name === 'haier') return 'haier.com';
-  if (name === 'hisense') return 'hisense.com';
-  return `${name}.com`;
-}
-
 interface DetailsPanelProps {
   nodes: GraphNodeData[];
   onClose: (id?: string) => void;
@@ -72,7 +54,7 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
   }, [node.id]);
   const origin = (node.type === 'holding' || node.type === 'manufacturer') ? node.country : node.origin;
   const flagUrl = getFlagUrl(origin);
-  const brandLogo = node.type === 'brand' ? `https://logo.clearbit.com/${getBrandDomain(node.name)}` : null;
+  const brandLogo = node.type === 'brand' ? node.localLogo ?? null : null;
 
   return (
     <div className="flex flex-col h-full bg-white relative">

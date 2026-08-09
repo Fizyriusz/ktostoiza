@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import dataset from '@/data/dataset.json';
 import { HomeContent } from '@/app/page';
+import NodeArticle, { type NodeLike } from '@/components/seo/NodeArticle';
 
 export function generateStaticParams() {
   return dataset.nodes
@@ -77,16 +78,10 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
     };
   }
   
-  // Try to define logo
-  const cleanName = node.name.split('/')[0].trim().toLowerCase().replace(/[^a-z0-9]/g, '');
-  const domainMap: Record<string, string> = {
-    bosch: 'bosch-home.com', siemens: 'siemens-home.bsh-group.com', candy: 'candy-home.com',
-    amica: 'amica.pl', samsung: 'samsung.com', lg: 'lg.com', miele: 'miele.com',
-    electrolux: 'electrolux.com', whirlpool: 'whirlpool.com', beko: 'beko.com',
-    haier: 'haier.com', hisense: 'hisense.com'
-  };
-  const finalDomain = domainMap[cleanName] || `${cleanName}.com`;
-  jsonLd.logo = `https://logo.clearbit.com/${finalDomain}`;
+  // Logo tylko jeśli faktycznie mamy plik u siebie — schema.org nie znosi martwych URL-i.
+  if (nAny.localLogo) {
+    jsonLd.logo = `https://ktostoiza.pl${nAny.localLogo}`;
+  }
 
   return (
     <>
@@ -94,9 +89,22 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={<div className="bg-[#f8fafc] w-full h-screen" />}>
+      <Suspense fallback={<div className="bg-[#f8fafc] w-full h-[100svh]" />}>
         <HomeContent />
       </Suspense>
+
+      {/* Mapa przechwytuje zdarzenia kółka (zoom), więc sekcja pod nią jest
+          nieosiągalna scrollem — stąd zakotwiczony skrót. */}
+      <a
+        href="#o-marce"
+        className="fixed bottom-14 left-3 sm:bottom-4 sm:left-4 z-[130] flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 bg-slate-900/90 backdrop-blur-md text-white rounded-full text-xs font-bold shadow-lg hover:bg-slate-800 transition-colors"
+      >
+        <span className="sm:hidden">Szczegóły</span>
+        <span className="hidden sm:inline">Szczegóły: {node.name}</span>
+        <span aria-hidden="true">↓</span>
+      </a>
+
+      <NodeArticle node={node as NodeLike} />
     </>
   );
 }

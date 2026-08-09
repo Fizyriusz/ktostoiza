@@ -9,6 +9,7 @@ export interface HoldingNode {
   tags?: string[];
   seo_slug: string;
   isOEM?: boolean;
+  localLogo?: string;
 }
 
 export interface ManufacturerNode {
@@ -43,6 +44,7 @@ export interface BrandNode {
   producedBy?: string[];
   availableInPL?: boolean;
   scope?: 'global' | 'regional';
+  localLogo?: string;
 }
 
 export type GraphNodeData = HoldingNode | BrandNode | ManufacturerNode;
