@@ -278,14 +278,15 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       
     } else {
       // OEM MODE
-      const manufacturers = dataset.nodes.filter(n => n.type === 'manufacturer');
-      const mMaxPerRow = 3;
-      const mSpacingX = 1400;
-      const mSpacingY = 1400;
-      
+      // Producentem bywa nie tylko węzeł 'manufacturer' — część marek wskazuje
+      // w producedBy koncern oznaczony isOEM (np. h-beko, h-vestel).
+      const producers = dataset.nodes.filter(
+        n => n.type === 'manufacturer' || (n.type === 'holding' && 'isOEM' in n && n.isOEM)
+      );
+
       const manufacturerChildren = new Map<string, typeof brands>();
-      manufacturers.forEach(m => manufacturerChildren.set(m.id, []));
-      
+      producers.forEach(m => manufacturerChildren.set(m.id, []));
+
       brands.forEach(b => {
         if ('producedBy' in b && Array.isArray(b.producedBy) && b.producedBy.length > 0) {
           b.producedBy.forEach(producerId => {
@@ -296,7 +297,18 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
         }
       });
 
-      manufacturers.forEach((m, index) => {
+      // Najpierw najwięksi producenci, żeby siatka czytała się od góry-lewej.
+      const sortedProducers = [...producers].sort(
+        (a, b) => (manufacturerChildren.get(b.id)?.length || 0) - (manufacturerChildren.get(a.id)?.length || 0)
+      );
+
+      // Siatka mniej więcej kwadratowa — przy ~60 klastrach 3 kolumny dawały
+      // pas długi na dziesiątki tysięcy pikseli.
+      const mMaxPerRow = Math.max(3, Math.ceil(Math.sqrt(sortedProducers.length)));
+      const mSpacingX = 1100;
+      const mSpacingY = 1100;
+
+      sortedProducers.forEach((m, index) => {
         const col = index % mMaxPerRow;
         const row = Math.floor(index / mMaxPerRow);
         const mX = col * mSpacingX;
@@ -328,6 +340,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
             position: { x: bX, y: bY },
             data: {
                ...brand,
+               realId: brand.id, // id węzła jest tu prefiksowane, oryginał trzymamy obok
                accentColor: '#d946ef',
                isOEMMode: true
             },
@@ -348,7 +361,9 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
     }
 
     return { initialNodes: nodes, initialEdges: edges };
-  }, [showOEM, expandedHoldings]);
+    // recentNews dociera asynchronicznie — bez niego w zależnościach znaczniki
+    // "świeży news" liczyłyby się z pustej tablicy i nigdy nie zapalały.
+  }, [showOEM, expandedHoldings, recentNews]);
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -391,10 +406,12 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       });
     }
     
-    // We send back the actual ID without the "oem-" prefix if it has it
+    // W trybie OEM id węzła jest prefiksowane (oem-<producent>-<marka>), więc
+    // oryginalne id bierzemy z data — rozbijanie stringa po myślnikach gubiło je,
+    // gdy id producenta miało więcej niż dwa człony.
     let realData = node.data;
     if (node.id.startsWith('oem-')) {
-      const realId = node.id.split('-').slice(2).join('-');
+      const realId = node.data.realId as string | undefined;
       const found = dataset.nodes.find(n => n.id === realId);
       if (found) realData = found as any;
     }
@@ -534,7 +551,7 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           fitView
-          minZoom={0.2}
+          minZoom={0.1}
           maxZoom={5.0}
           className="border-none"
         >

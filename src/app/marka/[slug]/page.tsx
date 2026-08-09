@@ -77,16 +77,10 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
     };
   }
   
-  // Try to define logo
-  const cleanName = node.name.split('/')[0].trim().toLowerCase().replace(/[^a-z0-9]/g, '');
-  const domainMap: Record<string, string> = {
-    bosch: 'bosch-home.com', siemens: 'siemens-home.bsh-group.com', candy: 'candy-home.com',
-    amica: 'amica.pl', samsung: 'samsung.com', lg: 'lg.com', miele: 'miele.com',
-    electrolux: 'electrolux.com', whirlpool: 'whirlpool.com', beko: 'beko.com',
-    haier: 'haier.com', hisense: 'hisense.com'
-  };
-  const finalDomain = domainMap[cleanName] || `${cleanName}.com`;
-  jsonLd.logo = `https://logo.clearbit.com/${finalDomain}`;
+  // Logo tylko jeśli faktycznie mamy plik u siebie — schema.org nie znosi martwych URL-i.
+  if (nAny.localLogo) {
+    jsonLd.logo = `https://ktostoiza.pl${nAny.localLogo}`;
+  }
 
   return (
     <>

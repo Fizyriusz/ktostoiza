@@ -51,26 +51,6 @@ function getHoldingAccent(name: string): string {
   return '#6b7280';
 }
 
-function getBrandDomain(brandName: string) {
-  const name = brandName.split('/')[0].trim().toLowerCase().replace(/[^a-z0-9]/g, '');
-  const domainMap: Record<string, string> = {
-    hotpointariston: 'hotpoint.com', bosch: 'bosch-home.com',
-    siemens: 'siemens-home.bsh-group.com', candy: 'candy-home.com',
-    geappliances: 'geappliances.com', amica: 'amica.pl',
-    samsung: 'samsung.com', lg: 'lg.com', miele: 'miele.com',
-    smeg: 'smeg.com', liebherr: 'liebherr.com', electrolux: 'electrolux.com',
-    whirlpool: 'whirlpool.com', sharp: 'sharp.com', grundig: 'grundig.com',
-    beko: 'beko.com', haier: 'haier.com', hisense: 'hisense.com',
-    gorenje: 'gorenje.com', neff: 'neff-home.com', gaggenau: 'gaggenau.com',
-    teka: 'teka.com', hitachi: 'hitachi.com', zanussi: 'zanussi.com',
-    indesit: 'indesit.com', aeg: 'aeg.com', hoover: 'hoover.com',
-    polar: 'polar.eu', toshiba: 'toshiba.com', tcl: 'tcl.com',
-    panasonic: 'panasonic.com', franke: 'franke.com', hansa: 'hansa.com',
-    gorenje2: 'gorenje.com',
-  };
-  return domainMap[name] || `${name}.com`;
-}
-
 function accentToGradient(accent: string): string {
   const lightMap: Record<string, string> = {
     '#0d9488': 'from-teal-50 to-teal-100',
@@ -181,8 +161,9 @@ export const BrandNode = ({ data }: NodeProps) => {
   const brandName = data.name as string;
   const origin = data.origin as string;
   const accentColor = (data.accentColor as string) || '#64748b';
-  const domain = getBrandDomain(brandName);
-  const logoUrl = `https://logo.clearbit.com/${domain}`;
+  const localLogo = data.localLogo as string | undefined;
+  // Logo lokalne z /public/brandsicons; inicjał marki jako ostatnia deska ratunku.
+  const showLogo = Boolean(localLogo) && !imgError;
   const initial = brandName.charAt(0).toUpperCase();
   const flagUrl = getFlagUrl(origin);
   const hasRecentNews = data.hasRecentNews as boolean;
@@ -240,7 +221,7 @@ export const BrandNode = ({ data }: NodeProps) => {
           {/* Circle */}
           <div
             className={`w-[82px] h-[82px] rounded-full flex items-center justify-center overflow-hidden ring-1 ring-slate-200/60 bg-white relative
-              ${imgError ? `bg-gradient-to-br ${fallbackGrad}` : ''}`}
+              ${showLogo ? '' : `bg-gradient-to-br ${fallbackGrad}`}`}
             style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.09), 0 1px 4px rgba(0,0,0,0.06)' }}
           >
             {hasRecentNews && (
@@ -250,10 +231,10 @@ export const BrandNode = ({ data }: NodeProps) => {
             )}
             <InvisibleHandle type="target" position={Position.Top} />
 
-            {!imgError ? (
+            {showLogo ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={logoUrl}
+                src={localLogo}
                 alt={`Logo ${brandName}`}
                 className="w-12 h-12 object-contain"
                 onError={() => setImgError(true)}
