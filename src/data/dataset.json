@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-13T00:14:55.179Z",
+  "lastUpdate": "2026-08-09T07:14:04.504Z",
   "nodes": [
     {
       "id": "h-beko",
@@ -134,7 +134,7 @@
         "Produkcja w zakładach Beko Europe (dawniej Whirlpool) w Łodzi, Radomsku i Wrocławiu."
       ],
       "producedBy": [
-        "m-beko-europe"
+        "h-beko"
       ],
       "availableInPL": true,
       "scope": "global"
@@ -1366,6 +1366,30 @@
       "seo_slug": "pozostale-niezalezne"
     },
     {
+      "id": "h-gb-ind",
+      "type": "holding",
+      "name": "Marki brytyjskie",
+      "country": "Wielka Brytania",
+      "description": "Marki o rodowodzie brytyjskim, którym nie przypisano w bazie koncernu-właściciela.",
+      "seo_slug": "marki-brytyjskie"
+    },
+    {
+      "id": "h-fr-ind",
+      "type": "holding",
+      "name": "Marki francuskie",
+      "country": "Francja",
+      "description": "Marki o rodowodzie francuskim, którym nie przypisano w bazie koncernu-właściciela.",
+      "seo_slug": "marki-francuskie"
+    },
+    {
+      "id": "h-es-ind",
+      "type": "holding",
+      "name": "Marki hiszpańskie",
+      "country": "Hiszpania",
+      "description": "Marki o rodowodzie hiszpańskim, którym nie przypisano w bazie koncernu-właściciela.",
+      "seo_slug": "marki-hiszpanskie"
+    },
+    {
       "id": "h-market",
       "type": "holding",
       "name": "Marki Marketowe (OEM)",
@@ -1592,7 +1616,7 @@
       "localLogo": "/brandsicons/teka.png",
       "producedBy": [
         "m-midea",
-        "m-vestel",
+        "h-vestel",
         "m-bsh-factory",
         "h-beko"
       ],
@@ -2749,11 +2773,12 @@
         "Korzysta z zaplecza produkcyjnego BSH w Polsce (Łódź, Wrocław, Rogoźnica) dla wybranych linii produktowych."
       ],
       "producedBy": [
-        "m-bsh-group"
+        "m-bsh-factory"
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-bsh"
     },
     {
       "id": "b-bomann",
@@ -2779,7 +2804,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-cata",
@@ -2805,7 +2831,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-de-noble-foster",
@@ -2831,7 +2858,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-gb-ind"
     },
     {
       "id": "b-freggia",
@@ -2857,7 +2885,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-ikea",
@@ -2880,11 +2909,12 @@
       ],
       "producedBy": [
         "m-electrolux",
-        "m-beko-europe"
+        "h-beko"
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-kaiser",
@@ -2910,7 +2940,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-kuppersbusch",
@@ -2936,7 +2967,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-malatec",
@@ -2962,7 +2994,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-nodor",
@@ -2987,7 +3020,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-pyramis",
@@ -3013,7 +3047,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-thetford",
@@ -3038,7 +3073,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-vivax",
@@ -3064,7 +3100,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-dometic",
@@ -3090,7 +3127,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-kitchenaid",
@@ -3112,12 +3150,13 @@
         "Wybrane modele dużego AGD (lodówki, zmywarki) produkowane są w polskich zakładach Beko Europe (dawniej Whirlpool)."
       ],
       "producedBy": [
-        "m-beko-europe",
+        "h-beko",
         "m-whirlpool-usa"
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-beko"
     },
     {
       "id": "b-mora",
@@ -3139,11 +3178,12 @@
         "Brak produkcji w Polsce; główny zakład znajduje się w czeskim Mariánskim Údolí."
       ],
       "producedBy": [
-        "m-gorenje-hisense"
+        "h-hisense"
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-hisense"
     },
     {
       "id": "b-winia",
@@ -3169,7 +3209,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-avintage",
@@ -3193,7 +3234,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-caso",
@@ -3219,7 +3261,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-cavin",
@@ -3243,7 +3286,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-climadiff",
@@ -3267,7 +3311,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-dunavox",
@@ -3292,7 +3337,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-la-sommeliere",
@@ -3317,7 +3363,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-le-cellier",
@@ -3341,7 +3388,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-bright",
@@ -3365,7 +3413,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-gb-ind"
     },
     {
       "id": "b-clatronic",
@@ -3391,7 +3440,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-continental-edison",
@@ -3417,7 +3467,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-hanseatic",
@@ -3443,7 +3494,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-orbegozo",
@@ -3469,7 +3521,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-silva-homeline",
@@ -3494,7 +3547,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-airforce",
@@ -3518,7 +3572,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-berdsen",
@@ -3543,7 +3598,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-best",
@@ -3567,7 +3623,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-cecotec",
@@ -3593,7 +3650,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-ciarra",
@@ -3617,7 +3675,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-comfee",
@@ -3639,11 +3698,12 @@
         "Brak produkcji w Polsce."
       ],
       "producedBy": [
-        "m-midea-group"
+        "m-midea"
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-midea"
     },
     {
       "id": "b-falcon",
@@ -3668,7 +3728,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-gb-ind"
     },
     {
       "id": "b-focus",
@@ -3693,7 +3754,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-goodhome",
@@ -3719,7 +3781,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-guzzanti",
@@ -3745,7 +3808,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-hendi",
@@ -3770,7 +3834,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-kuchinox",
@@ -3795,7 +3860,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-mepamsa",
@@ -3819,7 +3885,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-novy",
@@ -3844,7 +3911,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-pkm",
@@ -3870,7 +3938,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-respekta",
@@ -3895,7 +3964,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-turboair",
@@ -3918,7 +3988,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-vidaxl",
@@ -3943,7 +4014,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-amzchef",
@@ -3968,7 +4040,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-ardo",
@@ -3993,7 +4066,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-arebos",
@@ -4018,7 +4092,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-cooke-lewis",
@@ -4043,7 +4118,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-daewoo",
@@ -4069,7 +4145,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-lacor",
@@ -4094,7 +4171,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-oceanic",
@@ -4120,7 +4198,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-schild",
@@ -4145,7 +4224,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-silvercrest",
@@ -4170,7 +4250,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-simfer",
@@ -4196,7 +4277,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-other-ind"
     },
     {
       "id": "b-taurus",
@@ -4221,7 +4303,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-vevor",
@@ -4246,7 +4329,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-vitrokitchen",
@@ -4271,7 +4355,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-arset",
@@ -4294,7 +4379,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-cata-can-roca",
@@ -4319,7 +4405,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-es-ind"
     },
     {
       "id": "b-covercook",
@@ -4344,7 +4431,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-fenu",
@@ -4368,7 +4456,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-galvamet",
@@ -4393,7 +4482,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-heinrichs",
@@ -4418,7 +4508,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-de-ind"
     },
     {
       "id": "b-hobsir",
@@ -4442,7 +4533,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-iceberg",
@@ -4467,7 +4559,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-kage",
@@ -4491,7 +4584,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-livoo",
@@ -4516,7 +4610,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-fr-ind"
     },
     {
       "id": "b-melchioni",
@@ -4541,7 +4636,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-neto",
@@ -4565,7 +4661,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-novoterm",
@@ -4590,7 +4687,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-obi",
@@ -4615,7 +4713,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-market"
     },
     {
       "id": "b-smartcook",
@@ -4640,7 +4739,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-stella",
@@ -4664,7 +4764,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-pl-ind"
     },
     {
       "id": "b-tognana",
@@ -4689,7 +4790,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-it-ind"
     },
     {
       "id": "b-vovv",
@@ -4713,7 +4815,8 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
     },
     {
       "id": "b-topstrong",
@@ -4738,7 +4841,432 @@
       ],
       "type": "brand",
       "availableInPL": true,
-      "scope": "regional"
+      "scope": "regional",
+      "parentId": "h-cn-ind"
+    },
+    {
+      "id": "m-bora-holding",
+      "type": "manufacturer",
+      "name": "Bora Holding",
+      "country": "Austria",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: BORA.",
+      "seo_slug": "bora-holding-oem"
+    },
+    {
+      "id": "m-braukmann-gmbh",
+      "type": "manufacturer",
+      "name": "Braukmann Gmbh",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Caso.",
+      "seo_slug": "braukmann-gmbh-oem"
+    },
+    {
+      "id": "m-canbolat-vertriebs",
+      "type": "manufacturer",
+      "name": "Canbolat Vertriebs",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: AREBOS.",
+      "seo_slug": "canbolat-vertriebs-oem"
+    },
+    {
+      "id": "m-cdiscount-group",
+      "type": "manufacturer",
+      "name": "Cdiscount Group",
+      "country": "Francja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Continental Edison, Oceanic.",
+      "seo_slug": "cdiscount-group-oem"
+    },
+    {
+      "id": "m-cecotec-innovaciones",
+      "type": "manufacturer",
+      "name": "Cecotec Innovaciones",
+      "country": "Hiszpania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Cecotec.",
+      "seo_slug": "cecotec-innovaciones-oem"
+    },
+    {
+      "id": "m-ciarko-sanok",
+      "type": "manufacturer",
+      "name": "Ciarko (Sanok)",
+      "country": "Polska",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ciarko.",
+      "seo_slug": "ciarko-sanok-oem"
+    },
+    {
+      "id": "m-ciarra-appliances",
+      "type": "manufacturer",
+      "name": "Ciarra Appliances",
+      "country": "Chiny",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ciarra.",
+      "seo_slug": "ciarra-appliances-oem"
+    },
+    {
+      "id": "m-clatronic-group",
+      "type": "manufacturer",
+      "name": "Clatronic Group",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Bomann, Clatronic.",
+      "seo_slug": "clatronic-group-oem"
+    },
+    {
+      "id": "m-cna-group",
+      "type": "manufacturer",
+      "name": "CNA Group",
+      "country": "Hiszpania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Cata, Nodor, Cata & Can Roca.",
+      "seo_slug": "cna-group-oem"
+    },
+    {
+      "id": "m-delta-france",
+      "type": "manufacturer",
+      "name": "Delta France",
+      "country": "Francja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Livoo.",
+      "seo_slug": "delta-france-oem"
+    },
+    {
+      "id": "m-dometic-group",
+      "type": "manufacturer",
+      "name": "Dometic Group",
+      "country": "Szwecja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Dometic.",
+      "seo_slug": "dometic-group-oem"
+    },
+    {
+      "id": "m-dunavox-europe",
+      "type": "manufacturer",
+      "name": "Dunavox Europe",
+      "country": "Węgry",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Dunavox.",
+      "seo_slug": "dunavox-europe-oem"
+    },
+    {
+      "id": "m-electrolux",
+      "type": "manufacturer",
+      "name": "Electrolux",
+      "country": "Szwecja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ikea.",
+      "seo_slug": "electrolux-oem"
+    },
+    {
+      "id": "m-elica-group",
+      "type": "manufacturer",
+      "name": "Elica Group",
+      "country": "Włochy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Airforce, TurboAir.",
+      "seo_slug": "elica-group-oem"
+    },
+    {
+      "id": "m-ers-group",
+      "type": "manufacturer",
+      "name": "ERS Group",
+      "country": "Nieznany",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Heinrich'S.",
+      "seo_slug": "ers-group-oem"
+    },
+    {
+      "id": "m-focus-agd",
+      "type": "manufacturer",
+      "name": "Focus AGD",
+      "country": "Polska",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Focus.",
+      "seo_slug": "focus-agd-oem"
+    },
+    {
+      "id": "m-franke-group",
+      "type": "manufacturer",
+      "name": "Franke Group",
+      "country": "Szwajcaria",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Mepamsa.",
+      "seo_slug": "franke-group-oem"
+    },
+    {
+      "id": "m-frio-group",
+      "type": "manufacturer",
+      "name": "Frio Group",
+      "country": "Francja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Avintage, Climadiff, La Sommelière, Le Cellier.",
+      "seo_slug": "frio-group-oem"
+    },
+    {
+      "id": "m-galvamet-italy",
+      "type": "manufacturer",
+      "name": "Galvamet (Włochy)",
+      "country": "Włochy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Galvamet.",
+      "seo_slug": "galvamet-italy-oem"
+    },
+    {
+      "id": "m-hendi-group",
+      "type": "manufacturer",
+      "name": "Hendi Group",
+      "country": "Holandia",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Hendi.",
+      "seo_slug": "hendi-group-oem"
+    },
+    {
+      "id": "m-id-unknown",
+      "type": "manufacturer",
+      "name": "Producent nieustalony",
+      "country": "Nieznany",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: De Noble & Foster, Freggia, Schild, KAGE.",
+      "seo_slug": "id-unknown-oem"
+    },
+    {
+      "id": "m-jp-industries",
+      "type": "manufacturer",
+      "name": "JP Industries",
+      "country": "Włochy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ardo.",
+      "seo_slug": "jp-industries-oem"
+    },
+    {
+      "id": "m-kingfisher-plc",
+      "type": "manufacturer",
+      "name": "Kingfisher plc",
+      "country": "Wielka Brytania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: GoodHome, Cooke & Lewis.",
+      "seo_slug": "kingfisher-plc-oem"
+    },
+    {
+      "id": "m-klima-classic",
+      "type": "manufacturer",
+      "name": "Klima Classic",
+      "country": "Czechy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Guzzanti.",
+      "seo_slug": "klima-classic-oem"
+    },
+    {
+      "id": "m-kuchinox-polska",
+      "type": "manufacturer",
+      "name": "Kuchinox Polska",
+      "country": "Polska",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Kuchinox.",
+      "seo_slug": "kuchinox-polska-oem"
+    },
+    {
+      "id": "m-lacor-menaje",
+      "type": "manufacturer",
+      "name": "Lacor Menaje Profesional",
+      "country": "Hiszpania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Lacor.",
+      "seo_slug": "lacor-menaje-oem"
+    },
+    {
+      "id": "m-ls-group",
+      "type": "manufacturer",
+      "name": "LS Group",
+      "country": "Nieznany",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Cavin.",
+      "seo_slug": "ls-group-oem"
+    },
+    {
+      "id": "m-m-san-grupa",
+      "type": "manufacturer",
+      "name": "M SAN Grupa",
+      "country": "Chorwacja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Vivax.",
+      "seo_slug": "m-san-grupa-oem"
+    },
+    {
+      "id": "m-melchioni-spa",
+      "type": "manufacturer",
+      "name": "Melchioni S.p.A.",
+      "country": "Włochy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Melchioni.",
+      "seo_slug": "melchioni-spa-oem"
+    },
+    {
+      "id": "m-middleby-corp",
+      "type": "manufacturer",
+      "name": "Middleby Corp",
+      "country": "USA",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Falcon, Novy.",
+      "seo_slug": "middleby-corp-oem"
+    },
+    {
+      "id": "m-neg-novex",
+      "type": "manufacturer",
+      "name": "NEG / Novex",
+      "country": "Nieznany",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Respekta.",
+      "seo_slug": "neg-novex-oem"
+    },
+    {
+      "id": "m-nortek-global",
+      "type": "manufacturer",
+      "name": "Nortek Global",
+      "country": "USA",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Best.",
+      "seo_slug": "nortek-global-oem"
+    },
+    {
+      "id": "m-novoterm-szczecin",
+      "type": "manufacturer",
+      "name": "Novoterm (Szczecin)",
+      "country": "Polska",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Novoterm.",
+      "seo_slug": "novoterm-szczecin-oem"
+    },
+    {
+      "id": "m-obi-group",
+      "type": "manufacturer",
+      "name": "OBI Group",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: OBI.",
+      "seo_slug": "obi-group-oem"
+    },
+    {
+      "id": "m-oem-china",
+      "type": "manufacturer",
+      "name": "Producenci kontraktowi (Chiny)",
+      "country": "Chiny",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Malatec, Bright, Berdsen, VidaXL, Amzchef, Covercook i 3 innych.",
+      "seo_slug": "oem-china-oem"
+    },
+    {
+      "id": "m-oem-turkey",
+      "type": "manufacturer",
+      "name": "Producenci kontraktowi (Turcja)",
+      "country": "Turcja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Stella.",
+      "seo_slug": "oem-turkey-oem"
+    },
+    {
+      "id": "m-oem-various",
+      "type": "manufacturer",
+      "name": "Producenci kontraktowi (różni)",
+      "country": "Różne",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Daewoo, Arset, Fenu, Iceberg, Neto, Smartcook.",
+      "seo_slug": "oem-various-oem"
+    },
+    {
+      "id": "m-olan-haushaltsgerate",
+      "type": "manufacturer",
+      "name": "Olan Haushaltsgeräte",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Kaiser.",
+      "seo_slug": "olan-haushaltsgerate-oem"
+    },
+    {
+      "id": "m-otto-group",
+      "type": "manufacturer",
+      "name": "Otto Group",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Hanseatic.",
+      "seo_slug": "otto-group-oem"
+    },
+    {
+      "id": "m-pkm-gmbh",
+      "type": "manufacturer",
+      "name": "PKM GmbH",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: PKM.",
+      "seo_slug": "pkm-gmbh-oem"
+    },
+    {
+      "id": "m-pyramis-metallourgia",
+      "type": "manufacturer",
+      "name": "Pyramis Metallourgia",
+      "country": "Grecja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Pyramis.",
+      "seo_slug": "pyramis-metallourgia-oem"
+    },
+    {
+      "id": "m-schwarz-gruppe",
+      "type": "manufacturer",
+      "name": "Schwarz Gruppe",
+      "country": "Niemcy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Silvercrest.",
+      "seo_slug": "schwarz-gruppe-oem"
+    },
+    {
+      "id": "m-silva-schneider",
+      "type": "manufacturer",
+      "name": "Silva-Schneider",
+      "country": "Austria",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Silva Homeline.",
+      "seo_slug": "silva-schneider-oem"
+    },
+    {
+      "id": "m-simfer-as",
+      "type": "manufacturer",
+      "name": "Simfer A.Ş.",
+      "country": "Turcja",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Simfer.",
+      "seo_slug": "simfer-as-oem"
+    },
+    {
+      "id": "m-sonifer-sa",
+      "type": "manufacturer",
+      "name": "Sonifer SA",
+      "country": "Nieznany",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Orbegozo.",
+      "seo_slug": "sonifer-sa-oem"
+    },
+    {
+      "id": "m-taurus-group",
+      "type": "manufacturer",
+      "name": "Taurus Group",
+      "country": "Hiszpania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Taurus.",
+      "seo_slug": "taurus-group-oem"
+    },
+    {
+      "id": "m-teka-group",
+      "type": "manufacturer",
+      "name": "Teka Group",
+      "country": "Hiszpania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Küppersbusch.",
+      "seo_slug": "teka-group-oem"
+    },
+    {
+      "id": "m-thetford-corp",
+      "type": "manufacturer",
+      "name": "Thetford Corp",
+      "country": "USA",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Thetford.",
+      "seo_slug": "thetford-corp-oem"
+    },
+    {
+      "id": "m-tognana-spa",
+      "type": "manufacturer",
+      "name": "Tognana S.p.A.",
+      "country": "Włochy",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Tognana.",
+      "seo_slug": "tognana-spa-oem"
+    },
+    {
+      "id": "m-vevor-group",
+      "type": "manufacturer",
+      "name": "Vevor Group",
+      "country": "Chiny",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: VEVOR.",
+      "seo_slug": "vevor-group-oem"
+    },
+    {
+      "id": "m-vitrokitchen-spain",
+      "type": "manufacturer",
+      "name": "Vitrokitchen (Hiszpania)",
+      "country": "Hiszpania",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Vitrokitchen.",
+      "seo_slug": "vitrokitchen-spain-oem"
+    },
+    {
+      "id": "m-whirlpool-usa",
+      "type": "manufacturer",
+      "name": "Whirlpool Corporation (USA)",
+      "country": "USA",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: KitchenAid.",
+      "seo_slug": "whirlpool-usa-oem"
+    },
+    {
+      "id": "m-winia-electronics",
+      "type": "manufacturer",
+      "name": "Winia Electronics",
+      "country": "Korea Południowa",
+      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Winia, Daewoo.",
+      "seo_slug": "winia-electronics-oem"
     }
   ],
   "edges": [
@@ -5311,6 +5839,486 @@
       "source": "h-de-ind",
       "target": "b-bora",
       "label": "Niezależna"
+    },
+    {
+      "id": "e-bsh-balay",
+      "source": "h-bsh",
+      "target": "b-balay",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-de-ind-bomann",
+      "source": "h-de-ind",
+      "target": "b-bomann",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-cata",
+      "source": "h-es-ind",
+      "target": "b-cata",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-gb-ind-de-noble-foster",
+      "source": "h-gb-ind",
+      "target": "b-de-noble-foster",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-freggia",
+      "source": "h-it-ind",
+      "target": "b-freggia",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-ikea",
+      "source": "h-market",
+      "target": "b-ikea",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-de-ind-kaiser",
+      "source": "h-de-ind",
+      "target": "b-kaiser",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-kuppersbusch",
+      "source": "h-de-ind",
+      "target": "b-kuppersbusch",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-malatec",
+      "source": "h-pl-ind",
+      "target": "b-malatec",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-nodor",
+      "source": "h-es-ind",
+      "target": "b-nodor",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-pyramis",
+      "source": "h-other-ind",
+      "target": "b-pyramis",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-thetford",
+      "source": "h-other-ind",
+      "target": "b-thetford",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-vivax",
+      "source": "h-other-ind",
+      "target": "b-vivax",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-dometic",
+      "source": "h-other-ind",
+      "target": "b-dometic",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-beko-kitchenaid",
+      "source": "h-beko",
+      "target": "b-kitchenaid",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-hisense-mora",
+      "source": "h-hisense",
+      "target": "b-mora",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-other-ind-winia",
+      "source": "h-other-ind",
+      "target": "b-winia",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-avintage",
+      "source": "h-fr-ind",
+      "target": "b-avintage",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-caso",
+      "source": "h-de-ind",
+      "target": "b-caso",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-cavin",
+      "source": "h-other-ind",
+      "target": "b-cavin",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-climadiff",
+      "source": "h-fr-ind",
+      "target": "b-climadiff",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-dunavox",
+      "source": "h-other-ind",
+      "target": "b-dunavox",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-la-sommeliere",
+      "source": "h-fr-ind",
+      "target": "b-la-sommeliere",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-le-cellier",
+      "source": "h-fr-ind",
+      "target": "b-le-cellier",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-gb-ind-bright",
+      "source": "h-gb-ind",
+      "target": "b-bright",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-clatronic",
+      "source": "h-de-ind",
+      "target": "b-clatronic",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-continental-edison",
+      "source": "h-fr-ind",
+      "target": "b-continental-edison",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-hanseatic",
+      "source": "h-market",
+      "target": "b-hanseatic",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-es-ind-orbegozo",
+      "source": "h-es-ind",
+      "target": "b-orbegozo",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-silva-homeline",
+      "source": "h-other-ind",
+      "target": "b-silva-homeline",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-airforce",
+      "source": "h-it-ind",
+      "target": "b-airforce",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-berdsen",
+      "source": "h-pl-ind",
+      "target": "b-berdsen",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-best",
+      "source": "h-it-ind",
+      "target": "b-best",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-cecotec",
+      "source": "h-es-ind",
+      "target": "b-cecotec",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-cn-ind-ciarra",
+      "source": "h-cn-ind",
+      "target": "b-ciarra",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-midea-comfee",
+      "source": "h-midea",
+      "target": "b-comfee",
+      "label": "Właściciel"
+    },
+    {
+      "id": "e-gb-ind-falcon",
+      "source": "h-gb-ind",
+      "target": "b-falcon",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-focus",
+      "source": "h-pl-ind",
+      "target": "b-focus",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-goodhome",
+      "source": "h-market",
+      "target": "b-goodhome",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-other-ind-guzzanti",
+      "source": "h-other-ind",
+      "target": "b-guzzanti",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-hendi",
+      "source": "h-other-ind",
+      "target": "b-hendi",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-kuchinox",
+      "source": "h-pl-ind",
+      "target": "b-kuchinox",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-mepamsa",
+      "source": "h-es-ind",
+      "target": "b-mepamsa",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-other-ind-novy",
+      "source": "h-other-ind",
+      "target": "b-novy",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-pkm",
+      "source": "h-de-ind",
+      "target": "b-pkm",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-respekta",
+      "source": "h-de-ind",
+      "target": "b-respekta",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-turboair",
+      "source": "h-it-ind",
+      "target": "b-turboair",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-vidaxl",
+      "source": "h-market",
+      "target": "b-vidaxl",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-cn-ind-amzchef",
+      "source": "h-cn-ind",
+      "target": "b-amzchef",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-ardo",
+      "source": "h-it-ind",
+      "target": "b-ardo",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-arebos",
+      "source": "h-de-ind",
+      "target": "b-arebos",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-cooke-lewis",
+      "source": "h-market",
+      "target": "b-cooke-lewis",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-other-ind-daewoo",
+      "source": "h-other-ind",
+      "target": "b-daewoo",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-lacor",
+      "source": "h-es-ind",
+      "target": "b-lacor",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-oceanic",
+      "source": "h-fr-ind",
+      "target": "b-oceanic",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-schild",
+      "source": "h-pl-ind",
+      "target": "b-schild",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-silvercrest",
+      "source": "h-market",
+      "target": "b-silvercrest",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-other-ind-simfer",
+      "source": "h-other-ind",
+      "target": "b-simfer",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-taurus",
+      "source": "h-es-ind",
+      "target": "b-taurus",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-cn-ind-vevor",
+      "source": "h-cn-ind",
+      "target": "b-vevor",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-vitrokitchen",
+      "source": "h-es-ind",
+      "target": "b-vitrokitchen",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-arset",
+      "source": "h-pl-ind",
+      "target": "b-arset",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-es-ind-cata-can-roca",
+      "source": "h-es-ind",
+      "target": "b-cata-can-roca",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-cn-ind-covercook",
+      "source": "h-cn-ind",
+      "target": "b-covercook",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-fenu",
+      "source": "h-pl-ind",
+      "target": "b-fenu",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-galvamet",
+      "source": "h-it-ind",
+      "target": "b-galvamet",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-de-ind-heinrichs",
+      "source": "h-de-ind",
+      "target": "b-heinrichs",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-cn-ind-hobsir",
+      "source": "h-cn-ind",
+      "target": "b-hobsir",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-iceberg",
+      "source": "h-pl-ind",
+      "target": "b-iceberg",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-kage",
+      "source": "h-pl-ind",
+      "target": "b-kage",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-fr-ind-livoo",
+      "source": "h-fr-ind",
+      "target": "b-livoo",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-melchioni",
+      "source": "h-it-ind",
+      "target": "b-melchioni",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-neto",
+      "source": "h-pl-ind",
+      "target": "b-neto",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-novoterm",
+      "source": "h-pl-ind",
+      "target": "b-novoterm",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-market-obi",
+      "source": "h-market",
+      "target": "b-obi",
+      "label": "Marka własna"
+    },
+    {
+      "id": "e-pl-ind-smartcook",
+      "source": "h-pl-ind",
+      "target": "b-smartcook",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-pl-ind-stella",
+      "source": "h-pl-ind",
+      "target": "b-stella",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-it-ind-tognana",
+      "source": "h-it-ind",
+      "target": "b-tognana",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-cn-ind-vovv",
+      "source": "h-cn-ind",
+      "target": "b-vovv",
+      "label": "Pochodzenie"
+    },
+    {
+      "id": "e-cn-ind-topstrong",
+      "source": "h-cn-ind",
+      "target": "b-topstrong",
+      "label": "Pochodzenie"
     }
   ]
 }
