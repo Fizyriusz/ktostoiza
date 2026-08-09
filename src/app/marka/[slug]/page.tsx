@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import dataset from '@/data/dataset.json';
 import { HomeContent } from '@/app/page';
+import NodeArticle, { type NodeLike } from '@/components/seo/NodeArticle';
 
 export function generateStaticParams() {
   return dataset.nodes
@@ -91,6 +92,18 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
       <Suspense fallback={<div className="bg-[#f8fafc] w-full h-screen" />}>
         <HomeContent />
       </Suspense>
+
+      {/* Mapa przechwytuje zdarzenia kółka (zoom), więc sekcja pod nią jest
+          nieosiągalna scrollem — stąd zakotwiczony skrót. */}
+      <a
+        href="#o-marce"
+        className="fixed bottom-4 left-4 z-[130] flex items-center gap-2 px-4 py-2.5 bg-slate-900/90 backdrop-blur-md text-white rounded-full text-xs font-bold shadow-lg hover:bg-slate-800 transition-colors"
+      >
+        Szczegóły: {node.name}
+        <span aria-hidden="true">↓</span>
+      </a>
+
+      <NodeArticle node={node as NodeLike} />
     </>
   );
 }
