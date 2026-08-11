@@ -122,7 +122,19 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           next.add(target.parentId as string);
           return next;
         });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.8 }), 100);
+        // Marka razem z właścicielem — sam kafel marki nie mówi nic o tym,
+        // do kogo należy, a po to się tu przyszło.
+        setTimeout(
+          () =>
+            fitView({
+              nodes: [{ id: target.id }, { id: target.parentId as string }],
+              duration: 800,
+              padding: 0.35,
+              minZoom: 0.45,
+              maxZoom: 1.2,
+            }),
+          120
+        );
       } else if (target.type === 'holding') {
         setExpandedHoldings(prev => {
           if (prev.has(target.id)) return prev;
@@ -131,10 +143,25 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           next.add(target.id);
           return next;
         });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.8 }), 100);
+        // Kadrujemy całą grupę, nie sam kafel koncernu. Wcześniej fitView
+        // dostawał jeden węzeł, więc widok dojeżdżał do napisu z nazwą
+        // koncernu — a interesujące jest to, co pod nim wisi.
+        setTimeout(() => {
+          const childIds = childMap.get(target.id) || [];
+          fitView({
+            nodes: [{ id: target.id }, ...childIds.map(id => ({ id }))],
+            duration: 800,
+            padding: 0.2,
+            // Etykiety marek gasną poniżej 0.45, więc najliczniejsze grupy
+            // zmieściłyby się w kadrze jako bezimienne kółka. Lepiej wylądować
+            // na czytelnym przybliżeniu i dać doprzewijać resztę.
+            minZoom: 0.45,
+            maxZoom: 1.2,
+          });
+        }, 120);
       }
     }
-  }, [selectedNodes, fitView]);
+  }, [selectedNodes, fitView, getViewport]);
 
   // Layout generation depends on expandedHoldings and showOEM
   const { initialNodes, initialEdges } = useMemo(() => {
