@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { useReactFlow } from '@xyflow/react';
 import { useSearchParams, useParams } from 'next/navigation';
 import { Search, X } from 'lucide-react';
 import dataset from '@/data/dataset.json';
@@ -29,7 +28,6 @@ interface FlowInternalsProps {
 }
 
 export default function FlowInternals({ onNodeSelect }: FlowInternalsProps) {
-  const { fitView } = useReactFlow();
   const searchParams = useSearchParams();
   const params = useParams();
   const [query, setQuery] = useState('');
@@ -43,11 +41,12 @@ export default function FlowInternals({ onNodeSelect }: FlowInternalsProps) {
     if (resolvedSlug) {
       const match = dataset.nodes.find(n => n.seo_slug === resolvedSlug || n.name.toLowerCase() === resolvedSlug.toLowerCase());
       if (match) {
-        fitView({ nodes: [{ id: match.id }], duration: 1500, padding: 1.8 });
         onNodeSelect(match as any);
       }
     }
-  }, [searchParams, fitView, onNodeSelect]);
+    // Kadrowaniem zajmuje się GraphMap w reakcji na zaznaczenie — dwa
+    // komponenty ruszające widokiem naraz dawały szarpane, zbyt ciasne ujęcie.
+  }, [searchParams, onNodeSelect]);
 
   useEffect(() => {
     if (query.trim().length < 1) {
@@ -78,17 +77,11 @@ export default function FlowInternals({ onNodeSelect }: FlowInternalsProps) {
     setQuery(result.name);
     setOpen(false);
 
-    fitView({
-      nodes: [{ id: result.id }],
-      duration: 900,
-      padding: 1.8,
-    });
-
     const nodeData = dataset.nodes.find((n) => n.id === result.id);
     if (nodeData) {
       onNodeSelect(nodeData);
     }
-  }, [fitView, onNodeSelect]);
+  }, [onNodeSelect]);
 
   const clearSearch = () => {
     setQuery('');
