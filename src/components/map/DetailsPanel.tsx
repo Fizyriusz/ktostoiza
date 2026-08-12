@@ -42,7 +42,7 @@ interface DetailsPanelProps {
 
 import dataset from '@/data/dataset.json';
 
-function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: GraphNodeData, onClose: () => void, onCompare?: () => void, isSideBySide: boolean }) {
+function SingleNodeDetails({ node, onClose, onCompare, isSideBySide, compact = false }: { node: GraphNodeData, onClose: () => void, onCompare?: () => void, isSideBySide: boolean, compact?: boolean }) {
   const [imgError, setImgError] = useState(false);
   const [content, setContent] = React.useState<{ news: any[], blogs: any[] }>({ news: [], blogs: [] });
 
@@ -74,13 +74,27 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
             <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md">Marka</span>
           )}
         </div>
-        <button 
-          onClick={onClose}
-          className="p-2 -mr-2 bg-slate-50 rounded-full hover:bg-slate-200 transition-colors text-slate-500"
-          aria-label="Zamknij"
-        >
-          <X className="w-4 h-4" />
-        </button>
+        <div className="flex items-center gap-2 -mr-2">
+          {/* W podglądzie pełny przycisk porównania nie mieści się nad krawędzią,
+              więc zostaje z niego samo kółko obok zamknięcia. */}
+          {compact && !isSideBySide && onCompare && (
+            <button
+              onClick={onCompare}
+              className="w-9 h-9 shrink-0 bg-slate-900 text-white rounded-full flex items-center justify-center text-[10px] font-black tracking-widest hover:bg-slate-800 transition-colors shadow-sm"
+              aria-label="Zestaw z inną marką"
+              title="Zestaw z inną marką"
+            >
+              VS
+            </button>
+          )}
+          <button
+            onClick={onClose}
+            className="p-2 bg-slate-50 rounded-full hover:bg-slate-200 transition-colors text-slate-500"
+            aria-label="Zamknij"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
       </div>
 
       <div className="p-6 flex flex-col items-center border-b border-slate-50 bg-gradient-to-b from-slate-50/50 to-white">
@@ -126,9 +140,9 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
           </div>
         )}
 
-        {!isSideBySide && onCompare && (
-          <button 
-            onClick={onCompare} 
+        {!compact && !isSideBySide && onCompare && (
+          <button
+            onClick={onCompare}
             className="mt-3 px-4 py-2 pb-[10px] bg-slate-900 border border-slate-700 rounded-xl text-white text-sm font-semibold w-full transition-colors hover:bg-slate-800 shadow-sm flex items-center justify-center gap-2 group relative overflow-hidden"
           >
             <span className="relative z-10">Zestaw z inną marką</span>
@@ -301,8 +315,10 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
   );
 }
 
-/** Arkusz zatrzymuje się na tej wysokości; widoczna zostaje górna część. */
-const PEEK_OFFSET = '48%';
+/** Zsunięcie arkusza w pozycji podglądu. Dobrane tak, żeby widoczna część
+ *  kończyła się tuż pod plakietką z krajem — dalej zaczyna się treść, po którą
+ *  trzeba świadomie sięgnąć. */
+const PEEK_OFFSET = '66%';
 
 const mobileQuery = '(max-width: 639px)';
 const subscribeToViewport = (onChange: () => void) => {
@@ -403,6 +419,7 @@ export default function DetailsPanel({ nodes, onClose, onRequestCompare }: Detai
                   node={node}
                   onClose={() => onClose(node.id)}
                   isSideBySide={isMulti}
+                  compact={isMobile && !expanded}
                   onCompare={onRequestCompare ? () => onRequestCompare(node) : undefined}
                 />
               </div>
