@@ -93,8 +93,10 @@ interface GraphMapProps {
 }
 
 export default function GraphMap({ activeFilter = 'all', showOEM = false, selectedNodes = [], onNodeSelect }: GraphMapProps) {
-  const { fitView, getViewport, setViewport } = useReactFlow();
-  const savedViewportRef = useRef<any>(null);
+  const { fitView } = useReactFlow();
+  /** Kliknięcie w węzeł samo ustawia kamerę, więc efekt reagujący na zmianę
+   *  zaznaczenia musi wtedy odpuścić — inaczej obie animacje biją się o widok. */
+  const skipFocusRef = useRef(false);
   const childOffsetsRef = useRef<Map<string, { dx: number; dy: number }>>(new Map());
   const draggedHoldingId = useRef<string | null>(null);
   const manualPositionsRef = useRef<Map<string, { x: number; y: number }>>(new Map());
@@ -109,32 +111,61 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       .catch(console.error);
   }, []);
 
-  // Listen to external selection (like searches and Quick Jump) to expand and zoom
+  /** Kadr na koncern wraz z jego markami. Sam kafel koncernu to napis z nazwą,
+   *  a interesujące jest to, co pod nim wisi. minZoom trzyma etykiety marek
+   *  zapalone — gasną poniżej 0.45, więc największe grupy zmieściłyby się
+   *  w kadrze jako bezimienne kółka. */
+  const focusOnHolding = useCallback(
+    (holdingId: string) => {
+      const childIds = childMap.get(holdingId) || [];
+      fitView({
+        nodes: [{ id: holdingId }, ...childIds.map(id => ({ id }))],
+        duration: 800,
+        padding: 0.2,
+        minZoom: 0.45,
+        maxZoom: 1.2,
+      });
+    },
+    [fitView]
+  );
+
+  const showWholeMap = useCallback(() => {
+    fitView({ duration: 700, padding: 0.15 });
+  }, [fitView]);
+
+  // Zaznaczenie przychodzące z zewnątrz: wyszukiwarka, Szybki Skok, Tournée,
+  // deep link. Kliknięcia w mapę obsługuje handleNodeClick i podnosi flagę,
+  // żeby ten efekt nie dokładał drugiej animacji kamery.
   useEffect(() => {
-    if (selectedNodes && selectedNodes.length > 0) {
-      const target = selectedNodes[selectedNodes.length - 1]; // most recent
-      // Auto-expand its parent if it's a brand
-      if (target.type === 'brand' && 'parentId' in target && target.parentId) {
-        setExpandedHoldings(prev => {
-          if (prev.has(target.parentId as string)) return prev;
-          const next = new Set(prev);
-          savedViewportRef.current = getViewport();
-          next.add(target.parentId as string);
-          return next;
-        });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.8 }), 100);
-      } else if (target.type === 'holding') {
-        setExpandedHoldings(prev => {
-          if (prev.has(target.id)) return prev;
-          const next = new Set(prev);
-          savedViewportRef.current = getViewport();
-          next.add(target.id);
-          return next;
-        });
-        setTimeout(() => fitView({ nodes: [{ id: target.id }], duration: 800, padding: 0.8 }), 100);
-      }
+    if (skipFocusRef.current) {
+      skipFocusRef.current = false;
+      return;
     }
-  }, [selectedNodes, fitView]);
+    if (!selectedNodes || selectedNodes.length === 0) return;
+
+    const target = selectedNodes[selectedNodes.length - 1];
+
+    if (target.type === 'brand' && 'parentId' in target && target.parentId) {
+      const parentId = target.parentId as string;
+      setExpandedHoldings(prev => (prev.has(parentId) ? prev : new Set(prev).add(parentId)));
+      // Marka razem z właścicielem — sam kafel marki nie mówi nic o tym,
+      // do kogo należy, a po to się tu przyszło.
+      setTimeout(
+        () =>
+          fitView({
+            nodes: [{ id: target.id }, { id: parentId }],
+            duration: 800,
+            padding: 0.35,
+            minZoom: 0.45,
+            maxZoom: 1.2,
+          }),
+        120
+      );
+    } else if (target.type === 'holding') {
+      setExpandedHoldings(prev => (prev.has(target.id) ? prev : new Set(prev).add(target.id)));
+      setTimeout(() => focusOnHolding(target.id), 120);
+    }
+  }, [selectedNodes, fitView, focusOnHolding]);
 
   // Layout generation depends on expandedHoldings and showOEM
   const { initialNodes, initialEdges } = useMemo(() => {
@@ -215,22 +246,27 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           const holdingBrands = brands.filter(b => childIds.includes(b.id));
 
           if (holdingBrands.length > 10) {
-            // COMPACT GRID layout for large groups
-            const columns = 5;
+            // COMPACT GRID layout for large groups.
+            // Sztywne 5 kolumn dawało dla 35 marek blok 5x7 — wysoki i wąski,
+            // przez co kadrowanie grupy musiało odjeżdżać. Liczba kolumn
+            // wychodzi teraz z pierwiastka, więc blok jest bliżej kwadratu.
+            const columns = Math.min(6, Math.ceil(Math.sqrt(holdingBrands.length)));
             const cellW = 110;
             const cellH = 110;
             const gap = 15;
             const stepW = cellW + gap;
             const stepH = cellH + gap;
-            
-            const totalW = (Math.min(holdingBrands.length, columns) - 1) * stepW;
-            const startX = hX - totalW / 2;
+
             const startY = hY + 160;
 
             holdingBrands.forEach((brand, bIndex) => {
               const bCol = bIndex % columns;
               const bRow = Math.floor(bIndex / columns);
-              const bX = startX + bCol * stepW;
+              // Każdy rząd centrowany osobno — przy niepełnym ostatnim rzędzie
+              // marki lądowały dosunięte do lewej i grupa wyglądała na krzywą.
+              const inThisRow = Math.min(columns, holdingBrands.length - bRow * columns);
+              const rowWidth = (inThisRow - 1) * stepW;
+              const bX = hX - rowWidth / 2 + bCol * stepW;
               const bY = startY + bRow * stepH;
 
               nodes.push({
@@ -437,25 +473,6 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
   );
 
   const handleNodeClick = useCallback((e: React.MouseEvent, node: Node) => {
-    if (!showOEM && node.type === 'holding') {
-      setExpandedHoldings(prev => {
-        const next = new Set(prev);
-        if (next.has(node.id)) {
-          next.delete(node.id);
-          if (savedViewportRef.current) {
-            setTimeout(() => setViewport(savedViewportRef.current, { duration: 800 }), 50);
-          } else {
-            setTimeout(() => fitView({ duration: 800, padding: 0.8 }), 50);
-          }
-        }
-        else {
-          savedViewportRef.current = getViewport();
-          next.add(node.id);
-        }
-        return next;
-      });
-    }
-    
     // W trybie OEM id węzła jest prefiksowane (oem-<producent>-<marka>), więc
     // oryginalne id bierzemy z data — rozbijanie stringa po myślnikach gubiło je,
     // gdy id producenta miało więcej niż dwa człony.
@@ -465,9 +482,38 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       const found = dataset.nodes.find(n => n.id === realId);
       if (found) realData = found as any;
     }
-    
-    onNodeSelect?.(realData as unknown as GraphNodeData, e.shiftKey);
-  }, [onNodeSelect, showOEM]);
+    const payload = realData as unknown as GraphNodeData;
+
+    if (!showOEM && node.type === 'holding') {
+      const isExpanded = expandedHoldings.has(node.id);
+      const isSelected = selectedNodes.some(n => n.id === payload.id);
+
+      // Zaznaczenie ruszamy tylko wtedy, gdy ma się faktycznie zmienić.
+      // Zamknięcie panelu krzyżykiem czyści zaznaczenie, ale zostawia grupę
+      // rozwiniętą — bezwarunkowe przełączanie dokładało ją wtedy z powrotem
+      // do zaznaczenia, efekt natychmiast rozwijał ją na nowo i dwie animacje
+      // kamery biły się o widok.
+      const changesSelection = e.shiftKey || (isExpanded ? isSelected : !isSelected);
+      if (changesSelection) skipFocusRef.current = true;
+
+      setExpandedHoldings(prev => {
+        const next = new Set(prev);
+        if (isExpanded) next.delete(node.id);
+        else next.add(node.id);
+        return next;
+      });
+
+      // Zwinięcie wraca do podglądu całej mapy. Wcześniej przywracaliśmy widok
+      // zapamiętany przed rozwinięciem, ale po ręcznym przesunięciu kamery
+      // "widok sprzed" bywał dowolnym miejscem, więc powrót wyglądał losowo.
+      setTimeout(() => (isExpanded ? showWholeMap() : focusOnHolding(node.id)), isExpanded ? 60 : 130);
+
+      if (changesSelection) onNodeSelect?.(payload, e.shiftKey);
+      return;
+    }
+
+    onNodeSelect?.(payload, e.shiftKey);
+  }, [onNodeSelect, showOEM, expandedHoldings, selectedNodes, focusOnHolding, showWholeMap]);
 
   // ── DragStart ────────────────────────────────────────────────────────────
   const handleNodeDragStart = useCallback((_e: React.MouseEvent, node: Node) => {
