@@ -242,22 +242,27 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
           const holdingBrands = brands.filter(b => childIds.includes(b.id));
 
           if (holdingBrands.length > 10) {
-            // COMPACT GRID layout for large groups
-            const columns = 5;
+            // COMPACT GRID layout for large groups.
+            // Sztywne 5 kolumn dawało dla 35 marek blok 5x7 — wysoki i wąski,
+            // przez co kadrowanie grupy musiało odjeżdżać. Liczba kolumn
+            // wychodzi teraz z pierwiastka, więc blok jest bliżej kwadratu.
+            const columns = Math.min(6, Math.ceil(Math.sqrt(holdingBrands.length)));
             const cellW = 110;
             const cellH = 110;
             const gap = 15;
             const stepW = cellW + gap;
             const stepH = cellH + gap;
-            
-            const totalW = (Math.min(holdingBrands.length, columns) - 1) * stepW;
-            const startX = hX - totalW / 2;
+
             const startY = hY + 160;
 
             holdingBrands.forEach((brand, bIndex) => {
               const bCol = bIndex % columns;
               const bRow = Math.floor(bIndex / columns);
-              const bX = startX + bCol * stepW;
+              // Każdy rząd centrowany osobno — przy niepełnym ostatnim rzędzie
+              // marki lądowały dosunięte do lewej i grupa wyglądała na krzywą.
+              const inThisRow = Math.min(columns, holdingBrands.length - bRow * columns);
+              const rowWidth = (inThisRow - 1) * stepW;
+              const bX = hX - rowWidth / 2 + bCol * stepW;
               const bY = startY + bRow * stepH;
 
               nodes.push({
@@ -465,24 +470,28 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
 
   const handleNodeClick = useCallback((e: React.MouseEvent, node: Node) => {
     if (!showOEM && node.type === 'holding') {
-      setExpandedHoldings(prev => {
-        const next = new Set(prev);
-        if (next.has(node.id)) {
+      // Zapis widoku i fitView siedziały wcześniej wewnątrz funkcji
+      // aktualizującej stan, którą React może wywołać więcej niż raz —
+      // przy powtórce zapamiętywany był widok już przybliżony, więc powrót
+      // po zwinięciu nigdzie nie wracał. Efekty uboczne są teraz na zewnątrz.
+      if (expandedHoldings.has(node.id)) {
+        const saved = savedViewportRef.current;
+        savedViewportRef.current = null;
+        setExpandedHoldings(prev => {
+          const next = new Set(prev);
           next.delete(node.id);
-          if (savedViewportRef.current) {
-            setTimeout(() => setViewport(savedViewportRef.current, { duration: 800 }), 50);
-          } else {
-            setTimeout(() => fitView({ duration: 800, padding: 0.8 }), 50);
-          }
-        }
-        else {
-          savedViewportRef.current = getViewport();
-          next.add(node.id);
-        }
-        return next;
-      });
+          return next;
+        });
+        setTimeout(() => {
+          if (saved) setViewport(saved, { duration: 700 });
+          else fitView({ duration: 700, padding: 0.15 });
+        }, 60);
+      } else {
+        savedViewportRef.current = getViewport();
+        setExpandedHoldings(prev => new Set(prev).add(node.id));
+      }
     }
-    
+
     // W trybie OEM id węzła jest prefiksowane (oem-<producent>-<marka>), więc
     // oryginalne id bierzemy z data — rozbijanie stringa po myślnikach gubiło je,
     // gdy id producenta miało więcej niż dwa człony.
@@ -492,9 +501,9 @@ export default function GraphMap({ activeFilter = 'all', showOEM = false, select
       const found = dataset.nodes.find(n => n.id === realId);
       if (found) realData = found as any;
     }
-    
+
     onNodeSelect?.(realData as unknown as GraphNodeData, e.shiftKey);
-  }, [onNodeSelect, showOEM]);
+  }, [onNodeSelect, showOEM, expandedHoldings, getViewport, setViewport, fitView]);
 
   // ── DragStart ────────────────────────────────────────────────────────────
   const handleNodeDragStart = useCallback((_e: React.MouseEvent, node: Node) => {

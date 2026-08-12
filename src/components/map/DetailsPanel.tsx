@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Factory, Globe2, BookOpen, Link2, Info, ShoppingCart, Newspaper } from 'lucide-react';
+import { motion, AnimatePresence, useDragControls, type PanInfo } from 'framer-motion';
+import { X, ExternalLink, Factory, BookOpen, Link2, ShoppingCart, Newspaper, ChevronUp } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
 
 function getCountryCode(countryStr: string) {
@@ -301,42 +301,115 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide }: { node: G
   );
 }
 
+/** Arkusz zatrzymuje się na tej wysokości; widoczna zostaje górna część. */
+const PEEK_OFFSET = '48%';
+
+const mobileQuery = '(max-width: 639px)';
+const subscribeToViewport = (onChange: () => void) => {
+  const mq = window.matchMedia(mobileQuery);
+  mq.addEventListener('change', onChange);
+  return () => mq.removeEventListener('change', onChange);
+};
+
+/** useSyncExternalStore zamiast useState+useEffect — bez setState w efekcie
+ *  i bez rozjazdu przy hydracji (na serwerze zawsze desktop). */
+function useIsMobile() {
+  return React.useSyncExternalStore(
+    subscribeToViewport,
+    () => window.matchMedia(mobileQuery).matches,
+    () => false
+  );
+}
+
 export default function DetailsPanel({ nodes, onClose, onRequestCompare }: DetailsPanelProps) {
+  const isMobile = useIsMobile();
+  const dragControls = useDragControls();
+  const [expanded, setExpanded] = useState(false);
+
+  const selectionKey = nodes.map(n => n.id).join('-');
+  const [lastSelection, setLastSelection] = useState(selectionKey);
+  if (selectionKey !== lastSelection) {
+    // Nowy węzeł otwiera się zawsze w pozycji podglądu.
+    setLastSelection(selectionKey);
+    setExpanded(false);
+  }
+
   if (!nodes || nodes.length === 0) return null;
 
   const isMulti = nodes.length > 1;
 
+  const handleDragEnd = (_e: unknown, info: PanInfo) => {
+    const draggedUp = info.offset.y < -50 || info.velocity.y < -500;
+    const draggedDown = info.offset.y > 50 || info.velocity.y > 500;
+
+    if (draggedUp) setExpanded(true);
+    // Z pozycji podglądu ruch w dół zamyka panel, z rozwiniętej tylko go składa.
+    else if (draggedDown) (expanded ? setExpanded(false) : onClose());
+  };
+
   return (
     <AnimatePresence>
+      {/* Zewnętrzna warstwa trzyma pozycję zatrzaskową (podgląd / pełny) oraz
+          wejście i wyjście. Wewnętrzna odpowiada wyłącznie za sprężynę pod
+          palcem — gdyby oba sterowały tym samym `y`, przeciągnięcie kasowałoby
+          przesunięcie podglądu i arkusz wskakiwałby na pełną wysokość. */}
       <motion.div
-        key={nodes.map(n => n.id).join('-')}
-        initial={{ opacity: 0, y: '100%', x: 0 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        exit={{ opacity: 0, y: '100%', x: 0 }}
-        transition={{ type: 'spring', damping: 28, stiffness: 220 }}
+        key={selectionKey}
+        initial={{ opacity: 0, y: '100%' }}
+        animate={{ opacity: 1, y: isMobile && !expanded ? PEEK_OFFSET : '0%' }}
+        exit={{ opacity: 0, y: '100%' }}
+        transition={{ type: 'spring', damping: 30, stiffness: 260 }}
         className={`
-          absolute z-50 flex flex-col sm:flex-row overflow-hidden
-          bg-white sm:bg-transparent
-          /* Mobile: full-width bottom sheet (stacked vertically if 2) */
-          bottom-0 left-0 right-0 max-h-[85vh] rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)]
+          absolute z-50 flex flex-col sm:flex-row
+          /* Mobile: arkusz pełnej wysokości, zsunięty w dół do pozycji podglądu */
+          bottom-0 left-0 right-0 h-[88svh]
           /* Desktop */
-          sm:bottom-4 sm:top-4 sm:left-auto sm:right-4 sm:max-h-none sm:rounded-3xl sm:shadow-none
+          sm:h-auto sm:bottom-4 sm:top-4 sm:left-auto sm:right-4
           ${isMulti ? 'sm:w-[700px]' : 'sm:w-[400px]'}
         `}
       >
-        <div className={`flex flex-col sm:flex-row w-full h-full overflow-y-auto sm:overflow-hidden rounded-t-3xl sm:rounded-3xl shadow-2xl divide-y sm:divide-y-0 sm:divide-x divide-slate-200 border border-slate-200 ${isMulti ? 'bg-slate-100' : 'bg-white'}`}>
-          {nodes.map(node => (
-            <div key={node.id} className="flex-1 sm:overflow-y-auto min-w-[300px]">
-              <SingleNodeDetails 
-                node={node} 
-                onClose={() => onClose(node.id)} 
-                isSideBySide={isMulti} 
-                onCompare={onRequestCompare ? () => onRequestCompare(node) : undefined}
-              />
-            </div>
-          ))}
-        </div>
-        
+        <motion.div
+          drag={isMobile ? 'y' : false}
+          dragListener={false}
+          dragControls={dragControls}
+          dragConstraints={{ top: 0, bottom: 0 }}
+          dragElastic={{ top: 0.05, bottom: 0.35 }}
+          onDragEnd={handleDragEnd}
+          className="flex flex-col sm:flex-row w-full h-full overflow-hidden bg-white sm:bg-transparent rounded-t-3xl sm:rounded-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.12)] sm:shadow-none"
+        >
+          {/* Uchwyt — przeciąganie tylko stąd, żeby nie kolidowało ze scrollem treści */}
+          <div
+            onPointerDown={event => dragControls.start(event)}
+            onClick={() => setExpanded(v => !v)}
+            className="sm:hidden shrink-0 flex flex-col items-center gap-1 pt-2.5 pb-2 bg-white touch-none select-none cursor-grab active:cursor-grabbing"
+          >
+            <div className="w-10 h-1 rounded-full bg-slate-300" />
+            <motion.div
+              className="flex items-center gap-1.5 text-slate-400"
+              animate={expanded ? { y: 0 } : { y: [0, -3, 0] }}
+              transition={expanded ? undefined : { repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+            >
+              <ChevronUp className={`w-3.5 h-3.5 transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} />
+              <span className="text-[9px] font-black uppercase tracking-[0.15em]">
+                {expanded ? 'Przeciągnij w dół' : 'Przeciągnij po więcej'}
+              </span>
+            </motion.div>
+          </div>
+
+          <div className={`flex flex-col sm:flex-row w-full flex-1 min-h-0 overflow-y-auto sm:overflow-hidden sm:rounded-3xl shadow-2xl divide-y sm:divide-y-0 sm:divide-x divide-slate-200 border border-slate-200 ${isMulti ? 'bg-slate-100' : 'bg-white'}`}>
+            {nodes.map(node => (
+              <div key={node.id} className="flex-1 sm:overflow-y-auto min-w-[300px]">
+                <SingleNodeDetails
+                  node={node}
+                  onClose={() => onClose(node.id)}
+                  isSideBySide={isMulti}
+                  onCompare={onRequestCompare ? () => onRequestCompare(node) : undefined}
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Render a sticky "vs" badge if multi-select and desktop */}
         {isMulti && (
           <div className="hidden sm:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-slate-900 text-white rounded-full items-center justify-center font-black tracking-widest text-xs shadow-xl border-4 border-white pointer-events-none z-50">
