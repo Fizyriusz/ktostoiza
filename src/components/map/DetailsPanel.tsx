@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, useDragControls, type PanInfo } from 'framer-motion';
 import { X, ExternalLink, Factory, BookOpen, Link2, ShoppingCart, Newspaper, ChevronUp } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
+import { SHOW_OEM } from '@/config/features';
 
 function getCountryCode(countryStr: string) {
   if (!countryStr) return 'un';
@@ -64,10 +65,10 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide, compact = f
           {node.type === 'holding' && (
             <span className="bg-slate-800 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md">Koncern</span>
           )}
-          {node.type === 'holding' && 'isOEM' in node && node.isOEM && (
+          {SHOW_OEM && node.type === 'holding' && 'isOEM' in node && node.isOEM && (
             <span className="bg-fuchsia-900 text-fuchsia-100 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md flex items-center gap-1.5"><Factory className="w-3 h-3 text-fuchsia-300" /> OEM</span>
           )}
-          {node.type === 'manufacturer' && (
+          {SHOW_OEM && node.type === 'manufacturer' && (
             <span className="bg-slate-900 text-slate-300 border border-slate-700 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-md flex items-center gap-1.5"><Factory className="w-3 h-3" /> Fabryka (OEM)</span>
           )}
           {node.type === 'brand' && (
@@ -224,7 +225,7 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide, compact = f
           </div>
         )}
 
-        {node.type === 'brand' && node.producedBy && node.producedBy.length > 0 && (
+        {SHOW_OEM && node.type === 'brand' && node.producedBy && node.producedBy.length > 0 && (
           <div className="bg-fuchsia-50/50 p-5 rounded-2xl shadow-sm border border-fuchsia-100">
             <h4 className="flex items-center gap-2 text-xs font-black text-fuchsia-800 uppercase tracking-widest mb-3 border-b border-fuchsia-100 pb-2">
               <Factory className="w-4 h-4 text-fuchsia-500" /> Realna Produkcja (OEM)

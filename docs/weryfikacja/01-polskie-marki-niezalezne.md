@@ -87,8 +87,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy Kuchenne |
-| fabryki w PL | Produkcja OEM (głównie Turcja i Chiny). |
-| producent (OEM) | Producenci kontraktowi (różni) `m-oem-various` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/arset` |
 | linki zakupowe | — |
@@ -97,10 +97,9 @@
 
 **Historia przejęć:** Niezależny polski podmiot handlowy.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -121,8 +120,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Szerokie Portfolio (Głównie Okapy) |
 | kategorie | Okapy Kuchenne, Akcesoria kuchenne, Małe AGD |
-| fabryki w PL | Produkcja kontraktowa (OEM) w Chinach i Turcji. |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/berdsen` |
 | linki zakupowe | — |
@@ -131,10 +130,9 @@
 
 **Historia przejęć:** Marka należąca do polskiej grupy kapitałowej koncentrującej się na handlu elektronicznym.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -187,7 +185,7 @@
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy Kuchenne, Systemy wyciągowe |
 | fabryki w PL | Własna fabryka w Sanoku (woj. podkarpackie). |
-| producent (OEM) | Ciarko (Sanok) `m-ciarko-sanok` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/ciarkodesign.svg` |
 | adres strony | `/marka/ciarko` |
 | linki zakupowe | — |
@@ -195,6 +193,8 @@
 **Opis:** Największy polski producent okapów kuchennych z siedzibą w Sanoku. Firma przeszła drogę od małego warsztatu do jednego z najnowocześniejszych zakładów w Europie, dostarczając produkty pod własną marką (w tym luksusową linię Ciarko Design) oraz produkując dla największych światowych koncernów.
 
 **Historia przejęć:** Rodzinna firma z polskim kapitałem, stale reinwestująca w automatyzację i design.
+
+**Brakuje:** producent (OEM)
 
 ---
 
@@ -246,7 +246,7 @@
 | struktura | Przedsiębiorstwo Prywatne (PL) |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Lodówki podblatowe, Pralki wirnikowe, Kuchnie wolnostojące |
-| fabryki w PL | _Brak. Działalność importerska z rynków azjatyckich._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/electro-line.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/electro-line` |
@@ -277,8 +277,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Szerokie Portfolio (Zabudowa) |
 | kategorie | Okapy Kuchenne, Płyty Grzewcze |
-| fabryki w PL | Produkcja OEM. |
-| producent (OEM) | Producenci kontraktowi (różni) `m-oem-various` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/fenu` |
 | linki zakupowe | — |
@@ -287,10 +287,9 @@
 
 **Historia przejęć:** Marka rozwijana przez polskich importerów.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -311,8 +310,8 @@
 | struktura | Przedsiębiorstwo Prywatne (PL) |
 | zakres produktów | Szerokie Portfolio (Zabudowa) |
 | kategorie | Okapy Kuchenne, Piekarniki, Płyty Grzewcze |
-| fabryki w PL | Produkcja mieszana (własny montaż / OEM). |
-| producent (OEM) | Focus AGD `m-focus-agd` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/focus` |
 | linki zakupowe | — |
@@ -321,7 +320,7 @@
 
 **Historia przejęć:** Niezależna marka zarządzana przez Focus AGD Sp. z o.o.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -406,8 +405,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Okapy Kuchenne, Chłodnictwo, Zamrażarki |
-| fabryki w PL | Produkcja OEM (Turcja, Chiny). |
-| producent (OEM) | Producenci kontraktowi (różni) `m-oem-various` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/iceberg` |
 | linki zakupowe | — |
@@ -416,10 +415,9 @@
 
 **Historia przejęć:** Niezależna marka zarządzana przez krajowych importerów.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -440,8 +438,8 @@
 | struktura | Przedsiębiorstwo Prywatne (PL) |
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy kuchenne, Akcesoria wentylacyjne |
-| fabryki w PL | Częściowy montaż lub produkcja kontraktowa w Polsce. |
-| producent (OEM) | Producent nieustalony `m-id-unknown` ⚠️ zastępnik |
+| fabryki w PL | Częściowy montaż w Polsce. |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/kage` |
 | linki zakupowe | — |
@@ -450,10 +448,9 @@
 
 **Historia przejęć:** Niezależny brand rozwijany w ramach partnerstw produkcyjnych.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -474,8 +471,8 @@
 | struktura | Przedsiębiorstwo Prywatne (PL) |
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki, Pralki, Zmywarki, Piekarniki, Płyty grzewcze, Okapy, Zlewozmywaki |
-| fabryki w PL | _Brak własnych fabryk. Model OEM: produkcja zlecana zewnętrznym partnerom w celu optymalizacji kosztów. Główni dostawcy to turecki Vestel (lodówki, pralki) oraz polska Amica (kuchnie)._ |
-| producent (OEM) | Vestel `h-vestel`<br>Amica Group `h-amica` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/kernau.png` |
 | adres strony | `/marka/kernau` |
 | linki zakupowe | — |
@@ -483,6 +480,8 @@
 **Opis:** Polska marka oferująca pełne spektrum dużego AGD z długą gwarancją.
 
 **Historia przejęć:** Niezależna polska marka należąca do GT Group.
+
+**Brakuje:** producent (OEM)
 
 ---
 
@@ -503,7 +502,7 @@
 | struktura | Przedsiębiorstwo Prywatne (PL) |
 | zakres produktów | Pełne Portfolio |
 | kategorie | Zmywarki, Piekarniki, Płyty indukcyjne, Lodówki do zabudowy, Kuchenki mikrofalowe |
-| fabryki w PL | _Brak własnej fabryki. Produkty zlecane do zaufanych fabryk OEM (często tureckich)._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/kluge.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/kluge` |
@@ -535,7 +534,7 @@
 | zakres produktów | Specjalista: Zlewozmywaki i Armatura |
 | kategorie | Zlewozmywaki, Baterie kuchenne, Akcesoria kuchenne |
 | fabryki w PL | Własna produkcja zlewozmywaków granitowych w Polsce. |
-| producent (OEM) | Kuchinox Polska `m-kuchinox-polska` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/kuchinox` |
 | linki zakupowe | — |
@@ -544,7 +543,7 @@
 
 **Historia przejęć:** Marka powiązana kapitałowo z grupą Laveo.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -598,7 +597,7 @@
 | struktura | Niezależna Marka |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Lodówki, Pralki, Kuchnie wolnostojące, Zamrażarki |
-| fabryki w PL | _Brak produkcji. Import bezpośredni (OEM) z azjatyckich fabryk._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/lin.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/lin` |
@@ -660,8 +659,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Specjalista: Małe AGD |
 | kategorie | Odkurzacze, Nawilżacze, Akcesoria kuchenne, Małe AGD |
-| fabryki w PL | Produkcja typu OEM, głównie w Chinach. |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/malatec` |
 | linki zakupowe | — |
@@ -670,10 +669,9 @@
 
 **Historia przejęć:** Własność firmy Kruzzel / ISO Trade.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -694,7 +692,7 @@
 | struktura | Spółka Publiczna (PL) |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Lodówki wolnostojące, Chłodziarki barowe, Zamrażarki |
-| fabryki w PL | _Brak zaplecza produkcyjnego AGD w Polsce. Import OEM/ODM._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/manta.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/manta` |
@@ -725,8 +723,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Specjalista: Akcesoria Kuchenne |
 | kategorie | Okapy Kuchenne, Zlewozmywaki |
-| fabryki w PL | Produkcja OEM. |
-| producent (OEM) | Producenci kontraktowi (różni) `m-oem-various` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/neto` |
 | linki zakupowe | — |
@@ -735,10 +733,9 @@
 
 **Historia przejęć:** Marka zarządzana przez lokalnych dystrybutorów AGD.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -791,7 +788,7 @@
 | zakres produktów | Szerokie Portfolio (Wyposażenie) |
 | kategorie | Okapy Kuchenne, Zlewozmywaki, Armatura |
 | fabryki w PL | Produkcja mieszana; własne zaplecze projektowe i logistyczne w Polsce. |
-| producent (OEM) | Novoterm (Szczecin) `m-novoterm-szczecin` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/novoterm` |
 | linki zakupowe | — |
@@ -800,7 +797,7 @@
 
 **Historia przejęć:** Polska firma rodzinna.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -854,7 +851,7 @@
 | struktura | Przedsiębiorstwo Prywatne (PL) |
 | zakres produktów | Szerokie Portfolio (Budżetowe) |
 | kategorie | Chłodziarki turystyczne, Lodówki podblatowe, Kuchnie gazowe nastawne, Wentylatory i klimatyzatory |
-| fabryki w PL | _Brak własnych fabryk. Model czysto importerski/OEM. Produkcja w Chinach (małe AGD, winiarki) oraz Turcji (kuchnie gazowe)._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/ravanson.png` |
 | adres strony | `/marka/ravanson` |
@@ -886,7 +883,7 @@
 | zakres produktów | Specjalista: Gotowanie i Okapy |
 | kategorie | Okapy Kuchenne, Płyty Indukcyjne, Piekarniki |
 | fabryki w PL | Produkcja mieszana (Polska/Turcja). |
-| producent (OEM) | Producent nieustalony `m-id-unknown` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/schild` |
 | linki zakupowe | — |
@@ -895,10 +892,9 @@
 
 **Historia przejęć:** Niezależna marka rozwijana przez dystrybutorów AGD.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -919,8 +915,8 @@
 | struktura | Marka Dystrybutorska (PL) |
 | zakres produktów | Specjalista: Gotowanie |
 | kategorie | Płyty Indukcyjne, Piekarniki, Okapy |
-| fabryki w PL | Produkcja OEM. |
-| producent (OEM) | Producenci kontraktowi (różni) `m-oem-various` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/smartcook` |
 | linki zakupowe | — |
@@ -929,10 +925,9 @@
 
 **Historia przejęć:** Niezależny brand rozwijany przez dystrybutorów technologii kuchennych.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -953,7 +948,7 @@
 | struktura | Niezależna Marka |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Piekarniki, Płyty grzewcze, Okapy, Zmywarki |
-| fabryki w PL | _Brak produkcji. Sprzęt tworzony na zlecenie przez dostawców OEM w Azji i Turcji._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/smith-brown.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/smith-brown` |
@@ -1016,7 +1011,7 @@
 | zakres produktów | Specjalista: Okapy i Zlewozmywaki |
 | kategorie | Okapy Kuchenne, Zlewozmywaki |
 | fabryki w PL | _Brak produkcji w Polsce; głównie Turcja._ |
-| producent (OEM) | Producenci kontraktowi (Turcja) `m-oem-turkey` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/stella` |
 | linki zakupowe | — |
@@ -1025,10 +1020,9 @@
 
 **Historia przejęć:** Marka handlowa dystrybutorów wyposażenia kuchni.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 

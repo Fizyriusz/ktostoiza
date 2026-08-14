@@ -26,7 +26,7 @@
 | zakres produktów | Pełne Portfolio (Premium) |
 | kategorie | Pralki (Pro Wash), Suszarki, Zmywarki, Lodówki, Piekarniki parowe, Winiarki |
 | fabryki w PL | — **brak informacji** |
-| producent (OEM) | Hisense Group `h-hisense` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/asko.svg` |
 | adres strony | `/marka/asko` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Przejęta przez Gorenje (2010), a następnie Hisense Group (2018).
 
-**Brakuje:** informacja o fabrykach w PL
+**Brakuje:** informacja o fabrykach w PL · producent (OEM)
 
 ---
 
@@ -57,7 +57,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki (Retro), Pralki, Suszarki, Zmywarki, Piekarniki, Płyty grzewcze, Kuchnie wolnostojące |
 | fabryki w PL | _Brak fabryk w Polsce. Produkcja skoncentrowana w Słowenii (Velenje) oraz Serbii (Valjevo) pod nadzorem grupy Hisense._ |
-| producent (OEM) | Hisense Group `h-hisense` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/gorenje.svg` |
 | adres strony | `/marka/gorenje` |
 | linki zakupowe | — |
@@ -65,6 +65,8 @@
 **Opis:** Znana z designu (linie Retro, Ora-Ito), obecnie z kapitałem chińskim.
 
 **Historia przejęć:** Przejęta przez Hisense Group w 2018 roku.
+
+**Brakuje:** producent (OEM)
 
 ---
 
@@ -117,7 +119,7 @@
 | zakres produktów | Szerokie Portfolio (Głównie Gotowanie) |
 | kategorie | Gotowanie, Okapy Kuchenne, Zmywanie, Chłodnictwo |
 | fabryki w PL | _Brak produkcji w Polsce; główny zakład znajduje się w czeskim Mariánskim Údolí._ |
-| producent (OEM) | Hisense Group `h-hisense` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/mora` |
 | linki zakupowe | — |
@@ -126,6 +128,6 @@
 
 **Historia przejęć:** W 2005 roku firma Mora Moravia została przejęta przez słoweńską grupę Gorenje, która obecnie jest częścią chińskiego giganta Hisense.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 ---

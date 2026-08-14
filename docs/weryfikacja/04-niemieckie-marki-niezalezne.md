@@ -25,8 +25,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Małe AGD, Płyty grzewcze, Urządzenia warsztatowe |
-| fabryki w PL | Produkcja OEM w Azji. |
-| producent (OEM) | Canbolat Vertriebs `m-canbolat-vertriebs` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/arebos` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Własność Canbolat Vertriebs GmbH.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -89,8 +89,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Chłodnictwo, Zmywanie, Małe AGD, Gotowanie |
-| fabryki w PL | _Brak własnych fabryk w Polsce; produkcja głównie OEM (Chiny, Turcja)._ |
-| producent (OEM) | Clatronic Group `m-clatronic-group` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/bomann` |
 | linki zakupowe | — |
@@ -99,7 +99,7 @@
 
 **Historia przejęć:** Obecnie marka należy do C. Bomann GmbH, będącej częścią grupy Clatronic International GmbH.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -123,7 +123,7 @@
 | zakres produktów | Specjalista: Gotowanie i Wyciągi |
 | kategorie | Systemy wyciągu oparów, Płyty grzewcze, Piekarniki parowe, Chłodnictwo |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Bora Holding `m-bora-holding` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/bora.svg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/bora` |
 | linki zakupowe | — |
@@ -132,7 +132,7 @@
 
 **Historia przejęć:** Marka pozostaje niezależnym przedsiębiorstwem prywatnym, stale rozwijającym swoje portfolio o systemy chłodzenia i profesjonalne piekarniki parowe dla domu.
 
-**Brakuje:** logo (plik `/brandsicons/bora.svg` nie istnieje)
+**Brakuje:** producent (OEM) · logo (plik `/brandsicons/bora.svg` nie istnieje)
 
 ---
 
@@ -154,7 +154,7 @@
 | zakres produktów | Specjalista: Kuchnia i Chłodnictwo |
 | kategorie | Winiarki, Kuchenki mikrofalowe, Pakowarki próżniowe, Płyty indukcyjne mobilne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Braukmann Gmbh `m-braukmann-gmbh` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/caso` |
 | linki zakupowe | — |
@@ -163,7 +163,7 @@
 
 **Historia przejęć:** Marka należy do Braukmann GmbH, niezależnej firmy rodzinnej.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -187,7 +187,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Kuchenki mikrofalowe, Małe AGD, Gotowanie, Sprzątanie |
 | fabryki w PL | _Brak produkcji w Polsce; produkcja zorientowana na Azję i Turcję._ |
-| producent (OEM) | Clatronic Group `m-clatronic-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/clatronic` |
 | linki zakupowe | — |
@@ -196,7 +196,7 @@
 
 **Historia przejęć:** Niezależna firma rodzinna (rodzina Claßen), właściciel marek Bomann i ProfiCook.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -219,8 +219,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Chłodnictwo, Gotowanie, Małe AGD |
-| fabryki w PL | _Brak produkcji w Polsce; produkcja kontraktowa._ |
-| producent (OEM) | ERS Group `m-ers-group` ⚠️ kraj nieznany |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/heinrichs` |
 | linki zakupowe | — |
@@ -229,7 +229,7 @@
 
 **Historia przejęć:** Własność grupy ERS Group, specjalizującej się w handlu międzynarodowym.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -253,7 +253,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Gotowanie, Okapy Kuchenne, Chłodnictwo, Zmywanie |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Olan Haushaltsgeräte `m-olan-haushaltsgerate` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/kaiser` |
 | linki zakupowe | — |
@@ -262,7 +262,7 @@
 
 **Historia przejęć:** Prywatna własność założycieli (rodzina Friedmann).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -317,7 +317,7 @@
 | zakres produktów | Pełne Portfolio (Luksusowe) |
 | kategorie | Piekarniki, Płyty Grzewcze, Chłodnictwo, Zmywanie |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Teka Group `m-teka-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/kuppersbusch` |
 | linki zakupowe | — |
@@ -326,7 +326,7 @@
 
 **Historia przejęć:** Od 1999 roku marka należy do Teka Group.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -412,7 +412,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki, Pralki, Suszarki, Zmywarki, Piekarniki, Płyty grzewcze |
 | fabryki w PL | Ksawerów (pralki) |
-| producent (OEM) | BSH Factory (OEM) `m-bsh-factory` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/miele.svg` |
 | adres strony | `/marka/miele` |
 | linki zakupowe | — |
@@ -420,6 +420,8 @@
 **Opis:** Wzorzec trwałości. Większość urządzeń produkują sami, z wyjątkiem chłodnictwa, które dostarcza BSH oraz Liebherr.
 
 **Historia przejęć:** Niezależna. Firma rodzinna od 1899 roku.
+
+**Brakuje:** producent (OEM)
 
 ---
 
@@ -440,17 +442,17 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Chłodnictwo, Gotowanie, Zmywanie, Zabudowa podblatowa |
-| fabryki w PL | Produkcja OEM (Chiny, Turcja). |
-| producent (OEM) | PKM GmbH `m-pkm-gmbh` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/pkm` |
 | linki zakupowe | — |
 
 **Opis:** Niemiecka marka nastawiona na dostarczanie kompletnego AGD do zabudowy w bardzo niskich cenach. PKM jest niezwykle popularne w Niemczech jako marka pierwszego wyboru do wynajmowanych mieszkań i tanich systemów kuchennych.
 
-**Historia przejęć:** Należy do PKM GmbH & Co. KG, specjalizującej się w imporcie i certyfikacji urządzeń OEM.
+**Historia przejęć:** Należy do PKM GmbH & Co. KG, specjalizującej się w imporcie i certyfikacji sprzętu AGD.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -473,8 +475,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio (Zabudowa) |
 | kategorie | Zestawy do pieczenia, Zmywanie, Chłodnictwo do zabudowy |
-| fabryki w PL | Produkcja OEM. |
-| producent (OEM) | NEG / Novex `m-neg-novex` ⚠️ kraj nieznany |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/respekta` |
 | linki zakupowe | — |
@@ -483,7 +485,7 @@
 
 **Historia przejęć:** Niezależna marka w ramach struktur NEG-Novex.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 

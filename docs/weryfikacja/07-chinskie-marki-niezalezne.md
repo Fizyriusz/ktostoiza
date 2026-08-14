@@ -26,7 +26,7 @@
 | zakres produktów | Specjalista: Małe AGD |
 | kategorie | Płyty indukcyjne nastawne, Wyciskarki wolnoobrotowe, Maszynki do mięsa |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/amzchef` |
 | linki zakupowe | — |
@@ -35,10 +35,9 @@
 
 **Historia przejęć:** Niezależna marka chińska operująca w modelu Global Direct-to-Consumer.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -91,7 +90,7 @@
 | zakres produktów | Szerokie Portfolio (Gotowanie) |
 | kategorie | Okapy Kuchenne, Płyty Indukcyjne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Ciarra Appliances `m-ciarra-appliances` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/ciarra` |
 | linki zakupowe | — |
@@ -100,7 +99,7 @@
 
 **Historia przejęć:** Marka o zasięgu globalnym, rozwijana przez chińskich inwestorów technologicznych.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -124,7 +123,7 @@
 | zakres produktów | Specjalista: Płyty Grzewcze |
 | kategorie | Płyty Indukcyjne, Płyty Ceramiczne, Płyty Gazowe |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/covercook` |
 | linki zakupowe | — |
@@ -133,10 +132,9 @@
 
 **Historia przejęć:** Niezależna marka chińska o zasięgu globalnym.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -158,7 +156,7 @@
 | zakres produktów | Specjalista: Płyty Grzewcze |
 | kategorie | Płyty Indukcyjne, Płyty Ceramiczne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/hobsir` |
 | linki zakupowe | — |
@@ -167,10 +165,9 @@
 
 **Historia przejęć:** Chiński podmiot produkcyjno-handlowy.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -253,8 +250,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio (Akcesoria/AGD) |
 | kategorie | Okapy Kuchenne, Akcesoria montażowe, Małe AGD |
-| fabryki w PL | Produkcja OEM. |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/topstrong` |
 | linki zakupowe | — |
@@ -263,10 +260,9 @@
 
 **Historia przejęć:** Marka handlowa o zasięgu międzynarodowym.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -288,7 +284,7 @@
 | zakres produktów | Specjalista: Narzędzia i Gastronomia |
 | kategorie | Gastronomia profesjonalna, Lodówki turystyczne, Przetwórstwo żywności |
 | fabryki w PL | Posiada duże centra logistyczne w Polsce (np. okolice Słubic). |
-| producent (OEM) | Vevor Group `m-vevor-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/vevor` |
 | linki zakupowe | — |
@@ -297,7 +293,7 @@
 
 **Historia przejęć:** Niezależna grupa z potężnym zapleczem logistycznym na każdym kontynencie.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -321,7 +317,7 @@
 | zakres produktów | Specjalista: Płyty Grzewcze |
 | kategorie | Płyty Indukcyjne, Płyty Ceramiczne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/vovv` |
 | linki zakupowe | — |
@@ -330,9 +326,8 @@
 
 **Historia przejęć:** Marka technologiczna ukierunkowana na globalną sprzedaż online.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---

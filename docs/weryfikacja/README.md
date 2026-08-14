@@ -1,6 +1,6 @@
 # Weryfikacja datasetu
 
-**175 marek** i **56 producentów** do przejścia.
+**175 marek** i **0 producentów** do przejścia.
 Każda pozycja ma wypisany komplet tego, co jest w bazie, listę brakujących pól
 i gotowe linki do Wikipedii, Ceneo i wyszukiwarki.
 
@@ -25,7 +25,7 @@ node scratch/gen-weryfikacja.js
 | 2 | [Włoskie Marki Niezależne](02-wloskie-marki-niezalezne.md) | 16 | 9 |
 | 3 | [Pozostałe Marki Niezależne](03-pozostale-marki-niezalezne.md) | 16 | 13 |
 | 4 | [Niemieckie Marki Niezależne](04-niemieckie-marki-niezalezne.md) | 15 | 10 |
-| 5 | [Marki Marketowe (OEM)](05-marki-marketowe-oem.md) | 11 | 7 |
+| 5 | [Marki Marketowe](05-marki-marketowe.md) | 11 | 7 |
 | 6 | [Beko Europe](06-beko-europe.md) | 10 | — |
 | 7 | [Chińskie Marki Niezależne](07-chinskie-marki-niezalezne.md) | 10 | 8 |
 | 8 | [Marki hiszpańskie](08-marki-hiszpanskie.md) | 9 | 9 |
@@ -46,7 +46,7 @@ node scratch/gen-weryfikacja.js
 | 23 | [Samsung Electronics](23-samsung-electronics.md) | 1 | — |
 | 24 | [LG Electronics](24-lg-electronics.md) | 1 | — |
 | 25 | [Słoweńskie Marki Niezależne](25-slowenskie-marki-niezalezne.md) | 1 | 1 |
-| — | [Producenci OEM](99-producenci-oem.md) | 56 | 8 |
+| — | [Producenci OEM](99-producenci-oem.md) | 0 | 0 |
 
 **Razem: 175 marek, z czego 104 z niepotwierdzoną wartością.**
 

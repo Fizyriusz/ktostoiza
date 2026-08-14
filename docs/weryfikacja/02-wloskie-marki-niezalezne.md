@@ -26,7 +26,7 @@
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy Kuchenne, Płyty zintegrowane z wyciągiem |
 | fabryki w PL | _Brak bezpośrednich fabryk w Polsce (korzysta z centrów logistycznych Elica w Jelczu-Laskowicach)._ |
-| producent (OEM) | Elica Group `m-elica-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/airforce` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Marka stała się częścią grupy Elica, co pozwoliło na synergię technologiczną i globalną ekspansję.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -59,7 +59,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Pranie, Chłodnictwo, Gotowanie |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | JP Industries `m-jp-industries` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/ardo` |
 | linki zakupowe | — |
@@ -68,7 +68,7 @@
 
 **Historia przejęć:** Po upadku grupy Antonio Merloni, prawa do marki przechodziły przez różne struktury holdingowe (m.in. J.P. Industries).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -123,7 +123,7 @@
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy Kuchenne, Systemy filtracji powietrza |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Nortek Global `m-nortek-global` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/best` |
 | linki zakupowe | — |
@@ -132,7 +132,7 @@
 
 **Historia przejęć:** Przez lata marka należała do amerykańskiego koncernu Nortek; obecnie operuje w ramach międzynarodowych struktur wyspecjalizowanych w wentylacji.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -249,7 +249,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Gotowanie, Okapy Kuchenne, Zmywanie, Pranie |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Producent nieustalony `m-id-unknown` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/freggia` |
 | linki zakupowe | — |
@@ -258,10 +258,9 @@
 
 **Historia przejęć:** Należy do międzynarodowej grupy dystrybucyjnej, która zleca produkcję w wyspecjalizowanych włoskich fabrykach.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -314,7 +313,7 @@
 | zakres produktów | Specjalista: Wentylacja i Gotowanie |
 | kategorie | Okapy Kuchenne, Płyty z wyciągiem, Systemy oczyszczania powietrza |
 | fabryki w PL | _Brak produkcji w Polsce; 100% Made in Italy._ |
-| producent (OEM) | Galvamet (Włochy) `m-galvamet-italy` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/galvamet` |
 | linki zakupowe | — |
@@ -323,7 +322,7 @@
 
 **Historia przejęć:** Niezależna firma rodzinna z silnym zapleczem R&D we Włoszech.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -378,7 +377,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Gotowanie, Małe AGD, Chłodnictwo przenośne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Melchioni S.p.A. `m-melchioni-spa` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/melchioni` |
 | linki zakupowe | — |
@@ -387,7 +386,7 @@
 
 **Historia przejęć:** Niezależna grupa Melchioni S.p.A.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -473,7 +472,7 @@
 | zakres produktów | Szerokie Portfolio (Wyposażenie Kuchni) |
 | kategorie | Płyty grzewcze, Małe AGD kuchenne, Naczynia i Porcelana |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Tognana S.p.A. `m-tognana-spa` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/tognana` |
 | linki zakupowe | — |
@@ -482,7 +481,7 @@
 
 **Historia przejęć:** Niezależna firma Tognana Porcellane S.p.A.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -506,7 +505,7 @@
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy Kuchenne |
 | fabryki w PL | Produkcja realizowana w fabrykach Elica, w tym w Polsce (Jelcz-Laskowice). |
-| producent (OEM) | Elica Group `m-elica-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/turboair` |
 | linki zakupowe | — |
@@ -515,7 +514,7 @@
 
 **Historia przejęć:** Marka portfelowa grupy Elica.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 

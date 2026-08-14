@@ -26,7 +26,7 @@
 | zakres produktów | Specjalista: Chłodnictwo Wina |
 | kategorie | Winiarki do zabudowy, Winiarki wolnostojące |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Frio Group `m-frio-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/avintage` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Marka portfelowa grupy Frio (dawniej Climadiff), lidera w segmencie winiarskim w Europie.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -59,7 +59,7 @@
 | zakres produktów | Specjalista: Chłodnictwo Wina |
 | kategorie | Winiarki piwniczne (starzenie), Winiarki serwujące |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Frio Group `m-frio-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/climadiff` |
 | linki zakupowe | — |
@@ -68,7 +68,7 @@
 
 **Historia przejęć:** Założona przez rodzinę winiarzy, obecnie główna marka grupy Frio.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -91,8 +91,8 @@
 | struktura | Marka Własna (Private Label) |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Kuchenki mikrofalowe, Telewizory, Pranie, Chłodnictwo |
-| fabryki w PL | _Brak produkcji w Polsce; korzysta z dostawców OEM (m.in. Vestel, Midea)._ |
-| producent (OEM) | Cdiscount Group `m-cdiscount-group` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/continental-edison` |
 | linki zakupowe | — |
@@ -101,7 +101,7 @@
 
 **Historia przejęć:** Obecnie marka należy do grupy Casino (Cdiscount), francuskiego giganta handlu detalicznego.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -125,7 +125,7 @@
 | zakres produktów | Specjalista: Chłodnictwo Wina |
 | kategorie | Winiarki domowe, Urządzenia dla gastronomii, Systemy serwowania wina |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Frio Group `m-frio-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/la-sommeliere` |
 | linki zakupowe | — |
@@ -134,7 +134,7 @@
 
 **Historia przejęć:** Kluczowa marka w portfolio grupy Frio.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -158,7 +158,7 @@
 | zakres produktów | Specjalista: Chłodnictwo Wina |
 | kategorie | Luksusowe szafy na wino, Winiarki do zabudowy |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Frio Group `m-frio-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/le-cellier` |
 | linki zakupowe | — |
@@ -167,7 +167,7 @@
 
 **Historia przejęć:** Marka operująca w ramach powiązań z francuskimi liderami rynku winiarskiego (grupa Frio).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -191,7 +191,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Małe AGD, Płyty grzewcze nastawne, Urządzenia do przygotowywania posiłków |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Delta France `m-delta-france` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/livoo` |
 | linki zakupowe | — |
@@ -200,7 +200,7 @@
 
 **Historia przejęć:** Ewolucja marki Domoclip; należy do grupy Delta.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -223,8 +223,8 @@
 | struktura | Marka Własna (Private Label) |
 | zakres produktów | Pełne Portfolio |
 | kategorie | Chłodnictwo, Pranie, Gotowanie, RTV |
-| fabryki w PL | Produkcja OEM w Chinach i Turcji (m.in. Vestel). |
-| producent (OEM) | Cdiscount Group `m-cdiscount-group` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/oceanic` |
 | linki zakupowe | — |
@@ -233,7 +233,7 @@
 
 **Historia przejęć:** Należy do Cnova N.V. (część grupy Casino/Cdiscount).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 

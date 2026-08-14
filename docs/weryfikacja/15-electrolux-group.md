@@ -57,7 +57,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki, Pralki, Suszarki, Zmywarki, Piekarniki |
 | fabryki w PL | Oława (pralki)<br>Świdnica (kuchenki)<br>Żarów (zmywarki)<br>Siewierz (suszarki) |
-| producent (OEM) | Vestel `h-vestel` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/electrolux.svg` |
 | adres strony | `/marka/electrolux` |
 | linki zakupowe | media_expert: https://www.mediaexpert.pl/agd/brand-electrolux |
@@ -65,6 +65,8 @@
 **Opis:** Lider w piekarnikach parowych oraz jeden z głównych dostawców AGD dla sieci IKEA (wraz z Whirlpoolem). Spora część lodówek pochodzi od Vestela.
 
 **Historia przejęć:** Globalna grupa. Przejęła markę Zanussi (1984) i AEG (1994).
+
+**Brakuje:** producent (OEM)
 
 ---
 

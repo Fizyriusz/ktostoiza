@@ -25,20 +25,19 @@
 | struktura | Marka Własna (Private Label) |
 | zakres produktów | Specjalista: Małe AGD |
 | kategorie | Kuchenki mikrofalowe, Małe AGD kuchenne |
-| fabryki w PL | Produkcja OEM w Chinach. |
-| producent (OEM) | Producenci kontraktowi (Chiny) `m-oem-china` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/bright` |
 | linki zakupowe | — |
 
 **Opis:** Ekonomiczna marka oferująca podstawowy sprzęt AGD, często spotykana w sieciach handlowych i na rynkach e-commerce. Skupia się na prostocie wykonania i najniższej cenie, oferując modele mikrofal o standardowych parametrach.
 
-**Historia przejęć:** Marka rozwijana przez międzynarodowych dystrybutorów na bazie produkcji OEM.
+**Historia przejęć:** Marka rozwijana przez międzynarodowych dystrybutorów.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -59,20 +58,19 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio (Zabudowa) |
 | kategorie | Kuchnie Wolnostojące, Okapy Kuchenne, Piekarniki, Chłodnictwo |
-| fabryki w PL | _Brak produkcji w Polsce; modele często produkowane na zlecenie przez zakłady we Włoszech lub Turcji._ |
-| producent (OEM) | Producent nieustalony `m-id-unknown` ⚠️ zastępnik |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/de-noble-foster` |
 | linki zakupowe | — |
 
 **Opis:** Ekskluzywna marka pozycjonowana na styl klasyczny i brytyjską elegancję. Często kojarzona z wysokiej jakości kuchniami wolnostojącymi i okapami o charakterystycznym designie, dedykowana dla klientów poszukujących estetyki retro i premium.
 
-**Historia przejęć:** Marka operująca w ramach partnerstw dystrybucyjnych i produkcyjnych, często powiązana z zapleczem produkcyjnym dużych grup europejskich.
+**Historia przejęć:** Marka operująca w ramach partnerstw dystrybucyjnych.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -94,7 +92,7 @@
 | zakres produktów | Specjalista: Kuchnie Wolnostojące |
 | kategorie | Kuchnie Wolnostojące, Okapy Kuchenne, Chłodnictwo Premium |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Middleby Corp `m-middleby-corp` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/falcon` |
 | linki zakupowe | — |
@@ -103,7 +101,7 @@
 
 **Historia przejęć:** Marka należała do grupy Aga Rangemaster, która w 2015 roku została przejęta przez amerykański koncern Middleby Corporation.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
