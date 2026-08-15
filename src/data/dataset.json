@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-09T07:38:23.460Z",
+  "lastUpdate": "2026-08-15T08:21:36.222Z",
   "nodes": [
     {
       "id": "h-beko",
@@ -8,8 +8,7 @@
       "country": "Turcja / USA",
       "description": "Fuzja europejskich operacji amerykańskiego Whirlpoola oraz tureckiego Arçelik (właściciela Beko).",
       "seo_slug": "beko-europe",
-      "localLogo": "/brandsicons/beko.svg",
-      "isOEM": true
+      "localLogo": "/brandsicons/beko.svg"
     },
     {
       "id": "b-beko",
@@ -133,9 +132,6 @@
       "factories_pl": [
         "Produkcja w zakładach Beko Europe (dawniej Whirlpool) w Łodzi, Radomsku i Wrocławiu."
       ],
-      "producedBy": [
-        "h-beko"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -213,9 +209,6 @@
         "Zamrażarki skrzyniowe"
       ],
       "acquisition_history": "Przejęta przez Whirlpool w 2002 roku, przeniesiona do Beko Europe w 2024 roku.",
-      "producedBy": [
-        "h-beko"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -549,9 +542,6 @@
       ],
       "acquisition_history": "Globalna grupa. Przejęła markę Zanussi (1984) i AEG (1994).",
       "localLogo": "/brandsicons/electrolux.svg",
-      "producedBy": [
-        "h-vestel"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -613,8 +603,7 @@
       "country": "Chiny",
       "description": "Chiński koncern, który przejął słoweńskie Gorenje, tworząc silnego gracza w Europie Środkowej.",
       "seo_slug": "hisense-group",
-      "localLogo": "/brandsicons/hisense.svg",
-      "isOEM": true
+      "localLogo": "/brandsicons/hisense.svg"
     },
     {
       "id": "b-hisense",
@@ -673,9 +662,6 @@
       ],
       "acquisition_history": "Przejęta przez Hisense Group w 2018 roku.",
       "localLogo": "/brandsicons/gorenje.svg",
-      "producedBy": [
-        "h-hisense"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -701,9 +687,6 @@
         "Winiarki"
       ],
       "localLogo": "/brandsicons/asko.svg",
-      "producedBy": [
-        "h-hisense"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -714,8 +697,7 @@
       "country": "Polska",
       "description": "Polska firma z Wronek, potężny gracz w Europie Wschodniej i Skandynawii.",
       "seo_slug": "amica-group",
-      "localLogo": "/brandsicons/amica.svg",
-      "isOEM": true
+      "localLogo": "/brandsicons/amica.svg"
     },
     {
       "id": "b-amica",
@@ -746,11 +728,6 @@
       ],
       "acquisition_history": "Niezależna (GPW). W portfolio posiada: Gram, CDA, Fagor, Hansa oraz francuską markę Sideme.",
       "localLogo": "/brandsicons/amica.svg",
-      "producedBy": [
-        "m-amica-factory",
-        "m-midea",
-        "h-vestel"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -857,9 +834,8 @@
       "type": "holding",
       "name": "Vestel",
       "country": "Turcja",
-      "description": "Cichy gigant. Potężna fabryka OEM/ODM produkująca dla innych.",
-      "seo_slug": "vestel",
-      "isOEM": true
+      "description": "Turecka grupa przemysłowa działająca w elektronice użytkowej i AGD.",
+      "seo_slug": "vestel"
     },
     {
       "id": "b-sharp",
@@ -888,9 +864,6 @@
         "Piekarniki"
       ],
       "localLogo": "/brandsicons/sharp.svg",
-      "producedBy": [
-        "h-vestel"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -901,7 +874,7 @@
       "name": "Toshiba",
       "origin": "Japonia / Chiny / Turcja",
       "segment": "Standard",
-      "history": "Japońska ikona. Od 2016 roku marka AGD Toshiba (w skrócie: Toshiba Home Appliances) jest własnością chińskiego Midea Group. W Europie urządzenia pod marką Toshiba są wytwarzane przez tureckiego Vestela, który pełni rolę kontraktowego partnera dystrybucyjno-produkcyjnego.",
+      "history": "Japońska ikona. Od 2016 roku marka AGD Toshiba (w skrócie: Toshiba Home Appliances) jest własnością chińskiego Midea Group.",
       "seo_slug": "toshiba",
       "founded_year": 1939,
       "business_structure": "Partnerstwo Licencyjne",
@@ -914,9 +887,6 @@
       ],
       "acquisition_history": "Toshiba Home Appliances przejęta przez Midea Group w 2016 roku. Dystrybucja i produkcja na rynek europejski realizowana przez Vestel od 2017 roku.",
       "localLogo": "/brandsicons/toshiba.svg",
-      "producedBy": [
-        "h-vestel"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -940,9 +910,6 @@
       ],
       "acquisition_history": "Przejęta przez Vestel Group w 2006 roku.",
       "localLogo": "/brandsicons/finlux.webp",
-      "producedBy": [
-        "h-vestel"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1077,9 +1044,6 @@
       "acquisition_history": "Niezależna. Firma rodzinna od 1899 roku.",
       "parentId": "h-de-ind",
       "localLogo": "/brandsicons/miele.svg",
-      "producedBy": [
-        "m-bsh-factory"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1134,9 +1098,9 @@
     {
       "id": "h-pl-ind",
       "type": "holding",
-      "name": "Polskie Marki Niezależne",
+      "name": "Marki polskie",
       "country": "Polska",
-      "description": "Firmy z polskim rodowodem, posiadające własne fabryki lub bazujące na imporcie pod swoim logo.",
+      "description": "Marki o polskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "polskie-niezalezne"
     },
     {
@@ -1150,7 +1114,7 @@
       "seo_slug": "kernau",
       "founded_year": 2011,
       "factories_pl": [
-        "Brak własnych fabryk. Model OEM: produkcja zlecana zewnętrznym partnerom w celu optymalizacji kosztów. Główni dostawcy to turecki Vestel (lodówki, pralki) oraz polska Amica (kuchnie)."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
       "product_range": "Pełne Portfolio",
@@ -1165,10 +1129,6 @@
       ],
       "acquisition_history": "Niezależna polska marka należąca do GT Group.",
       "localLogo": "/brandsicons/kernau.png",
-      "producedBy": [
-        "h-vestel",
-        "h-amica"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1247,9 +1207,6 @@
       ],
       "acquisition_history": "Rodzinna firma z polskim kapitałem, stale reinwestująca w automatyzację i design.",
       "localLogo": "/brandsicons/ciarkodesign.svg",
-      "producedBy": [
-        "m-ciarko-sanok"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1328,41 +1285,41 @@
     {
       "id": "h-it-ind",
       "type": "holding",
-      "name": "Włoskie Marki Niezależne",
+      "name": "Marki włoskie",
       "country": "Włochy",
-      "description": "Firmy z włoskim rodowodem, posiadające własne fabryki lub bazujące na imporcie.",
+      "description": "Marki o włoskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "wloskie-niezalezne"
     },
     {
       "id": "h-de-ind",
       "type": "holding",
-      "name": "Niemieckie Marki Niezależne",
+      "name": "Marki niemieckie",
       "country": "Niemcy",
-      "description": "Niemieckie, austriackie oraz szwajcarskie marki niezależne.",
+      "description": "Marki o niemieckim, austriackim i szwajcarskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "niemieckie-niezalezne"
     },
     {
       "id": "h-jp-ind",
       "type": "holding",
-      "name": "Japońskie Marki Niezależne",
+      "name": "Marki japońskie",
       "country": "Japonia",
-      "description": "Rozwiązania i technologie z Japonii.",
+      "description": "Marki o japońskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "japonskie-niezalezne"
     },
     {
       "id": "h-cn-ind",
       "type": "holding",
-      "name": "Chińskie Marki Niezależne",
+      "name": "Marki chińskie",
       "country": "Chiny",
-      "description": "Rosnący w siłę niezależni producenci z Chin.",
+      "description": "Marki o chińskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "chinskie-niezalezne"
     },
     {
       "id": "h-other-ind",
       "type": "holding",
-      "name": "Pozostałe Marki Niezależne",
+      "name": "Pozostałe marki",
       "country": "Różne",
-      "description": "Marki niezależne z innych krajów Europy i Świata.",
+      "description": "Marki z krajów bez osobnej grupy, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "pozostale-niezalezne"
     },
     {
@@ -1392,7 +1349,7 @@
     {
       "id": "h-market",
       "type": "holding",
-      "name": "Marki Marketowe (OEM)",
+      "name": "Marki Marketowe",
       "country": "Globalnie",
       "description": "Marki należące do sieci handlowych, produkcja zlecana zewnętrznym gigantom.",
       "seo_slug": "marki-marketowe"
@@ -1422,11 +1379,6 @@
       ],
       "acquisition_history": "Marka własna stworzona przez RTV Euro AGD (2014).",
       "localLogo": "/brandsicons/raven.png",
-      "producedBy": [
-        "h-vestel",
-        "h-amica",
-        "m-midea"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1614,12 +1566,6 @@
       "acquisition_history": "Przejęta pod koniec 2024/2025 roku (wraz z marką Kuppersbusch) przez chiński gigant Midea Group.",
       "parentId": "h-midea",
       "localLogo": "/brandsicons/teka.png",
-      "producedBy": [
-        "m-midea",
-        "h-vestel",
-        "m-bsh-factory",
-        "h-beko"
-      ],
       "availableInPL": true,
       "scope": "global"
     },
@@ -1678,7 +1624,7 @@
       "seo_slug": "ravanson",
       "founded_year": 2003,
       "factories_pl": [
-        "Brak własnych fabryk. Model czysto importerski/OEM. Produkcja w Chinach (małe AGD, winiarki) oraz Turcji (kuchnie gazowe)."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
       "product_range": "Szerokie Portfolio (Budżetowe)",
@@ -1704,7 +1650,7 @@
       "seo_slug": "concept",
       "founded_year": 1991,
       "factories_pl": [
-        "Brak fabryk w Polsce. Czeska marka korzystająca z produkcji OEM w Chinach i Turcji (szczególnie w zakresie kolorowych lodówek retro)."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Szerokie Portfolio",
@@ -1716,9 +1662,6 @@
       "acquisition_history": "Niezależna czeska firma prywatna.",
       "parentId": "h-other-ind",
       "localLogo": "/brandsicons/concept.png",
-      "producedBy": [
-        "m-amica-factory"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1742,10 +1685,6 @@
         "Piekarniki"
       ],
       "localLogo": "/brandsicons/philco.svg",
-      "producedBy": [
-        "h-hisense",
-        "h-vestel"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1869,7 +1808,7 @@
       "name": "Franke",
       "origin": "Szwajcaria",
       "segment": "Premium",
-      "history": "Lider rynku zlewozmywaków. W kategorii dużego AGD bazuje silnie na platformach Whirlpoola oraz rozwiązaniach od włoskiego OEM Meneghetti.",
+      "history": "Lider rynku zlewozmywaków, obecny także w kategorii dużego AGD.",
       "seo_slug": "franke",
       "founded_year": 1911,
       "business_structure": "Przedsiębiorstwo Prywatne",
@@ -1884,9 +1823,6 @@
       "acquisition_history": "Niezależny holding rodzinny Artemis. Właściciel marki okapów Faber.",
       "parentId": "h-other-ind",
       "localLogo": "/brandsicons/franke.svg",
-      "producedBy": [
-        "h-beko"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -1942,9 +1878,8 @@
       "type": "holding",
       "name": "Midea Group",
       "country": "Chiny",
-      "description": "Jeden z największych na świecie producentów AGD i dostawców OEM. Właściciel marek Toshiba (AGD), Teka i Kuppersbusch. Operator fabryki OEM m-midea.",
-      "seo_slug": "midea-group",
-      "isOEM": true
+      "description": "Jeden z największych producentów AGD na świecie. Właściciel marek Toshiba (AGD), Teka i Küppersbusch.",
+      "seo_slug": "midea-group"
     },
     {
       "id": "h-cevital",
@@ -1973,9 +1908,9 @@
     {
       "id": "h-si-ind",
       "type": "holding",
-      "name": "Słoweńskie Marki Niezależne",
+      "name": "Marki słoweńskie",
       "country": "Słowenia",
-      "description": "Niezależne firmy ze Słowenii operujące poza strukturami grupy Hisense/Gorenje.",
+      "description": "Marki o słoweńskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "slowenskie-niezalezne"
     },
     {
@@ -1985,11 +1920,11 @@
       "name": "Midea",
       "origin": "Chiny",
       "segment": "Standard",
-      "history": "Jeden z największych producentów AGD na świecie, z potężnym zapleczem produkcyjnym dla marek własnych i obcych.",
+      "history": "Jeden z największych producentów AGD na świecie, z własnym zapleczem produkcyjnym.",
       "seo_slug": "midea",
       "founded_year": 1968,
       "factories_pl": [
-        "Brak własnych fabryk w Polsce. Ogromna produkcja zlokalizowana w Azji (model OEM/ODM)."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Spółka Publiczna",
       "product_range": "Pełne Portfolio",
@@ -2044,7 +1979,7 @@
       "seo_slug": "smith-brown",
       "founded_year": 2020,
       "factories_pl": [
-        "Brak produkcji. Sprzęt tworzony na zlecenie przez dostawców OEM w Azji i Turcji."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Niezależna Marka",
       "product_range": "Szerokie Portfolio",
@@ -2070,7 +2005,7 @@
       "seo_slug": "lin",
       "founded_year": 2018,
       "factories_pl": [
-        "Brak produkcji. Import bezpośredni (OEM) z azjatyckich fabryk."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Niezależna Marka",
       "product_range": "Szerokie Portfolio",
@@ -2121,7 +2056,7 @@
       "seo_slug": "electro-line",
       "founded_year": 1998,
       "factories_pl": [
-        "Brak. Działalność importerska z rynków azjatyckich."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
       "product_range": "Szerokie Portfolio",
@@ -2172,7 +2107,7 @@
       "seo_slug": "goddess",
       "founded_year": 2008,
       "factories_pl": [
-        "Brak produkcji europejskiej. Czysty model dystrybucyjny OEM."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Grupa Kapitałowa",
       "product_range": "Szerokie Portfolio",
@@ -2224,7 +2159,7 @@
       "seo_slug": "manta",
       "founded_year": 1998,
       "factories_pl": [
-        "Brak zaplecza produkcyjnego AGD w Polsce. Import OEM/ODM."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Spółka Publiczna (PL)",
       "product_range": "Szerokie Portfolio",
@@ -2450,7 +2385,7 @@
       "seo_slug": "kluge",
       "founded_year": 2016,
       "factories_pl": [
-        "Brak własnej fabryki. Produkty zlecane do zaufanych fabryk OEM (często tureckich)."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Przedsiębiorstwo Prywatne (PL)",
       "product_range": "Pełne Portfolio",
@@ -2669,22 +2604,6 @@
       "scope": "regional"
     },
     {
-      "id": "m-midea",
-      "type": "manufacturer",
-      "name": "Midea OEM",
-      "country": "Chiny",
-      "description": "Globalny lider produkcji kontraktowej chłodnictwa i mikrofali.",
-      "seo_slug": "midea-oem"
-    },
-    {
-      "id": "m-bsh-factory",
-      "type": "manufacturer",
-      "name": "BSH Factory (OEM)",
-      "country": "Niemcy / Europa",
-      "description": "Zakłady produkcyjne BSH Group świadczące usługi kontraktowe dla partnerów zewnętrznych (m.in. Miele), głównie w obszarze chłodnictwa.",
-      "seo_slug": "bsh-factory-oem"
-    },
-    {
       "id": "b-gotze-jensen",
       "type": "brand",
       "parentId": "h-market",
@@ -2695,7 +2614,7 @@
       "seo_slug": "gotze-jensen",
       "founded_year": 2016,
       "factories_pl": [
-        "Brak produkcji. Typowy import OEM z fabryk azjatyckich i tureckich."
+        "Brak fabryk w Polsce."
       ],
       "business_structure": "Marka Własna (Media Expert)",
       "product_range": "Szerokie Portfolio (Uzupełniające)",
@@ -2707,14 +2626,6 @@
       "acquisition_history": "Stworzona i zarządzana przez firmę TERG S.A.",
       "availableInPL": true,
       "scope": "regional"
-    },
-    {
-      "id": "m-amica-factory",
-      "type": "manufacturer",
-      "name": "Fabryka Amica (Wronki)",
-      "country": "Polska",
-      "description": "Specjalistyczny zakład produkcyjny Amica Group we Wronkach. Produkuje kuchnie wolnostojące, piekarniki i płyty grzejne dla Amiki i partnerów (m.in. Concept).",
-      "seo_slug": "amica-factory-wronki"
     },
     {
       "id": "h-mpm",
@@ -2747,9 +2658,6 @@
       ],
       "acquisition_history": "Marka pozostaje niezależnym przedsiębiorstwem prywatnym, stale rozwijającym swoje portfolio o systemy chłodzenia i profesjonalne piekarniki parowe dla domu.",
       "localLogo": "/brandsicons/bora.svg",
-      "producedBy": [
-        "m-bora-holding"
-      ],
       "availableInPL": true,
       "scope": "regional"
     },
@@ -2771,9 +2679,6 @@
       ],
       "factories_pl": [
         "Korzysta z zaplecza produkcyjnego BSH w Polsce (Łódź, Wrocław, Rogoźnica) dla wybranych linii produktowych."
-      ],
-      "producedBy": [
-        "m-bsh-factory"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -2798,10 +2703,7 @@
         "Gotowanie"
       ],
       "factories_pl": [
-        "Brak własnych fabryk w Polsce; produkcja głównie OEM (Chiny, Turcja)."
-      ],
-      "producedBy": [
-        "m-clatronic-group"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -2828,9 +2730,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-cna-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -2846,7 +2745,7 @@
       "founded_year": 2012,
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Szerokie Portfolio (Zabudowa)",
-      "acquisition_history": "Marka operująca w ramach partnerstw dystrybucyjnych i produkcyjnych, często powiązana z zapleczem produkcyjnym dużych grup europejskich.",
+      "acquisition_history": "Marka operująca w ramach partnerstw dystrybucyjnych.",
       "product_categories": [
         "Kuchnie Wolnostojące",
         "Okapy Kuchenne",
@@ -2854,10 +2753,7 @@
         "Chłodnictwo"
       ],
       "factories_pl": [
-        "Brak produkcji w Polsce; modele często produkowane na zlecenie przez zakłady we Włoszech lub Turcji."
-      ],
-      "producedBy": [
-        "m-id-unknown"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -2884,9 +2780,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-id-unknown"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -2902,7 +2795,7 @@
       "founded_year": 1943,
       "business_structure": "Marka Własna (Private Label)",
       "product_range": "Pełne Portfolio (Zabudowa)",
-      "acquisition_history": "Nie dotyczy – rozwój poprzez partnerstwa strategiczne z OEM.",
+      "acquisition_history": "Nie dotyczy – rozwój poprzez partnerstwa strategiczne.",
       "product_categories": [
         "Gotowanie",
         "Chłodnictwo",
@@ -2911,10 +2804,6 @@
       ],
       "factories_pl": [
         "Brak własnych fabryk AGD, ale produkty dedykowane dla IKEA są wytwarzane w polskich fabrykach Electrolux i Whirlpool/Beko Europe."
-      ],
-      "producedBy": [
-        "m-electrolux",
-        "h-beko"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -2941,9 +2830,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-olan-haushaltsgerate"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -2969,9 +2855,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-teka-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -2995,10 +2878,7 @@
         "Małe AGD"
       ],
       "factories_pl": [
-        "Produkcja typu OEM, głównie w Chinach."
-      ],
-      "producedBy": [
-        "m-oem-china"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3023,9 +2903,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-cna-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3052,9 +2929,6 @@
       "factories_pl": [
         "Brak produkcji urządzeń AGD w Polsce; silna obecność dystrybucyjna."
       ],
-      "producedBy": [
-        "m-pyramis-metallourgia"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3078,9 +2952,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-thetford-corp"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3107,9 +2978,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce; własna linia montażowa telewizorów i klimatyzacji w Chorwacji."
       ],
-      "producedBy": [
-        "m-m-san-grupa"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3134,9 +3002,6 @@
       ],
       "factories_pl": [
         "Brak produkcji urządzeń AGD w Polsce (posiada centra dystrybucyjne)."
-      ],
-      "producedBy": [
-        "m-dometic-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3163,10 +3028,6 @@
       "factories_pl": [
         "Wybrane modele dużego AGD (lodówki, zmywarki) produkowane są w polskich zakładach Beko Europe (dawniej Whirlpool)."
       ],
-      "producedBy": [
-        "h-beko",
-        "m-whirlpool-usa"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3191,9 +3052,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce; główny zakład znajduje się w czeskim Mariánskim Údolí."
-      ],
-      "producedBy": [
-        "h-hisense"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3220,9 +3078,6 @@
       "factories_pl": [
         "Obecnie brak własnej produkcji w Polsce (historycznie Daewoo posiadało duże zakłady w Warszawie i Pruszkowie)."
       ],
-      "producedBy": [
-        "m-winia-electronics"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3245,9 +3100,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-frio-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3274,9 +3126,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-braukmann-gmbh"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3300,9 +3149,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-ls-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3325,9 +3171,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-frio-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3353,9 +3196,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-dunavox-europe"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3380,9 +3220,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-frio-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3406,9 +3243,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-frio-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3424,16 +3258,13 @@
       "founded_year": 2010,
       "business_structure": "Marka Własna (Private Label)",
       "product_range": "Specjalista: Małe AGD",
-      "acquisition_history": "Marka rozwijana przez międzynarodowych dystrybutorów na bazie produkcji OEM.",
+      "acquisition_history": "Marka rozwijana przez międzynarodowych dystrybutorów.",
       "product_categories": [
         "Kuchenki mikrofalowe",
         "Małe AGD kuchenne"
       ],
       "factories_pl": [
-        "Produkcja OEM w Chinach."
-      ],
-      "producedBy": [
-        "m-oem-china"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3460,9 +3291,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce; produkcja zorientowana na Azję i Turcję."
       ],
-      "producedBy": [
-        "m-clatronic-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3486,10 +3314,7 @@
         "Chłodnictwo"
       ],
       "factories_pl": [
-        "Brak produkcji w Polsce; korzysta z dostawców OEM (m.in. Vestel, Midea)."
-      ],
-      "producedBy": [
-        "m-cdiscount-group"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3514,10 +3339,7 @@
         "Zmywanie"
       ],
       "factories_pl": [
-        "Korzysta z produkcji OEM w różnych krajach; część asortymentu może pochodzić z fabryk w Polsce współpracujących z Otto Group."
-      ],
-      "producedBy": [
-        "m-otto-group"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3544,9 +3366,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-sonifer-sa"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3571,9 +3390,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-silva-schneider"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3597,9 +3413,6 @@
       "factories_pl": [
         "Brak bezpośrednich fabryk w Polsce (korzysta z centrów logistycznych Elica w Jelczu-Laskowicach)."
       ],
-      "producedBy": [
-        "m-elica-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3622,10 +3435,7 @@
         "Małe AGD"
       ],
       "factories_pl": [
-        "Produkcja kontraktowa (OEM) w Chinach i Turcji."
-      ],
-      "producedBy": [
-        "m-oem-china"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3650,9 +3460,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-nortek-global"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3676,10 +3483,7 @@
         "Duże AGD (wolnostojące)"
       ],
       "factories_pl": [
-        "Brak produkcji w Polsce; produkcja zorientowana na model OEM w Azji pod ścisłym nadzorem inżynieryjnym w Walencji."
-      ],
-      "producedBy": [
-        "m-cecotec-innovaciones"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3703,9 +3507,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-ciarra-appliances"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3732,9 +3533,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-midea"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3759,9 +3557,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-middleby-corp"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3784,10 +3579,7 @@
         "Płyty Grzewcze"
       ],
       "factories_pl": [
-        "Produkcja mieszana (własny montaż / OEM)."
-      ],
-      "producedBy": [
-        "m-focus-agd"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3812,10 +3604,7 @@
         "Chłodnictwo"
       ],
       "factories_pl": [
-        "Produkcja OEM realizowana przez dużych graczy rynkowych (m.in. Whirlpool/Beko Europe)."
-      ],
-      "producedBy": [
-        "m-kingfisher-plc"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3842,9 +3631,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-klima-classic"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3868,9 +3654,6 @@
       ],
       "factories_pl": [
         "Posiada centrum logistyczne i montażowe w Polsce (Gądki pod Poznaniem)."
-      ],
-      "producedBy": [
-        "m-hendi-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3896,9 +3679,6 @@
       "factories_pl": [
         "Własna produkcja zlewozmywaków granitowych w Polsce."
       ],
-      "producedBy": [
-        "m-kuchinox-polska"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3921,9 +3701,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-franke-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -3949,9 +3726,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-middleby-corp"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -3967,7 +3741,7 @@
       "founded_year": 1985,
       "business_structure": "Przedsiębiorstwo Prywatne",
       "product_range": "Szerokie Portfolio",
-      "acquisition_history": "Należy do PKM GmbH & Co. KG, specjalizującej się w imporcie i certyfikacji urządzeń OEM.",
+      "acquisition_history": "Należy do PKM GmbH & Co. KG, specjalizującej się w imporcie i certyfikacji sprzętu AGD.",
       "product_categories": [
         "Chłodnictwo",
         "Gotowanie",
@@ -3975,10 +3749,7 @@
         "Zabudowa podblatowa"
       ],
       "factories_pl": [
-        "Produkcja OEM (Chiny, Turcja)."
-      ],
-      "producedBy": [
-        "m-pkm-gmbh"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4002,10 +3773,7 @@
         "Chłodnictwo do zabudowy"
       ],
       "factories_pl": [
-        "Produkcja OEM."
-      ],
-      "producedBy": [
-        "m-neg-novex"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4028,9 +3796,6 @@
       ],
       "factories_pl": [
         "Produkcja realizowana w fabrykach Elica, w tym w Polsce (Jelcz-Laskowice)."
-      ],
-      "producedBy": [
-        "m-elica-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4056,9 +3821,6 @@
       "factories_pl": [
         "Wielkie centrum logistyczne w Polsce; produkcja AGD głównie w Chinach."
       ],
-      "producedBy": [
-        "m-oem-china"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4082,9 +3844,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-oem-china"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4110,9 +3869,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-jp-industries"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4135,10 +3891,7 @@
         "Urządzenia warsztatowe"
       ],
       "factories_pl": [
-        "Produkcja OEM w Azji."
-      ],
-      "producedBy": [
-        "m-canbolat-vertriebs"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4162,10 +3915,7 @@
         "Okapy Kuchenne"
       ],
       "factories_pl": [
-        "Produkcja kontraktowa w fabrykach dużych producentów (np. Whirlpool, Beko)."
-      ],
-      "producedBy": [
-        "m-kingfisher-plc"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4191,10 +3941,6 @@
       "factories_pl": [
         "Historycznie posiadała potężne zakłady w Polsce, obecnie brak własnej produkcji."
       ],
-      "producedBy": [
-        "m-winia-electronics",
-        "m-oem-various"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4219,9 +3965,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-lacor-menaje"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4245,10 +3988,7 @@
         "RTV"
       ],
       "factories_pl": [
-        "Produkcja OEM w Chinach i Turcji (m.in. Vestel)."
-      ],
-      "producedBy": [
-        "m-cdiscount-group"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4274,9 +4014,6 @@
       "factories_pl": [
         "Produkcja mieszana (Polska/Turcja)."
       ],
-      "producedBy": [
-        "m-id-unknown"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4299,10 +4036,7 @@
         "Pielęgnacja osobista"
       ],
       "factories_pl": [
-        "Brak produkcji w Polsce; głównymi dostawcami są producenci OEM z Chin (m.in. Hoyer Handel)."
-      ],
-      "producedBy": [
-        "m-schwarz-gruppe"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4329,9 +4063,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce; ogromne zakłady produkcyjne w Turcji (Kayseri)."
       ],
-      "producedBy": [
-        "m-simfer-as"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4355,9 +4086,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce."
-      ],
-      "producedBy": [
-        "m-taurus-group"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4383,9 +4111,6 @@
       "factories_pl": [
         "Posiada duże centra logistyczne w Polsce (np. okolice Słubic)."
       ],
-      "producedBy": [
-        "m-vevor-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4410,9 +4135,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-vitrokitchen-spain"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4433,10 +4155,7 @@
         "Okapy Kuchenne"
       ],
       "factories_pl": [
-        "Produkcja OEM (głównie Turcja i Chiny)."
-      ],
-      "producedBy": [
-        "m-oem-various"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4462,9 +4181,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-cna-group"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4489,9 +4205,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-oem-china"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4513,10 +4226,7 @@
         "Płyty Grzewcze"
       ],
       "factories_pl": [
-        "Produkcja OEM."
-      ],
-      "producedBy": [
-        "m-oem-various"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4542,9 +4252,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce; 100% Made in Italy."
       ],
-      "producedBy": [
-        "m-galvamet-italy"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4567,10 +4274,7 @@
         "Małe AGD"
       ],
       "factories_pl": [
-        "Brak produkcji w Polsce; produkcja kontraktowa."
-      ],
-      "producedBy": [
-        "m-ers-group"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4595,9 +4299,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-oem-china"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4620,10 +4321,7 @@
         "Zamrażarki"
       ],
       "factories_pl": [
-        "Produkcja OEM (Turcja, Chiny)."
-      ],
-      "producedBy": [
-        "m-oem-various"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4646,10 +4344,7 @@
         "Akcesoria wentylacyjne"
       ],
       "factories_pl": [
-        "Częściowy montaż lub produkcja kontraktowa w Polsce."
-      ],
-      "producedBy": [
-        "m-id-unknown"
+        "Częściowy montaż w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4675,9 +4370,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-delta-france"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4702,9 +4394,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-melchioni-spa"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4726,10 +4415,7 @@
         "Zlewozmywaki"
       ],
       "factories_pl": [
-        "Produkcja OEM."
-      ],
-      "producedBy": [
-        "m-oem-various"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4755,9 +4441,6 @@
       "factories_pl": [
         "Produkcja mieszana; własne zaplecze projektowe i logistyczne w Polsce."
       ],
-      "producedBy": [
-        "m-novoterm-szczecin"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4780,10 +4463,7 @@
         "Małe AGD"
       ],
       "factories_pl": [
-        "Produkcja OEM realizowana przez zewnętrznych dostawców."
-      ],
-      "producedBy": [
-        "m-obi-group"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4807,10 +4487,7 @@
         "Okapy"
       ],
       "factories_pl": [
-        "Produkcja OEM."
-      ],
-      "producedBy": [
-        "m-oem-various"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4834,9 +4511,6 @@
       ],
       "factories_pl": [
         "Brak produkcji w Polsce; głównie Turcja."
-      ],
-      "producedBy": [
-        "m-oem-turkey"
       ],
       "type": "brand",
       "availableInPL": true,
@@ -4862,9 +4536,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-tognana-spa"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4888,9 +4559,6 @@
       "factories_pl": [
         "Brak produkcji w Polsce."
       ],
-      "producedBy": [
-        "m-oem-china"
-      ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
@@ -4913,440 +4581,13 @@
         "Małe AGD"
       ],
       "factories_pl": [
-        "Produkcja OEM."
-      ],
-      "producedBy": [
-        "m-oem-china"
+        "Brak fabryk w Polsce."
       ],
       "type": "brand",
       "availableInPL": true,
       "scope": "regional",
       "parentId": "h-cn-ind",
       "seo_slug": "topstrong"
-    },
-    {
-      "id": "m-bora-holding",
-      "type": "manufacturer",
-      "name": "Bora Holding",
-      "country": "Austria",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: BORA.",
-      "seo_slug": "bora-holding-oem"
-    },
-    {
-      "id": "m-braukmann-gmbh",
-      "type": "manufacturer",
-      "name": "Braukmann Gmbh",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Caso.",
-      "seo_slug": "braukmann-gmbh-oem"
-    },
-    {
-      "id": "m-canbolat-vertriebs",
-      "type": "manufacturer",
-      "name": "Canbolat Vertriebs",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: AREBOS.",
-      "seo_slug": "canbolat-vertriebs-oem"
-    },
-    {
-      "id": "m-cdiscount-group",
-      "type": "manufacturer",
-      "name": "Cdiscount Group",
-      "country": "Francja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Continental Edison, Oceanic.",
-      "seo_slug": "cdiscount-group-oem"
-    },
-    {
-      "id": "m-cecotec-innovaciones",
-      "type": "manufacturer",
-      "name": "Cecotec Innovaciones",
-      "country": "Hiszpania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Cecotec.",
-      "seo_slug": "cecotec-innovaciones-oem"
-    },
-    {
-      "id": "m-ciarko-sanok",
-      "type": "manufacturer",
-      "name": "Ciarko (Sanok)",
-      "country": "Polska",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ciarko.",
-      "seo_slug": "ciarko-sanok-oem"
-    },
-    {
-      "id": "m-ciarra-appliances",
-      "type": "manufacturer",
-      "name": "Ciarra Appliances",
-      "country": "Chiny",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ciarra.",
-      "seo_slug": "ciarra-appliances-oem"
-    },
-    {
-      "id": "m-clatronic-group",
-      "type": "manufacturer",
-      "name": "Clatronic Group",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Bomann, Clatronic.",
-      "seo_slug": "clatronic-group-oem"
-    },
-    {
-      "id": "m-cna-group",
-      "type": "manufacturer",
-      "name": "CNA Group",
-      "country": "Hiszpania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Cata, Nodor, Cata & Can Roca.",
-      "seo_slug": "cna-group-oem"
-    },
-    {
-      "id": "m-delta-france",
-      "type": "manufacturer",
-      "name": "Delta France",
-      "country": "Francja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Livoo.",
-      "seo_slug": "delta-france-oem"
-    },
-    {
-      "id": "m-dometic-group",
-      "type": "manufacturer",
-      "name": "Dometic Group",
-      "country": "Szwecja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Dometic.",
-      "seo_slug": "dometic-group-oem"
-    },
-    {
-      "id": "m-dunavox-europe",
-      "type": "manufacturer",
-      "name": "Dunavox Europe",
-      "country": "Węgry",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Dunavox.",
-      "seo_slug": "dunavox-europe-oem"
-    },
-    {
-      "id": "m-electrolux",
-      "type": "manufacturer",
-      "name": "Electrolux",
-      "country": "Szwecja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ikea.",
-      "seo_slug": "electrolux-oem"
-    },
-    {
-      "id": "m-elica-group",
-      "type": "manufacturer",
-      "name": "Elica Group",
-      "country": "Włochy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Airforce, TurboAir.",
-      "seo_slug": "elica-group-oem"
-    },
-    {
-      "id": "m-ers-group",
-      "type": "manufacturer",
-      "name": "ERS Group",
-      "country": "Nieznany",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Heinrich'S.",
-      "seo_slug": "ers-group-oem"
-    },
-    {
-      "id": "m-focus-agd",
-      "type": "manufacturer",
-      "name": "Focus AGD",
-      "country": "Polska",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Focus.",
-      "seo_slug": "focus-agd-oem"
-    },
-    {
-      "id": "m-franke-group",
-      "type": "manufacturer",
-      "name": "Franke Group",
-      "country": "Szwajcaria",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Mepamsa.",
-      "seo_slug": "franke-group-oem"
-    },
-    {
-      "id": "m-frio-group",
-      "type": "manufacturer",
-      "name": "Frio Group",
-      "country": "Francja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Avintage, Climadiff, La Sommelière, Le Cellier.",
-      "seo_slug": "frio-group-oem"
-    },
-    {
-      "id": "m-galvamet-italy",
-      "type": "manufacturer",
-      "name": "Galvamet (Włochy)",
-      "country": "Włochy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Galvamet.",
-      "seo_slug": "galvamet-italy-oem"
-    },
-    {
-      "id": "m-hendi-group",
-      "type": "manufacturer",
-      "name": "Hendi Group",
-      "country": "Holandia",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Hendi.",
-      "seo_slug": "hendi-group-oem"
-    },
-    {
-      "id": "m-id-unknown",
-      "type": "manufacturer",
-      "name": "Producent nieustalony",
-      "country": "Nieznany",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: De Noble & Foster, Freggia, Schild, KAGE.",
-      "seo_slug": "id-unknown-oem"
-    },
-    {
-      "id": "m-jp-industries",
-      "type": "manufacturer",
-      "name": "JP Industries",
-      "country": "Włochy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Ardo.",
-      "seo_slug": "jp-industries-oem"
-    },
-    {
-      "id": "m-kingfisher-plc",
-      "type": "manufacturer",
-      "name": "Kingfisher plc",
-      "country": "Wielka Brytania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: GoodHome, Cooke & Lewis.",
-      "seo_slug": "kingfisher-plc-oem"
-    },
-    {
-      "id": "m-klima-classic",
-      "type": "manufacturer",
-      "name": "Klima Classic",
-      "country": "Czechy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Guzzanti.",
-      "seo_slug": "klima-classic-oem"
-    },
-    {
-      "id": "m-kuchinox-polska",
-      "type": "manufacturer",
-      "name": "Kuchinox Polska",
-      "country": "Polska",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Kuchinox.",
-      "seo_slug": "kuchinox-polska-oem"
-    },
-    {
-      "id": "m-lacor-menaje",
-      "type": "manufacturer",
-      "name": "Lacor Menaje Profesional",
-      "country": "Hiszpania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Lacor.",
-      "seo_slug": "lacor-menaje-oem"
-    },
-    {
-      "id": "m-ls-group",
-      "type": "manufacturer",
-      "name": "LS Group",
-      "country": "Nieznany",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Cavin.",
-      "seo_slug": "ls-group-oem"
-    },
-    {
-      "id": "m-m-san-grupa",
-      "type": "manufacturer",
-      "name": "M SAN Grupa",
-      "country": "Chorwacja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Vivax.",
-      "seo_slug": "m-san-grupa-oem"
-    },
-    {
-      "id": "m-melchioni-spa",
-      "type": "manufacturer",
-      "name": "Melchioni S.p.A.",
-      "country": "Włochy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Melchioni.",
-      "seo_slug": "melchioni-spa-oem"
-    },
-    {
-      "id": "m-middleby-corp",
-      "type": "manufacturer",
-      "name": "Middleby Corp",
-      "country": "USA",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Falcon, Novy.",
-      "seo_slug": "middleby-corp-oem"
-    },
-    {
-      "id": "m-neg-novex",
-      "type": "manufacturer",
-      "name": "NEG / Novex",
-      "country": "Nieznany",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Respekta.",
-      "seo_slug": "neg-novex-oem"
-    },
-    {
-      "id": "m-nortek-global",
-      "type": "manufacturer",
-      "name": "Nortek Global",
-      "country": "USA",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Best.",
-      "seo_slug": "nortek-global-oem"
-    },
-    {
-      "id": "m-novoterm-szczecin",
-      "type": "manufacturer",
-      "name": "Novoterm (Szczecin)",
-      "country": "Polska",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Novoterm.",
-      "seo_slug": "novoterm-szczecin-oem"
-    },
-    {
-      "id": "m-obi-group",
-      "type": "manufacturer",
-      "name": "OBI Group",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: OBI.",
-      "seo_slug": "obi-group-oem"
-    },
-    {
-      "id": "m-oem-china",
-      "type": "manufacturer",
-      "name": "Producenci kontraktowi (Chiny)",
-      "country": "Chiny",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Malatec, Bright, Berdsen, VidaXL, Amzchef, Covercook i 3 innych.",
-      "seo_slug": "oem-china-oem"
-    },
-    {
-      "id": "m-oem-turkey",
-      "type": "manufacturer",
-      "name": "Producenci kontraktowi (Turcja)",
-      "country": "Turcja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Stella.",
-      "seo_slug": "oem-turkey-oem"
-    },
-    {
-      "id": "m-oem-various",
-      "type": "manufacturer",
-      "name": "Producenci kontraktowi (różni)",
-      "country": "Różne",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Daewoo, Arset, Fenu, Iceberg, Neto, Smartcook.",
-      "seo_slug": "oem-various-oem"
-    },
-    {
-      "id": "m-olan-haushaltsgerate",
-      "type": "manufacturer",
-      "name": "Olan Haushaltsgeräte",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Kaiser.",
-      "seo_slug": "olan-haushaltsgerate-oem"
-    },
-    {
-      "id": "m-otto-group",
-      "type": "manufacturer",
-      "name": "Otto Group",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Hanseatic.",
-      "seo_slug": "otto-group-oem"
-    },
-    {
-      "id": "m-pkm-gmbh",
-      "type": "manufacturer",
-      "name": "PKM GmbH",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: PKM.",
-      "seo_slug": "pkm-gmbh-oem"
-    },
-    {
-      "id": "m-pyramis-metallourgia",
-      "type": "manufacturer",
-      "name": "Pyramis Metallourgia",
-      "country": "Grecja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Pyramis.",
-      "seo_slug": "pyramis-metallourgia-oem"
-    },
-    {
-      "id": "m-schwarz-gruppe",
-      "type": "manufacturer",
-      "name": "Schwarz Gruppe",
-      "country": "Niemcy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Silvercrest.",
-      "seo_slug": "schwarz-gruppe-oem"
-    },
-    {
-      "id": "m-silva-schneider",
-      "type": "manufacturer",
-      "name": "Silva-Schneider",
-      "country": "Austria",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Silva Homeline.",
-      "seo_slug": "silva-schneider-oem"
-    },
-    {
-      "id": "m-simfer-as",
-      "type": "manufacturer",
-      "name": "Simfer A.Ş.",
-      "country": "Turcja",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Simfer.",
-      "seo_slug": "simfer-as-oem"
-    },
-    {
-      "id": "m-sonifer-sa",
-      "type": "manufacturer",
-      "name": "Sonifer SA",
-      "country": "Nieznany",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Orbegozo.",
-      "seo_slug": "sonifer-sa-oem"
-    },
-    {
-      "id": "m-taurus-group",
-      "type": "manufacturer",
-      "name": "Taurus Group",
-      "country": "Hiszpania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Taurus.",
-      "seo_slug": "taurus-group-oem"
-    },
-    {
-      "id": "m-teka-group",
-      "type": "manufacturer",
-      "name": "Teka Group",
-      "country": "Hiszpania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Küppersbusch.",
-      "seo_slug": "teka-group-oem"
-    },
-    {
-      "id": "m-thetford-corp",
-      "type": "manufacturer",
-      "name": "Thetford Corp",
-      "country": "USA",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Thetford.",
-      "seo_slug": "thetford-corp-oem"
-    },
-    {
-      "id": "m-tognana-spa",
-      "type": "manufacturer",
-      "name": "Tognana S.p.A.",
-      "country": "Włochy",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Tognana.",
-      "seo_slug": "tognana-spa-oem"
-    },
-    {
-      "id": "m-vevor-group",
-      "type": "manufacturer",
-      "name": "Vevor Group",
-      "country": "Chiny",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: VEVOR.",
-      "seo_slug": "vevor-group-oem"
-    },
-    {
-      "id": "m-vitrokitchen-spain",
-      "type": "manufacturer",
-      "name": "Vitrokitchen (Hiszpania)",
-      "country": "Hiszpania",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Vitrokitchen.",
-      "seo_slug": "vitrokitchen-spain-oem"
-    },
-    {
-      "id": "m-whirlpool-usa",
-      "type": "manufacturer",
-      "name": "Whirlpool Corporation (USA)",
-      "country": "USA",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: KitchenAid.",
-      "seo_slug": "whirlpool-usa-oem"
-    },
-    {
-      "id": "m-winia-electronics",
-      "type": "manufacturer",
-      "name": "Winia Electronics",
-      "country": "Korea Południowa",
-      "description": "Podmiot produkcyjny wskazany w danych jako zaplecze marek: Winia, Daewoo.",
-      "seo_slug": "winia-electronics-oem"
     }
   ],
   "edges": [

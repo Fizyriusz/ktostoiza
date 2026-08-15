@@ -2,7 +2,7 @@
 
 `h-vestel` · Turcja · **3 marek**
 
-> Cichy gigant. Potężna fabryka OEM/ODM produkująca dla innych.
+> Turecka grupa przemysłowa działająca w elektronice użytkowej i AGD.
 
 [← spis wszystkich grup](README.md)
 
@@ -26,7 +26,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Pralki, Lodówki, Zmywarki, Kuchnie wolnostojące |
 | fabryki w PL | — **brak informacji** |
-| producent (OEM) | Vestel `h-vestel` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/finlux.webp` |
 | adres strony | `/marka/finlux` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Przejęta przez Vestel Group w 2006 roku.
 
-**Brakuje:** informacja o fabrykach w PL
+**Brakuje:** informacja o fabrykach w PL · producent (OEM)
 
 ---
 
@@ -57,7 +57,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki, Pralki, Zmywarki, Kuchenki mikrofalowe, Piekarniki |
 | fabryki w PL | _Brak własnych fabryk w Polsce w segmencie AGD. Produkcja zlecana na licencji tureckiemu koncernowi Vestel._ |
-| producent (OEM) | Vestel `h-vestel` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/sharp.svg` |
 | adres strony | `/marka/sharp` |
 | linki zakupowe | media_expert: https://www.mediaexpert.pl/agd/brand-sharp |
@@ -65,6 +65,8 @@
 **Opis:** Popularny w kategorii lodówek i zmywarek. Technologia i produkcja tureckiego Vestela na licencji.
 
 **Historia przejęć:** Europejska licencja na markę przejęta przez Vestel w 2014 roku.
+
+**Brakuje:** producent (OEM)
 
 ---
 

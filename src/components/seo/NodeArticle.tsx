@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import dataset from '@/data/dataset.json';
+import { SHOW_OEM } from '@/config/features';
+import { Disclaimer } from '@/components/ui/Disclaimer';
 
 /**
  * Treść podstrony /marka/[slug] renderowana po stronie serwera.
@@ -159,7 +161,7 @@ export default function NodeArticle({ node }: { node: NodeLike }) {
                   {node.availableInPL === false ? 'Niedostępna w Polsce' : 'Dostępna w Polsce'}
                 </Fact>
               )}
-              {isHolding && node.isOEM && (
+              {SHOW_OEM && isHolding && node.isOEM && (
                 <Fact label="Produkcja kontraktowa">Koncern świadczy usługi OEM dla marek zewnętrznych</Fact>
               )}
             </dl>
@@ -204,7 +206,7 @@ export default function NodeArticle({ node }: { node: NodeLike }) {
             </Section>
           )}
 
-          {producers.length > 0 && (
+          {SHOW_OEM && producers.length > 0 && (
             <Section title="Realna produkcja (OEM)">
               <p className="text-slate-600 font-medium text-[15px] mb-4 leading-relaxed">
                 Sprzęt sygnowany logo {node.name} powstaje z wykorzystaniem zaplecza
@@ -248,7 +250,7 @@ export default function NodeArticle({ node }: { node: NodeLike }) {
             </Section>
           )}
 
-          {!isHolding && producedHere.length > 0 && (
+          {SHOW_OEM && !isHolding && producedHere.length > 0 && (
             <Section title={`Marki korzystające z tego zaplecza (${producedHere.length})`}>
               <ul className="flex flex-wrap gap-x-4 gap-y-2">
                 {producedHere.map(c => (
@@ -272,6 +274,8 @@ export default function NodeArticle({ node }: { node: NodeLike }) {
             </Section>
           )}
         </div>
+
+        <Disclaimer subject={node.name} />
 
         <footer className="mt-10 pt-8 border-t border-slate-200 flex flex-wrap items-center gap-4">
           <Link

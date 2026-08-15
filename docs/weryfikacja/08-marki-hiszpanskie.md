@@ -26,7 +26,7 @@
 | zakres produktów | Specjalista: Gotowanie i Okapy |
 | kategorie | Okapy Kuchenne, Płyty Grzewcze, Piekarniki, Zlewozmywaki |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | CNA Group `m-cna-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/cata` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Niezależna grupa CNA Group, która w swojej historii przejmowała inne marki, takie jak Nodor czy markę Fagor (prawa do nazwy w określonych regionach).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -59,7 +59,7 @@
 | zakres produktów | Specjalista: Gotowanie (Linia Premium) |
 | kategorie | Płyty Indukcyjne, Okap kuchenne, Piekarniki |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | CNA Group `m-cna-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/cata-can-roca` |
 | linki zakupowe | — |
@@ -68,7 +68,7 @@
 
 **Historia przejęć:** Dedykowana linia wewnątrz struktur CNA Group (Cata).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -91,8 +91,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Pełne Portfolio (Małe i Duże AGD) |
 | kategorie | Małe AGD, Roboty sprzątające, Ekspresy do kawy, Duże AGD (wolnostojące) |
-| fabryki w PL | _Brak produkcji w Polsce; produkcja zorientowana na model OEM w Azji pod ścisłym nadzorem inżynieryjnym w Walencji._ |
-| producent (OEM) | Cecotec Innovaciones `m-cecotec-innovaciones` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/cecotec` |
 | linki zakupowe | — |
@@ -101,7 +101,7 @@
 
 **Historia przejęć:** Niezależna firma rodzinna (rodzeństwo Orts), która przekształciła się w globalne przedsiębiorstwo.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -125,7 +125,7 @@
 | zakres produktów | Specjalista: Gastronomia |
 | kategorie | Małe AGD profesjonalne, Naczynia kuchenne, Przetwórstwo żywności |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Lacor Menaje Profesional `m-lacor-menaje` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/lacor` |
 | linki zakupowe | — |
@@ -134,7 +134,7 @@
 
 **Historia przejęć:** Niezależna firma hiszpańska.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -158,7 +158,7 @@
 | zakres produktów | Specjalista: Okapy Kuchenne |
 | kategorie | Okapy Kuchenne, Płyty Grzewcze |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Franke Group `m-franke-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/mepamsa` |
 | linki zakupowe | — |
@@ -167,7 +167,7 @@
 
 **Historia przejęć:** Marka została przejęta przez szwajcarski koncern Franke Group, stając się częścią ich portfela marek kuchennych.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -191,7 +191,7 @@
 | zakres produktów | Specjalista: Gotowanie |
 | kategorie | Okapy Kuchenne, Płyty Indukcyjne, Piekarniki |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | CNA Group `m-cna-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/nodor` |
 | linki zakupowe | — |
@@ -200,7 +200,7 @@
 
 **Historia przejęć:** Przejęta w 2004 roku przez CNA Group.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -224,7 +224,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Kuchenki mikrofalowe, Ogrzewanie, Wentylacja, Małe AGD kuchenne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Sonifer SA `m-sonifer-sa` ⚠️ kraj nieznany |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/orbegozo` |
 | linki zakupowe | — |
@@ -233,7 +233,7 @@
 
 **Historia przejęć:** Należy do Sonifer S.A., hiszpańskiej firmy rodzinnej.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -257,7 +257,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Małe AGD kuchenne, Roboty sprzątające, Obróbka żywności |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Taurus Group `m-taurus-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/taurus` |
 | linki zakupowe | — |
@@ -266,7 +266,7 @@
 
 **Historia przejęć:** Główna marka Taurus Group, która w swoim portfolio posiada również marki takie jak Solac czy Casals.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -290,7 +290,7 @@
 | zakres produktów | Specjalista: Gotowanie |
 | kategorie | Kuchnie wolnostojące, Płyty gazowe, Piekarniki gazowe |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Vitrokitchen (Hiszpania) `m-vitrokitchen-spain` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/vitrokitchen` |
 | linki zakupowe | — |
@@ -299,7 +299,7 @@
 
 **Historia przejęć:** Niezależne przedsiębiorstwo hiszpańskie.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 

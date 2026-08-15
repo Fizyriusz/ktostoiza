@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Handle, Position, NodeProps, useStore } from '@xyflow/react';
 import { Factory } from 'lucide-react';
 import { useFilter, nodeMatchesFilter } from '@/contexts/FilterContext';
+import { SHOW_BRAND_LOGOS } from '@/config/features';
 import { motion } from 'framer-motion';
 
 function getCountryCode(countryStr: string) {
@@ -181,7 +182,7 @@ export const BrandNode = ({ data }: NodeProps) => {
   const accentColor = (data.accentColor as string) || '#64748b';
   const localLogo = data.localLogo as string | undefined;
   // Logo lokalne z /public/brandsicons; inicjał marki jako ostatnia deska ratunku.
-  const showLogo = Boolean(localLogo) && !imgError;
+  const showLogo = SHOW_BRAND_LOGOS && Boolean(localLogo) && !imgError;
   const initial = brandName.charAt(0).toUpperCase();
   const flagUrl = getFlagUrl(origin);
   const hasRecentNews = data.hasRecentNews as boolean;

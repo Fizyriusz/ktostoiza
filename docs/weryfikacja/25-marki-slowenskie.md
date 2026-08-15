@@ -1,8 +1,8 @@
-# Słoweńskie Marki Niezależne
+# Marki słoweńskie
 
 `h-si-ind` · Słowenia · **1 marek**
 
-> Niezależne firmy ze Słowenii operujące poza strukturami grupy Hisense/Gorenje.
+> Marki o słoweńskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Słowenia |
-| właściciel / grupa | Słoweńskie Marki Niezależne `h-si-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki słoweńskie `h-si-ind` — podstawa: _Marka_ |
 | segment | Standard / Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |

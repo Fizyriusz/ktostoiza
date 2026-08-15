@@ -56,7 +56,7 @@
 | struktura | Grupa Kapitałowa |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Lodówki wolnostojące, Zamrażarki skrzyniowe, Zmywarki, Pralki |
-| fabryki w PL | _Brak produkcji europejskiej. Czysty model dystrybucyjny OEM._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/goddess.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/goddess` |

@@ -26,7 +26,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Pranie, Chłodnictwo, Zmywanie, Gotowanie |
 | fabryki w PL | Korzysta z zaplecza produkcyjnego BSH w Polsce (Łódź, Wrocław, Rogoźnica) dla wybranych linii produktowych. |
-| producent (OEM) | BSH Factory (OEM) `m-bsh-factory` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/balay` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** W 1988 roku marka została włączona do grupy BSH (Bosch und Siemens Hausgeräte), stając się częścią jednego z największych koncernów AGD na świecie.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 ---
 

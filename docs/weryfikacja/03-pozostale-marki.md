@@ -1,8 +1,8 @@
-# Pozostałe Marki Niezależne
+# Pozostałe marki
 
 `h-other-ind` · Różne · **16 marek**
 
-> Marki niezależne z innych krajów Europy i Świata.
+> Marki z krajów bez osobnej grupy, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Szwecja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard / Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -26,7 +26,7 @@
 | zakres produktów | Specjalista: Chłodnictwo Wina |
 | kategorie | Winiarki do zabudowy, Winiarki wolnostojące |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | LS Group `m-ls-group` ⚠️ kraj nieznany |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/cavin` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Marka ściśle powiązana z grupą dystrybucyjną LS-Group, operującą na rynku skandynawskim i europejskim.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -50,7 +50,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Czechy |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -58,8 +58,8 @@
 | struktura | Przedsiębiorstwo Prywatne |
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Lodówki Retro, Piekarniki i płyty do zabudowy, Zmywarki |
-| fabryki w PL | _Brak fabryk w Polsce. Czeska marka korzystająca z produkcji OEM w Chinach i Turcji (szczególnie w zakresie kolorowych lodówek retro)._ |
-| producent (OEM) | Fabryka Amica (Wronki) `m-amica-factory` |
+| fabryki w PL | _Brak fabryk w Polsce._ |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/concept.png` |
 | adres strony | `/marka/concept` |
 | linki zakupowe | — |
@@ -67,6 +67,8 @@
 **Opis:** Czeska popularna linia małego i dużego AGD. Sporą część asortymentu dostarcza im polska Amica.
 
 **Historia przejęć:** Niezależna czeska firma prywatna.
+
+**Brakuje:** producent (OEM)
 
 ---
 
@@ -79,7 +81,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Korea Południowa |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -88,7 +90,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Chłodnictwo, Pranie, Kuchenki mikrofalowe |
 | fabryki w PL | _Historycznie posiadała potężne zakłady w Polsce, obecnie brak własnej produkcji._ |
-| producent (OEM) | Winia Electronics `m-winia-electronics`<br>Producenci kontraktowi (różni) `m-oem-various` ⚠️ zastępnik |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/daewoo` |
 | linki zakupowe | — |
@@ -97,10 +99,9 @@
 
 **Historia przejęć:** Dział AGD został przekształcony w Winia Electronics, jednak prawa do samej nazwy Daewoo na wielu rynkach są licencjonowane zewnętrznym podmiotom.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
-> ⚠️ Producent to zbiorczy zastępnik, nie konkretny zakład — do ustalenia.
 
 ---
 
@@ -113,7 +114,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Szwecja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -122,7 +123,7 @@
 | zakres produktów | Specjalista: Mobile Living |
 | kategorie | Chłodnictwo mobilne, Klimatyzacja, Gotowanie outdoorowe, Systemy sanitarne |
 | fabryki w PL | _Brak produkcji urządzeń AGD w Polsce (posiada centra dystrybucyjne)._ |
-| producent (OEM) | Dometic Group `m-dometic-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/dometic` |
 | linki zakupowe | — |
@@ -131,7 +132,7 @@
 
 **Historia przejęć:** Wydzielona z grupy Electrolux w 2001 roku. W kolejnych latach przejęła wielu konkurentów, m.in. marki Waeco (chłodnictwo) oraz Kampa (sprzęt outdoorowy).
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -146,7 +147,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Węgry |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -155,7 +156,7 @@
 | zakres produktów | Specjalista: Chłodnictwo Wina |
 | kategorie | Winiarki do zabudowy, Winiarki wolnostojące, Profesjonalne szafy na wino |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Dunavox Europe `m-dunavox-europe` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/dunavox` |
 | linki zakupowe | — |
@@ -164,7 +165,7 @@
 
 **Historia przejęć:** Niezależna spółka z centralą w Budapeszcie, obecna w ponad 40 krajach.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -179,7 +180,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Szwajcaria |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` |
+| właściciel / grupa | Pozostałe marki `h-other-ind` |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -188,16 +189,16 @@
 | zakres produktów | Pełne Portfolio (Zabudowa i Zlewozmywaki) |
 | kategorie | Zlewozmywaki, Piekarniki, Płyty grzewcze, Okapy, Zmywarki |
 | fabryki w PL | — **brak informacji** |
-| producent (OEM) | Beko Europe `h-beko` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/franke.svg` |
 | adres strony | `/marka/franke` |
 | linki zakupowe | — |
 
-**Opis:** Lider rynku zlewozmywaków. W kategorii dużego AGD bazuje silnie na platformach Whirlpoola oraz rozwiązaniach od włoskiego OEM Meneghetti.
+**Opis:** Lider rynku zlewozmywaków, obecny także w kategorii dużego AGD.
 
 **Historia przejęć:** Niezależny holding rodzinny Artemis. Właściciel marki okapów Faber.
 
-**Brakuje:** informacja o fabrykach w PL
+**Brakuje:** informacja o fabrykach w PL · producent (OEM)
 
 ---
 
@@ -210,7 +211,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Czechy |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -219,7 +220,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Chłodnictwo Wina, Małe AGD, Okapy Kuchenne, Zmywanie |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Klima Classic `m-klima-classic` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/guzzanti` |
 | linki zakupowe | — |
@@ -228,7 +229,7 @@
 
 **Historia przejęć:** Część grupy Klima-Classic, czeskiego dystrybutora i producenta.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -243,7 +244,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Holandia |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium (Profesjonalny) |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -252,7 +253,7 @@
 | zakres produktów | Specjalista: Gastronomia (HoReCa) |
 | kategorie | Sprzęt kuchenny profesjonalny, Obróbka termiczna, Chłodnictwo komercyjne |
 | fabryki w PL | Posiada centrum logistyczne i montażowe w Polsce (Gądki pod Poznaniem). |
-| producent (OEM) | Hendi Group `m-hendi-group` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/hendi` |
 | linki zakupowe | — |
@@ -261,7 +262,7 @@
 
 **Historia przejęć:** Międzynarodowa grupa z oddziałami w całej Europie, w tym silnym przedstawicielstwem Hendi Polska.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -276,7 +277,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Belgia |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -285,7 +286,7 @@
 | zakres produktów | Specjalista: Okapy i Płyty |
 | kategorie | Okapy sufitowe, Płyty z wyciągiem, Oświetlenie kuchenne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Middleby Corp `m-middleby-corp` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/novy` |
 | linki zakupowe | — |
@@ -294,7 +295,7 @@
 
 **Historia przejęć:** W 2021 roku marka Novy została przejęta przez amerykańską grupę Middleby Corporation.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -309,7 +310,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | USA |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -318,7 +319,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki, Pralki, Zmywarki, Piekarniki |
 | fabryki w PL | — **brak informacji** |
-| producent (OEM) | Hisense Group `h-hisense`<br>Vestel `h-vestel` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/philco.svg` |
 | adres strony | `/marka/philco` |
 | linki zakupowe | — |
@@ -327,7 +328,7 @@
 
 **Historia przejęć:** Licencja na markę w Europie Środkowo-Wschodniej przejęta przez Fast ČR w 2011 roku.
 
-**Brakuje:** informacja o fabrykach w PL
+**Brakuje:** informacja o fabrykach w PL · producent (OEM)
 
 ---
 
@@ -340,7 +341,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Grecja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -349,7 +350,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Zlewozmywaki, Baterie kuchenne, Piekarniki, Okapy Kuchenne |
 | fabryki w PL | _Brak produkcji urządzeń AGD w Polsce; silna obecność dystrybucyjna._ |
-| producent (OEM) | Pyramis Metallourgia `m-pyramis-metallourgia` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/pyramis` |
 | linki zakupowe | — |
@@ -358,7 +359,7 @@
 
 **Historia przejęć:** Niezależne przedsiębiorstwo rodzinne z własnymi zakładami produkcyjnymi w Grecji i Indiach.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -373,7 +374,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Austria |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -382,7 +383,7 @@
 | zakres produktów | Specjalista: Małe AGD |
 | kategorie | Kuchenki mikrofalowe, Małe AGD kuchenne, Audio |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Silva-Schneider `m-silva-schneider` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/silva-homeline` |
 | linki zakupowe | — |
@@ -391,7 +392,7 @@
 
 **Historia przejęć:** Część Silva Schneider Handel GmbH, operującej głównie na rynkach DACH.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -406,7 +407,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Turcja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -415,7 +416,7 @@
 | zakres produktów | Szerokie Portfolio (Głównie Gotowanie) |
 | kategorie | Kuchnie wolnostojące, Piekarniki, Chłodnictwo, Ogrzewanie |
 | fabryki w PL | _Brak produkcji w Polsce; ogromne zakłady produkcyjne w Turcji (Kayseri)._ |
-| producent (OEM) | Simfer A.Ş. `m-simfer-as` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/simfer` |
 | linki zakupowe | — |
@@ -424,7 +425,7 @@
 
 **Historia przejęć:** Niezależna turecka firma rodzinna.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -439,7 +440,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | USA / Holandia |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -448,7 +449,7 @@
 | zakres produktów | Specjalista: Mobile Living |
 | kategorie | Lodówki turystyczne, Kuchenki mobilne, Systemy sanitarne |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Thetford Corp `m-thetford-corp` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/thetford` |
 | linki zakupowe | — |
@@ -457,7 +458,7 @@
 
 **Historia przejęć:** Należy do Monomoy Capital Partners; europejskie centrum operacyjne znajduje się w Holandii.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -472,7 +473,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chorwacja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -481,7 +482,7 @@
 | zakres produktów | Szerokie Portfolio (Głównie Chłodnictwo) |
 | kategorie | Klimatyzacja, Chłodnictwo, Telewizory, Małe AGD |
 | fabryki w PL | _Brak produkcji w Polsce; własna linia montażowa telewizorów i klimatyzacji w Chorwacji._ |
-| producent (OEM) | M SAN Grupa `m-m-san-grupa` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/vivax` |
 | linki zakupowe | — |
@@ -490,7 +491,7 @@
 
 **Historia przejęć:** Marka własna chorwackiego dystrybutora M San Grupa.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 
@@ -505,7 +506,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Korea Południowa |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -514,7 +515,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Chłodnictwo, Pranie, Kuchenki mikrofalowe, Klimatyzacja |
 | fabryki w PL | _Obecnie brak własnej produkcji w Polsce (historycznie Daewoo posiadało duże zakłady w Warszawie i Pruszkowie)._ |
-| producent (OEM) | Winia Electronics `m-winia-electronics` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/winia` |
 | linki zakupowe | — |
@@ -523,7 +524,7 @@
 
 **Historia przejęć:** Marka powstała po przejęciu Daewoo Electronics przez Dayou Group w 2018 roku (później zmieniona na Winia Electronics). Firma przechodziła liczne procesy restrukturyzacyjne w ostatnich latach.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 > ⚠️ Przypisanie do grupy jest **zgadywane po kraju pochodzenia** — marka nie miała w bazie żadnego właściciela. Jeśli ma realnego, przepnij ją.
 

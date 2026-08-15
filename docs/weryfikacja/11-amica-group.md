@@ -26,7 +26,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Piekarniki, Płyty grzewcze, Kuchnie wolnostojące, Zmywarki, Lodówki, Pralki |
 | fabryki w PL | Wronki (kuchnie wolnostojące, piekarniki, płyty grzejne) |
-| producent (OEM) | Fabryka Amica (Wronki) `m-amica-factory`<br>Midea OEM `m-midea`<br>Vestel `h-vestel` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/amica.svg` |
 | adres strony | `/marka/amica` |
 | linki zakupowe | media_expert: https://www.mediaexpert.pl/agd/brand-amica<br>ceneo: https://www.ceneo.pl/Sprzet_AGD;szukaj-amica |
@@ -34,6 +34,8 @@
 **Opis:** Największy polski producent. Własna produkcja to głównie piekarniki i płyty, reszta sprzętu (chłodnictwo) pochodzi m.in. od Vestela i Midei.
 
 **Historia przejęć:** Niezależna (GPW). W portfolio posiada: Gram, CDA, Fagor, Hansa oraz francuską markę Sideme.
+
+**Brakuje:** producent (OEM)
 
 ---
 

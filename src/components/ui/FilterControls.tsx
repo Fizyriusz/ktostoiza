@@ -3,6 +3,7 @@
 import React from 'react';
 import { Factory, MapPin } from 'lucide-react';
 import { FilterType } from '@/contexts/FilterContext';
+import { SHOW_OEM } from '@/config/features';
 
 export const FILTERS: { key: FilterType; label: string }[] = [
   { key: 'all',              label: 'Wszystkie'        },
@@ -79,6 +80,7 @@ export default function FilterControls({
             : 'flex items-center justify-center gap-3 flex-wrap border-t border-slate-200/50 pt-3 w-full'
         }
       >
+        {SHOW_OEM && (
         <button
           onClick={onToggleOEM}
           className={`
@@ -93,6 +95,7 @@ export default function FilterControls({
           <Factory className="w-3 h-3" />
           Tryb OEM
         </button>
+        )}
 
         <button
           onClick={() => {

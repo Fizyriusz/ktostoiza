@@ -119,7 +119,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Pranie, Suszenie, Chłodnictwo, Gotowanie |
 | fabryki w PL | Produkcja w zakładach Beko Europe (dawniej Whirlpool) w Łodzi, Radomsku i Wrocławiu. |
-| producent (OEM) | Beko Europe `h-beko` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/hotpoint.svg` |
 | adres strony | `/marka/hotpoint-ariston` |
 | linki zakupowe | — |
@@ -127,6 +127,8 @@
 **Opis:** Historyczna marka o korzeniach amerykańsko-brytyjskich, przez lata kojarzona z innowacjami w praniu i chłodnictwie. Przez długi czas funkcjonowała jako Hotpoint-Ariston po połączeniu z włoskim Aristonem, stając się jednym z najpopularniejszych brandów AGD w Europie.
 
 **Historia przejęć:** Przejęta przez Whirlpool Corporation, a obecnie (od 2024 r.) stanowi część Beko Europe – spółki joint venture z udziałem Arçelik i Whirlpool.
+
+**Brakuje:** producent (OEM)
 
 ---
 
@@ -210,7 +212,7 @@
 | zakres produktów | Szerokie Portfolio |
 | kategorie | Małe AGD, Gotowanie, Chłodnictwo, Zmywanie |
 | fabryki w PL | Wybrane modele dużego AGD (lodówki, zmywarki) produkowane są w polskich zakładach Beko Europe (dawniej Whirlpool). |
-| producent (OEM) | Beko Europe `h-beko`<br>Whirlpool Corporation (USA) `m-whirlpool-usa` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/kitchenaid` |
 | linki zakupowe | — |
@@ -219,7 +221,7 @@
 
 **Historia przejęć:** Od 1986 roku marka należy do Whirlpool Corporation. Od 2024 r. dystrybucja dużego AGD w Europie realizowana jest w ramach Beko Europe.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 ---
 
@@ -241,7 +243,7 @@
 | zakres produktów | Szerokie Portfolio (Chłodnictwo, Pranie) |
 | kategorie | Lodówki wolnostojące, Pralki ładowane od frontu, Pralki ładowane od góry, Zamrażarki skrzyniowe |
 | fabryki w PL | Wrocław |
-| producent (OEM) | Beko Europe `h-beko` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/polar` |
 | linki zakupowe | — |
@@ -250,7 +252,7 @@
 
 **Historia przejęć:** Przejęta przez Whirlpool w 2002 roku, przeniesiona do Beko Europe w 2024 roku.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 ---
 

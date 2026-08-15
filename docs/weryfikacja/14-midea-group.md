@@ -2,7 +2,7 @@
 
 `h-midea` · Chiny · **4 marek**
 
-> Jeden z największych na świecie producentów AGD i dostawców OEM. Właściciel marek Toshiba (AGD), Teka i Kuppersbusch. Operator fabryki OEM m-midea.
+> Jeden z największych producentów AGD na świecie. Właściciel marek Toshiba (AGD), Teka i Küppersbusch.
 
 [← spis wszystkich grup](README.md)
 
@@ -26,7 +26,7 @@
 | zakres produktów | Pełne Portfolio |
 | kategorie | Chłodnictwo, Klimatyzacja, Pranie, Zmywanie |
 | fabryki w PL | _Brak produkcji w Polsce._ |
-| producent (OEM) | Midea OEM `m-midea` |
+| producent (OEM) | — **brak** |
 | logo | — **brak** |
 | adres strony | `/marka/comfee` |
 | linki zakupowe | — |
@@ -35,7 +35,7 @@
 
 **Historia przejęć:** Marka strategiczna w portfelu Midea Group.
 
-**Brakuje:** logo
+**Brakuje:** producent (OEM) · logo
 
 ---
 
@@ -56,13 +56,13 @@
 | struktura | Spółka Publiczna |
 | zakres produktów | Pełne Portfolio |
 | kategorie | Lodówki, Pralki, Zmywarki, Piekarniki, Płyty grzewcze, Klimatyzatory |
-| fabryki w PL | _Brak własnych fabryk w Polsce. Ogromna produkcja zlokalizowana w Azji (model OEM/ODM)._ |
+| fabryki w PL | _Brak fabryk w Polsce._ |
 | producent (OEM) | — **brak** |
 | logo | `/brandsicons/midea.jpg` ❌ **plik nie istnieje** |
 | adres strony | `/marka/midea` |
 | linki zakupowe | — |
 
-**Opis:** Jeden z największych producentów AGD na świecie, z potężnym zapleczem produkcyjnym dla marek własnych i obcych.
+**Opis:** Jeden z największych producentów AGD na świecie, z własnym zapleczem produkcyjnym.
 
 **Historia przejęć:** Niezależny gigant. W 2016 roku Midea przejęła dział AGD japońskiej Toshiby.
 
@@ -88,7 +88,7 @@
 | zakres produktów | Pełne Portfolio (Zabudowa) |
 | kategorie | Piekarniki, Płyty grzewcze, Zmywarki, Okapy, Zlewozmywaki |
 | fabryki w PL | — **brak informacji** |
-| producent (OEM) | Midea OEM `m-midea`<br>Vestel `h-vestel`<br>BSH Factory (OEM) `m-bsh-factory`<br>Beko Europe `h-beko` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/teka.png` |
 | adres strony | `/marka/teka` |
 | linki zakupowe | — |
@@ -97,7 +97,7 @@
 
 **Historia przejęć:** Przejęta pod koniec 2024/2025 roku (wraz z marką Kuppersbusch) przez chiński gigant Midea Group.
 
-**Brakuje:** informacja o fabrykach w PL
+**Brakuje:** informacja o fabrykach w PL · producent (OEM)
 
 ---
 
@@ -119,15 +119,15 @@
 | zakres produktów | Szerokie Portfolio (Głównie Chłodnictwo) |
 | kategorie | Lodówki Multidoor, Lodówki Side-by-Side, Mikrofalówki, Pralki (wybrane modele) |
 | fabryki w PL | — **brak informacji** |
-| producent (OEM) | Vestel `h-vestel` |
+| producent (OEM) | — **brak** |
 | logo | `/brandsicons/toshiba.svg` |
 | adres strony | `/marka/toshiba` |
 | linki zakupowe | — |
 
-**Opis:** Japońska ikona. Od 2016 roku marka AGD Toshiba (w skrócie: Toshiba Home Appliances) jest własnością chińskiego Midea Group. W Europie urządzenia pod marką Toshiba są wytwarzane przez tureckiego Vestela, który pełni rolę kontraktowego partnera dystrybucyjno-produkcyjnego.
+**Opis:** Japońska ikona. Od 2016 roku marka AGD Toshiba (w skrócie: Toshiba Home Appliances) jest własnością chińskiego Midea Group.
 
 **Historia przejęć:** Toshiba Home Appliances przejęta przez Midea Group w 2016 roku. Dystrybucja i produkcja na rynek europejski realizowana przez Vestel od 2017 roku.
 
-**Brakuje:** informacja o fabrykach w PL
+**Brakuje:** informacja o fabrykach w PL · producent (OEM)
 
 ---
