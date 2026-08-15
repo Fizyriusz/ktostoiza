@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import dataset from '@/data/dataset.json';
 import { SHOW_OEM } from '@/config/features';
+import { Disclaimer } from '@/components/ui/Disclaimer';
 
 /**
  * Treść podstrony /marka/[slug] renderowana po stronie serwera.
@@ -273,6 +274,8 @@ export default function NodeArticle({ node }: { node: NodeLike }) {
             </Section>
           )}
         </div>
+
+        <Disclaimer subject={node.name} />
 
         <footer className="mt-10 pt-8 border-t border-slate-200 flex flex-wrap items-center gap-4">
           <Link

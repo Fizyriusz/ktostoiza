@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, useDragControls, type PanInfo } from 'framer-motion';
 import { X, ExternalLink, Factory, BookOpen, Link2, ShoppingCart, Newspaper, ChevronUp } from 'lucide-react';
 import { GraphNodeData } from '@/data/types';
-import { SHOW_OEM } from '@/config/features';
+import { SHOW_AFFILIATE, SHOW_BRAND_LOGOS, SHOW_OEM } from '@/config/features';
+import { DisclaimerCompact } from '@/components/ui/Disclaimer';
 
 function getCountryCode(countryStr: string) {
   if (!countryStr) return 'un';
@@ -55,7 +56,7 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide, compact = f
   }, [node.id]);
   const origin = (node.type === 'holding' || node.type === 'manufacturer') ? node.country : node.origin;
   const flagUrl = getFlagUrl(origin);
-  const brandLogo = node.type === 'brand' ? node.localLogo ?? null : null;
+  const brandLogo = SHOW_BRAND_LOGOS && node.type === 'brand' ? node.localLogo ?? null : null;
 
   return (
     <div className="flex flex-col h-full bg-white relative">
@@ -279,7 +280,7 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide, compact = f
         )}
       </div>
 
-      {node.type === 'brand' && node.monetization && Object.keys(node.monetization).length > 0 && (
+      {SHOW_AFFILIATE && node.type === 'brand' && node.monetization && Object.keys(node.monetization).length > 0 && (
         <div className="p-6 bg-white border-t border-slate-100 mt-auto shadow-[0_-10px_30px_rgba(0,0,0,0.03)]">
           <h4 className="flex items-center gap-2 text-[11px] font-black text-slate-400 uppercase tracking-[0.15em] mb-4">
             <ShoppingCart className="w-4 h-4" /> Gdzie najlepiej kupić?
@@ -312,6 +313,8 @@ function SingleNodeDetails({ node, onClose, onCompare, isSideBySide, compact = f
           </div>
         </div>
       )}
+
+      <DisclaimerCompact subject={node.name} />
     </div>
   );
 }

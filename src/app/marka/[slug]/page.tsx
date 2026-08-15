@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import dataset from '@/data/dataset.json';
 import { HomeContent } from '@/app/page';
 import NodeArticle, { type NodeLike } from '@/components/seo/NodeArticle';
+import { SHOW_BRAND_LOGOS } from '@/config/features';
 
 export function generateStaticParams() {
   return dataset.nodes
@@ -79,7 +80,7 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
   }
   
   // Logo tylko jeśli faktycznie mamy plik u siebie — schema.org nie znosi martwych URL-i.
-  if (nAny.localLogo) {
+  if (SHOW_BRAND_LOGOS && nAny.localLogo) {
     jsonLd.logo = `https://ktostoiza.pl${nAny.localLogo}`;
   }
 
