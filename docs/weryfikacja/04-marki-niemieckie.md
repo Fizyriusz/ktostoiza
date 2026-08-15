@@ -1,8 +1,8 @@
-# Niemieckie Marki Niezależne
+# Marki niemieckie
 
 `h-de-ind` · Niemcy · **15 marek**
 
-> Niemieckie, austriackie oraz szwajcarskie marki niezależne.
+> Marki o niemieckim, austriackim i szwajcarskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -50,7 +50,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -81,7 +81,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -114,7 +114,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -145,7 +145,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -178,7 +178,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -211,7 +211,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -244,7 +244,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium / Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -277,7 +277,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -308,7 +308,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -341,7 +341,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy / Szwajcaria |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -372,7 +372,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy / Czechy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Niezależna_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -403,7 +403,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -434,7 +434,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny / Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -467,7 +467,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Niemcy |
-| właściciel / grupa | Niemieckie Marki Niezależne `h-de-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki niemieckie `h-de-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |

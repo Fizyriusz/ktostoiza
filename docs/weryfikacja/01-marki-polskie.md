@@ -1,8 +1,8 @@
-# Polskie Marki Niezależne
+# Marki polskie
 
 `h-pl-ind` · Polska · **35 marek**
 
-> Firmy z polskim rodowodem, posiadające własne fabryki lub bazujące na imporcie pod swoim logo.
+> Marki o polskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -48,7 +48,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Standard / Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -79,7 +79,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -112,7 +112,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -145,7 +145,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska (Dystrybucja) |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -176,7 +176,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Mieszane (Standard / Premium) |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -207,7 +207,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -238,7 +238,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -269,7 +269,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska / Chiny |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny / Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -302,7 +302,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -335,7 +335,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -366,7 +366,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -397,7 +397,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -430,7 +430,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska / Europa |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard / Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -463,7 +463,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -494,7 +494,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska / Czechy |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -525,7 +525,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -558,7 +558,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -589,7 +589,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -620,7 +620,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Standard / Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -651,7 +651,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -684,7 +684,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -715,7 +715,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -748,7 +748,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -779,7 +779,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -812,7 +812,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -843,7 +843,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -874,7 +874,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska / Szwajcaria (Design) |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -907,7 +907,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska / Europa |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -940,7 +940,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -971,7 +971,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -1002,7 +1002,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska / Turcja |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -1035,7 +1035,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -1066,7 +1066,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Niezależna_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -1097,7 +1097,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Polska |
-| właściciel / grupa | Polskie Marki Niezależne `h-pl-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki polskie `h-pl-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |

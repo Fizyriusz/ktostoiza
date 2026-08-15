@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-14T22:22:46.949Z",
+  "lastUpdate": "2026-08-15T08:21:36.222Z",
   "nodes": [
     {
       "id": "h-beko",
@@ -1098,9 +1098,9 @@
     {
       "id": "h-pl-ind",
       "type": "holding",
-      "name": "Polskie Marki Niezależne",
+      "name": "Marki polskie",
       "country": "Polska",
-      "description": "Firmy z polskim rodowodem, posiadające własne fabryki lub bazujące na imporcie pod swoim logo.",
+      "description": "Marki o polskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "polskie-niezalezne"
     },
     {
@@ -1285,41 +1285,41 @@
     {
       "id": "h-it-ind",
       "type": "holding",
-      "name": "Włoskie Marki Niezależne",
+      "name": "Marki włoskie",
       "country": "Włochy",
-      "description": "Firmy z włoskim rodowodem, posiadające własne fabryki lub bazujące na imporcie.",
+      "description": "Marki o włoskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "wloskie-niezalezne"
     },
     {
       "id": "h-de-ind",
       "type": "holding",
-      "name": "Niemieckie Marki Niezależne",
+      "name": "Marki niemieckie",
       "country": "Niemcy",
-      "description": "Niemieckie, austriackie oraz szwajcarskie marki niezależne.",
+      "description": "Marki o niemieckim, austriackim i szwajcarskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "niemieckie-niezalezne"
     },
     {
       "id": "h-jp-ind",
       "type": "holding",
-      "name": "Japońskie Marki Niezależne",
+      "name": "Marki japońskie",
       "country": "Japonia",
-      "description": "Rozwiązania i technologie z Japonii.",
+      "description": "Marki o japońskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "japonskie-niezalezne"
     },
     {
       "id": "h-cn-ind",
       "type": "holding",
-      "name": "Chińskie Marki Niezależne",
+      "name": "Marki chińskie",
       "country": "Chiny",
-      "description": "Rosnący w siłę niezależni producenci z Chin.",
+      "description": "Marki o chińskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "chinskie-niezalezne"
     },
     {
       "id": "h-other-ind",
       "type": "holding",
-      "name": "Pozostałe Marki Niezależne",
+      "name": "Pozostałe marki",
       "country": "Różne",
-      "description": "Marki niezależne z innych krajów Europy i Świata.",
+      "description": "Marki z krajów bez osobnej grupy, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "pozostale-niezalezne"
     },
     {
@@ -1908,9 +1908,9 @@
     {
       "id": "h-si-ind",
       "type": "holding",
-      "name": "Słoweńskie Marki Niezależne",
+      "name": "Marki słoweńskie",
       "country": "Słowenia",
-      "description": "Niezależne firmy ze Słowenii operujące poza strukturami grupy Hisense/Gorenje.",
+      "description": "Marki o słoweńskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.",
       "seo_slug": "slowenskie-niezalezne"
     },
     {

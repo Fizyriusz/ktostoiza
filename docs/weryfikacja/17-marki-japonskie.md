@@ -1,8 +1,8 @@
-# Japońskie Marki Niezależne
+# Marki japońskie
 
 `h-jp-ind` · Japonia · **3 marek**
 
-> Rozwiązania i technologie z Japonii.
+> Marki o japońskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Japonia / Tajlandia |
-| właściciel / grupa | Japońskie Marki Niezależne `h-jp-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki japońskie `h-jp-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -48,7 +48,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Japonia |
-| właściciel / grupa | Japońskie Marki Niezależne `h-jp-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki japońskie `h-jp-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -79,7 +79,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Japonia |
-| właściciel / grupa | Japońskie Marki Niezależne `h-jp-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki japońskie `h-jp-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |

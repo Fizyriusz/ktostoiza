@@ -1,8 +1,8 @@
-# Pozostałe Marki Niezależne
+# Pozostałe marki
 
 `h-other-ind` · Różne · **16 marek**
 
-> Marki niezależne z innych krajów Europy i Świata.
+> Marki z krajów bez osobnej grupy, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Szwecja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard / Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -50,7 +50,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Czechy |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -81,7 +81,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Korea Południowa |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -114,7 +114,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Szwecja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -147,7 +147,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Węgry |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -180,7 +180,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Szwajcaria |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` |
+| właściciel / grupa | Pozostałe marki `h-other-ind` |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -211,7 +211,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Czechy |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -244,7 +244,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Holandia |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium (Profesjonalny) |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -277,7 +277,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Belgia |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -310,7 +310,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | USA |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -341,7 +341,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Grecja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -374,7 +374,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Austria |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -407,7 +407,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Turcja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -440,7 +440,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | USA / Holandia |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -473,7 +473,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chorwacja |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -506,7 +506,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Korea Południowa |
-| właściciel / grupa | Pozostałe Marki Niezależne `h-other-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Pozostałe marki `h-other-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |

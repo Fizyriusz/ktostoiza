@@ -1,8 +1,8 @@
-# Włoskie Marki Niezależne
+# Marki włoskie
 
 `h-it-ind` · Włochy · **16 marek**
 
-> Firmy z włoskim rodowodem, posiadające własne fabryki lub bazujące na imporcie.
+> Marki o włoskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -50,7 +50,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -83,7 +83,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -114,7 +114,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium / Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -147,7 +147,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -178,7 +178,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -209,7 +209,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -240,7 +240,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -273,7 +273,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -304,7 +304,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Premium / Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -337,7 +337,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Luksusowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -368,7 +368,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -401,7 +401,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Marka_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -432,7 +432,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Niezależna_ |
 | segment | Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -463,7 +463,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard / Premium |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -496,7 +496,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Włochy |
-| właściciel / grupa | Włoskie Marki Niezależne `h-it-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki włoskie `h-it-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |

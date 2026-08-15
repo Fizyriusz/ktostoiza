@@ -1,8 +1,8 @@
-# Chińskie Marki Niezależne
+# Marki chińskie
 
 `h-cn-ind` · Chiny · **10 marek**
 
-> Rosnący w siłę niezależni producenci z Chin.
+> Marki o chińskim rodowodzie, którym nie przypisano w bazie koncernu-właściciela.
 
 [← spis wszystkich grup](README.md)
 
@@ -17,7 +17,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy / Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -50,7 +50,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -81,7 +81,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Standard |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -114,7 +114,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -147,7 +147,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny / Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -180,7 +180,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Marka_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Marka_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -211,7 +211,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Niezależna_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Niezależna_ |
 | segment | Budżetowy |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -242,7 +242,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -275,7 +275,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny / Premium (Funkcjonalność) |
 | zasięg | regionalny |
 | dostępna w PL | tak |
@@ -308,7 +308,7 @@
 | pole | wartość w bazie |
 | --- | --- |
 | kraj pochodzenia | Chiny |
-| właściciel / grupa | Chińskie Marki Niezależne `h-cn-ind` — podstawa: _Pochodzenie_ |
+| właściciel / grupa | Marki chińskie `h-cn-ind` — podstawa: _Pochodzenie_ |
 | segment | Ekonomiczny |
 | zasięg | regionalny |
 | dostępna w PL | tak |
